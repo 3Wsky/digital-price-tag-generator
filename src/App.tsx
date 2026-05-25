@@ -1698,9 +1698,9 @@ function App() {
         </div>
         <div className="topbar-actions">
           <div className="top-contact-links">
-            <span>微信 xj0991988</span>
-            <a href="https://1go.im/xhs/" target="_blank" rel="noreferrer">小红书</a>
-            <a href="https://verify.1go.im" target="_blank" rel="noreferrer">验证</a>
+            <span>定制开发 / 智能体 / 门店工具：微信 xj0991988</span>
+            <a href="https://1go.im/xhs/" target="_blank" rel="noreferrer">小红书工具站</a>
+            <a href="https://verify.1go.im" target="_blank" rel="noreferrer">验证工具</a>
           </div>
           <button type="button" className="tool-button" onClick={exportCurrentCardPdf}><Download size={17} />导出当前卡</button>
           <button type="button" className="tool-button" onClick={exportCurrentCardPng}><Image size={17} />PNG</button>

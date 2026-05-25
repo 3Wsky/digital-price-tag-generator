@@ -70,7 +70,7 @@
 .action-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 button,
@@ -100,7 +100,7 @@ button:hover {
 
 .tool-button,
 .primary-button {
-  padding: 0 13px;
+  padding: 0 11px;
   font-size: 14px;
   font-weight: 700;
 }
