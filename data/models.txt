@@ -31,6 +31,7 @@ iQOO Neo11
 vivo iQOO Z11x
 
 # ── 华为 ──（按需增删）
+华为 Mate 80 Pro Max
 华为 Mate 70 Pro
 华为 Pura 80 Ultra
 

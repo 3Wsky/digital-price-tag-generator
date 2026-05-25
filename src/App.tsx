@@ -1176,6 +1176,17 @@ function App() {
       return buildDraftFromOfficial(model, staticEntry.product, staticEntry.zhihuItems || [])
     }
 
+    const isStaticSite = !location.hostname.includes('localhost') && !location.hostname.includes('127.0.0.1')
+    if (isStaticSite) {
+      return {
+        ...buildFallbackDraft(model),
+        sourceNotes: [
+          '静态产品库暂未收录该型号，已生成通用门店价签草稿。',
+          '如需官网数据，请将该型号加入 data/models.txt 并等待数据刷新。',
+        ],
+      }
+    }
+
     const isHonorModel = /荣耀|honor/i.test(model)
     const official = await fetch(`/api/official/search?model=${encodeURIComponent(model)}`)
       .then(r => r.json())
@@ -1225,7 +1236,7 @@ function App() {
       setStatusText(
         nextDraft.source === 'official' ? '已从官网获取数据并生成草稿，请复核。'
           : nextDraft.source === 'zhihu' ? '已生成草稿，请复核。'
-          : '未拿到搜索结果，已使用本地规则生成。'
+          : nextDraft.sourceNotes[0] || '未拿到搜索结果，已使用本地规则生成。'
       )
     } catch (error) {
       setStatusText(error instanceof Error ? error.message : '官网数据获取失败。')
