@@ -1,0 +1,39 @@
+# 数码产品价签 — 长期跟踪型号清单
+#
+# 一行一个型号。空行和以 # 开头的行会被忽略。
+# 这份清单由 GitHub Actions 定时跑 `node server.mjs --build-data` 时使用，
+# 每个型号会被抓取一次最新的官网价格、SKU、配色、卖点，
+# 结果合并写入 public/data/products.json，前端站点读取它来生成价签。
+#
+# 想新增型号：直接加一行；想下架：删掉对应行，下次构建生效。
+# 命名规则：用品牌官网/商城上的中文/英文显示名称，区分大小写不严格。
+#   VIVO Y500i 和 VIVO Y500 是不同型号，不要简写。
+#
+# 想本地预览：
+#   node server.mjs --build-data
+#   会读这份清单，写出 public/data/products.json。
+
+# ── VIVO / iQOO ──
+vivo S50
+vivo S50 Pro mini
+vivo X200 Ultra
+vivo X300
+vivo X300s
+vivo X300 Pro
+vivo X300 Ultra
+vivo Y60
+vivo Y500
+vivo Y500i
+vivo Y500 Pro
+vivo Y600 Pro
+iQOO 15
+iQOO Neo11
+vivo iQOO Z11x
+
+# ── 华为 ──（按需增删）
+华为 Mate 70 Pro
+华为 Pura 80 Ultra
+
+# ── 荣耀 ──（按需增删）
+荣耀 Magic7 Pro
+荣耀 X70

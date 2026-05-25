@@ -1,0 +1,45 @@
+name: Refresh Product Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Beijing 04:10 every day
+    - cron: '10 20 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Refresh products.json
+        env:
+          ZHIHU_ACCESS_SECRET: ${{ secrets.ZHIHU_ACCESS_SECRET }}
+        run: node server.mjs --build-data --models data/models.txt --out public/data/products.json
+
+      - name: Validate JSON
+        run: node -e "const fs=require('fs');const p='public/data/products.json';const d=JSON.parse(fs.readFileSync(p,'utf8'));const ok=Object.values(d).filter(x=>x&&x.ok).length;console.log('entries',Object.keys(d).length,'ok',ok);if(!Object.keys(d).length)process.exit(1)"
+
+      - name: Commit updated product data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(data): refresh product data"
+          file_pattern: public/data/products.json
