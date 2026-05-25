@@ -34,7 +34,12 @@
 荣耀 Magic7
 荣耀 Magic7 Pro
 荣耀 Magic6 Pro
+荣耀 500
+荣耀 500 Pro
+荣耀 400 Pro
 荣耀 GT
+荣耀 Power2
+荣耀 WIN
 荣耀 X70
 荣耀 X60 Pro
 荣耀 X50
@@ -53,7 +58,6 @@ vivo S30 Pro mini
 vivo S50
 vivo S50 Pro mini
 vivo Y60
-vivo Y300
 vivo Y500
 vivo Y500i
 vivo Y500 Pro
@@ -63,3 +67,4 @@ iQOO 13
 iQOO Neo11
 iQOO Neo10
 iQOO Z11x
+iQOO Z11 Turbo
