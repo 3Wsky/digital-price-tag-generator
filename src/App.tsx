@@ -143,6 +143,7 @@ interface AppState {
 // ─── Constants ───────────────────────────────────────────────────────
 
 const presets: TagPreset[] = [
+  { name: '门店价签 75 x 121', width: 75, height: 121 },
   { name: '手机参数牌 100 x 185', width: 100, height: 185 },
   { name: '手机参数牌 90 x 130', width: 90, height: 130 },
   { name: '桌牌横版 100 x 70', width: 100, height: 70 },
@@ -193,16 +194,16 @@ const featureIconOptions: Array<{ key: FeatureIconKey; label: string; Icon: type
 
 
 const genericFootnote =
-  '1. 规格、价格及库存请以门店实际为准。\n2. 参数可能因版本、地区或系统更新有所差异。\n3. 保障服务内容及价格请以品牌官方政策为准。'
+  '产品功能参数详见官网或咨询店员。\n1. 手机作为精密电子产品，跌落仍有损坏风险，请注意避免跌落碰撞。\n2. 规格、价格、库存、服务内容及活动政策请以门店实际销售口径为准。'
 
-const officialFootnote = (brand: string) =>
-  `数据来自${brand}官网。\n${genericFootnote}`
+const officialFootnote = (_brand: string) =>
+  genericFootnote
 
 const zhihuFootnote =
-  '数据来自网络搜索，建议复核价格和参数。\n' + genericFootnote
+  genericFootnote
 
 const fallbackFootnote =
-  '本地模板生成，需人工填写价格和参数。\n' + genericFootnote
+  genericFootnote
 
 // ─── Helpers ─────────────────────────────────────────────────────────
 
@@ -758,8 +759,8 @@ function buildDraftFromOfficial(
     footnote: isHuawei
       ? officialFootnote(brandName)
       : isHonor && zhihuFeatureDraft
-        ? `标题、价格、颜色及版本来自${brandName}官网，卖点参考知乎公开内容。\n1. 规格、价格及库存请以门店实际为准。\n2. 参数可能因版本、地区或系统更新有所差异。`
-        : `数据来自${brandName}官网。\n1. 规格、价格及库存请以门店实际为准。\n2. 参数可能因版本、地区或系统更新有所差异。`,
+        ? genericFootnote
+        : genericFootnote,
     source: 'official',
     sourceNotes: zhihuFeatureDraft
       ? ['官网数据：标题、价格、颜色、版本。', ...zhihuFeatureDraft.sourceNotes.slice(0, 3).map(text => `知乎卖点参考：${text}`)]
@@ -871,71 +872,83 @@ function makeEmptyCard(preset: TagPreset): Card {
   return { id: makeId(), name: preset.name, customName: false, width: preset.width, height: preset.height, elements: [] }
 }
 
-function elementsFromDraft(draft: ProductDraft, cardW = 100, cardH = 185): TagElement[] {
+function elementsFromDraft(draft: ProductDraft, cardW = presets[0].width, cardH = presets[0].height): TagElement[] {
   const r = (v: number) => Math.round(v * 10) / 10
-  const fontSize = (pct: number, min = 2.5) => Math.max(r(cardW * pct / 100), min)
-  const footnoteFontSize = Math.max(r(cardW * 1.6 / 100), 1.1)
-  const iconSpecFontSize = 3.6
-
-  const titleTop = cardH * 0.075
-  const featureTop = cardH * 0.205
-  const featureAreaH = cardH * 0.34
-  const colorTop = cardH * 0.565
-  const dividerTop = cardH * 0.635
-  const priceTop = cardH * 0.675
+  const fontSize = (pct: number, min = 2.4) => Math.max(r(cardW * pct / 100), min)
   const shouldShowService = /华为|huawei/i.test(draft.title)
-  const titleX = r(cardW * 0.10)
-  const titleWidth = r(cardW * 0.80)
-  const titleBaseFontSize = 6
-  const displayTitle = displayTitleForCard(draft.title, titleWidth, titleBaseFontSize)
-  const titleFontSize = fitSingleLineFontSize(displayTitle, titleWidth, titleBaseFontSize, Math.max(r(cardW * 3.2 / 100), 2.2))
+
+  const contentX = r(cardW * 0.095)
+  const contentW = r(cardW * 0.81)
+  const titleX = 5
+  const titleW = r(cardW - 10)
+  const titleTop = 5
+  const featureTop = cardH * 0.18
+  const featureAreaH = cardH * 0.42
+  const colorTop = cardH * 0.585
+  const dividerTop = cardH * 0.645
+  const priceTop = cardH * 0.685
+
+  const titleBaseFontSize = Math.max(r(cardW * 7.2 / 100), 4.8)
+  const displayTitle = displayTitleForCard(draft.title, titleW, titleBaseFontSize)
+  const titleFontSize = fitSingleLineFontSize(displayTitle, titleW, titleBaseFontSize, Math.max(r(cardW * 4.6 / 100), 3.2))
   const colorNames = draft.colorNames?.length ? draft.colorNames : ['以官网为准']
   const colorText = `颜色：${colorNames.join(' / ')}`
-  const colorX = r(cardW * 0.10)
-  const colorWidth = r(cardW * 0.80)
-  const colorFontSize = fitSingleLineFontSize(colorText, colorWidth, fontSize(2.35, 0.8), 0.75)
+  const metaFontSize = fontSize(2.7, 1.8)
+  const colorFontSize = fitSingleLineFontSize(colorText, contentW, metaFontSize, 1.6)
+  const iconSpecFontSize = fontSize(5.15, 3.7)
 
   const base: TagElement[] = [
-    { id: makeId(), kind: 'text', text: displayTitle, x: titleX, y: r(titleTop), width: titleWidth, height: r(cardH * 0.08), fontSize: titleFontSize, fontWeight: 400, color: '#4a4a4a', background: 'transparent', align: 'center', radius: 0, singleLine: true },
+    { id: makeId(), kind: 'text', text: displayTitle, x: titleX, y: r(titleTop), width: titleW, height: r(cardH * 0.095), fontSize: titleFontSize, fontWeight: 400, color: '#4a4a4a', background: 'transparent', align: 'left', radius: 0, singleLine: true },
     ...draft.features.slice(0, 4).map<TagElement>((item, index) => {
       const featureH = featureAreaH / 4
       return {
         id: makeId(), kind: 'iconSpec' as ElementKind, text: item.text,
-        x: r(cardW * 0.20), y: r(featureTop + index * featureH),
-        width: r(cardW * 0.66), height: r(featureH * 0.78), fontSize: iconSpecFontSize, fontWeight: 400,
+        x: contentX, y: r(featureTop + index * featureH),
+        width: contentW, height: r(featureH * 0.74), fontSize: iconSpecFontSize, fontWeight: 400,
         color: '#4b4b4b', background: 'transparent', align: 'left' as const, radius: 0,
         iconKey: item.iconKey, iconBackground: '#b96c6b', iconColor: '#ffffff',
       }
     }),
-    { id: makeId(), kind: 'colors', text: colorText, x: colorX, y: r(colorTop), width: colorWidth, height: r(cardH * 0.045), fontSize: colorFontSize, fontWeight: 400, color: '#6f6f6f', background: 'transparent', align: 'center', radius: 0, singleLine: true },
-    { id: makeId(), kind: 'divider', text: '', x: r(cardW * 0.20), y: r(dividerTop), width: r(cardW * 0.66), height: r(0.35), fontSize: r(1), fontWeight: 400, color: '#9d9d9d', background: '#9d9d9d', align: 'left', radius: 0 },
-    { id: makeId(), kind: 'text', text: '\u5efa\u8bae\u96f6\u552e\u4ef7', x: r(cardW * 0.20), y: r(priceTop), width: r(cardW * 0.28), height: r(cardH * 0.032), fontSize: fontSize(2.6), fontWeight: 400, color: '#9a9a9a', background: 'transparent', align: 'left', radius: 0 },
+    { id: makeId(), kind: 'colors', text: colorText, x: contentX, y: r(colorTop), width: contentW, height: r(cardH * 0.042), fontSize: colorFontSize, fontWeight: 400, color: '#6f6f6f', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+    { id: makeId(), kind: 'divider', text: '', x: contentX, y: r(dividerTop), width: contentW, height: r(0.35), fontSize: r(1), fontWeight: 400, color: '#9d9d9d', background: '#9d9d9d', align: 'left', radius: 0 },
+    { id: makeId(), kind: 'text', text: '\u5efa\u8bae\u96f6\u552e\u4ef7', x: contentX, y: r(priceTop), width: r(cardW * 0.30), height: r(cardH * 0.032), fontSize: metaFontSize, fontWeight: 400, color: '#9a9a9a', background: 'transparent', align: 'left', radius: 0 },
   ]
 
   const visibleSkus = draft.skus
-  const skuRowH = cardH * (visibleSkus.length > 4 ? 0.032 : 0.037)
-  const priceRowsTop = priceTop + cardH * 0.045
+  const svcs = shouldShowService ? (draft.services?.length ? draft.services : [draft.service]).slice(0, 2) : []
+  const totalRows = visibleSkus.length + svcs.length
+  const rowH = cardH * (totalRows >= 6 ? 0.033 : totalRows >= 5 ? 0.035 : 0.039)
+  const priceRowsTop = cardH * 0.735
+  const specFontSize = 2.8
+  const priceFontSize = 4
+  const specX = contentX
+  const specW = r(cardW * 0.60)
+  const priceX = r(cardW * 0.645)
+  const priceW = r(cardW * 0.26)
   visibleSkus.forEach((sku, index) => {
-    const y = priceRowsTop + index * skuRowH
+    const y = priceRowsTop + index * rowH
     base.push(
-      { id: makeId(), kind: 'spec', text: sku.label, x: r(cardW * 0.20), y: r(y), width: r(cardW * 0.43), height: r(skuRowH * 0.92), fontSize: fontSize(2.75), fontWeight: 400, color: '#4b4b4b', background: 'transparent', align: 'left', radius: 0 },
-      { id: makeId(), kind: 'price', text: sku.price, x: r(cardW * 0.62), y: r(y - cardH * 0.002), width: r(cardW * 0.24), height: r(skuRowH * 0.92), fontSize: fontSize(3.9), fontWeight: 400, color: '#4b4b4b', background: 'transparent', align: 'right', radius: 0 },
+      { id: makeId(), kind: 'spec', text: sku.label, x: specX, y: r(y), width: specW, height: r(rowH * 0.94), fontSize: specFontSize, fontWeight: 400, color: '#4b4b4b', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+      { id: makeId(), kind: 'price', text: sku.price, x: priceX, y: r(y - cardH * 0.002), width: priceW, height: r(rowH * 0.94), fontSize: priceFontSize, fontWeight: 700, color: '#4b4b4b', background: 'transparent', align: 'right', radius: 0, singleLine: true },
     )
   })
 
-  const svcs = shouldShowService ? (draft.services?.length ? draft.services : [draft.service]).slice(0, 1) : []
-  const svcRowH = cardH * 0.038
-  const serviceTop = priceRowsTop + visibleSkus.length * skuRowH + cardH * 0.008
+  const serviceTop = priceRowsTop + visibleSkus.length * rowH + (svcs.length ? cardH * 0.008 : 0)
   svcs.forEach((svc, index) => {
-    const y = serviceTop + index * svcRowH
+    const y = serviceTop + index * rowH
     base.push(
-      { id: makeId(), kind: 'spec', text: svc.label, x: r(cardW * 0.20), y: r(y), width: r(cardW * 0.48), height: r(svcRowH * 0.92), fontSize: fontSize(2.65), fontWeight: 400, color: '#4b4b4b', background: 'transparent', align: 'left', radius: 0 },
-      { id: makeId(), kind: 'price', text: svc.price, x: r(cardW * 0.68), y: r(y - cardH * 0.002), width: r(cardW * 0.18), height: r(svcRowH * 0.92), fontSize: fontSize(3.9), fontWeight: 400, color: '#4b4b4b', background: 'transparent', align: 'right', radius: 0 },
+      { id: makeId(), kind: 'spec', text: svc.label, x: specX, y: r(y), width: specW, height: r(rowH * 0.94), fontSize: specFontSize, fontWeight: 400, color: '#4b4b4b', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+      { id: makeId(), kind: 'price', text: svc.price, x: priceX, y: r(y - cardH * 0.002), width: priceW, height: r(rowH * 0.94), fontSize: priceFontSize, fontWeight: 700, color: '#4b4b4b', background: 'transparent', align: 'right', radius: 0, singleLine: true },
     )
   })
-  const footnoteTop = Math.max(cardH * 0.855, serviceTop + svcs.length * svcRowH + cardH * 0.014)
+
+  const rowsEnd = svcs.length
+    ? serviceTop + svcs.length * rowH
+    : priceRowsTop + visibleSkus.length * rowH
+  const footnoteTop = Math.max(cardH * 0.91, rowsEnd + cardH * 0.006)
+  const footnoteFontSize = 1.2
   base.push(
-    { id: makeId(), kind: 'footnote', text: draft.footnote, x: r(cardW * 0.14), y: r(footnoteTop), width: r(cardW * 0.74), height: r(cardH - footnoteTop - cardH * 0.018), fontSize: footnoteFontSize, fontWeight: 400, color: '#686868', background: 'transparent', align: 'left', radius: 0 },
+    { id: makeId(), kind: 'footnote', text: draft.footnote, x: contentX, y: r(footnoteTop), width: contentW, height: r(cardH - footnoteTop - cardH * 0.014), fontSize: footnoteFontSize, fontWeight: 400, color: '#686868', background: 'transparent', align: 'left', radius: 0 },
   )
   return base
 }
@@ -947,7 +960,7 @@ function makeCardFromDraft(draft: ProductDraft): Card {
     customName: false,
     width: presets[0].width,
     height: presets[0].height,
-    elements: elementsFromDraft(draft),
+    elements: elementsFromDraft(draft, presets[0].width, presets[0].height),
   }
 }
 

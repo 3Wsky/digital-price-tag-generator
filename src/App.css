@@ -511,7 +511,7 @@ input[type='color'] {
 
 .kind-iconSpec {
   padding-left: 0;
-  gap: 0.58em;
+  gap: 0.75em;
 }
 
 .kind-iconSpec span {
@@ -524,9 +524,9 @@ input[type='color'] {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  width: 1.62em;
-  height: 1.62em;
-  border-radius: 0.28em;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 0.26em;
   background: #b96c6b;
 }
 
