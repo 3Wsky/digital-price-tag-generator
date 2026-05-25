@@ -13,20 +13,35 @@
 #   node server.mjs --build-data
 #   会读这份清单，写出 public/data/products.json。
 
-# ── 华为 ──
+# ── 华为 ── (来源: 华为SKU编码表 20260525)
 华为 Mate 80
 华为 Mate 80 Pro
 华为 Mate 80 Pro Max
+华为 Mate 80 Pro Max 风驰版
 华为 Mate 70
 华为 Mate 70 Pro
+华为 Mate 70 Pro+
+华为 Mate 70 Pro 优享版
+华为 Mate 70 Air
+华为 Mate X5
+华为 Mate X5 典藏版
+华为 Mate X6
+华为 Mate X6 典藏版
+华为 Mate X7
+华为 Mate X7 典藏版
+华为 Pura X
+华为 Pura X 典藏版
 华为 Pura 80
 华为 Pura 80 Pro
+华为 Pura 80 Pro+
 华为 Pura 80 Ultra
-华为 Pura 90
-华为 Pura 90 Pro
-华为 Pura 90 Pro Max
 华为 畅享 80
 华为 畅享 70X
+华为 畅享 70X 尊享版
+华为 畅享 70S
+华为 畅享 90 Plus
+华为 畅享 90m Plus
+华为 畅享 90 Pro Max
 
 # ── 荣耀 ──
 荣耀 Magic8
