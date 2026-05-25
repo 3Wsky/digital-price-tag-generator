@@ -1697,7 +1697,7 @@ function App() {
           <h1>数码产品价签编辑器</h1>
           <div className="site-meta-links">
             <span>定制开发 / 智能体 / 门店工具：微信 xj0991988</span>
-            <a href="https://1go.im/XHS" target="_blank" rel="noreferrer">小红书工具站</a>
+            <a href="https://1go.im/xhs/" target="_blank" rel="noreferrer">小红书工具站</a>
             <a href="https://verify.1go.im" target="_blank" rel="noreferrer">验证工具</a>
           </div>
         </div>
