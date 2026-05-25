@@ -32,6 +32,40 @@
   letter-spacing: 0;
 }
 
+.site-meta-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+  margin-top: 9px;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.site-meta-links span {
+  padding: 4px 9px;
+  border: 1px solid #c7d2fe;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+}
+
+.site-meta-links a {
+  padding: 4px 9px;
+  border: 1px solid #d1fae5;
+  border-radius: 999px;
+  background: #ecfdf5;
+  color: #047857;
+  text-decoration: none;
+}
+
+.site-meta-links a:hover {
+  border-color: #10b981;
+  background: #d1fae5;
+  color: #065f46;
+}
+
 .topbar-actions,
 .action-row {
   display: flex;
