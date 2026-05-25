@@ -13,28 +13,53 @@
 #   node server.mjs --build-data
 #   会读这份清单，写出 public/data/products.json。
 
+# ── 华为 ──
+华为 Mate 80
+华为 Mate 80 Pro
+华为 Mate 80 Pro Max
+华为 Mate 70
+华为 Mate 70 Pro
+华为 Pura 80
+华为 Pura 80 Pro
+华为 Pura 80 Ultra
+华为 Pura 90
+华为 Pura 90 Pro
+华为 Pura 90 Pro Max
+华为 畅享 80
+华为 畅享 70X
+
+# ── 荣耀 ──
+荣耀 Magic8
+荣耀 Magic8 Pro
+荣耀 Magic7
+荣耀 Magic7 Pro
+荣耀 Magic6 Pro
+荣耀 GT
+荣耀 X70
+荣耀 X60 Pro
+荣耀 X50
+
 # ── VIVO / iQOO ──
-vivo S50
-vivo S50 Pro mini
+vivo X200
 vivo X200 Ultra
+vivo X200 Pro
+vivo X200s
 vivo X300
-vivo X300s
 vivo X300 Pro
 vivo X300 Ultra
+vivo X300s
+vivo S30
+vivo S30 Pro mini
+vivo S50
+vivo S50 Pro mini
 vivo Y60
+vivo Y300
 vivo Y500
 vivo Y500i
 vivo Y500 Pro
 vivo Y600 Pro
 iQOO 15
+iQOO 13
 iQOO Neo11
-vivo iQOO Z11x
-
-# ── 华为 ──（按需增删）
-华为 Mate 80 Pro Max
-华为 Mate 70 Pro
-华为 Pura 80 Ultra
-
-# ── 荣耀 ──（按需增删）
-荣耀 Magic7 Pro
-荣耀 X70
+iQOO Neo10
+iQOO Z11x

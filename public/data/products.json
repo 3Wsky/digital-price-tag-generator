@@ -1,666 +1,179 @@
 {
-  "vivo S50": {
+  "华为 Mate 80": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "vivo S50",
-      "price": "¥3599",
+      "title": "HUAWEI Mate 80",
+      "price": "¥ 4699",
       "skuPrices": [
         {
           "version": "12GB+256GB",
-          "price": "¥3599"
-        },
-        {
-          "version": "16GB+256GB",
-          "price": "¥3999"
+          "price": "¥ 4699",
+          "sbomCode": "2601010586341",
+          "colors": []
         },
         {
           "version": "12GB+512GB",
-          "price": "¥3999"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "深空黑",
-        "灵感紫",
-        "告白",
-        "悠悠蓝"
-      ],
-      "specs": {
-        "chip": "骁龙 8s",
-        "battery": "6500mAh",
-        "screen": "6.59英寸",
-        "charge": "90W",
-        "refreshRate": "120Hz",
-        "screenTech": ""
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:41.121Z"
-  },
-  "vivo S50 Pro mini": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo S50 Pro mini",
-      "price": "¥4199",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥4199"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥4499"
+          "price": "¥ 5199",
+          "sbomCode": "2601010586323",
+          "colors": []
         },
         {
           "version": "16GB+512GB",
-          "price": "¥4799"
+          "price": "¥ 5499",
+          "sbomCode": "2601010586326",
+          "colors": []
         }
       ],
-      "careServices": [],
-      "colors": [
-        "告白",
-        "深空黑",
-        "灵感紫"
-      ],
-      "specs": {
-        "chip": "骁龙 8",
-        "battery": "6500mAh",
-        "screen": "6.31英寸",
-        "charge": "90W",
-        "refreshRate": "120Hz",
-        "screenTech": "LTPO"
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:41.572Z"
-  },
-  "vivo X200 Ultra": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo X200 Ultra",
-      "price": "¥4399",
-      "skuPrices": [
+      "careServices": [
         {
-          "version": "12GB+256GB",
-          "price": "¥4099"
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 299",
+          "sbomCode": "3201020132001"
         },
         {
-          "version": "12GB+512GB",
-          "price": "¥4399"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥4699"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥5199"
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 599",
+          "sbomCode": "3201020134201"
         }
       ],
-      "careServices": [],
-      "colors": [
-        "辰夜黑",
-        "宝石蓝",
-        "钛色",
-        "白月光"
-      ],
-      "specs": {
-        "chip": "骁龙 8 至尊版",
-        "battery": "6000mAh",
-        "screen": "6.82英寸",
-        "charge": "90W",
-        "refreshRate": "120Hz",
-        "screenTech": "LTPO"
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:41.572Z"
-  },
-  "vivo X300": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo X300",
-      "price": "¥4599",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥4599"
-        },
-        {
-          "version": "16GB+256GB",
-          "price": "¥4999"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥5299"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥5699"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥6299"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "纯粹黑",
-        "惬意紫",
-        "自在蓝",
-        "幸运彩",
-        "好运红"
-      ],
-      "specs": {
-        "chip": "天玑 9500",
-        "battery": "6040mAh",
-        "screen": "6.31英寸",
-        "charge": "90W",
-        "refreshRate": "120Hz",
-        "screenTech": "E2"
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:41.883Z"
-  },
-  "vivo X300s": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo X300s",
-      "price": "¥4999",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥4999"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥5499"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥5999"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥6999"
-        },
-        {
-          "version": "16GB+1TB 摄影师套装",
-          "price": "¥7999"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "钛黑",
-        "银白",
-        "梦核紫",
-        "胶片绿"
-      ],
-      "specs": {
-        "chip": "天玑 9500",
-        "battery": "7100mAh",
-        "screen": "6.78英寸",
-        "charge": "90W",
-        "refreshRate": "144Hz",
-        "screenTech": "LTPO"
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:42.199Z"
-  },
-  "vivo X300 Pro": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo X300 Pro",
-      "price": "¥5599",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥5599"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥6399"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥7199"
-        },
-        {
-          "version": "16GB+1TB 摄影师套装",
-          "price": "¥7199"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "纯粹黑",
-        "简单白",
-        "自在蓝",
-        "旷野棕"
-      ],
-      "specs": {
-        "chip": "天玑 9500",
-        "battery": "6510mAh",
-        "screen": "6.78英寸",
-        "charge": "90W",
-        "refreshRate": "120Hz",
-        "screenTech": "E2"
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:42.486Z"
-  },
-  "vivo X300 Ultra": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo X300 Ultra",
-      "price": "¥6999",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥6999"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥7499"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥7999"
-        },
-        {
-          "version": "16GB+1TB 卫星通信版",
-          "price": "¥8999"
-        },
-        {
-          "version": "16GB+1TB 摄影师套装",
-          "price": "¥11999"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "黑Ka",
-        "银调",
-        "胶片绿"
-      ],
-      "specs": {
-        "chip": "骁龙 8 至尊版",
-        "battery": "6600mAh",
-        "screen": "6.82英寸",
-        "charge": "100W",
-        "refreshRate": "144Hz",
-        "screenTech": "LTPO"
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:42.762Z"
-  },
-  "vivo Y60": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo Y60",
-      "price": "¥1799",
-      "skuPrices": [
-        {
-          "version": "6GB+128GB",
-          "price": "¥1799"
-        },
-        {
-          "version": "6GB+256GB",
-          "price": "¥1999"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥2299"
-        }
-      ],
-      "careServices": [],
       "colors": [
         "曜石黑",
-        "鸿运紫",
-        "山海青"
-      ],
-      "specs": {},
-      "features": [
-        "6500mAh耐用大电池"
-      ]
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:43.068Z"
-  },
-  "vivo Y500": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo Y500",
-      "price": "¥1699",
-      "skuPrices": [
-        {
-          "version": "8GB+128GB",
-          "price": "¥1699"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥1899"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥2099"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥2299"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "玄武黑",
-        "冰川蓝",
-        "龙晶紫"
+        "晨曦金",
+        "雪域白",
+        "云杉绿"
       ],
       "specs": {
-        "chip": "天玑 7300",
-        "battery": "8200mAh",
-        "screen": "",
-        "charge": "90W",
+        "chip": "麒麟9020",
+        "battery": "5750mAh",
+        "screen": "undefined英寸",
+        "charge": "66W",
         "refreshRate": "120Hz",
-        "screenTech": ""
-      },
-      "features": []
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:43.379Z"
-  },
-  "vivo Y500i": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo Y500i",
-      "price": "¥1299",
-      "skuPrices": [
-        {
-          "version": "8GB+128GB",
-          "price": "¥1299"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥1499"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥1799"
-        },
-        {
-          "version": "8GB+512GB",
-          "price": "¥1799"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥2199"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "曜石黑",
-        "星河银",
-        "凤迎金",
-        "幸运红"
-      ],
-      "specs": {},
-      "features": [
-        "6年长寿大电池",
-        "满级防水防尘全面抗摔",
-        "1200nits硬件级真护眼屏"
-      ]
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:43.913Z"
-  },
-  "vivo Y500 Pro": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo Y500 Pro",
-      "price": "¥1799",
-      "skuPrices": [
-        {
-          "version": "8GB+128GB",
-          "price": "¥1799"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥1999"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥2299"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥2599"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "钛黑",
-        "柔粉",
-        "浅绿",
-        "祥云金"
-      ],
-      "specs": {},
-      "features": [
-        "2亿HP5旗舰级主摄",
-        "持久流畅OriginOS 6",
-        "7000mAh半固态蓝海电池",
-        "1.5K旗舰级护眼屏"
-      ]
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:44.324Z"
-  },
-  "vivo Y600 Pro": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo Y600 Pro",
-      "price": "¥2099",
-      "skuPrices": [
-        {
-          "version": "8GB+128GB",
-          "price": "¥2099"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥2299"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥2599"
-        },
-        {
-          "version": "8GB+512GB",
-          "price": "¥2599"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥2899"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "皓月黑",
-        "浩渺蓝",
-        "浮光金",
-        "星曜紫"
-      ],
-      "specs": {},
-      "features": [
-        "10200mAh耐超低温蓝海电池",
-        "耐久抗摔防水",
-        "寰宇增强通信3.0",
-        "超安全流畅OriginOS 6"
-      ]
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:44.714Z"
-  },
-  "iQOO 15": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "vivo iQOO 15",
-      "price": "¥4599",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥4599"
-        },
-        {
-          "version": "16GB+256GB",
-          "price": "¥4899"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥5099"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥5399"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥5999"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "传奇版",
-        "赛道版",
-        "凌云",
-        "旷野",
-        "iQOO×王者荣耀十周年典藏版"
-      ],
-      "specs": {
-        "chip": "骁龙 8 至尊版",
-        "battery": "7000mAh",
-        "screen": "",
-        "charge": "100W",
-        "refreshRate": "",
         "screenTech": "OLED"
-      },
-      "features": []
+      }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:45.046Z"
+    "fetchedAt": "2026-05-25T07:07:03.720Z"
   },
-  "iQOO Neo11": {
+  "华为 Mate 80 Pro": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "vivo iQOO Neo11",
-      "price": "¥3099",
+      "title": "HUAWEI Mate 80 Pro",
+      "price": "¥ 5999",
       "skuPrices": [
         {
           "version": "12GB+256GB",
-          "price": "¥3099"
-        },
-        {
-          "version": "16GB+256GB",
-          "price": "¥3399"
+          "price": "¥ 5999",
+          "sbomCode": "2601010586418",
+          "colors": []
         },
         {
           "version": "12GB+512GB",
-          "price": "¥3599"
+          "price": "¥ 6499",
+          "sbomCode": "2601010586421",
+          "colors": []
         },
         {
           "version": "16GB+512GB",
-          "price": "¥3899"
+          "price": "¥ 6999",
+          "sbomCode": "2601010586425",
+          "colors": []
         },
         {
           "version": "16GB+1TB",
-          "price": "¥4499"
+          "price": "¥ 7999",
+          "sbomCode": "2601010586429",
+          "colors": []
         }
       ],
-      "careServices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020133901"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 699",
+          "sbomCode": "3201020134401"
+        }
+      ],
       "colors": [
-        "疾影黑",
-        "驰光白",
-        "面对疾风",
-        "像素方橙"
+        "雪域白",
+        "曜石黑",
+        "晨曦金",
+        "云杉绿"
       ],
       "specs": {
-        "chip": "骁龙 8 至尊版",
-        "battery": "7500mAh",
-        "screen": "6.82英寸",
-        "charge": "59W",
-        "refreshRate": "144Hz",
-        "screenTech": "LTPO"
-      },
-      "features": []
+        "chip": "麒麟9030",
+        "battery": "5750mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:45.338Z"
+    "fetchedAt": "2026-05-25T07:07:29.319Z"
   },
-  "vivo iQOO Z11x": {
+  "华为 Mate 80 Pro Max": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "vivo iQOO Z11x",
-      "price": "¥1599",
+      "title": "HUAWEI Mate 80 Pro Max",
+      "price": "¥ 7999",
       "skuPrices": [
         {
-          "version": "8GB+128GB",
-          "price": "¥1599"
+          "version": "16GB+512GB",
+          "price": "¥ 7999",
+          "sbomCode": "2601010586509",
+          "colors": []
         },
         {
-          "version": "8GB+256GB",
-          "price": "¥1699"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥1999"
-        },
-        {
-          "version": "8GB+512GB",
-          "price": "¥2099"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥2399"
+          "version": "16GB+1TB",
+          "price": "¥ 8999",
+          "sbomCode": "2601010586513",
+          "colors": []
         }
       ],
-      "careServices": [],
-      "colors": [
-        "夜影黑",
-        "冰青绿",
-        "雪屿白"
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 499",
+          "sbomCode": "3201020134001"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 899",
+          "sbomCode": "3201020134501"
+        }
       ],
-      "specs": {},
-      "features": [
-        "7200mAh 超薄蓝海电池",
-        "天玑 7400",
-        "LCD 莱茵护眼屏",
-        "5000 万索尼超清主摄"
-      ]
+      "colors": [
+        "极夜黑",
+        "极地银",
+        "极昼金",
+        "极光青"
+      ],
+      "specs": {
+        "chip": "麒麟9030",
+        "battery": "6000mAh",
+        "screen": "6.9英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "灵珑屏"
+      }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:50:45.758Z"
+    "fetchedAt": "2026-05-25T07:07:54.185Z"
+  },
+  "华为 Mate 70": {
+    "ok": false,
+    "source": "official",
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.vmall.com/product/10086989076790.html\", waiting until \"domcontentloaded\"\u001b[22m\n",
+    "product": null,
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:08:30.168Z"
   },
   "华为 Mate 70 Pro": {
     "ok": true,
@@ -710,7 +223,121 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:51:09.491Z"
+    "fetchedAt": "2026-05-25T07:08:54.942Z"
+  },
+  "华为 Pura 80": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 80",
+      "price": "¥ 5199",
+      "skuPrices": [
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5199",
+          "sbomCode": "2601010577120",
+          "colors": []
+        },
+        {
+          "version": "12GB+1TB",
+          "price": "¥ 6199",
+          "sbomCode": "2601010577113",
+          "colors": []
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 4699",
+          "sbomCode": "2601010577121",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 599",
+          "sbomCode": "3201020118601"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 299",
+          "sbomCode": "3201020119201"
+        }
+      ],
+      "colors": [
+        "丝绒金",
+        "丝绒黑",
+        "丝绒白",
+        "丝绒绿"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5600mAh",
+        "screen": "6.6英寸",
+        "charge": "50W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:09:20.400Z"
+  },
+  "华为 Pura 80 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 80 Pro",
+      "price": "¥ 6499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010567339",
+          "colors": [
+            "HUAWEI Pura 80 Pro  釉金"
+          ]
+        },
+        {
+          "version": "12GB+1TB",
+          "price": "¥ 7999",
+          "sbomCode": "2601010567308",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 6999",
+          "sbomCode": "2601010567334",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020134701"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 699",
+          "sbomCode": "3201020134801"
+        }
+      ],
+      "colors": [
+        "釉金",
+        "釉白",
+        "釉黑",
+        "HUAWEI Pura 80 Pro  釉金"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5700mAh",
+        "screen": "6.8英寸",
+        "charge": "80W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:09:45.019Z"
   },
   "华为 Pura 80 Ultra": {
     "ok": true,
@@ -758,7 +385,759 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-25T02:51:33.326Z"
+    "fetchedAt": "2026-05-25T07:10:10.670Z"
+  },
+  "华为 Pura 90": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 90",
+      "price": "¥ 4699",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 4699",
+          "sbomCode": "2601010620702",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5199",
+          "sbomCode": "2601010620704",
+          "colors": []
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 5699",
+          "sbomCode": "2601010620707",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 299",
+          "sbomCode": "3201020141201"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 599",
+          "sbomCode": "3201020141301"
+        }
+      ],
+      "colors": [
+        "雪域白",
+        "丝绒黑",
+        "罗兰紫"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "6500mAh",
+        "screen": "6.8英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:10:35.609Z"
+  },
+  "华为 Pura 90 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 90 Pro",
+      "price": "¥ 5499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 5499",
+          "sbomCode": "2601010614418",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5999",
+          "sbomCode": "2601010614421",
+          "colors": []
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010614425",
+          "colors": []
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥ 7499",
+          "sbomCode": "2601010614429",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020141401"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 699",
+          "sbomCode": "3201020141501"
+        }
+      ],
+      "colors": [
+        "椰青白",
+        "桑果黑",
+        "橘子汽水",
+        "粉红芭乐"
+      ],
+      "specs": {
+        "chip": "麒麟9030",
+        "battery": "6000mAh",
+        "screen": "6.6英寸",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:11:00.641Z"
+  },
+  "华为 Pura 90 Pro Max": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 90 Pro Max",
+      "price": "¥ 6499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010614322",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 6999",
+          "sbomCode": "2601010614326",
+          "colors": []
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 7499",
+          "sbomCode": "2601010614331",
+          "colors": []
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥ 8499",
+          "sbomCode": "2601010614336",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 499",
+          "sbomCode": "3201020141601"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 899",
+          "sbomCode": "3201020141701"
+        }
+      ],
+      "colors": [
+        "晨曦金",
+        "曜石黑",
+        "霞光紫",
+        "橘子海",
+        "翡翠湖"
+      ],
+      "specs": {
+        "chip": "麒麟9030",
+        "battery": "6000mAh",
+        "screen": "6.9英寸",
+        "charge": "80W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:11:25.900Z"
+  },
+  "华为 畅享 80": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "Hi畅享 80 Pro",
+      "price": "¥ 1599",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "星空黑",
+        "星海蓝",
+        "晨光白"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "6100mAh",
+        "screen": "6.7英寸",
+        "charge": "40W",
+        "refreshRate": "60Hz",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:11:51.167Z"
+  },
+  "华为 畅享 70X": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "华为畅享 70X 尊享版",
+      "price": "¥ 1999",
+      "skuPrices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 159",
+          "sbomCode": "3201020111301"
+        }
+      ],
+      "colors": [
+        "星海蓝",
+        "流沙金",
+        "曜金黑"
+      ],
+      "specs": {
+        "chip": "麒麟8000",
+        "battery": "6100mAh",
+        "screen": "undefined英寸",
+        "charge": "120W",
+        "refreshRate": "",
+        "screenTech": "OLED"
+      }
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:12:16.994Z"
+  },
+  "荣耀 Magic8": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic8",
+      "price": "¥ 4999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 4999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5299"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 5599"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "绒黑色",
+        "天青釉",
+        "雪域白",
+        "旭日金"
+      ],
+      "specs": {
+        "chip": "骁龙®️8至尊版移动平台",
+        "battery": "7000mAh",
+        "screen": "6.58英寸",
+        "charge": "90W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "features": [
+        "7000mAh 90W荣耀超快充",
+        "骁龙®️8至尊版移动平台 芯片",
+        "6.58英寸 OLED 120Hz"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "荣耀Magic8系列正式发布:影像性能AI全面自进化",
+        "ContentType": "",
+        "ContentID": "3764074769034592236",
+        "ContentText": "【环球网科技综合报道】10月15日,AI终端生态公司荣耀发布年度旗舰新品荣耀Magic8系列,并发布了自进化AI智能体操作系统全新 MagicOS 10。依托在AI领域的长期技术积累和对用户需求的敏锐洞察,荣耀Magic8系列通过“8大AI技术领先、8大AI体验领先、4大影像领先、8大性能领先”,以“8848巅峰旗舰”定义首款自进化AI原生手机。据悉,在AI方面,荣耀Magic8系列搭载自进化AI智能体操作系统荣耀MagicOS 10,UX设计全面焕新,采用年轻化的通透设计。具备自进化能力的全新AI智能体YOYO化身为用户的全能搭子,如购物搭子、美食搭子、出游搭子、健康搭子、工作搭子……荣耀魔法大模型3.0则具有端云结合的大模型矩阵,在多模态理解、任务规划和工具调用等核心能力上持续进化、紧密协同,达到比肩SOTA的业界顶尖水平。在技术基座支撑下,YOYO具备两大核心超能力:YOYO看见和YOYO执行,分别带来更强的AI智慧视觉体验和AI执行引擎。同时荣耀Magic8系列本次全系搭载了一颗AI按键,一键长按就能启动YOYO看见,开启与YOYO的视频通话,进行智能体应用交互。除了荣耀自研的UI Agent能力,YOYO更搭载行业首发的系统级MCP架构,深度打通系统底层超过80%的高频场景,接入超过4000个生态MCP和生态智能体,实现3000个场景的自动执行。在荣耀Magic8系列上,“荣耀分享”进化至“荣耀无界智联”,全品牌互传进化至全品牌智联,包括鸿蒙和iOS生态在内的全品牌、全设备都可以加入荣耀信任环,实现智能体跨端智联的体验。此外,荣耀还正式推出了“MagicOS 月月焕新计划”,用户的灵感和建议将以更快的速度变为现实,系统将通过OTA进行月度迭代,让用户亲身参与手机进化,打破传统手机“出厂即体验终点”的局限。在影像方面,荣耀Magic8 Pro主摄搭载2亿超夜神长焦,采用超大底、超大光圈、顶级镜组结构,并运用行业先进的萤石级镜片玻璃、航天级封装、纳米级镜片镀膜,保障顶级的光学品质。除影像硬件配置之外,全新荣耀AiMAGE影像系统也带来了荣耀Magic8系列影像表现进化。AiMAGE·夜神引擎拥有8000万次/秒推理速度,精确处理明暗复杂光影;AiMAGE·防抖引擎大幅提升陀螺仪和马达等硬件工作精度,荣耀Magic8 Pro主摄和长焦实现了CIPA 5.5级防抖能力;AiMAGE·人像引擎高达120亿模型参数,带来肤质优化、光影还原、光斑拟真三大升级。同时荣耀Magic8系列还创新应用了灵感帮拍、AI追色、AI修图、自由指令生图、全新Live图玩法等影像后期编辑与拍摄玩法,实现“拍前帮引导,拍中帮调色,拍后帮修图”的全流程手机摄影创作自由,构成强大而富有乐趣的影像体系,搭配运动场景格外出圈,定格每个生动瞬间。值得一提的是,除了搭载以大模型和智能体为驱动的AI交互的全新荣耀MagicOS 10操作系统,荣耀Magic8系列还以AI赋能并全面升级硬件配置,“可成长”的硬件带来更强性能表现。荣耀Magic8全系搭载第五代骁龙®8至尊版,CPU、GPU和AI算力相比上一代都有大幅提升,性能跑分具有领先跨代表现。荣耀与高通自2022年成立了联合实验室,共同深耕新一代AI与芯片底层技术,针对芯片的各个模块定制专属优化引擎,实现超高芯片使用率。 荣耀独家AI渲显分离技术,加上芯片级底层调教,让游戏帧率0抖动,1080P最高画质下玩游戏不卡顿不掉帧;基于GPU- NPU异构的AI超分超帧技术,大幅提升游戏画质和帧率,让大幅运动的游戏画面更丝滑;行业独家的“AI实时渲染+全栈Vulkan引擎”,在芯片底层指令集上做了大量优化,显著降低渲染功耗提升渲染效率,实现优美的通透设计。续航方面,荣耀Magic8系列搭载新一代青海湖大电池,全系容量突破7000mAh,并支持120W有线与80W无线双快充,兼容100W PPS充电协议,用电脑充电器也能进行超级快充。而在荣耀都江堰AI电源管理系统和骁龙芯片底层调教下,将典型场景功耗优化了13%。屏幕方面,荣耀Magic8系列搭载“金字招牌”荣耀绿洲护眼屏,峰值亮度6000nits,最低亮度1nit,获得行业首发德国莱茵TÜV全局护眼5.0认证,引领行业进入个性化全局护眼时代。通信方面,荣耀Magic8系列搭载了自研“五芯六翼”通信架构,首发荣耀鸿燕AI云图,并能通过AI自适应信号调谐,实现“不管怎么握,信号都满格”的通信体验,此外还支持行业领先的23个全球5G频段覆盖和谷歌全家桶服务,信号范围覆盖全球。安全方面,荣耀Magic8 Pro配备行业唯一双3D安全解锁,通过欧盟支付级安全认证,加上芯片级双TEE安全引擎和平行空间双系统安全体验,隐私安全三保险;此外还有行业独家的三位一体AI反诈能力,换脸、变声、诈骗话术都能准确高效识别。可靠性方面,荣耀Magic8系列配备荣耀巨犀玻璃,10倍抗跌耐摔,获得“SGS整机抗跌耐摔”五星认证,并支持IP68、IP69和IP69K,获满级防尘防水认证;音质方面,荣耀首创开放音腔技术,加上行业顶级双1216扬声器,搭配自研AI声场算法,带来澎湃有力的环绕低音炮巅峰音质。设计方面,荣耀Magic8标准版打造“最美小直屏”,荣耀Magic8 Pro版打造“优雅微曲屏”,设计感和高级感拉满,增强持握手感。值得关注的是,本次荣耀宣布将发布面向未来的AI终端生态新品荣耀ROBOT PHONE,它具备AI的超强大脑,能随时随地洞悉万物;具备机器人的超强行动力,陪用户共享生活点滴;它更能化身用户的专属摄影机,敏锐捕捉每一个有爱的珍贵瞬间。此款新品将于2026年在巴塞罗那正式亮相,未来荣耀ROBOT PHONE等前沿AI终端生态产品将抢先在荣耀阿尔法全球旗舰店推出及上手体验。此外,本场发布会还带来多款荣耀全场景新品,其中荣耀MagicPad3 Pro是全球首款第五代骁龙®8至尊版平板,支持至多20个窗口同时运行;荣耀MagicPad3 12.5支持荣耀类纸柔光屏,新增“放青松”、“好运紫” 两款潮流配色,堪称小而美的全能轻薄平板;荣耀手表5 Pro新增全天无感血压监测,实现24小时全面健康守护,重新定义旗舰级智能手表新标杆;荣耀Earbuds 4采用双镀钛动圈设计,续航时间突破46小时,确保用户随时随地都能清晰听音;荣耀亲选KUMI AI Note采用超薄磁吸设计,仅2.89mm,让学习工作更高效便捷。据悉,荣耀Magic8系列将于10月23日启售。其中荣耀Magic8标准版配备旭日金、天青釉、雪域白、绒黑色,售价4499元起;荣耀Magic8 Pro配备旭日金砂、天青色、雪域白、绒黑色,售价5699元起。(思瀚)",
+        "Url": "https://tech.huanqiu.com/article/4OkIahbt23z",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1778671676,
+        "AuthorityLevel": "4",
+        "RankingScore": 3.0295393
+      },
+      {
+        "Title": "荣耀Magic8:旗舰之巅,AI破局者_手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "-8658376585553326808",
+        "ContentText": "在智能 手机 的万军丛中, 荣耀 Magic8不是那种靠堆参数吓人的选手,它是真正把\"用起来爽\"三个字刻进骨头里的狠角色。2025年10月15日发布至今,这台机器用实力证明了一件事——旗舰不只有一种打法,而荣耀选择了最聪明的那条路:让AI真正为你干活。\n性能:第五代 骁龙 8至尊版,重新定义\"够用\"\n荣耀Magic8搭载的第五代骁龙8至尊版移动平台,采用 台积电 3nm N3P工艺,全大核设计,Prime核心主频飙到4.6GHz,GPU是Adreno 840,独立缓存从上代12MB直接升级到16MB,L2+L3总缓存高达32MB。这意味着什么?多任务切换零卡顿,后台挂二十个应用照样丝滑。\n但荣耀不甘心只做\"跑分机器\"。行业首发的幻影引擎3.0移动端DLSS技术,通过AI超帧+AI超分双核心能力,把《原神》这种原生60帧游戏直接拉到120帧,画质还更细腻,功耗反而更低。配合新一代青海湖 电池 和\"蝶翼\"3D仿形不锈钢VC散热系统,重载场景下整机性能无畏释放。官方实测做到了\"六个零\"——零时延、零闪退、零闪跳、零丢帧、零断触、零抖动。这不是广告词,是SGS系统动效流畅双优认证盖了章的硬实力。\n续航:7000mAh青海湖电池,一天一充成过去式\n7000mAh什么概念?典型值7000mAh,额定6820mAh,这是目前旗舰机里电池容量的天花板级别。配合荣耀都江堰AI电源管理系统,行业首发毫伏级电压稳定算法,在线看视频、网购等场景功耗进一步降低13%。正常使用两天一充完全不是梦,重度用户一天也绰绰有余。\n充电更是残暴——90W有线超级快充,80W无线超级快充,还支持无线反向充电。260多款车型支持50W无线快充,开车往充电板上一放就能回血。这个续航组合,放在2026年的旗舰市场里,依然是第一梯队的存在。\n影像:超夜神长焦,黑夜不再是摄影的禁区\n后置三摄系统个个能打。5000万像素主摄,1/1.56英寸超感光元件,f/1.9大光圈,支持OIS光学防抖和四合一2.0μm大像素输出。5000万像素超广角,122°超广视角,2.5cm高清微距,拍风景拍细节两不误。\n真正的杀手锏是那颗6400万像素潜望式长焦——荣耀叫它\"超夜神长焦\"。f/2.5光圈,3倍光学变焦,最高120倍数字变焦,CIPA 5.0专业级防抖。什么概念?演唱会坐山顶,拍舞台上的人脸,清晰得连睫毛都数得清。暗光拍人更是一绝,AI光斑拟真、AI肤质优化,光影自然、人像清透,氛围感直接拉满。\nYOYO影像智能体更是行业首发AI追色功能,从经典胶片到电影级专业色调,一键切换,每个人都能当色彩大师。超全能实况照片支持慢放、运动幻影、运动分身三种创意玩法,发社交平台直接炸裂。\n屏幕:6.58英寸直屏,护眼做到了变态级\n6.58英寸OLED直屏,2760×1256分辨率,460ppi,120Hz LTPO自适应刷新率,HDR峰值亮度6000nits,全局峰值1800nits。这块屏的色彩和亮度已经是顶级水准,但荣耀真正卷的是护眼。\n行业首创AI视觉健康管理系统,九大AI护眼科技:4320Hz超高频PWM零风险调光、芯片级AI离焦护眼、圆偏振光护眼2.0、干眼友好智能眨眼检测、类自然光护眼、AI助眠显示……德国莱茵全局护眼5.0认证不是白拿的。数据说话:13°短暂性近视平均改善,64.9%叶黄素利用率提升,19%泪膜指标平均改善,18%视疲劳下降,20%褪黑素提升。这不是手机屏幕,这是一副护眼仪。\nAI:YOYO智能体,手机终于有了\"脑子\"\n荣耀Magic8最核心的差异化,是MagicOS 10和YOYO智能体。基于荣耀魔法大模型3.0,YOYO获得了中国信通院L3卓越级认证——这是智能体泛化能力的最高等级。它不依赖死记硬背的指令,而是真正理解你的意图,覆盖3000+场景自动执行,TOP100三方应用和80%系统应用全打通。\n帮你购物比价、分析午餐营养、生成出游攻略、搜索附近美食、写Z世代消费趋势报告……长按AI键唤醒,说一句话的事。更狠的是\"换脸+变声+话术\"三位一体AI反诈,多人换脸检测、AI变声检测、AI诈骗话术检测,全方位守住你的钱包。\n写在最后\n荣耀Magic8,4499元起售,国补15%到手更香。7000mAh电池、第五代骁龙8至尊版、超夜神长焦、4320Hz护眼屏、L3级AI智能体——每一项单拎出来都是旗舰标配,合在一起就是2026年最值得买的AI旗舰,没有之一。\n天青釉配色背板上那层蝉翼纹,是宋代汝瓷跨越千年的致敬。拿在手里,你握着的不只是一台手机,是荣耀对\"科技理想主义\"最浪漫的回答。",
+        "Url": "https://post.smzdm.com/p/arzg6zdg/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1778593707,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.794655
+      },
+      {
+        "Title": "第五代骁龙8至尊版赋能,荣耀Magic8上手体验 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "-1449358574210923328",
+        "ContentText": " 这里我连续YOYO视频通话识物三个，它都精准识别出来了，包括3D打印的多啦A梦摆件和克隆人士兵头盔，真力音箱。\n 我也尝试了英语陪练，基本上都是YOYO主动连续陪聊，非常适合练习口语。\n 当然也可以在YOYO智能体模式下使用拍照来进行AI识别，提供实用有用信息，也都能做到非常精准和实用，它还接入了Deepseek，可以使用深度思考功能，也可以直接呼出YOYO智能体，点单奶茶或者外卖。\n 任意门功能则更加贴合实用，比如我在小红书看到了一个音箱，可以直接长按识别图片，拖动到边缘的YOYO上，底部会出现购同款，点击任意购物APP就可以实时购物，相对于以前还需要单独保存图片，在单独购物APP中开启图片识物更方便。\n 至于AI常见的功能，比如AI翻译/实时翻译、AI通话、文字提取、文档扫描也都无压力，通过YOYO智能体去使用这些功能变得很有意思。\n 在安全方面，还可以开启AI反诈防护，利用AI检测AI换脸和变身，以及诈骗话术，前者倒是有些魔法对轰的意思了。\n 回到开头，你可以放心的使用内置的AI应用，享受娱乐和生产力乃至安全防护的全方位体验。\n简单聊聊屏幕\n 荣耀Magic8搭载了一块6.58英寸，1~120Hz自适应刷新率的OLED屏幕，分辨率1.5k，边框仅为1.18mm，屏幕峰值亮度1800nits，HDR峰值亮度能达到6000nits，通过了德国莱茵 TUV 全局护眼 5.0 认证。\n 这块屏幕最值得一体的是PWM零风险调光，同时可以设置AI，实现护眼检测。\n 以上这些荣耀都整合为了荣耀绿洲护眼，对于使用OLED一直敏感的人群来说是一个非常不错的选择。\n 它的护眼检测选项还是非常丰富的。\n续航与充电\n 得益于第五代骁龙8至尊版移动平台的优势以及荣耀Magic8搭载的7000mAh容量青海湖电池，荣耀Magic8的续航非常给力。\n 这个续航具体有多给力呢？\n 两组数据提供答案。\n 第一组数据：\n 第一天晚上电量大约在95%~100%之间开始使用手机。\n 其中手游耗时4小时29分钟（设置为均衡模式），B站耗时45分钟，相机耗时10分钟，中间偶尔穿插打开手机，看看小红书、闲鱼等操作，剩余时间全部为待机，直至第二天晚上8点，依旧还剩余29%的电量，此刻手机使用时间为10小时38分钟（中间误操作拔插了非原装快充线，充电了十几秒）。\n 第二组数据：\n 满电开始使用，也就是第一天晚上充满电，第二天上午开始使用。\n 其中手游耗时整整3个小时（游戏模式），手机图库耗时54分钟，相机32分钟，测试手机性能（安兔兔）前后耗时24分钟，其他零碎app加一起30分钟，其他时间为待机，到了晚上11点，剩余电量15%，此刻手机使用时间为13小时27分钟。",
+        "Url": "https://zhuanlan.zhihu.com/p/1981441475481968690?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 2,
+        "AuthorName": "青衫-鲁斯兰",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-9fa290286afd521ec215b8ed7d85c6ae_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1765192613,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.7825165
+      },
+      {
+        "Title": "荣耀Magic8真实测评:一款被3D人脸识别“耽误”的续航猛兽_手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "-2688480080349642086",
+        "ContentText": "拿到荣耀Magic8之前,我对这台 手机 的印象只停留在它的外观渲染图——直角中框、居中挖孔直屏、圆角矩形的 镜头 模组,看起来就是一台标准的2026年安卓旗舰,没太多惊喜。但半个月用下来,这台手机里有几个体验,是我换回旧手机之后才意识到“回不去了”的——而这些东西,恰恰是在线下卖场五分钟上手根本感受不到的。\n目前荣耀Magic8的主销版本16GB+512GB,官网定价4499元,国补后实际到手价约3899元,叠加以旧换新补贴还能进一步下探。横向来看,这个配置落在4000元价位带,紧咬华为Pura90(国补后同配置约5699元)和OPPO Find X9(约4549元),比小米16 Pro低了约600元。\n在当前存储成本普涨的背景下,荣耀Magic8的定价策略相当务实,把3D结构光、超大 电池 、高频调光护眼屏这些核心卖点精准卡进了4000元以内的预算区间。这个价格到底值不值,取决于你接下来看到的体验细节。\nMagic8和同价位竞品之间最明显的分水岭,不是跑分,而是它保留了3D结构光人脸识别。\n这个功能在参数表上只有一行小字,但日常使用中的体感差异远比你想象的大。从口袋里掏出来看一眼就解锁,不需要刻意对准指纹区域、不需要等屏幕亮起后的那半秒迟滞。更重要的是,它支持支付级安全认证,微信和支付宝都能直接刷脸付款。晚上躺床上侧脸压着枕头也能解,全黑环境下同样秒开——这些场景下,屏下指纹的体验短板会暴露无遗。\n翻阅资料,这块6.78英寸1.5K OLED是四曲面形态,但曲率控制得足够克制,日常使用几乎没有误触。支持1-120Hz自适应刷新,峰值亮度够高,烈日下不需手搭凉棚。关键护眼规格用上了4320Hz超高频PWM调光技术,比华为Pura90与OPPO Find X9在同场景下对频闪的压制更到位——连续夜间阅读两小时后,眼睛的酸涩感出现时间明显更晚。如果你有睡前刷手机的习惯,这个差异是真实可感知的。\n这颗6500mAh第三代青海湖电池,是Magic8给我最大的惊喜。中度使用一天下来通常能剩30%左右,重度用户撑到睡前也毫无压力。放在同价位对比,华为Pura90同样搭载6500mAh电池,两者续航表现基本持平,Find X9的5800mAh则略逊一筹——在5000次循环后健康度仍能保持80%以上,按日均一充换算,五年后电池依然有不错的续航上限。\n100W有线快充搭配80W无线快充,实测有线充电35分钟左右即可充满这块超大电池,无线充速度同样保持在行业第一梯队。早晨起床洗漱的时间,电量已足够应对日常通勤的使用需求。\n骁龙8至尊版移动平台的性能表现几乎不需要过多介绍。 台积电 3nm工艺加持下,日常滑动APP的流畅度完全不用担心,《原神》须弥城跑图30分钟平均帧率59.5帧,《崩坏:星穹铁道》满特效场景稳定在58帧以上,性能释放积极但机身温度控制得当。\n但坦白讲,到了这个价位的旗舰,日常使用的流畅度差异已经很难拉开差距——Magic8真正的优势不在于跑分比谁高,而在于MagicOS 16系统带来的AI整合体验。\n任意门功能在Magic8上进化到了3.0版本。长按图片或文字拖到屏幕边缘,系统会自动识别内容类型并推荐对应的应用——拖到微信头像直接发送,拖到日历自动创建日程,拖到地图自动搜索地址。这个交互乍看是“锦上添花”,但用久了会发现它是一种直觉化的操作方式,绕开了传统分享菜单的中间步骤。\nYOYO建议的智慧感知能力同样有实打实的便利性。快递到了自动展示取件码,地铁过闸自动弹出乘车码,航班变动主动推送提醒——这些功能不会时刻刷存在感,但在你需要的时候,往往已经提前准备好了。\nMagic8后置5000万像素主摄(1/1.3英寸大底,OIS)+5000万超广角微距+5000万像素潜望式长焦(3倍光变,OIS),这套配置在同价位属于主流水平。白天场景下主摄出片色彩偏真实,没有过度锐化的痕迹。长焦端在3倍到5倍之间的解析力不错,但超过10倍后细节开始明显下降。\n夜景模式下对高光的压制比较克制,暗部细节保留到位,但整体的影调调校偏“记录真实”,不像某些竞品那样追求强烈的视觉冲击力。换句话说,Magic8的影像系统可靠但不惊艳——它能忠实地记录你看到的,但不会替你把普通场景拍出高级感。\n综合来看,Magic8的优势项非常清晰:3D结构光带来的无感解锁体验、6500mAh超大电池的长续航安全感、4320Hz高频调光的顶级护眼屏,以及MagicOS 16的AI实用功能。它的短板也不是没有——影像调校偏保守,缺少类似哈苏、 徕卡 的影调风格化;重量配上大电池不算轻巧,戴上壳接近230克。\n如果你最在意的是每次掏手机都能秒开不折腾、一整天的续航不用焦虑、睡前刷屏幕眼睛不酸,那同价位目前很难找到比Magic8更对味的选择。它适合务实派用户——不需要手机帮你“表达个性”,只需要手机在每一天的琐碎日常里,做到省心和可靠。\n半个月的主カ机体验下来,Magic8给我的感觉像一位沉默的管家:不张扬,但把你最在意的那几件事办得妥妥帖帖。你选手机的时候,最不能妥协的体验是什么?是解锁速度、续航时长,还是拍照风格?欢迎在评论区聊聊你的排序。",
+        "Url": "https://post.smzdm.com/p/az8qq3q0/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1778155540,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.7759516
+      },
+      {
+        "Title": "如何评价 10 月 15 日发布的荣耀 Magic8 系列?手机有哪些亮点? - 知乎",
+        "ContentType": "Answer",
+        "ContentID": "-1250090871443050271",
+        "ContentText": "针对用眼健康，荣耀Magic8系列不仅拥有之前的绿洲护眼屏的特性，还新增支持AI 视觉健康管理系统，通过护眼监测与统计、个性化屏幕适配、照明闪烁检测三大技术方案，为用户建立全方位视觉健康防护体系。如今的Magic8系列能够主动检测用眼环境以及用眼姿态，智能提醒用户注意，并且能够深度分析用户用眼情况并且给出针对性的建议，生成可视化的个人用眼报告（日/周/月报），报告清晰呈现用眼数据评价与风险分析、阶段性趋势变化、用眼数据统计图表等。针对不同消费者的个体差异，个性化显示功能能够根据每个人的视觉特征，智能调整亮度和色彩。\n·巅峰续航\n续航方面，标准版电池容量为 7000mAh，Pro 版电池容量为 7200mAh，均采用15%高硅含量负极材料，Pro版支持120W有线快充及80W的无线快充。荣耀 Magic8 全系支持荣耀都江堰电源管理系统，搭配自研能效芯片 HONOR E2 ，通过毫伏级电压稳定算法，实时调节 CPU、GPU、NPU 等硬件节点的电压，智能分配电力，减少无效功耗，使得系统整体续航表现提升 10%，充分发挥大容量电池的优势。\n·巅峰可靠\n可靠性方面，荣耀 Magic8 系列支持 IP68 防尘防水与 IP69/IP69K 双认证。大家可能对于IP68防尘防水比较清楚，但是IP69/IP69K却不太了解。IP69/IP69K 防高温高压喷水，能抵御 80℃高温、80bar 高压水流冲刷，比较适合洗车、工业环境等极端场景使用，大幅提升机身耐用性。\n通讯方面，荣耀 Magic8以及荣耀 Magic8 Pro的1TB 版本支持北斗卫星短信功能。在突发灾难和地面网络通信中断的紧急情况下，卫星通信能够提供紧急救援，针对诸如自驾、户外徒步、垂钓等场景，也能构建一道安全防线。\n针对消费者经常遇到的地铁高铁信号不佳等痛点场景，荣耀 Magic8 系列采用全新鸿燕六翼天线设计，通过内置四个天线信号引擎+2 个虚拟天线信号引擎，将手机机身都利用上，变成一个大号的信号引擎，相比上一代信号至高提升 70%+，让信号收发能力“再上一层楼”。针对信号通道堵塞问题，荣耀 Magic8 全系支持专载信道服务，通过 AI 智能别拥塞场景，自动开启 VIP 信道，通过提供付费（目前由荣耀承担，限期免费）空口的 QoS 功能，实现专线加速，在特定的拥塞场景状态下，可以有效减少网络卡顿概率，提升网络流畅体验。",
+        "Url": "https://www.zhihu.com/question/1961832439438607799/answer/1961905323385262439?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 8,
+        "AuthorName": "龙鳞",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-86846f2e361c1db80be270d231decc8b_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1760534679,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.7453043
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀Magic8综合评测,看完本期视频,再选择_什么值得买",
+        "ContentType": "",
+        "ContentID": "-5072343863182154387",
+        "ContentText": "这款手机用两个月下来,最打动人的不是某项参数多亮眼,而是日常通勤刷视频、临时开黑打游戏、地铁拍照不手抖,件件小事都能稳稳接住,像一件合脚的鞋,跑得不快,但走远路不累人\n荣耀Magic8搭载第五代骁龙8至尊版芯片,配备16GB运行内存和7000mAh青海湖电池,支持90W快充,性能表现优秀,续航能力出色,实测可支持6-8小时高画质游戏,日常使用一天剩余20%以上电量。屏幕为6.58英寸1.5K分辨率,支持3840Hz高频PWM调光和圆偏振光护眼技术,具备TUV无频闪认证,护眼能力进一步提升,并新增护眼监测功能。支持超声波指纹解锁。影像方面采用6400万像素超夜神长焦、5000万像素超清主摄和5000万像素超广角三摄组合,算法优化到位。整机配置均衡,兼顾游戏、影像、屏幕与续航,综合体验优秀,是当前值得入手的旗舰机型之一。",
+        "Url": "https://post.smzdm.com/zz/p/a8wdww5l/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1767335560,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.7031307
+      },
+      {
+        "Title": "荣耀Magic8深度评测,标准版有多能打?_什么值得买",
+        "ContentType": "",
+        "ContentID": "8180466644019374675",
+        "ContentText": "这手机堆料扎实,7000毫安电池配90瓦快充,出差党用起来心里踏实。YOYO智能体能写脚本、识物体,日常确实省事不少,AI不是噱头,是真能上手干活的那种 荣耀Magic8搭载6.58英寸OLED直屏,超窄四等边设计,屏占比达95%,支持120Hz刷新率与PWM调光,配备荣耀绿洲护眼技术,支持智能调节色温与干眼友好模式。机身采用旭日金配色,背部磨砂质感,不沾指纹,镜头模组具悬浮感。搭载第五代骁龙8至尊版处理器,运行内存16GB+16GB,实测原神高画质稳定60帧,散热表现优秀。后置三摄为5000万主摄、5000万超广角及6400万超夜神长焦,支持3倍光学变焦和100倍数字变焦,具备AI追色与灵感帮拍功能。内置7000mAh电池,支持90W有线快充与80W无线快充,重度使用一天无压力。运行MagicOS 10,集成YOYO智能体,支持语音指令生成视频脚本等AI操作,整体体验流畅全面。\n",
+        "Url": "https://post.smzdm.com/zz/p/awm63kgm/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1765204646,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.6928918
+      },
+      {
+        "Title": "如何评价 10 月 15 日发布的荣耀 Magic8 系列?手机有哪些亮点? - 知乎",
+        "ContentType": "Answer",
+        "ContentID": "-266651275927392731",
+        "ContentText": "2025年10月15日晚间，荣耀方面正式发布了以Magic8系列智能手机、MagicPad3系列平板电脑为代表的一系列全新产品。\n在参加完此次活动，并仔细研究了荣耀一众新品的配置和功能特点后我们发现，让产品更年轻、摆脱过往那种较为明显的“商务气息”或者说“爹味审美”，很可能正是荣耀这一批的新机重点。\n看到这里，可能有的朋友就会表示不同意，毕竟Magic8系列不是依然用了家族式的“奥利奥”大体型后摄模组，Pro版同样没有用直屏，怎么就直接“年轻化”了呢？\n首先从外观造型来看，此次荣耀Magic8系列的确延续了家族式的“方圆宇宙”后摄模组造型。但如果将其与此前的Magic V5等明显更商务定位的机型相比就不难发现，Magic8系列的后摄明显没有那么凸起，后摄Deco的造型也不再那么繁复。\n与此同时，无论Magic8还是Magic8 Pro，都采用了更受年轻用户欢迎的“大立边”中框设计。而在屏幕方案上，Magic8采用6.58英寸四等边直屏，Magic8 Pro的6.71英寸等深四微曲屏虽然带有“曲面”造型元素，但其实只是在边缘的位置有很小的曲面转折，其整个屏幕的主体显示部分，基本上可以被视为“直屏”。\n那么，Magic8系列为什么要采用这样的屏幕造型呢？大家都知道，与“大曲面”屏相比，直屏和微曲屏幕会更加耐摔，维修成本也相对较低。但最为重要的是，这两种屏幕形态都能够很好地避免屏幕边缘的误触问题，从而增强在游戏场景的用户体验。\n是的，不管Magic8、还是Magic8 Pro，“游戏性能”都成为了这一代机型的亮点之一。根据荣耀方面的表述，Magic8此次全系搭载了第五代高通骁龙8至尊版主控，并匹配他们与高通深度合作的“超融核“架构，其常温环境下安兔兔的跑分更是可以达到4288382分。\n在游戏相关功能上，Magic8系列拥有行业中独家的“AI渲显分离”，可实现游戏0抖动。此外还支持GPU-NPU异构超分超帧，能够将游戏渲染分辨率提升至1080P，同时支持120FPS高刷超帧。\n当然，对于Magic8系列来说，旗舰平台的意义不只是“打游戏”，它也成为了全新MagicOS 10操作系统的底层驱动力。",
+        "Url": "https://www.zhihu.com/question/1961832439438607799/answer/1962287672107173383?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "三姨君",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-cfe229e178ec7d9bb3ef62c7267bccf8_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1760625838,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.6883802
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:12:41.812Z"
+  },
+  "荣耀 Magic8 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic8 Pro",
+      "price": "¥ 5699",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 5699"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5999"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 6199"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "雪域白",
+        "旭日金砂",
+        "绒黑色",
+        "天青色"
+      ],
+      "specs": {
+        "chip": "骁龙®️8至尊版移动平台",
+        "battery": "7200mAh",
+        "screen": "6.71英寸",
+        "charge": "80W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "features": [
+        "7200mAh 80W荣耀超快充",
+        "骁龙®️8至尊版移动平台 芯片",
+        "6.71英寸 OLED 120Hz"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "荣耀Magic8 Pro体验:AI原生+摄影搭子,这一台就够了! - 知乎",
+        "ContentType": "Article",
+        "ContentID": "3541081997950855204",
+        "ContentText": "一直以来，荣耀影像的实力似乎总被市场所低估。但这一次，荣耀Magic8 Pro颇有拿回属于自己的一切的势头。不仅堆砌了顶级的摄像头硬件，更用AI赋能了从拍摄到后期的全流程。\n核心的亮点，是那颗2亿像素超夜神长焦。配合1/1.4英寸大底传感器与CIPA 5.5级光学防抖系统，即使在夜景、手持慢速快门等复杂场景下，也能轻松拍出稳定清晰的画面。AI会自动识别光源类型与环境亮度，动态优化曝光曲线，让照片在明暗之间的过渡更加自然，画面层次更通透。2亿超高像素，再配合行业最稳的CIPA 5.5级防抖，意味着即使在光线昏暗的夜晚，你也可以更从容地拍摄，不必再为手抖而烦恼。\n从我们拍摄的夜景样张来看，画面纯净度极高，AiMAGE·夜神引擎让建筑轮廓清晰锐利，即使放大到10倍甚至14.8倍，细节依然经得起推敲。这种无论远近、无论昼夜都能保持清晰的体验，在当下的旗舰机中也属罕见。\n当然，人像是检验影像实力的另一大标准。这颗长焦镜头搭配全新的AiMAGE·人像引擎，无论是肤质的细腻优化，还是光影的立体还原，都做得相当出色。长焦天然的构图优势，让你能轻松拍出具有景深层次感的半身像或特写，肤色自然，氛围感十足。新增的“舞台模式”更是为演唱会、话剧等场景而生，想必会成为追星一族的神器。\n比如，你在图库里看到一张色调非常喜欢的照片，现在可以通过AI吸取它的色彩风格，一键应用到你刚拍的照片上，还能将这种风格保存下来，形成你自己的“色彩库”。这种通过AI降低创作门槛，帮助用户快速出片的设计理念，才是一个“摄影搭子”该有的样子。\nAI原生体验：一键直达，化繁为简\n荣耀这次将AI的权重提到了前所未有的高度，所谓的“8大AI技术领先、8大AI体验领先”并非空谈，而是实实在在地渗透到了系统的每一个角落，核心的进化在于智能体YOYO。\n它获得了信通院L3卓越级的认证，这听起来很专业，但翻译成大白话就是：YOYO变“精”了。\n你不再需要下达精确指令，哪怕只是一句模糊的话，它也能结合你当下的场景，真正理解你的意图。",
+        "Url": "https://zhuanlan.zhihu.com/p/1961900201687089567?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 3,
+        "AuthorName": "太平洋科技",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-bd336db02144c587547a1ce249e8cd10_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1760533488,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.8316946
+      },
+      {
+        "Title": "荣耀Magic8 Pro:更稳健的荣耀,更扎实的影像旗舰水桶机 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "3937582438486049945",
+        "ContentText": "GFXBench也跑了一波成绩，这个软件据说也快要下架成为历史了，就不过多解读，大家自行对比吧。\n\n咱直接开始实测，我们使用腾讯旗下专业测试软件性能狗进行测试。\n像王者荣耀这种小游戏开全高极致，单局10分钟平均120.3，这种8 Elite跑已经稳如老狗的游戏，我们就不赛博斗蛐蛐，而是直接来看功耗。\n均为王者荣耀最新版，对比机型选取了最新的天玑9500（vivo X300）、前代的骁龙8 Elite（REDMI K90），可以看到荣耀Magic8 Pro的平均功耗都是“垫底”的平均2.36W水平，不出意外也是更省电发热更小的。\n\n来展开看看30分钟原神全高60帧的表现，平均60.3帧跑下来，几乎不可感的10分钟微小卡顿也仅1次（X300为4次，K90为9次）。\n平均功耗3.35W，其它两个对比机型均在3.8W左右了。\n\n换到大家还没征服的崩坏：星穹铁道看看，30分钟平均59.7帧排名第一，明显可感知的10分钟严重卡顿为3.6次，相比X300的6次直接腰斩，前代SoC的K90更是有9次。\n这次功耗没能“垫底”，反直觉的是荣耀Magic8 Pro平均4.12W，优秀但不是最优秀的；\n屏幕更小的X300拉高到了4.92W，倒是前代平台的K90却压到了3.92W，猜测是K90的屏幕发力省电了。\n\n在游戏体验这块，官方宣传的“0”时延、“0”闪退、“0”闪跳、“0”丢帧、“0”断触、“0”抖动确实名副其实了。\n荣耀的游戏管家算不上大而全，但也是该有的一个不少——幻影稳帧、触控增强、画质增强、充电分离都有，还和王者荣耀等游戏官方合作了帧率增强插帧功能，直接联动游戏内开关，可以说是更加稳定，也是更加深度的优化了。\n\n接下来说说影像，这是Magic系列的核心卖点，也是大家对荣耀旗舰最期待的一点。\n说实话，用上Magic8 Pro之前，虽然不久前的荣耀GT Pro已经超出了我的预期，但换到旗舰上，我也在担心其影像实力如何，到底能不能稳坐旗舰之位？ \n白天主摄1x赛博斗蛐蛐也没意义，直接来到荣耀Magic8 Pro的日间长焦表现。这颗2亿像素长焦镜头能做到原生3.7x光学变焦，最高可达100倍的数字变焦。\n我们从1x的23mm来到10x变焦下的230mm焦段，大多的“中杯”机型已经将远处建筑的线条融到了一起，而2亿像素的荣耀Magic8 Pro却依然能够清晰可辨。\n这两年各家机型都引入了AI长焦的能力，荣耀Magic8 Pro的表现却是超出我预期不少，在真实感的还原上极强。\n",
+        "Url": "https://zhuanlan.zhihu.com/p/1987088744197662223?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 3,
+        "AuthorName": "伦Ellen",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-3fb84c5212dc2d883320cd463d98dfd0_l.jpg?source=bbf6831d",
+        "AuthorBadge": "https://picx.zhimg.com/v2-2ddc5cc683982648f6f123616fb4ec09_l.png?source=32738c0c",
+        "AuthorBadgeText": "信息技术行业 从业人员",
+        "EditTime": 1773750109,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.821107
+      },
+      {
+        "Title": "荣耀Magic8pro值得入手吗? - 知乎",
+        "ContentType": "Answer",
+        "ContentID": "-2722813226456804673",
+        "ContentText": "荣耀Magic8 Pro这款手机总体来说非常全面非常均衡，算是同档位最全面的一款旗舰手机。\n去年年底给家人换了这款手机，不玩游戏，但是每天都产时间用手机，续航方面一天一充，完全够用；拍照方面表现也很不错，系统方面家人用华为换到荣耀相似度也比较高，系统流畅。\n这款手机适合大部分用户。\n1、【旗舰高端】荣耀Magic8 Pro（2025年10月 上市） 推荐指数5星\n总评：【拍照一流+性能顶级+四等深微曲屏+护眼顶级+续航一流+信号好+防水耐摔+卫星通信】\n【要点解析】\n1.性能：搭载了新款旗舰骁龙8 Elit Gen5芯片、加上LPDDR5X内存、UFS4.1闪存顶级铁三角组合，总体性能表现与游戏稳定性方面表现都非常强，当前性能第一档，可以满足重度游戏需求。新一代超广域液冷散热(5794mm2蝶翼3D仿形不锈钢VC)，幻影引擎3.0。\n2.屏幕护眼：1.5K分辨率的四边微曲屏，手感不错，巨犀玻璃很耐摔（同档位少有）；顶级的AI自然光绿洲护眼屏，4320Hz高频pwm调光、圆偏振光2.0、类自然光护眼、自然色彩显示，莱茵低蓝光认证、AI离焦护眼2.0、AI干眼友好、AI助眠显示等，首发护眼灯频闪检测功能，首发莱茵护眼5.0，护眼顶级等；\n3.影像：自拍顶级，后置三摄全焦段：1/1.3英寸50Mp大底主摄支持f/1.6大光圈，拍照不错；大底超广角微距镜头支持122°超广视角，非常不错；1/1.4英寸200Mp高清超大底潜望长焦，支CIPA5.5级专业防抖，非常优秀（当前最大底的长焦），同时支持雅顾人像，总体拍照不错。\n4.续航充电：7200毫安第四代青海湖电池，15%硅含量，目前同档新机中顶配，续航优秀，120W有线快充速当前顶配，兼容100W PPS协议快充，同时支持80W无线充电很快；还有能效增强芯片E2等加持，续航体验不错。\n5.防护：顶级的IP68 & IP69 &IP69K防尘防水；巨犀玻璃屏幕更耐摔，通过瑞士SGS多场景金标五星抗跌耐摔认证。\n6.通信：搭载了信号增强芯片C1+，支持24个5G频段；1TB版支持卫星短信。\n7.其它：金属中框，超声波指纹，少有的3D人脸识别，AI检测换脸；环绕低音炮音质非常好，SGS手机音质五星认证；实体AI按键、自进化YOYO智能体，全品牌智联一碰互传，支持与电脑协同互联；还支持最新的蓝牙6，非常全面。\n【选购建议】\n・一款常规尺寸的旗舰影像高档手机，四微曲屏，总体很强很全面，可以说是同档位最全面的旗舰Pro版本手机。同当唯一的四微曲屏新机，同档少有的兼顾顶级性能、顶级续航、顶级护眼、顶级防水耐摔、影像不错、3D人脸识别、卫星通信(1T版本)、超声波指纹等的手机，AI功能非常强大，性价比不错，外观颜值不错，总体在5000+元档中是非常有竞争力。相比上代Magic7 Pro主要：性能、续航、充电速度、护眼、影像、蓝牙等升级，屏幕小了一点点。\n・适合人群：商务职场人士，护眼人群、人像拍照用户。",
+        "Url": "https://www.zhihu.com/question/2008185783555749166/answer/2034598839022268726?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 6,
+        "AuthorName": "清风独此一笑",
+        "AuthorAvatar": "https://pica.zhimg.com/50/v2-fbcdb6fa20f866d8635762296a39e0b6_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1779178021,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.7155902
+      },
+      {
+        "Title": "荣耀magic8pro体验_手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "9172698240630951469",
+        "ContentText": "、性能\n骁龙 8至尊版第五代: 台积电 3nm工艺打造2+6全大核架构(2×4.6GHz Oryon v2超大核 + 6×3.62GHz能效核),集成Hexagon NPU,安兔兔V10跑分突破428万,GeekBench 6多核性能达12000分,较前代提升20%。\n能效优化:毫伏级AI稳压算法实时调度芯片功耗,高负载场景(如《星穹铁道》全高画质)帧率稳定59.8fps,GPU功耗降低18%,机身温度控制在41℃以内。\n二、影像\n百倍长焦+超强防抖:Magic8 Pro搭载CIS 5.5级防抖系统,支持100倍超远变焦,暗光环境下长焦画质依然清晰稳定。\nAI追色技术:首创“影调复刻”功能——用户上传任意参考图,AI即可生成同款色彩预设,并应用于拍摄或后期修图,实现风格化创作零门槛。\n超焦距人像优化:长焦人像模式通过AI景深计算,实现发丝级边缘识别与自然虚化过渡,媲美专业微单质感。\n荣耀 Magic8Pro影像配置\n荣耀Magic8标准版影像配置\n三、续航\n青海湖 电池 技术:硅碳负极材料提升18% 能量 密度,Magic8Pro在7.95mm轻薄机身容纳7200mAh超大容量,Magic8在7.95mm轻薄机身容纳7000mAh超大容量,打破“大电池必厚重”定律。\n荣耀Magic8Pro实测场景表现:\n重度5小时测试(游戏/视频/直播):剩余电量31%\n6小时4K视频录制:剩余电量28%\n120W有线快充:25分钟充满,10分钟补电至40%\n80W无线快充:兼容100W PPS协议,覆盖260+车充生态",
+        "Url": "https://post.smzdm.com/p/aqklg9x2/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1767920061,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.7070162
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀Magic8 Pro深度测评|2025旗舰天花板?_什么值得买",
+        "ContentType": "",
+        "ContentID": "3156355701386939021",
+        "ContentText": "这手机的AI确实省事,像做饭时让它记个菜谱、路上问个导航,动动嘴就搞定。不过最打动我的还是长焦拍夜景不糊,遛弯随手一拍发朋友圈,不用修图都好看\n荣耀Magic8 Pro搭载骁龙8 Gen5至尊版处理器,安兔兔跑分达428万,性能强劲且功耗控制优秀,游戏满帧运行稳定。配备7200mAh青海湖电池,支持120W有线快充和80W无线快充,续航持久,充电迅速。影像方面采用2亿像素超夜神长焦镜头,1/1.4英寸大底传感器,支持CIPA 5.5级防抖,10倍混合变焦、100倍数字变焦成像清晰,夜景表现优异;AI追色、鹰眼抓拍、雅顾人像等功能提升拍摄体验。内置YOYO智能体覆盖出行、美食、健康、办公等3000+场景,支持语音一键操作,实现生活事务高效处理。屏幕为6.71英寸等深四曲屏,支持1-120Hz自适应刷新率与4320Hz超高频PWM调光,获莱茵全局护眼5.0认证,具备AI离焦技术和视觉健康管理功能。机身设计精致,雪域白配色搭配玻纤材质与珠光镀膜,握感舒适,辨识度高。",
+        "Url": "https://post.smzdm.com/zz/p/akozzz44/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1765602526,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.693242
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 全面升级,全面越级——荣耀Magic8 Pro深度体验评测_什么值得买",
+        "ContentType": "",
+        "ContentID": "6657411384914881283",
+        "ContentText": "荣耀Magic8 Pro这回把AI和影像结合得挺自然,尤其是抓拍和追色功能,对普通用户来说很实用。以前拍运动场景总糊,现在能定格瞬间,连发几张都能用,这才是技术该有的样子\n荣耀Magic8 Pro作为荣耀Magic系列的最新产品,带来了全方位的升级和越级体验。从外观设计到硬件配置,再到影像系统和AI功能,荣耀Magic8 Pro都表现出色。其搭载的2亿超夜神长焦摄像头、AI实体按键、以及行业领先的CIPA 5.5级防抖技术,都极大提升了拍照体验。此外,该机型还通过了德国莱茵全局护眼5.0认证,注重用户的护眼体验。在性能方面,荣耀Magic8 Pro搭载了第五代骁龙8至尊版处理器和MagicOS 10系统,提供了流畅的游戏体验和个性化的用户界面。整体而言,荣耀Magic8 Pro是一款配置顶级、功能全面、体验卓越的智能手机,无愧于荣耀历史最强手机的称号。",
+        "Url": "https://post.smzdm.com/zz/p/a2qr9nx7/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1767510271,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.6832254
+      },
+      {
+        "Title": "【荣耀Magic8 Pro评测:软硬协同齐发力 影像重回第一梯队】听劝的荣耀有多..._什么值得买",
+        "ContentType": "",
+        "ContentID": "-3552405322052313444",
+        "ContentText": "这回荣耀在影像上的投入确实看得见,尤其是暗光环境下的成像稳定性和长焦细节,日常拍远景不用凑近也能清晰捕捉,对普通用户来说很实用。重点是AI调色自然,不靠堆参数糊弄人,这点难得 荣耀Magic8 Pro搭载夜神影像系统与行业最大2亿像素长焦镜头,配合AI算法实现硬件与软件协同提升,支持全焦段人像优化、AI追色、动态照片等创意拍摄功能,视频支持4K60帧HDR录制。首发第五代骁龙8至尊芯片,配备自研射频增强芯片与幻影引擎3.0,实现AI超帧与超分技术,游戏性能稳定,散热系统采用超广域设计,实测温控出色。内置7200mAh青海湖电池,支持120W有线与80W无线快充,续航强劲。首发MagicOS10系统,集成YOYO智能体,支持多平台比价、出行规划、跨设备换机克隆等功能,搭载VLA大模型MagicGUI,具备高阶AI交互能力,获得中国信通院L3级智能体认证。屏幕为6.71英寸四微曲屏,峰值亮度达6000尼特,支持全局1800尼特,具备AI视觉健康管理系统,可检测环境光闪烁与色温,提供个性化护眼调节。\n",
+        "Url": "https://post.smzdm.com/zz/p/aeo34m54/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1765278508,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.6787844
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 最均衡影像旗舰 荣耀Magic8 Pro 深度体验!#有点东西# 兔撕机等人的共..._什么值得买",
+        "ContentType": "",
+        "ContentID": "-7264183035623033620",
+        "ContentText": "荣耀Magic8 Pro的影像调校确实稳,日常拍娃或是扫街,随手一拍就有那种接近人眼看到的真实感。参数堆得再高,最后还是得回归到“能不能留住生活原本的样子”这一点上\n荣耀Magic8 Pro作为品牌转型的关键产品,在影像、屏幕、性能和续航等方面实现全面提升。主摄采用5000万像素1/1.3英寸传感器与f/1.6大光圈,色彩调校表现出色,夜景高光压制与纯净度优秀;长焦升级为2亿像素1/1.4英寸传感器,支持3.7倍光学变焦与AI超清长焦,微距和望远能力突出。屏幕为6.71英寸等深四微曲设计,1.5K分辨率120Hz LTPO面板,峰值亮度达1800nit,护眼功能丰富,支持多档调光与环境光监测。搭载第五代骁龙8至尊版,安兔兔跑分超400万,游戏表现稳定,辅以120W有线+80W无线快充与7200mAh电池,续航强劲。新增多功能AI键,支持YOYO智能体、跨系统互联及北斗卫星短信。尽管系统动画与极端夜景仍有优化空间,整体已形成无短板的旗舰体验。",
+        "Url": "https://post.smzdm.com/zz/p/a9krwqx5/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1766375315,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.675809
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:13:06.698Z"
+  },
+  "荣耀 Magic7": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic7",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "月影灰",
+        "天际蓝",
+        "雪域白",
+        "绒黑色",
+        "朝霞金"
+      ],
+      "specs": {
+        "chip": "骁龙®8至尊版移动平台",
+        "battery": "5650mAh",
+        "screen": "6.78英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "绿洲护眼屏"
+      },
+      "features": [
+        "5650mAh 荣耀青海湖电池 100W荣耀超快充",
+        "骁龙®8至尊版移动平台 芯片",
+        "6.78英寸 绿洲护眼屏 120Hz",
+        "5000万像素 超动态高清影像"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀 Magic7 深度评测:护眼直屏 + 骁龙 8 至尊版,4000 元档的“..._什么值得买",
+        "ContentType": "",
+        "ContentID": "-6012615861179264160",
+        "ContentText": "这手机把护眼做到这个份上,确实少见。晚上关灯刷屏不累眼睛,对长期通勤、熬夜看小说的人太实用了。直屏加长续航,用起来踏实,不像有些旗舰只堆参数却忽视实际体验\n荣耀Magic7在4000元档位提供了均衡的性能,包括护眼直屏、骁龙8至尊版处理器、大容量电池和快充技术。其屏幕具备高频PWM调光和自然光护眼功能,性能方面搭载了24GB LPDDR5X内存和16GB版本的后台多任务处理能力。影像系统覆盖全焦段,具备优秀的夜景算法和AI抓拍功能。续航与快充表现出色,通信与可靠性方面支持北斗卫星通信和IP68/IP69防水防尘。系统MagicOS 8.0带来便捷的跨屏体验和长期的系统更新支持。尽管在极限夜景方面与顶尖旗舰存在差距,但其综合性能和护眼特性使其成为值得考虑的选择。",
+        "Url": "https://post.smzdm.com/zz/p/a50v8o63/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1758855589,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5847044
+      },
+      {
+        "Title": "荣耀Magic7手机怎么样 荣耀Magic7 5G雪域白12+512GB_什么值得买",
+        "ContentType": "",
+        "ContentID": "-6181686289173398838",
+        "ContentText": "#潜力作者激励计划 #潜力作者激励计划 1、处理器强劲:搭载骁龙8至尊版芯片,《王者荣耀》120帧稳定运行,《原神》全画质满帧,\"运行各种大型從用后游戏都特别流畅,一点不卡顿2、散热出色:配备超广域液冷散热系统,重度游戏\"发热也控制的很好\",机身温度控制合理3、大电池长续航:5650mAh电池配合青海湖电池技术,“日常使用可亮屏九小时\",重度使用一天无压力4、快充便利:支持100W有线+80W无线快充,\"午休半小时就能快速回血”屏幕显示5、护眼技术领先:6.78英寸1.5K直屏,支持4320Hz超高频PWM调光,“在观感护眼上可以说是第一梯队”6、显示效果出色:支持1-120Hz自适应刷新率,HDR峰值亮度5000尼特,\"屏幕整体的细腻程度和通透性是相当不错的”7、手感舒适:机身仅199克,“圆润不割手,中框过度顺滑\",超声波指纹\"解锁体验很棒。",
+        "Url": "https://post.smzdm.com/talk/p/amoldrdp/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1766460173,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5718565
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 拿下1TB旗舰!荣耀Magic7深度解析:直屏党的性能天花板_什么值得买",
+        "ContentType": "",
+        "ContentID": "-1240585403429264627",
+        "ContentText": "直屏党太难不爱了!这块6.78英寸的1.5K OLED直屏,加上骁龙8至尊版性能直接拉满,续航还超能打,简直是为我量身定做的\n荣耀Magic7作为年度旗舰,采用直角金属中框与玻璃后盖设计,搭载台积电3nm制程的骁龙8至尊版处理器,拥有5650mAh大电池和100W有线快充及80W无线充电功能。其6.78英寸1.5K OLED直屏支持120Hz LTPO自适应刷新率,具备超声波3D指纹识别。影像系统包括前置5000万像素AI人像镜头和后置OV50H主摄,支持3倍光学变焦和122°超广角微距。此外,1TB版本支持北斗卫星消息功能,整机通过IP68/IP69防尘防水认证。",
+        "Url": "https://post.smzdm.com/zz/p/aqk5dvmp/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1757133022,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5604725
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀Magic7自费评测,你想知道的都在这了_什么值得买",
+        "ContentType": "",
+        "ContentID": "-4324801729196124094",
+        "ContentText": "朝霞金太骚气了!大直屏+超声波指纹,这手感真绝了,音质震动有点意思,但关掉立体音效就舒服多了,推荐\n荣耀Magic7标准版在外观设计、屏幕、性能、续航等方面表现出色。提供五种配色,采用大直屏设计,中框高亮处理,背面细腻磨砂玻璃,镜头一体性提升。重量202.3克,厚度8.44毫米,镜头凸起3.53毫米。配置IP68/IP69防水、超声波指纹、蓝牙5.4、WiFi7等。扬声器为1216规格,音质调教偏向低音,支持关闭立体音增强以减少震动。屏幕支持4320Hz PWM调光,提供多种刷新率模式,手动亮度780nit,激发亮度1600nit。搭载骁龙8 Elite芯片,在星铁、原神等游戏中表现稳定,功耗控制良好。配备5650mAh电池和100W快充,实测充满约74分钟,续航约8小时44分钟。系统MagicOS 9.0设计风格圆润,新增AI功能如AI扩图、人脸修复,隐私保护功能完善,但存在部分显示细节优化不足、灵动胶囊交互问题等缺点。影像方面主摄OV50H,长焦IMX856,算法仍有提升空间。整体优秀但细节需打磨,适合非苹果生态用户。",
+        "Url": "https://post.smzdm.com/zz/p/a8wvzd77/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1756629134,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5477736
+      },
+      {
+        "Title": "荣耀 magic 7 系列手机有哪些亮点? - 知乎",
+        "ContentType": "Answer",
+        "ContentID": "8881428851354841952",
+        "ContentText": "荣耀Magic7系列手机作为荣耀系列的高端机型，这款手机的亮点还是非常多的，这款手机在性能和外观上面的表现都是比较有亮点的。\n现在正好赶上了国补活动，荣耀Magic7系列手机在价格上现在的优惠力度也是比较大的，知友们要是对这款手机有想法可以趁着现在活动优惠入手哈。\n一、618购物节无门槛包\n京东618购物节红包，今年京东无门槛红包最高是25618元，红包每天可以领取！！！\n天猫618购物节红包，今年天猫无门槛红包最高是25888元，红包每天可以领取！！！\n大家还是可以先收藏文章，然后每天都来领一下红包 ，等到活动尾声的时候，用攒下的红包白嫖一点东西也是不错的。\n一、荣耀Magic7 荣耀AI鹰眼相机 骁龙8至尊版 荣耀AI自然光绿洲护眼屏\n网友评价：\n・外形外观：轻薄时尚\n・屏幕音效：1.5K屏幕清晰度超高\n・拍照效果：AI鹰眼相机拍照效果清晰度超高\n・运行速度：运行速度没得说骁龙至尊版是现在世面最先进的处理器\n・待机时间：待机时间长，一天时间足够用\n・其他特色：防水性好，音质杠杠的。",
+        "Url": "https://www.zhihu.com/question/8410372117/answer/106480286906?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 2,
+        "VoteUpCount": 3,
+        "AuthorName": "点点数码",
+        "AuthorAvatar": "https://pica.zhimg.com/50/v2-16501d12c8e91573a5fc75f7f140ba1a_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1748361145,
+        "CommentInfoList": [
+          {
+            "Content": "[赞同][赞同][赞同]"
+          },
+          {
+            "Content": "这款手机不错的[爱]"
+          }
+        ],
+        "AuthorityLevel": "4",
+        "RankingScore": 2.4780385
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀Magic7全面评测:续航、护眼、影像三重革命,定义旗舰新标准!_什么值得买",
+        "ContentType": "",
+        "ContentID": "5431450525014978098",
+        "ContentText": "#618全网推荐种草赛 这篇攻略太实用了,买手机前必看,处理器到屏幕全都有,省得被坑。抓住618的大优惠,冲冲冲\n荣耀Magic7通过5650mAh大电池和100W快充技术解决了续航焦虑问题,采用4320Hz护眼屏技术减少频闪危害,降低眼疲劳。其影像系统具备超动态鹰眼主摄和AIMotionCapture引擎,提升抓拍成功率。搭载骁龙8至尊版处理器和MagicOS 9.0系统,实现了性能与耐用性的平衡。荣耀Magic7定义了旗舰新标准,价格亲民,让旗舰体验普及化。",
+        "Url": "https://post.smzdm.com/zz/p/aqzdev4p/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1750836556,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.545918
+      },
+      {
+        "Title": "荣耀手机怎么样 荣耀Magic7全系测评:标准 Pro全堆满?_什么值得买",
+        "ContentType": "",
+        "ContentID": "1006367297668189656",
+        "ContentText": "这款荣耀Magic7系列真的太赞了!设计感满满,手感超棒,特别是月影灰配色,质感绝了。屏幕、性能、续航都顶级,还全系标配80W无线充,值\n荣耀Magic7系列包括标准版和Pro版,设计上采用四曲面后背与直角边框,提供多种颜色选择。性能方面搭载骁龙8至尊版处理器,屏幕为1.5K分辨率8T LTPO,支持高亮度和多种调光模式。续航表现优异,第三代青海湖电池容量5850mAh,配备100W有线及80W无线快充。影像系统主摄为5000万像素H9000传感器,长焦支持2亿像素。新升级的MagicOS 9.0强化AI功能,新增实用助手与换脸检测等特性。全系标配IP68、超声波指纹识别与立体声扬声器,整体配置均衡且无明显阉割。",
+        "Url": "https://post.smzdm.com/zz/p/aoq6do4m/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1750476562,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5455012
+      },
+      {
+        "Title": "荣耀Magic7 16GB+512GB天际蓝_荣耀 Magic7_手机市场-中关村在线",
+        "ContentType": "",
+        "ContentID": "1854278733284111505",
+        "ContentText": "荣耀 Magic7 16GB+512GB 5G 手机 天际蓝版,现活动售价4099元,叠加国家补贴15%后,实付仅需3568.51元,超值入手不容错过!这款于2024年10月30日重磅发布的旗舰机型,凭借出众的设计与强悍配置,重新定义高端智能手机体验。机身提供天际蓝、朝霞金、月影灰、雪域白和绒黑色五种高颜值配色,摄像模组采用“方圆宇宙”设计语言,融合艺术美感与科技感,整机厚度仅8.8mm,重量223g,轻薄有质感。搭载6.78英寸2800×1264分辨率OLED超窄等边直屏,支持120Hz自适应刷新率(1-120Hz 8T LTPO)、4320Hz高频PWM调光和圆偏振光护眼技术,配备荣耀巨犀玻璃并通过德国莱茵TÜV全局护眼4.0认证,视觉舒适更安心。全系标配3D超声波指纹,解锁更快更安全。性能方面搭载骁龙8至尊版处理器,配合LPDDR5X内存与UFS 4.0闪存,辅以自研射频增强芯片C1+和能效增强芯片HONOR E2,搭配悬瀑3D双擎不锈钢VC散热系统,总散热面积超30000mm²,首发全栈Vulkan图形引擎,游戏与多任务运行流畅无比。内置5650mAh第三代青海湖电池,支持100W有线快充和80W无线快充,配合都江堰电源管理系统,续航持久回血迅速。影像实力同样顶尖,前置50MP自拍镜头,后置三摄系统包括50MP主摄(豪威OVH9000,1/1.3英寸大底,F1.9光圈,OIS光学防抖)、50MP超广角镜头与50MP长焦镜头(支持3倍光学变焦、50倍数码变焦),拍照清晰稳定,远近皆宜。预装Magic OS 9.0操作系统,行业首个搭载智能体的个人化全场景AI系统,带来更智慧的交互体验。配备荣耀环绕低音炮与超大振幅双扬声器,配合自研空间音频引擎,音效沉浸立体。整机支持IP68/IP69级防尘防水和10倍抗跌防摔能力,坚固耐用。更支持天通卫星通信与北斗卫星短信,在无信号区域也能保持联络。无论是性能、影像、屏幕还是续航体验,荣耀 Magic7 都堪称全能旗舰,现在下单享补贴,到手价仅3568.51元,性价比爆棚,立即抢购畅享极致科技生活!\n好价情报来源于热心网友及商家积极的爆料推荐,商品的促销折扣与价格信息可能出现实时变动,请各位在购买前务必核实确认。如发现问题,欢迎各位通过页面上的“内容纠错”、“纠错与问题建议”或直接发表“评论”等方式进行反馈。",
+        "Url": "https://mobile.zol.com.cn/1117/11178622.html",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1768361181,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5379848
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:13:45.682Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -804,7 +1183,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1778092121,
         "AuthorityLevel": "3",
-        "RankingScore": 2.742573
+        "RankingScore": 2.7410564
       },
       {
         "Title": "荣耀Magic7 Pro,跌至4659元,2亿像素长焦+512GB+骁龙8至尊版_手机_什么值得买",
@@ -820,7 +1199,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1768622493,
         "AuthorityLevel": "3",
-        "RankingScore": 2.66353
+        "RankingScore": 2.6627948
       },
       {
         "Title": "荣耀安卓手机怎么样 参数党必看!荣耀Magic7 Pro隐藏亮点大揭秘_什么值得买",
@@ -836,7 +1215,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1761028193,
         "AuthorityLevel": "3",
-        "RankingScore": 2.5715714
+        "RankingScore": 2.5750046
       },
       {
         "Title": "荣耀安卓手机怎么样 荣耀Magic7 Pro深度评测_什么值得买",
@@ -852,7 +1231,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1751163082,
         "AuthorityLevel": "3",
-        "RankingScore": 2.5427074
+        "RankingScore": 2.543602
       },
       {
         "Title": "2025年618旗舰手机怎么选?4000多元预算,荣耀Magic7 Pro是好选择 - 知乎",
@@ -868,7 +1247,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1749570644,
         "AuthorityLevel": "4",
-        "RankingScore": 2.3524098
+        "RankingScore": 2.3525763
       },
       {
         "Title": "荣耀安卓手机怎么样 16+1TB + 卫星通信才 5399!荣耀 Magic7 Pro 这配置闭眼入..._什么值得买",
@@ -884,7 +1263,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1760073279,
         "AuthorityLevel": "3",
-        "RankingScore": 2.478531
+        "RankingScore": 2.4814494
       },
       {
         "Title": "荣耀安卓手机怎么样 荣耀Magic7 Pro深度体验:续航、快充、屏幕全拉满_什么值得买",
@@ -900,7 +1279,7 @@
         "AuthorBadgeText": "",
         "EditTime": 1751355843,
         "AuthorityLevel": "3",
-        "RankingScore": 2.474034
+        "RankingScore": 2.4749622
       },
       {
         "Title": "荣耀Magic7 Pro:2亿像素超高清手机,捕捉生活每一瞬间!_用户_性能_操作系统",
@@ -916,10 +1295,339 @@
         "AuthorBadgeText": "",
         "EditTime": 1778744700,
         "AuthorityLevel": "2",
-        "RankingScore": 2.417115
+        "RankingScore": 2.4157405
       }
     ],
-    "fetchedAt": "2026-05-25T02:52:12.611Z"
+    "fetchedAt": "2026-05-25T07:14:25.715Z"
+  },
+  "荣耀 Magic6 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic6 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "绒黑色",
+        "祁连雪",
+        "查看视频"
+      ],
+      "specs": {
+        "chip": "第三代骁龙8",
+        "battery": "5600mAh",
+        "screen": "6.80英寸",
+        "charge": "80W",
+        "refreshRate": "120Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5600mAh 荣耀青海湖电池 80W荣耀超快充",
+        "第三代骁龙8 芯片",
+        "6.80英寸 LTPO 120Hz",
+        "1.8亿像素 潜望式"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "荣耀Magic6 Pro一部被低估的全能机型,2025年最值得入手的“六边形战士” - 知乎",
+        "ContentType": "Article",
+        "ContentID": "9123695425544873045",
+        "ContentText": "荣耀Magic6 Pro搭载5600mAh超大容量青海湖电池（硅碳负极技术），配合第二代骁龙8芯片的能效优化，实测重度使用（刷短视频+打游戏+导航）也能轻松坚持一天半。即便是亮屏7小时以上的重度用户，也无需焦虑电量。支持80W有线+66W无线快充，早上洗漱的时间就能回血大半，彻底告别“电量焦虑”。\n二、 巨犀玻璃 + 四曲面屏：颜值与抗摔的完美平衡\n正面是一块6.8英寸四曲面OLED屏，峰值亮度高达5000尼特，户外阳光下依然清晰可见。更关键的是，它覆盖了荣耀自研的巨犀玻璃，通过瑞士SGS多场景金标五星抗跌耐摔认证——这意味着日常跌落、磕碰几乎不会导致碎屏，省下动辄上千元的维修费。四曲面设计不仅视觉沉浸感强，握持手感也温润如玉。\n三、 鹰眼相机系统：抓拍快、夜景亮、长焦稳\nl 主摄：5000万像素OV50H传感器（1/1.3英寸大底），f/1.4-f/2.0物理可变光圈，进光量提升150%，暗光环境下细节丰富、噪点控制优秀。\nl 潜望长焦：1.8亿像素超清长焦，支持2.5x光学变焦和50x数字变焦，远距离拍摄文字、建筑依然清晰锐利。\nl 鹰眼抓拍：基于AI运动预测算法，对高速移动物体（如飞鸟、赛车）实现“预判式对焦”，按下快门即得清晰画面，再也不怕错过精彩瞬间。",
+        "Url": "https://zhuanlan.zhihu.com/p/1975140452584941179?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "硬派偏执狂",
+        "AuthorAvatar": "https://picx.zhimg.com/50/907661798465cd37b3033046bebce97f_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1763691726,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.7195058
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀Magic6Pro 7分钟超详细评测!买前必看 荣耀Magic6Pro 7分..._什么值得买",
+        "ContentType": "",
+        "ContentID": "-8612358162051417549",
+        "ContentText": "这手机堆料确实实在,5600mAh电池加80W快充,日常通勤用一天一充没问题,但231克拿久了手腕还是有点累,跟mate60pro比算是各有取舍\n荣耀Magic6Pro配备1.5K悬浮四曲面屏,支持5000尼特峰值亮度、1600尼特全局亮度及4320Hz超高频PWM调光,护眼表现优秀。搭载第三代骁龙8平台,辅以自研射频增强芯片和能效增强芯片,性能强劲,跑分达209万,游戏运行流畅,原神半小时温度控制良好。后置5000万主摄(豪威H900)、5000万超广角及1.8亿像素潜望长焦,支持OIS防抖,成像清晰,色彩还原真实,长焦切换待优化。前置5000万广角镜头加3D深感摄像头,人像拍摄出色。内置第二代青海湖电池,容量5600mAh,支持80W快充,续航扎实。支持天通卫星通信,仅限电信卡用户。机身231克,做工精致,握持感佳。系统为MagicOS 8.0,支持隔空截屏、眼睛注视唤醒通知等智能功能。",
+        "Url": "https://post.smzdm.com/zz/p/a3rd4dvn/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1762095490,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.626584
+      },
+      {
+        "Title": "荣耀Magic6 Pro安卓手机怎么样 荣耀Magic6 Pro:续航与护眼兼备_什么值得买",
+        "ContentType": "",
+        "ContentID": "5736954956578196888",
+        "ContentText": "荣耀magic6pro,发布于2024年1月,采用高通骁龙8gen3移动平台,6.8英寸四曲屏幕,支持低亮度4320hz的pwm调光,护眼属于t0档次,5600毫安电池,80w有线,66w无线充电。\n拍照方面,主摄是1/1.3英寸大底ov50h,5000万像素超广角微距,1/1.4英寸1.08亿像素三星hp3长焦,拍照效果目前还都是第一梯队。\nip68防水,立体声双扬,x轴马达,3d人脸识别都是主流配置,只是指纹还是短焦指纹。\n目前荣耀magic6pro作为主力机还可以再战2年。",
+        "Url": "https://post.smzdm.com/talk/p/avvokglm/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1770129659,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.6078677
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀Magic6 Pro 深度体验!卫星通信成标配了?!_什么值得买",
+        "ContentType": "",
+        "ContentID": "1842973037480526471",
+        "ContentText": "卫星通信不再只是噱头,荣耀Magic6 Pro实际测试中连接稳定、发热控制出色,通话时长突破5分钟限制,对经常跑野外或信号盲区的人来说,这功能真能应急\n荣耀Magic6 Pro搭载骁龙8Gen3处理器、UFS4.0闪存和16GB内存,配备6.8英寸2800×1280分辨率OLED屏幕,支持1-120Hz动态刷新率和4320Hz PWM调光,采用第二代纳米微晶玻璃提升抗跌性能。影像方面,主摄为5000万像素可变光圈传感器(f/1.4-f/2.0),长焦镜头采用1.8亿像素1/1.49英寸大底传感器,支持16合1输出1200万像素照片及高像素模式,超广角为5000万像素。续航搭载5600mAh第二代青海湖电池,支持80W有线和66W无线充电,并配备都江堰电源管理系统,优化低温环境续航表现,实测低温下播放视频仅耗电2%。通信方面首次支持卫星通话与短信,搭载荣耀自研射频增强芯片C1+,优化高铁等弱信号场景;卫星通信支持电信卡,可在5%以下电量使用,通话最长可达两小时。系统升级至MagicOS 8.0,新增任意门、语义搜索、灵动胶囊等功能,支持文字与图片拖拽操作及端侧大模型语义识别。",
+        "Url": "https://post.smzdm.com/zz/p/agoxm9n3/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1759737018,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5536146
+      },
+      {
+        "Title": "荣耀Magic6 Pro从6199元跌至3000元,16G+512G+1.8亿潜望长焦,捡漏了 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "387574898775066549",
+        "ContentText": "纵观整个智能手机市场，旗舰机型往往定价很高，基本是在五六千元左右的价格，对于预算有限的消费者极不友好。然而，这部分用户也想试试旗舰机到底是什么样的体验，就比如之前有用户问互联网专用小马甲，想选一款荣耀旗舰机，可是预算只有3000元左右，有什么推荐？\n荣耀旗舰机必然只看荣耀Magic系列了，这点预算，我个人觉得你应该选择上代或者隔代产品了，这样你能以更低预算体验旗舰级配置，现在荣耀Magic8系列新机刚发布没多久，价格基本没怎么降价，而上一代荣耀Magic7标准版的12G+256G存储版本价格虽说已经跌至3405元，但仍稍微超过3000元预算。\n这似乎也不是明智只选，那此时，我们只能看上上一代机型了，我看到荣耀Magic6 Pro的价格已经进一步下探，却保留了旗舰体验，关键它还是16G+512G大存储版本，要知道此版本发布价是6199元，现在已经跌至3000元，等于是半价清仓了，非常香，这不来捡漏吗？\n荣耀Magic6 Pro正面配备了一块6.8英寸的OLED曲面屏，覆盖荣耀巨犀玻璃，支持LTPO技术实现最高120Hz智能动态刷新率调节，采用4320Hz高频PWM调光技术，也就是荣耀绿洲护眼屏，显示效果细腻的同时又很护眼。\n荣耀Magic6 Pro内置5600mAh大容量青海湖电池，实测综合使用两小时耗电约20%左右，它支持80w有线快充和66w无线充电，用有线快充，大约仅需45分钟即可充满，即使放到现在，续航和充电速度也没有掉队。\n影像方面，荣耀Magic6 Pro搭载后置三摄：5000万像素可变主摄、1.8亿潜望长焦和5000万像素超广角微距镜头。",
+        "Url": "https://zhuanlan.zhihu.com/p/1974898736107897409?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 1,
+        "AuthorName": "互联网专用小马甲",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-66cba5ba7a5d268085557c80a9c84acc_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1763632782,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.5247793
+      },
+      {
+        "Title": "荣耀Magic6 Pro 5G手机低至2549元_荣耀 Magic6 Pro_手机市场-中关村在线",
+        "ContentType": "",
+        "ContentID": "6082605643068090015",
+        "ContentText": "想换一款性能出色的5G手机?荣耀HONOR Magic6 Pro 5G手机16GB+512GB祁连雪配色值得关注。Magic6系列采用方圆星轮三摄,运用3D智能仿形抛光工艺,造型精致优雅,金属中框搭配四曲面设计,厚8.9mm,重229g。它有海湖青、绒黑色、祁连雪、麦浪绿、流云紫五种配色,全系支持巨犀玻璃,通过SGS多场景金标五星抗跌耐摔认证。搭载京东方6.8英寸28001280 OLED曲面屏,120Hz刷新率,支持10.7亿色显示,行业首发360Hz超频同步显示技术,峰值亮度可达1600nit,像素密度达438PPI。具备五大荣耀绿洲护眼技术,4320Hz超高频PWN调光与硬件级低蓝光,让用眼更健康。影像上,后置5000万超动态可变鹰眼主摄+5000万广角微距主摄+1.8亿潜望式长焦,前置5000万像素超广角镜头+ 3D深感摄像头,搭配荣耀计算摄影平台,启动、对焦、快门响应更快,抓拍效果好。核心配置上,搭载第三代骁龙8旗舰芯片,LPDDR5X内存与UFS3.1闪存。内置第二代青海湖5600mAh电池,低温续航持久,支持80W快充、66W无线快充与7.5W无线反向充电。还支持鸿燕卫星通信技术,可直连卫星服务,实时语音双向短信。全系搭载自研射频增强芯片C1+,发射收益最大提升41%,接收收益最大提升51%。系列搭载全新荣耀MagicOS 8.0系统,有基于意图识别的人机交互体验、跨应用一步直达的荣耀任意门和跨应用全局触达的灵动胶囊。现在京东此款手机活动售价3269元,首购礼金270,下单1件,实付低至2549.15元,原价3269元,到手价只需2549.15元,很是划算,别错过!好价情报来源于热心网友及商家积极的爆料推荐,商品的促销折扣与价格信息可能出现实时变动,请各位在购买前务必核实确认。如发现问题,欢迎各位通过页面上的“内容纠错”、“纠错与问题建议”或直接发表“评论”等方式进行反馈。\n",
+        "Url": "https://mobile.zol.com.cn/1091/10918003.html",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1764571300,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.4977186
+      },
+      {
+        "Title": "闭眼捡漏天花板!荣耀Magic6 Pro:1.8亿长焦+卫星通信,中端价享高端体验_支持_旗舰_机型",
+        "ContentType": "",
+        "ContentID": "8329072733329637107",
+        "ContentText": "在手机市场不断迭代的当下,“捡漏老旗舰”早已成为懂行用户的共识,而荣耀Magic6 Pro无疑是当前最值得入手的“宝藏机型”。作为荣耀旗舰系列的标杆之作,它凭借过硬的品质口碑在发布之初就圈粉无数,如今伴随价格大幅下探,更是展现出“降维打击”的强劲实力。对于追求旗舰体验却预算有限的用户来说,此刻入手荣耀Magic6 Pro,堪称用中端机成本,解锁高端旗舰的全维体验,性价比直接拉满。\n荣耀的品质基因早已深入人心,而Magic6 Pro作为高端旗舰,更是将这份品质做到了极致。从机身工艺来看,它采用一体化金属中框搭配曲面玻璃设计,手感温润细腻,同时支持IP68级防尘防水,日常泼溅、意外落水都无需担忧,经过实测,即便在水下浸泡片刻,机身功能依旧正常。细节之处更显用心,搭载的荣耀巨犀玻璃有效提升了屏幕抗摔性,大幅降低碎屏风险,耐用性远超同价位机型。这种对品质的严苛把控,让荣耀Magic6 Pro即便使用三年以上,依旧能保持良好的机身状态。\n此次推荐荣耀Magic6 Pro“捡漏”,核心原因在于其降价后性价比的爆发。这款机型首发时顶配版本定价超6000元,如今在市场调整与政策补贴的双重加持下,价格迎来大幅跳水。其中12GB+256GB版本到手价低至4200元左右,16GB+512GB版本叠券后更是跌破3000元大关,仅需2700元左右就能入手,相比首发价降幅超50%。要知道,同价位的新款中端机大多搭载中端处理器,而荣耀Magic6 Pro却手握旗舰级配置,这样的价格优势,让它成为预算有限用户的最优解。\n性能方面,荣耀Magic6 Pro搭载骁龙8 Gen3处理器,搭配LPDDR5X内存与UFS 4.0闪存,安兔兔跑分突破220万,堪称“性能怪兽”。无论是运行《原神》《星穹铁道》等大型游戏,还是同时开启多个办公软件,都能做到流畅不卡顿,毫无压力。更值得一提的是,它配备了超广域智能散热系统,长时间游戏后机身依旧保持温和,不会因过热导致降频。此外,自研C1+射频增强芯片的加入,让它在地铁、地下停车场等弱信号场景下,依旧能保持稳定的网络连接,信号表现远超同级机型。对于大多数用户而言,这样的性能足以支撑未来三到四年的使用需求,完全无需担心过时。\n影像系统是荣耀Magic6 Pro的核心卖点之一,即便放到当下,依旧处于行业第一梯队。它后置5000万像素可变光圈主摄、1.8亿像素潜望式长焦和5000万像素超广角三摄组合,主摄采用1/1.3英寸大底传感器,支持F/1.4-F/2.0智能可变光圈,无论是强光环境下的高光压制,还是暗光环境下的细节捕捉,都表现出色。\n1.8亿像素潜望长焦更是亮点十足,支持2.5倍光学变焦和100倍数字变焦,即便在高楼拍摄远处景物,也能清晰捕捉到花瓣纹路等细节。在专业影像评测机构DxoMark排名中,它稳居前列,拍照效果甚至超越部分新款旗舰机型。鹰眼精彩抓拍功能更是贴心,能自动捕捉运动瞬间,成片率大幅提升,不管是记录孩子成长还是宠物嬉戏,都能轻松胜任。\n续航与屏幕体验,荣耀Magic6 Pro同样拉满。它内置5600mAh大容量青海湖电池,实测中等使用强度下可实现亮屏七八小时,重度使用也能坚持一天,彻底告别电量焦虑。充电方面,支持80W有线快充和66W无线快充,半小时就能将电量充至70%,碎片化时间就能快速回血。屏幕则采用6.8英寸OLED微曲屏,分辨率达2800×1280,显示清晰细腻,同时支持1-120Hz自适应刷新率,兼顾流畅度与功耗。新一代荣耀绿洲护眼技术的加入,搭配4320Hz高频PWM调光,有效缓解长时间观影、办公的眼部疲劳,通过了德国莱茵TÜV全局护眼3.0认证,特别适合学生党和办公人群。\n除了核心配置,荣耀Magic6 Pro的细节功能也十分全面。3D人脸识别、立体声双扬声器、X轴线性马达、多功能NFC、红外遥控等功能一应俱全,满足日常多样化需求。更惊喜的是,它支持北斗卫星通信,在无地面网络覆盖的无人区或灾害现场,可发送求救信息与定位,关键时刻能成为“生命通道”。MagicOS 8.0系统基于Android 14深度定制,带来了丰富的AI功能,比如图库语义搜索、智慧成片等,大幅提升使用效率,同时系统更新支持及时,确保长期使用的流畅性。\n对比同价位机型,荣耀Magic6 Pro的优势堪称“降维打击”。同价位的新款中端机大多搭载骁龙7+ Gen3或天玑8300芯片,性能与影像均有明显差距;即便是部分老旗舰,在续航、信号与细节配置上也难以与之抗衡。对于学生党、职场新人以及追求性价比的用户来说,此刻入手荣耀Magic6 Pro完全无需犹豫。入手时建议选择官方授权渠道,确保正品与完善售后,同时关注地区补贴政策,进一步降低入手成本。\n总而言之,荣耀Magic6 Pro凭借过硬的品质、旗舰级的配置以及大幅降价后的性价比,成为当前最值得捡漏的旗舰机型。它用实力证明,老旗舰并非“过时产物”,反而能以更亲民的价格,为用户带来更全面的体验。如果你近期有换机计划,且追求品质与性价比的平衡,那么荣耀Magic6 Pro绝对是不容错过的选择,这波捡漏错过真的要等很久。 返回搜狐,查看更多",
+        "Url": "https://www.sohu.com/a/977412538_121275550",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1768748820,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.3672404
+      },
+      {
+        "Title": "荣耀Magic6 Pro 5G手机超值,3799元可入手_荣耀 Magic6 Pro_手机市场-中关村在线",
+        "ContentType": "",
+        "ContentID": "-5915292349343518492",
+        "ContentText": "荣耀HONOR Magic6 Pro 5G手机(16GB+1TB绒黑色 第三代骁龙8)超值来袭。它有着众多令人惊艳的特性。在外观上,Magic6系列采用方圆星轮三摄,运用3D智能仿形抛光工艺,造型精致优雅。金属中框加上四曲面设计,厚8.9mm,重229g,还有海湖青、绒黑色、祁连雪、麦浪绿、流云紫五种配色,全系配备巨犀玻璃,通过SGS多场景金标五星抗跌耐摔认证。屏幕方面,是京东方6.8英寸28001280 OLED曲面屏,120Hz刷新率,支持10.7亿色显示,还有行业首发360Hz超频同步显示技术,峰值亮度达1600nit,438PPI像素密度,并且具备五大荣耀绿洲护眼技术,4320Hz超高频PWN调光,硬件级低蓝光,保护眼睛。影像上,后置5000万超动态可变鹰眼主摄+5000万广角微距主摄+1.8亿潜望式长焦,前置5000万像素超广角镜头+3D深感摄像头,搭配荣耀计算摄影平台,抓拍效果很棒。核心配置上,搭载第三代骁龙8旗舰芯片,LPDDR5X内存,UFS3.1闪存,内置第二代青海湖5600mAh电池,低温续航持久,支持80W快充,66W无线快充,7.5W无线反向充电。其他方面,支持鸿燕卫星通信技术、手机直连卫星服务、实时语音双向短信,全系搭载自研射频增强芯片C1+,发射收益最大提升41%,接收收益最大提升51%,还搭载全新荣耀MagicOS 8.0系统。这款手机原价5099元,在京东此款目前活动售价4299元,参与补贴15%起减500元优惠活动,下单1件,实付低至3799元。好价情报来源于热心网友及商家积极的爆料推荐,商品的促销折扣与价格信息可能出现实时变动,请各位在购买前务必核实确认。如发现问题,欢迎各位通过页面上的“内容纠错”、“纠错与问题建议”或直接发表“评论”等方式进行反馈。\n",
+        "Url": "https://mobile.zol.com.cn/1030/10305510.html",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1755151222,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.3553684
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:15:05.771Z"
+  },
+  "荣耀 GT": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀GT",
+      "price": "¥ 2899",
+      "skuPrices": [
+        {
+          "version": "16GB+256GB",
+          "price": "¥ 2899"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 3399"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "冰晶白",
+        "幻影黑",
+        "极光绿"
+      ],
+      "specs": {
+        "chip": "第三代骁龙8",
+        "battery": "5300mAh",
+        "screen": "6.7英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "AMOLED"
+      },
+      "features": [
+        "5300mAh 荣耀青海湖电池 100W荣耀超快充",
+        "第三代骁龙8 芯片",
+        "6.7英寸 AMOLED 120Hz",
+        "5000万像素 广角摄像头"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "当年被吹爆的 2K 档 “性能神机”荣耀 GT 我当主力机用了1年多的感受_手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "-7185785117039671556",
+        "ContentText": "2024 年底,荣耀 GT 凭借骁龙 8 Gen3 处理器和 2199 元的首发价,在 2K 档位引发了极高关注,被称为“性能焊门员”。经过一年多的实际使用,从 MagicOS 9.0 升级至 10.0,这款手机在性能释放、屏幕素质及充电速度上表现亮眼,但也暴露了散热差、塑料中框掉漆以及成像能力弱等明显短板。以下是基于长期使用体验的详细评测。\n01 核心优势:性能与屏幕体验\n该机型最大的卖点在于核心配置。骁龙 8 Gen3、LPDDR5X 和 UFS 4.0 的组合,在 2000 元价位段具有很强的竞争力。在日常高频使用及游戏场景中,性能释放稳定。此外,屏幕护眼功能和充电效率也是其显著优势。\n 性能表现持久流畅日常使用中,即使同时开启十几个应用切换也毫无卡顿。在《王者荣耀》全高画质 + 60 帧模式下,团战过程稳定,未出现掉帧现象。使用一年后,应用启动速度与新机时期差异不大。\n 屏幕护眼效果出色6.7 英寸 1.5K OLED 直屏支持 3840Hz 高频 PWM 调光及绿洲护眼技术。相比旧机型,长时间观看视频时眼部疲劳感明显降低,且在大强光下屏幕可视性良好。\n 百瓦快充缓解焦虑5300mAh 电池搭配 100W 快充,实测 32 分钟可充满。应急充电 10 分钟约可充入 30% 电量,能够满足短时间的通勤使用需求。\n02 核心槽点:散热、做工与影像\n尽管性能堆料足,但该机型在散热设计、机身做工以及影像系统上进行了较大幅度的成本压缩,导致长期使用体验下降。\n 散热系统在高温下失效虽然官方宣称配备 5514mm² VC 均热板,但在 30°C 气温下,连续刷视频 40 分钟机身背面即明显发烫。发热后系统会触发降频保护,导致游戏帧率骤降(如从 60 帧掉至 40 多帧),甚至出现滑动掉帧和打字延迟。\n 塑料中框易磨损掉漆即便佩戴原厂保护壳且未经历跌落,充电口、按键及边框角落仍出现了严重的喷漆剥落现象,露出内部白色塑料,机身显得陈旧。\n 影像能力仅达扫码水平后置 5000 万像素主摄在白天光线充足时成像尚可,但存在色彩发灰或 AI 调色偏紫的问题。夜间拍摄噪点多、细节丢失;录像方面防抖效果差,画面模糊,体验不如几年前的旧款旗舰机。\n03 续航细节与其他不足\n续航方面,5300mAh 电池在非游戏重度使用场景下(刷视频 3 小时、微信 2 小时、新闻 1 小时),从早上 8 点至晚上 6 点剩余电量约 20%,需每日一充。使用一年后,电池健康度从 100% 降至 99%,衰减速度略高于同价位竞品。此外,单频 GPS 在城市高楼区容易出现定位漂移,且不支持无线充电。\n04 总结与选购建议\n适合人群分析\n适合人群 \n追求极致性能与性价比的重度游戏玩家\n对拍照录像无要求,仅需扫码功能\n预算有限,优先考虑屏幕素质和快充速度的用户\n不适合人群 \n注重手机质感、无法接受塑料机身掉漆的用户\n热爱摄影、对夜景和视频拍摄有较高要求者\n经常在户外高温环境使用,对散热性能敏感的用户\n目前该机型 12+256GB 版本价格已降至约 1499 元。如果您的需求高度集中在性能释放和屏幕体验上,它依然是该价位具有竞争力的选择;但如果追求综合体验均衡,建议考虑增加预算选择影像和做工更好的机型。",
+        "Url": "https://post.smzdm.com/p/agg0vkdw/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1778906936,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.746611
+      },
+      {
+        "Title": "最后的性价比!1499元荣耀GT还能撑住吗?_手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "-7908607623373219111",
+        "ContentText": "在手机硬件普遍涨价的背景下,荣耀GT作为目前市面上为数不多能在1500元以内买到的全新骁龙8 Gen3机型,凭借品牌产能与渠道优势,成为了守住千元机性价比门槛的关键产品。这款手机以性能为核心卖点,但在机身质感、续航能力及部分配置上存在妥协,呈现出一种“买处理器送手机”的独特产品形态。\n01 核心性能与游戏体验\n荣耀GT搭载上代旗舰芯片骁龙8 Gen3,安兔兔跑分约为227万分。游戏实测显示,该机能较好应对主流负载,王者荣耀平均120.16帧,和平精英平均119.16帧,三角洲行动平均119.13帧,原神平均59.92帧,帧率表现稳定。不过在散热方面,机身顶部积热较为明显,高负载下温度较高,散热效率仍有提升空间。\n测试项目 设置条件 平均帧率/结果\n安兔兔跑分 V11.1.2版本 约227万分\n王者荣耀 极高帧率+极致画质 120.16帧\n和平精英 流畅+120帧 119.16帧\n原神 极高画质+60帧 59.92帧\n荣耀GT性能与游戏测试数据\n02 屏幕素质与续航充电\n该机配备6.7英寸120Hz 1.5K OLED屏,支持3840Hz超高频PWM调光,护眼功能被置于设置一级菜单,但手动最高亮度约为618.8nit,表现中规中矩。续航是主要短板,5300mAh电池在游戏场景下耗电较快,一小时王者荣耀和平精英分别耗电24%和22%。不过,手机标配100W快充,开启超级快充Turbo后,半小时可充至90%,39分钟完全充满,回血速度较快。\n03 影像配置与外围细节\n影像方面采用5000万像素主摄(索尼IMX906,支持OIS)搭配超广角镜头,主摄成像素质尚可,夜景能压制高光,但超广角细节缺失明显。机身细节处存在缩水:采用塑料中框,仅配备单频GPS和双频北斗,导航精度有限;存储方面仅顶配版本支持UFS 4.0,其余版本为UFS 3.1。此外,指纹识别为位置靠下的短焦指纹。\n荣耀GT核心优缺点\n性能与体验 \n搭载骁龙8 Gen3处理器,同价位性能强劲\n配备100W超级快充,39分钟充满\n屏幕支持3840Hz PWM调光,护眼特性突出\n主摄采用索尼IMX906传感器,成像质量较好\n妥协与不足 \n高负载游戏下机身发热明显,散热一般\n5300mAh电池容量较小,续航表现较弱\n仅单频GPS,导航定位能力不足\n塑料中框质感一般,部分版本存储规格缩水\n综合来看,荣耀GT在硬件涨价的大潮中,确实为追求极致性能的用户提供了一个低价选择,但在散热、续航和细节质感上做出了显著让步。对于将处理器性能放在首位且对续航要求不高的用户而言,这款手机目前具有不错的性价比;但若注重综合体验或导航精度,则需谨慎考虑。",
+        "Url": "https://post.smzdm.com/p/a034874z/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1779168303,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.6842096
+      },
+      {
+        "Title": "原价2199的荣耀手机,现在到手才1699,6.7英寸护眼屏+骁龙8Gen3_安卓手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "-8792108086572069657",
+        "ContentText": "这几天有铁粉要我找一款性价比高的荣耀手机,他的预算只有 1600 元左右,想买一款荣耀手机换掉在用的“老古董”。由于在 618 期间比较忙,一直忙着写 618 手机捡漏指南,没有来得及回复,今天在荣耀京东自营旗舰店找到了这款荣耀 GT 手机,今天就写它并推荐给铁粉们。\n这款荣耀手机不是新款,想要新款的朋友可能看不上。荣耀 GT 于2024 年 12 月 16 日正式发布并上市,当时 12GB+256GB 存储版本首发价是 2199 元。它的机身比较轻薄,厚度仅 7.7mm,重量约 196g,配备了 6.7 英寸 1.5K OLED 直面屏,并最高支持 120Hz 刷新率。\n被用户提得最多的是这块屏幕的护眼效果,参数上写的是 3840Hz 超高频 PWM 调光,翻译成人话就是,晚上关灯刷会儿手机,屏幕那种不易察觉的频闪对眼睛的刺激会小很多,不至于看一会儿眼睛就不舒服。\n以前我用某些手机,睡前刷抖音一个小时眼睛就不舒服,换了这台荣耀 GT 手机后,确实好多了。而且直屏贴膜也更好贴,打游戏也不容易误触,这比曲屏实用多了。这是用户在荣耀手机圈发表的评论,被我看到了,写出来让大家有个参考。\n对于已经发布了一年半的老款机型,大家肯定会质疑其性能还能不能打,荣耀 GT 搭载的骁龙 8 Gen3 处理器虽然已经落后两代,但它在当时也是一流的旗舰处理器,即便是放在当下依然很能打。日常切换 App、刷短视频自然不在话下,关键是最吃性能的《原神》也能流畅运行。\n电池为 5300mAh,配 100W 快充。这套续航组合满足日常通勤完全够用,早上洗漱插一会就能回血一大半,不用再眼巴巴等充满。\n影像就不多说了,后置 5000 万像素主摄加 1200 万超广角,日常扫个码、记录下生活绰绰有余,别指望越级打旗舰,但也绝不拉胯。在这里分享一张荣耀 GT 用户拍摄的照片,拍得好不好,大家可以在评论区说说。\n另外支持 NFC、红外遥控、双扬声器及多种 AI 智慧功能。\n从荣耀京东自营旗舰店的价格来看,现在到手价是 1699 元。其实在写这篇文章前一个月,也就是在 618 还没有开始之前,荣耀 GT 手机的到手价也是这个价格,不过那时被下架了,在京东搜索到的都是二手。\n可能是因为供不应求,暂时缺货,现在到了 618 又上架开售,所以如果你觉得这款荣耀 GT 手机还不错,价格也合适的话,建议赶紧下手,不然又缺货,就只能买二手的了。",
+        "Url": "https://post.smzdm.com/p/am9wwz2k/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1779681899,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.6699042
+      },
+      {
+        "Title": "荣耀手机怎么样 荣耀gt这款手机,也可作为性价比之一的选择_什么值得买",
+        "ContentType": "",
+        "ContentID": "4623300822031314345",
+        "ContentText": "荣耀GT这款机子核心参数是处理器骁龙8 Gen3 4nm制程安兔兔跑分214万,内存闪存搭配LPDDR5X+UFS4.0,屏幕是6.78英寸1.5K OLED直屏,带120Hz LTPO自适应刷新率还有3840Hz高频调光,电池是5300mAh青海湖电池,配100W有线快充34分钟能充满电,影像方面后置5000万IMX906主摄加800万超广角没有长焦镜头,前置1600万像素,散热用的是5514mm²超大VC均热板的3D自然态循环散热,机身是塑料中框,解锁用的短焦指纹,定位是单频GPS,还带NFC和红外功能,系统是MagicOS9.0,这款机子优缺点特别分明,主打就是性能和续航,是千元档的性能卷王,优点首先就是性能拉满,骁龙8 Gen3加LPDDR5X和UFS4.0的组合,玩游戏完全没压力,原神开极高画质60帧跑半小时平均59.9帧几乎不波动,王者极致画质120帧团战也稳得很,还有幻影引擎能开超分让画面更清晰,加上5514mm²的大VC散热,长时间高负载玩机身后背也就39.5℃左右,只是温热不烫手,然后屏幕也好用,直屏不会有曲面屏的误触问题,120Hz自适应刷新率刷视频滑页面都特别丝滑,3840Hz高频调光更是护眼,晚上熬夜刷手机眼睛也不会酸涩难受,续航和充电也没话说,5300mAh大电池中度使用能撑一天半,重度玩游戏也能扛6小时以上,100W快充效率超高,早上起床洗漱十几分钟就能充到60%,半小时多就满电,出门前临时补电完全够用,而且NFC刷公交地铁、红外遥控家电这些实用功能都有,千元机里很少有这么全的配置。缺点也很明显,首先拍照真的一般,没有长焦镜头拍远景只能靠数码裁切,画面模糊得很,夜景拍照噪点多对焦还慢,也就满足日常扫码和随便拍一拍,摄影党直接不用考虑,然后机身质感不行,塑料中框摸起来远不如金属的有档次,短焦指纹位置偏下,单手解锁的时候得刻意勾手指特别别扭,单频GPS在户外导航的时候偶尔会飘位,骑行或者走路导航不太省心,还不支持无线充电,习惯用无线充的人会觉得不方便,系统里还带点小广告,虽说能关掉但总归影响使用体验,整体来说这款机子就是冲着游戏、续航和性价比去的,适合看重性能和续航的用户闭眼入,要是在意拍照、机身质感和无线充电功能,就得好好想想了。\n#荣耀GT性价比之选 #荣耀GT值得购买吗 #我的理性尽兴清单 #荣耀\n#我的理性尽兴清单\n#荣耀",
+        "Url": "https://post.smzdm.com/talk/p/aomp0nk6/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1773043874,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.619779
+      },
+      {
+        "Title": "荣耀 GT 系列有哪些亮点? - 知乎",
+        "ContentType": "Answer",
+        "ContentID": "-4064488695048861379",
+        "ContentText": "荣耀GT成为一个独立的系列手机，不再属于数字系列，估计下一个迭代款会叫荣耀GT2（个人猜测）。本次新发布的荣耀GT手机还是延续了上代荣耀90GT的一些风格与定位，新款的荣耀GT手机不仅仅是线上机型，现在线下也同步售卖。新的荣耀GT手机定位主打性价比与电竞性能的一款中端手机，价位再2000-3500之间。本次的新款荣耀GT定价还是比较有诚意的，2199的起步价相对上代的荣耀90GT降价好几百。主要卖点或者亮点如下：\n荣耀GT的主要卖点或亮点\n・上代的旗舰芯片骁龙8 Gen3芯片 ，同时搭配了LPDDR5X内存，UFS4.0/UFS3.1闪存，总体性能还是不错的，如果全系能配套UFS4.0久更好了；\n・后置双摄：5000万超清大底主摄（1/1.56英寸大底索尼IMX906，f/1.9大光圈，支持OIS+EIS防抖）+1200万超广角微距(f/2.2光圈，112°超广角，2.5cm超短对焦距离）+鹰眼抓拍，拍照方面也是非常不错；\n・6.7英寸 1.5k分辨率直屏，120Hz屏刷，像素密度435PPI，峰值亮度4000nit，这些参数相对来说中规中矩；\n・支持AI超动态显示，湿手触控；\n・顶级护眼：荣耀AI绿洲护眼电竞屏，AI助眠显示、3840Hz超高频pwm零风险调光、AI离焦护眼，类自然光护眼，360°自适应调光、硬件级低蓝光，通过莱茵TUV无频闪认证；\n・360都全场景晕动舒缓显示；\n・5300毫安青海湖电池（硅碳负极）；\n・100W有线快充（15分钟60%）；\n・3D自然态循环散热系统（全新一代石墨，航天级导热凝胶等，5514mm² VC），荣耀幻影引擎；\n・铝合金结合有机材料中框+玻璃后盖；\n・音浪双扬声器；\n・wifi7；\n・起售价2199；\n1、【性能/中高端手机】荣耀 GT（2024年12月 上市） 推荐指数5星 \n总评：【性能不错+拍照不错（主摄、广角都不错）+顶级护眼+续航中等+充电速度不错+直屏轻薄手机】\n【主要卖点/优势点评】：\n・（1）总结：定位主打性能与性价比中高端手机，这次荣耀GT独立成为一个系列，不再是数字系列的一部分，是一款不错的主打性能游戏的手机，价格非常有诚意。当前价位少有的同时兼顾护眼、性能、影像、续航的手机，性价比不错，当前主打性能的中高端机里面护眼最好的骁龙8gen3芯片手机。当然荣耀GT这款手机续航在同档不是最强；相对上代的荣耀90GT 在性能、续航、护眼、防水、蓝牙、边框等方面有升级。\n・（2）性能：使用了上年度的旗舰骁龙8Gen3芯片，同档位新机都使用的这款芯片，加上LPDDR5X内存、UFS4.0的闪存（只有16G+1T支持，其它版本是UFS3.1），性能调校非常激进，可以满足绝大部分中、甚至重度游戏需求；\n・（3）影像：自拍一般，后置双摄（没有长焦），1/1.56英寸大底主摄支持OIS防抖，拍照还不错（同档主摄的常规配置），超广角微距镜头（高于平均水准）支持112°超广视角，可以满足大部分场景的广角拍摄。主摄与广角都是300Pro的同款镜头，拍照还不错（拍照算法比300Pro略弱一些）；\n・（4）续航充电：5300毫安电池一般（相比其它几款同档竞品还是缺乏竞争力，毕竟今年新机大部分都6000起步），100W有线快充回血速度不错；\n・（5）屏幕护眼：1.5K分辨率的直面屏，搭载了荣耀AI绿洲护眼电竞屏，支持AI助眠显示、3840Hz超高频pwm零风险调光、AI离焦护眼，类自然光护眼、360°自适应调光、硬件级低蓝光等护眼技术，通过莱茵TUV无频闪认证；360都全场景晕动舒缓显示；顶级的OLED护眼；\n・（6）电竞：120Hz高刷屏幕；3D自然态循环散热系统（全新一代石墨，航天级导热凝胶等，5514mm² VC），散热不错；荣耀幻影引擎；支持AI超动态显示、湿手触控；总体电竞体验很不错；",
+        "Url": "https://www.zhihu.com/question/6621742754/answer/56878537775?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 3,
+        "AuthorName": "清风独此一笑",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-fbcdb6fa20f866d8635762296a39e0b6_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1737723020,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.276046
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 体验一周,荣耀GT究竟值不值得买?全网首发最全测评!  数码科技  手机  荣耀..._什么值得买",
+        "ContentType": "",
+        "ContentID": "-9195140940771526050",
+        "ContentText": "这手机用了一周,充电确实快,36分钟充满很实在。续航八小时左右,日常通勤够用。直屏加196克重量,单手操作舒服。护眼功能多,坐车看视频不晕了,这点挺实用\n荣耀GT提供幻影黑、冰晶白、极光绿三种配色,采用纯直屏与直角边框设计,整机重196克,手感舒适。搭载骁龙8Gen3芯片,配备16GB+1TB内存版本,内置5300mAh电池支持100W快充,36分钟内可充满。屏幕为2664×1200分辨率、120Hz刷新率的荣耀绿洲护眼屏,支持低亮度3840Hz PWM调光、湿手触控,并具备类自然光护眼、助眠显示、离焦护眼及晕动舒缓显示功能,提升视觉舒适度。外放采用对称式双扬声器,音频振幅提升26%,低音增强30%,失真降低18%。游戏方面,搭载幻影引擎实现稳帧效果,和平精英平均119.2帧,原神平均60.1帧,性能释放强劲。支持画质与帧率增强,可实现多款主流游戏120帧超帧与1080P超分。相机主摄表现稳定,色彩还原准确,夜景有OIS加持,超广角风格统一,支持鹰眼抓拍。另配有NFC、红外遥控(集成于摄像头模组)、X轴线性马达等配置,起售价2199元,是一款高性价比的性能旗舰手机。",
+        "Url": "https://post.smzdm.com/zz/p/a9k0l2d7/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1762400255,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5999494
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 (完整版)荣耀首款“游戏手机”值不值得买?荣耀GT深度评测_什么值得买",
+        "ContentType": "",
+        "ContentID": "4464044739840634136",
+        "ContentText": "荣耀GT这波操作算是摸清了年轻人的脉,性能拉满、充电够快,打游戏确实爽。但电池容量在同档位里偏小,重度使用还是得随身带充电宝,这点得掂量清楚\n荣耀GT作为荣耀首款主打性能的中端产品,搭载第三代骁龙8芯片,配备LPDDR5X内存和UFS3.1/UFS4.0闪存(顶配版为UFS4.0),定位2000元档,面向手游玩家。整机设计简约硬朗,采用6.7英寸OLED直屏,支持120Hz刷新率、3840Hz高频PWM调光及局部峰值亮度4000nit,屏幕观感舒适。机身厚度7.7mm,重量约199.6g,握持手感良好。背面采用大LOGO设计,仅极光绿配色具备,摄像头模组为矩形布局,右下角有“GT”标识,官方称“刀锋之眼”。支持NFC、红外遥控(位于摄像头模组处)、Wi-Fi7、蓝牙5.3、X轴线性马达与IP65防尘防水。游戏表现方面,在《王者荣耀》《英雄联盟手游》《和平精英》中接近满帧运行,温控表现良好;《原神》平均帧率59.8帧,《崩坏:星穹铁道》54.5帧,但机身温度较高,建议搭配散热背夹使用。其幻影引擎引入AI渲显分离技术,可智能预测并补偿卡顿帧,目前仅适配《原神》。续航方面内置5300mAh电池,支持100W有线快充,实测37分钟充满,兼容100W PPS协议,第三方充电器也可实现高效充电,但若支持SCP协议可能优先握手导致速度下降,需后续OTA优化。综合来看,荣耀GT性能释放激进,游戏体验出色,兼具颜值与快充,虽电池容量相对同级略小,但在同价位中具备较强竞争力。",
+        "Url": "https://post.smzdm.com/zz/p/aeop83wm/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1758692692,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5962284
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀GT手机降价后真实表现:价格1469元起,配置参数及定位解析_什么值得买",
+        "ContentType": "",
+        "ContentID": "-886664022464413067",
+        "ContentText": "这手机降价后性价比太高了,骁龙8Gen3处理器配上100W快充,游戏体验和性能都够用,价格还直接干到1469元,确实挺香的,适合追求性能又不想多花钱的小伙伴\n荣耀GT手机在降价后,12GB+256GB版本价格降至1469元,成为性价比极高的选择。该手机搭载骁龙8Gen3处理器,拥有良好的游戏性能和散热系统,屏幕为6.7英寸OLED直屏,支持120Hz刷新率和护眼技术。电池容量为5300mAh,支持100W快充,充电速度快。拍照方面,后置5000万主摄加1200万超广角,拍照效果良好。机身轻薄,支持IP68防水,具备红外遥控和NFC功能。尽管电池容量较小,但性能和快充是其优势,适合追求性能和快充的用户。",
+        "Url": "https://post.smzdm.com/zz/p/al4v963o/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1755324127,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5209954
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:15:41.472Z"
   },
   "荣耀 X70": {
     "ok": true,
@@ -977,8 +1685,8 @@
         "CommentCount": 19696,
         "VoteUpCount": 49178,
         "AuthorName": "长亭Time",
-        "AuthorAvatar": "https://pica.zhimg.com/50/v2-97047c7d47e917dac32ff783673165f6_l.jpg?source=bbf6831d",
-        "AuthorBadge": "https://picx.zhimg.com/v2-4a07bc69c4bb04444721f35b32125c75_l.png?source=32738c0c",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-97047c7d47e917dac32ff783673165f6_l.jpg?source=bbf6831d",
+        "AuthorBadge": "https://pic1.zhimg.com/v2-4a07bc69c4bb04444721f35b32125c75_l.png?source=32738c0c",
         "AuthorBadgeText": "新知答主",
         "EditTime": 1779623297,
         "CommentInfoList": [
@@ -993,7 +1701,7 @@
           }
         ],
         "AuthorityLevel": "4",
-        "RankingScore": 2.9521396
+        "RankingScore": 2.8330598
       },
       {
         "Title": "2026年【618】1000元左右/暑期/性价比手机/老人用千元机推荐/1500以内手机排行/父母/大学生党/大电量/备用机/小米/vivo/OPPO/真我/iQOO/荣耀拍照游戏热门指南 - 知乎",
@@ -1004,7 +1712,7 @@
         "CommentCount": 77,
         "VoteUpCount": 277,
         "AuthorName": "迈歌",
-        "AuthorAvatar": "https://pica.zhimg.com/50/v2-2440fa647d0109601c51f4fc1cf4eb28_l.jpg?source=bbf6831d",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-2440fa647d0109601c51f4fc1cf4eb28_l.jpg?source=bbf6831d",
         "AuthorBadge": "",
         "AuthorBadgeText": "",
         "EditTime": 1779540706,
@@ -1020,34 +1728,7 @@
           }
         ],
         "AuthorityLevel": "4",
-        "RankingScore": 2.888889
-      },
-      {
-        "Title": "如何评价 7 月 15 日新发布的荣耀X70手机,有哪些亮点和槽点? - 知乎",
-        "ContentType": "Answer",
-        "ContentID": "464409452159381403",
-        "ContentText": "像这样的长途旅行，开车倒还好，主要是飞机和绿皮车，绫喵觉得是真的需要这样一台长续航手机。说实话我在去新疆的绿皮车上全程都在靠它跟朋友看剧。不过在新疆的旅途上没怎么用到，只有在赛里木湖露营的时候，我们没带灯，我拿它当手电筒用。（其实没用到是好事，真遇到紧急问题了就麻烦了）\n作为数码博主，也是一个重度旅游爱好者（今年才开始写游记，其实去年我们就去过很多地方了）随身携带这样一台备用机真的非常有安全感，不管是抗摔还是超长电量还是非常不错的信号。虽然绫喵可能不是这台手机的目标用户，但它也的确给我带来了不少安全感。\n以上\n以下为发布会总结部分\n抗摔和内外防护\n荣耀X70是业内首个十面内外抗摔的手机，首次将航天级非牛顿流体材料创新性应用到机身内部，吸能缓震能力提升300%，抗摔高度实现业内最高2.5米，有效预防手机器件损坏、卡顿死机、功能异常等抗摔难题。\n荣耀X70还自创包含6层抗冲击设计、8大行业技术专利的防弹衣架构，整机内外防护能力提升112%，是首个通过行业SGS金标五星整机综合可靠性认证的手机，抗摔不挑高度、角度和路面，成为实至名归的硬核之王。\n好家伙这大车\n航海级密封防护\n荣耀X70率先在业内实现航海级密封防护，具备IP69K、IP69、IP68、IP66业内最全最高满级防水认证，是主流厂商中首款通过IP69K工业级防水认证的机型，可经住86℃高温热水、10000Kpa高压水、24小时盐雾喷洒、100%完全防尘的严苛考验。\n整机具备应对极端天气、高盐高湿、高温高压等多种复杂场景能力，支持AI暴雨触控和AI手套触控，还支持YOYO助手一键排尘排水，由被动到主动，打造地表最强防水体验。\n暴雨触控\n排尘排水\n电池容量\n荣耀X70搭载8300mAh第三代青海湖电池，续航实力再破行业纪录，加持电池融合高密度材料与先进封装工艺，机身厚度仅为7.76mm，兼顾强劲续航与轻巧便携。\n手机厚度\n无线充电\n荣耀X70开拓性在同档位搭载无线充电技术，支持80W有线及80W无线双快充，也是档位首款具备有线加无线反向充电能力的机型，充电能力比肩充电宝；同时，其50W无线车充覆盖逾230种主流车型，实现了从电池容量、充电设计、快充生态全面构建续航解决方案。",
-        "Url": "https://www.zhihu.com/question/1928478732194120434/answer/1928541024462038102?utm_medium=openapi_platform&utm_source=5e44e06",
-        "CommentCount": 4,
-        "VoteUpCount": 63,
-        "AuthorName": "绫音Ayane",
-        "AuthorAvatar": "https://picx.zhimg.com/50/v2-efad7efcf914aa318eb08808111e4015_l.jpg?source=bbf6831d",
-        "AuthorBadge": "https://pic1.zhimg.com/v2-4a07bc69c4bb04444721f35b32125c75_l.png?source=32738c0c",
-        "AuthorBadgeText": "笔记本电脑等 2 个话题下的优秀答主",
-        "EditTime": 1752580010,
-        "CommentInfoList": [
-          {
-            "Content": "为啥荣耀不出PRO版本？"
-          },
-          {
-            "Content": "性价比真高[赞][赞]"
-          },
-          {
-            "Content": "看着不错啊"
-          }
-        ],
-        "AuthorityLevel": "4",
-        "RankingScore": 2.7969315
+        "RankingScore": 2.7168455
       },
       {
         "Title": "2026年(3月)超大电池超长续航手机盘点和挑选建议 - 知乎",
@@ -1058,8 +1739,8 @@
         "CommentCount": 275,
         "VoteUpCount": 1075,
         "AuthorName": "长亭Time",
-        "AuthorAvatar": "https://pica.zhimg.com/50/v2-97047c7d47e917dac32ff783673165f6_l.jpg?source=bbf6831d",
-        "AuthorBadge": "https://picx.zhimg.com/v2-4a07bc69c4bb04444721f35b32125c75_l.png?source=32738c0c",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-97047c7d47e917dac32ff783673165f6_l.jpg?source=bbf6831d",
+        "AuthorBadge": "https://pic1.zhimg.com/v2-4a07bc69c4bb04444721f35b32125c75_l.png?source=32738c0c",
         "AuthorBadgeText": "新知答主",
         "EditTime": 1779607830,
         "CommentInfoList": [
@@ -1074,39 +1755,7 @@
           }
         ],
         "AuthorityLevel": "4",
-        "RankingScore": 2.7344673
-      },
-      {
-        "Title": "如何评价 7 月 15 日新发布的荣耀X70手机,有哪些亮点和槽点? - 知乎",
-        "ContentType": "Answer",
-        "ContentID": "7771895393348411500",
-        "ContentText": "荣耀 X70 是一款特点鲜明的中端手机，其在抗摔、防水和续航等方面表现突出，但在性能、影像等方面也存在一定不足。以下是对它的详细评价：\n亮点\n・抗摔性能卓越：荣耀 X70 首创 “防弹衣架构”，应用旗舰折叠屏同源创新材料，将防摔高度提升至 2.5 米，是行业首个通过 SGS 金标三防认证以及 SGS 五星整机综合可靠性认证的产品。其采用 6 层抗冲击设计，融合 8 大行业技术专利，整机内外防护能力相较荣耀 X60 Pro 提升 112%。\n・防水等级顶尖：作为主流厂商中首款通过 IP69K 工业级防水认证的手机，荣耀 X70 构建起 IP69K+IP69+IP68+IP66 的四重防护体系，达到航海级密封标准，能承受 85℃高温热水冲洗、10000KPa 高压水冲击等，还支持 YOYO 助手一键排尘排水功能。\n・续航能力超强：搭载 8300mAh 第三代青海湖电池，刷新了国产手机电池纪录，同时支持 80W 有线 + 80W 无线双快充与反向充电。实测数据显示，其可支持 18 小时综合场景亮屏、27 小时短视频播放等，通过智慧节电引擎与抗老化引擎，电池健康周期延长至 6 年。",
-        "Url": "https://www.zhihu.com/question/1928478732194120434/answer/1946909507063125776?utm_medium=openapi_platform&utm_source=5e44e06",
-        "CommentCount": 0,
-        "VoteUpCount": 0,
-        "AuthorName": "老宅男",
-        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-a879d917432f179be4743535b325ba53_l.jpg?source=bbf6831d",
-        "AuthorBadge": "",
-        "AuthorBadgeText": "",
-        "EditTime": 1756959398,
-        "AuthorityLevel": "4",
-        "RankingScore": 2.7056983
-      },
-      {
-        "Title": "荣耀X70评测:8300mAh电池与抗摔设计,国补后价格引发关注_手机_什么值得买",
-        "ContentType": "",
-        "ContentID": "4128158342997827307",
-        "ContentText": "第一次看到 荣耀 X70的配置单,我以为产品经理喝多了。8300mAh 电池 是什么概念?主流机型还在5000mAh挣扎,荣耀直接塞了个充电宝进去。但问题来了——这 手机 到底适合谁?根据真实用户反馈,买X70的人群画像特别清晰:户外工作者、续航焦虑晚期患者,还有给爸妈买手机的孝顺子女。\n有用户双卡5G开热点,亮屏6个半小时,挂王者荣耀后台继续待机8小时,还剩10%电量。这成绩,重度使用一天完全没问题,中度使用两天一充。但也有用户吐槽续航也就那样,充电还慢。你看,同一款手机,不同人用起来完全是两个世界。\n结论很明确:如果你每天坐办公室随手充电,X70可能就是个笨重的备用机;但如果你经常在外跑业务,或者懒得一天两充,这手机就是续航焦虑的终极解药。\n荣耀X70最大的两个卖点,听起来像营销话术,实际体验确实有点东西。\n先说\"十面抗摔\"。X70通过了SGS金标三防认证,支持IP66、IP68、IP69、IP69K防尘防水。IP69K能扛住高压热水冲洗,比普通IP68强得多。有用户直接称其为\"户外工作者的福音\"。\n但抗摔的代价也很明显——塑料边框加塑料背板。多位用户反馈,为了保证抗摔和轻量化,X70牺牲了质感。高亮塑料中框特别容易沾染指纹,手上稍微有点油,不仅滑而且腻,不建议大家裸机使用。\n再说这块8300mAh青海湖电池。官方宣称硅含量突破10%, 能量 密度极高。实测数据显示:5小时重度续航测试后剩余电量89%,玩1小时王者荣耀耗电8%,刷2小时抖音耗电9%。有人甚至说:手机界的续航天花板,能超越荣耀的只有荣耀。\n但充电速度就被电池容量拖累了。虽然支持80W快充,但从2%充满需要70多分钟。想想也是,8300mAh的电池,80W快充确实有点小马拉大车。\n现在买荣耀X70,时机非常微妙。国家补贴15%的政策正在执行中,在京东搜索\"手机补助\"进入补贴页面,选择云闪付支付,补贴金额自动抵扣。8+256GB版本原价本来就不贵,叠加国补后价格更香。\n荣耀X70正处于\"先人一步加速换新计划\"中,除了国补还有高达200元的以旧换新补贴,以及3期免息。部分用户还能抽到半年碎屏险和365天无忧换新服务。\n但要注意的是,补贴政策具有时效性,不同地区执行标准可能有差异。有用户反馈线下店服务参差不齐,建议优先选择官方旗舰店或授权门店。\n从用户舆论来看,现在入手确实划算。有用户双11买的顶配版,评价性价比很高,屏幕亮度高、电池耐用。但也有用户吐槽电池消耗过快,比不上其他品牌四五千毫安的电池。这种两极分化的评价,恰恰说明X70是一款优缺点极其分明的手机。\n荣耀X70的使用场景分化特别严重,用对地方是神器,用错地方是鸡肋。\n最佳使用场景TOP3:第一,户外强光环境。X70屏幕亮度很高,用户反馈白天室外显示很清晰,配合IP69K防水,雨天、工地、外卖配送毫无压力。第二,长途差旅。8300mAh电池加7.76mm轻薄机身,比带充电宝轻便多了。实测纯WiFi条件下亮屏近9小时,双卡5G开热点也能撑一整天。第三,长辈日常使用。系统流畅不卡,续航够长不用天天充电,抗摔耐造不怕手滑。\n最不适合的场景:第一,重度手游。处理器跑分仅66万左右,王者荣耀目前不支持120帧,仅支持90帧加高清,玩大型游戏会掉帧发热。第二,夜景摄影。后置5000万像素单摄,白天成像尚可,但用户直言拍照录像不行,夜景噪点多、亮度控制一般。第三,裸机握持。塑料中框沾指纹严重,建议戴壳使用。\n荣耀X70的产品逻辑很清晰——不做全能旗舰,只做续航和耐用的 极致 。\n在2000元价位段,大部分手机都在拼性能、拼影像,荣耀却反其道而行之,用8300mAh电池加十面抗摔打造差异化。这种策略风险很大,但精准切中了特定人群的需求。\n从用户反馈来看,这个策略是成功的。大量用户表示:适合不玩游戏、对拍照要求不高、注重屏幕、音质、续航和手感的用户。但也有用户称这手机是最不理想的体验,主要是续航和网络问题。更多人认为作为备用机或主力机都非常合适。\n为什么X70能引起这么大争议?因为它把资源全部堆在了续航和耐用上,性能和影像必然妥协。这种偏科设计,爱的人爱死,嫌的人嫌死。\n基于真实用户反馈,给想入手X70的朋友三个建议。\n第一,版本选择务必上顶配。多位用户强调,只有顶配版支持无线充电和反向充电。8加256GB是基础款,如果预算允许,建议直接上12加512GB。\n第二,渠道选择认准官方。有用户反馈线下店服务问题,建议优先选择京东自营、天猫官方旗舰店等正规渠道,确保能享受到国补和以旧换新政策。\n第三,预期管理别拿它当游戏手机。如果你主要玩王者荣耀、和平精英,X70能应付,但别开最高画质。有用户提醒:轻度游戏也能应付,重度游戏不推荐。因为2000左右有相当多性能更强的机子可选。\n总结:这手机到底值不值?\n荣耀X70是一款优缺点极其鲜明的手机。\n优点:8300mAh续航怪兽、SGS金标十面抗摔、IP69K顶级防水、3840Hz护眼屏、80W无线快充、国家补贴后性价比极高。\n缺点:性能一般、塑料机身质感欠佳、转子马达体验差、夜景拍照拉胯、充电速度被电池容量拖累。\n适合人群:户外工作者、续航焦虑患者、长辈用户、备用机需求者。\n不适合人群:重度手游玩家、摄影爱好者、质感党。\n最后说句大实话:在这个价位段,没有完美的手机,只有适合的手机。荣耀X70用极致的续航和耐用性,换来性能和影像的妥协,这种偏科设计注定争议不断。但如果你正好需要一台充一次用两天、摔不坏泡不坏的实用机,国补后的荣耀X70确实香到离谱。\n毕竟,能超越荣耀续航的,可能只有下一代荣耀了。",
-        "Url": "https://post.smzdm.com/p/a65e620n/",
-        "CommentCount": 0,
-        "VoteUpCount": 0,
-        "AuthorName": "",
-        "AuthorAvatar": "",
-        "AuthorBadge": "",
-        "AuthorBadgeText": "",
-        "EditTime": 1770603133,
-        "AuthorityLevel": "3",
-        "RankingScore": 2.6999056
+        "RankingScore": 2.6327462
       },
       {
         "Title": "荣耀X70焕新版:续航与防护兼备_手机_什么值得买",
@@ -1122,25 +1771,1363 @@
         "AuthorBadgeText": "",
         "EditTime": 1779073700,
         "AuthorityLevel": "3",
-        "RankingScore": 2.6774926
+        "RankingScore": 2.561799
       },
       {
-        "Title": "1399元起的三防机,荣耀X70发布:8300mAh电池+双80W快充 - 知乎",
-        "ContentType": "Article",
-        "ContentID": "4832097293669986282",
-        "ContentText": "25年7月15日，荣耀X70正式发布。✨省流就是8300mAh电池的真.三防手机+价格最低的80W无线充新机。\n【荣耀X70】的价格：\n 8+128版1399元（国补1189元）；\n8+256版1599元（国补1359元）；\n12+256版1799元（国补1529元）；\n12+512版1999元（国补1699元）；\n荣耀X70的详细信息：\n☀️【性能、电池与快充】\n荣耀X70是骁龙6 Gen 4（强于骁龙7s Gen 2/778G、接近骁龙7G3，弱于骁龙7s Gen 3。台积电4nm，1颗2.3GHz的A720+3颗2.2GHz的A720+4颗1.8GHz的A520，Adreno 810 GPU）。3490m㎡不锈钢VC均热板；\n⚡8300mAh，31.3Wh(3.77V)，欣旺达+ATL；\n80W快充(20V高压方案)，512GB的顶配版还有80W无线充。\n⛽【屏幕】\n6.79英寸1.5K绿洲护眼屏OLED，3840Hz高频PWM调光。1.3mm三窄边。；\n2640X1200，全白峰值亮度1800尼特，局部峰值6000尼特。\n⭐【相机部分】\n❶前置800万像素，F2.0；\n❷主摄5000万像素，F1.88+OIS；\n❸超广角无（后摄3个开孔分别是主摄、闪光灯、红外发射器）；\n⛱️【周边配置】\n荣耀X70有朱砂红(素皮)、幻夜黑、幻彩青、曙光金4个配色；",
-        "Url": "https://zhuanlan.zhihu.com/p/1928595567669404927?utm_medium=openapi_platform&utm_source=5e44e06",
+        "Title": "清醒提示|荣耀X70焕新版 8+256幻夜黑 实测优缺点全解析!!!_手机_什么值得买",
+        "ContentType": "",
+        "ContentID": "-7504195211798376436",
+        "ContentText": "最近刷张大妈,总能刷到荣耀X70焕新版的推送,8+256G幻夜黑版本,原价1899元,叠加国家补贴后到手仅1749元,再加上“十面抗摔、8300mAh青海湖 电池 、IP69防水”这几个吸睛卖点,不少人直呼“千元机闭眼冲”。但作为常年蹲张大妈捡漏、踩过不少数码坑的过来人,必须提醒大家: 下单前一定要保持清醒 ,这款机的优点确实突出,但缺点也同样明显,适合自己才是最值,今天就用最真实的体验,把它的优缺点拆解得明明白白,帮你避坑不踩雷。\n先上核心信息,方便大家快速划重点:\n机型:荣耀X70 焕新版 8+256G 幻夜黑\n官方标价:1899元\n到手价(叠加国家补贴):1749元(补贴规则后文详细说,避免踩坑)\n核心卖点:十面抗摔、8300mAh青海湖电池、IP69防水、荣耀绿洲护眼屏、AI智能体验\n定位:千元级实用型AI 手机 ,主打续航、耐用、护眼,非性能机、非影像机\n这绝对是这款机最核心的加分项,也是我最满意的一点。8300mAh的青海湖电池,采用第三代硅碳负极技术, 能量 密度比普通锂电池提升12.8%,在同价位千元机里几乎找不到对手,甚至比很多中端机的续航还要能打。实测日常使用(刷抖音、聊微信、看新闻、偶尔拍照),轻度使用两天一充完全没问题;重度使用(连续刷3小时短视频、1小时导航、接打电话),一天下来还能剩余30%左右电量,再也不用出门带充电宝,对于外卖员、户外工作者或者经常忘充电的人来说,安全感直接拉满。\n另外,它支持80W有线快充,实测30分钟就能充至85%,早上洗漱+吃早餐的时间,就能把手机从低电量充到够用状态,充电速度完全能跟上日常需求,而且采用双电荷泵设计,充电全程温控不超过39℃,不用担心发烫问题。官方还承诺,这款电池6年耐用不衰减,一台机器用三五年,续航依然能打,不用频繁换手机。\n千元机大多不注重防护,但这款荣耀X70焕新版在耐用性上直接拉满。首先是IP69防水,这是工业级别的最高防水等级之一,能抵御高压水枪冲洗、高温蒸汽喷淋,日常洗手溅水、雨天出门、不小心掉水里(短时间),都完全不用担心损坏,甚至可以直接用高压水枪冲洗机身,实用性拉满。它的防水设计也很用心,听筒网孔直径精确到0.3mm,比水分子表面张力系数小20倍,SIM卡槽采用迷宫式排水结构,意外浸水时能主动排出液体,细节拉满。\n其次是十面抗摔,采用防弹衣抗摔架构和六层缓冲结构,四角内置微气囊,通过SGS金标认证,2.5米高度跌落(水泥地、石头地)通过率100%,实测从桌面、台阶摔落几次,机身毫发无损,没有出现划痕、碎屏的情况。对比普通千元机大多只做1.5米防摔,且只防护正面、背面,这款的十面全防护,不管是给长辈用、户外用,还是不小心磕碰,都不用太心疼,耐用性直接碾压同价位机型。\n屏幕方面,这款机搭载的荣耀绿洲护眼屏,确实有实打实的优势,不是噱头。6.79英寸1.5K大屏,屏占比高达94.62%,边框极窄,视觉效果完全不像千元机,看视频、刷新闻的沉浸感很好,而且支持120Hz自适应高刷,滑动起来很丝滑,没有卡顿、拖影的情况,日常使用很流畅。\n重点是护眼功能,每块屏幕出厂时都经过144项色彩校准,配合自研的“阳光环”算法,在强光下可保持900nit亮度同时不偏色,大太阳底下也能看得清清楚楚;支持3840Hz超高频PWM调光,这个数值是行业平均值的3倍,即便在5%亮度下也几乎无频闪,深夜刷手机也不会伤眼;还有类自然光显示,模仿日出到日落的色温变化,实测连续阅读3小时的眼疲劳指数比普通OLED降低47%,对长辈、学生党或者经常长时间看手机的人来说,非常友好,再也不用怕长时间用机眼睛发酸、干涩了。\n8+256G版本的幻夜黑配色,颜值确实不错,微曲面玻璃背板搭配航空铝中框(此处纠正:实际为塑料中框,但质感做得不错),上手手感细腻,不会有廉价感,而且黑色耐脏、不沾指纹,日常不用频繁擦拭,不管是男生用还是女生用,都很百搭。机身重量183g,厚度8.1mm,在搭载8300mAh超大电池的机型中,这个机身控制堪称“魔鬼身材”,单手握持不会太笨重,长时间携带也不会有明显负重感,比同类型大电池手机更轻薄。\n目前这款机型支持2026年国家消费品以旧换新补贴,8+256G版本原价1899元,叠加补贴后到手价1749元,直接省了150元,而且补贴流程简单,在京东、淘宝等平台搜索“数码588”或“手机588”,进入国补专属专区,实名认证后就能直接抵扣,结算时自动减免,无需额外垫付,非常方便。需要注意的是,国家补贴额度限量发放、先到先得,而且仅限全新国行正品,这款机型符合补贴要求,叠加补贴后,在同价位大电池、高防护机型中,性价比确实有优势。\n这款机搭载骁龙6 Gen4处理器,4nm工艺,安兔兔跑分在75万左右,性能属于中端偏下水平,但搭配荣耀OS轻量化引擎和AI智能调度,日常使用完全够用。刷微信、抖音、淘宝、看视频,甚至多开应用,都不会出现卡顿、闪退的情况;打开 相机 、扫码、支付,响应速度也很快,官方承诺36个月流畅不卡顿,对于不玩大型游戏的人来说,完全能满足日常需求。\nAI功能也比较实用,比如AI文档模式,拍摄文档时能自动矫正曲面畸变、增强对比度,最终效果堪比扫描仪;AI暴雨触控、AI手套模式,湿手、戴手套时也能正常操作屏幕,户外、工地使用很方便;还有AI护眼调节,能根据环境光线自动调整屏幕色温、亮度,不用手动调节,很省心。\n这是这款机最明显的缺点,骁龙6 Gen4处理器,主打低功耗、长续航,而非性能,所以 绝对不适合重度游戏党 。实测玩《原神》,即便是开中低画质,也会出现卡顿、掉帧的情况,玩半小时后机身会轻微发烫,帧率不稳定,体验很差;玩《王者荣耀》,开低画质能勉强流畅运行,但开高画质、高帧率,就会出现掉帧、卡顿,团战的时候尤为明显;至于《星穹铁道》这类中高负载游戏,更是难以流畅运行,只能偶尔玩一玩轻度小游戏(比如斗地主、消消乐),满足日常娱乐即可。如果平时经常玩大型游戏,这款机直接pass,别抱侥幸心理。\n千元机的影像大多不强,但这款机的影像配置确实比较简陋,后置只有一颗5000万主摄(支持OIS光学防抖),没有超广角、没有长焦,前置800万像素,只能满足最基础的拍照需求,比如拍家人合照、风景、扫码、发朋友圈,勉强够用,但别指望拍出多么清晰、有质感的照片,更达不到“拍照好看”的水准。\n实测拍照效果:白天光线充足时,拍出来的照片清晰度尚可,但色彩饱和度一般,细节还原不够细腻;傍晚、夜景拍摄时,噪点比较明显,画面容易发糊,即便是有AI夜景算法加持,也很难拍出干净、通透的夜景照片;没有超广角 镜头 ,拍大场景(比如风景、聚会合影)很不方便,只能靠移动手机拼接,体验很差。如果平时喜欢拍照,追求影像效果,这款机不适合你。\n虽然外观设计不错,但机身中框采用的是塑料材质,而非金属中框,上手质感虽然比普通塑料中框好一些,但仔细摸能感觉到塑料的廉价感,而且塑料中框的抗刮性、耐磨性不如金属中框,长期使用后,中框容易出现划痕、磨损,影响机身美观,这也是千元机的常见短板,但需要提前有心理预期,不要指望它有中端机的质感。\n很多人以为“焕新版”是大幅升级,但实际上,荣耀X70焕新版和老款X70相比,升级非常有限,主要就是多了一个旭日金配色,以及出厂预装MagicOS 10系统,硬件配置几乎没有变化,但价格却比老款贵了300元左右,目前老款X70清仓,同配置版本价格更低,性价比比焕新版更高。",
+        "Url": "https://post.smzdm.com/p/ae600glz/",
         "CommentCount": 0,
-        "VoteUpCount": 4,
-        "AuthorName": "爱搞机",
-        "AuthorAvatar": "https://pica.zhimg.com/50/v2-acbc372490a533a542c6012bb0edf4b5_l.jpg?source=bbf6831d",
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
         "AuthorBadge": "",
         "AuthorBadgeText": "",
-        "EditTime": 1752593024,
-        "AuthorityLevel": "4",
-        "RankingScore": 2.6670387
+        "EditTime": 1778141304,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.4358015
+      },
+      {
+        "Title": "荣耀X70:主打长辈市场,入手仅需1299元!|骁龙|手机|像素|护眼|低功耗|荣耀x70|全场景新品发布会_网易订阅",
+        "ContentType": "",
+        "ContentID": "7120300398547312526",
+        "ContentText": "荣耀X70定位明确,主打长辈市场,在屏幕护眼、操作简化及耐用性方面进行了针对性优化。6.79英寸护眼绿洲屏+3840Hz超高频调光,大字体模式防误触;8300mAh青海湖电池两天一充,IP68+十面抗摔守护安全;骁龙6Gen4流畅耐用,系统优化杜绝广告骚扰。\n荣耀X70配备的6.79英寸1.5K绿洲护眼屏支持4320Hz超高频PWM调光技术,这个参数通过了德国莱茵TÜV无频闪认证,达到零风险调光级别。根据标准定义,当调光频率高于3125Hz时就达到无频闪危害等级,4320Hz这个数值已经远超安全线。\n荣耀X70内置的8300mAh青海湖电池,采用第三代硅碳负极技术,让能量密度提升20%,配合骁龙6 Gen4低功耗芯片和MagicOS 9.0的“冻结后台”优化,刷短视频27小时、微信视频通话16小时、连续导航15.6小时,重度用户轻松坚持一天半,普通用户实现三天一充。支持的80W有线快充,15分钟即可将8300mAh青海湖电池充至50%电量;顶配版更支持80W无线快充,甚至能给耳机、手表反向供电。\n荣耀X70采用的“防弹衣抗摔架构”,整合了6层抗冲击结构:从最外层的超深度钢化玻璃,到屏下阻尼层、屏周阻尼层、蜂窝支架、缓震中框、强化后壳,形成了一个完整的防护体系。按照荣耀实验室的数据,这款手机在2.5米高度跌落、10多种不同路面测试中表现出色,甚至可能经受矿卡碾压而不损坏。\n荣耀X70搭载骁龙6Gen4处理器,4nm工艺制程,功耗控制很稳健。日常微信、抖音、网购、视频通话、看直播,全程流畅稳定,打开APP速度快,后台保活能力不错,不会出现杀后台的情况。系统内置的长辈模式通过放大字体与图标、简化界面及屏蔽广告,降低了操作门槛。\n荣耀X70后置1.08亿像素主摄,新增AI影像算法优化,支持动态抓拍、3X无损变焦及夜景增强,提升夜景与动态拍摄表现;支持夜景人像与运动抓拍;超广角镜头升级至1200万像素,支持112°视野与微距功能。前置镜头提升至1600万像素,加入AI美颜与背景虚化算法,满足直播与视频通话需求。",
+        "Url": "https://www.163.com/dy/article/KSM0UD6M0553TAZH.html",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1778498732,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.2385612
+      },
+      {
+        "Title": "荣耀X70焕新版:超长续航与十面抗摔,打造你的无忧生活!_手机_功能_用户",
+        "ContentType": "",
+        "ContentID": "-7285959957958338127",
+        "ContentText": "荣耀X70焕新版:超长续航与十面抗摔,打造你的无忧生活!\n在如今快节奏的生活中,手机不仅仅是通讯工具,更是我们生活中不可或缺的伙伴。想象一下,您正在户外探险,手机却因电量不足而无法记录美好瞬间,或者在一次意外中,手机屏幕摔裂而无法使用。这些场景是否让您感到无比沮丧?今天,我们将对荣耀X70焕新版进行详细测评,看看它如何在超长续航与强悍抗摔方面为您打造无忧的生活体验。\n1. 亮眼外观与护眼屏幕\n荣耀X70焕新版采用6.78英寸OLED曲面屏,屏幕亮度可达6000nits,保证在各种光照条件下都能清晰可见。它的荣耀绿洲护眼屏设计,能够有效减少蓝光对眼睛的伤害,尤其适合长时间使用手机的用户。无论是阅读、追剧,还是玩游戏,您都可以享受到舒适的视觉体验。\n2. 超长续航:8300mAh电池\n荣耀X70焕新版配备8300mAh大电池,最长可达2.5天的续航时间,足以满足您一天的各种需求,无论是通话、上网还是拍照。配合80W无线超级快充技术,您只需短暂充电,便能快速恢复满电状态。这一优势在长途旅行或户外活动中尤为明显,您再也不用担心电量不足的问题。\n3. 十面抗摔,安全无忧\n荣耀X70焕新版采用全新自研防弹衣抗摔架构,结合IP69K、IP68和IP66的多重防水等级,能够有效抵御意外跌落和水浸的伤害。即使在极端环境下,您也无需担心手机的安全性。对于喜欢户外运动或工作环境复杂的用户来说,这款手机无疑是一个理想的选择。\n4. 强大的摄影功能\n荣耀X70焕新版配备5000万AI超清防抖影像与OIS光学防抖技术,确保您在拍照时能获得清晰稳定的画面。无论是拍摄风景还是记录日常生活的点滴,荣耀X70都能帮助您轻松捕捉每一个精彩瞬间。此外,全能AI编辑功能让您在拍照后可进行简单的后期处理,提升照片质量,分享给朋友们。\n5. 人性化的智能功能\n荣耀X70焕新版还拥有AI触控与AI手势控制功能,让操作更加便捷。红外遥控、全场景NFC和双频GPS功能,为您的日常生活提供更多便利。无论是出门购物、导航还是控制家电,这款手机都能轻松应对,提升您的生活品质。\n6. 性价比与促销活动\n荣耀X70焕新版的起售价为1799元,结合其丰富的功能和强大的性能,性价比非常高。目前,荣耀还推出了三期免息、赠送半年碎屏险、90天只换不修等优惠活动,此外还有以旧换新最高补贴250元的政策,让用户在购买时享受更多实惠。这样的活动让您不仅能买到优质产品,还能节省一笔开支。\n7. 总结与建议\n通过对荣耀X70焕新版的测评,我们可以看出,它在超长续航、抗摔性、摄影能力及智能功能等方面都有着出色的表现,尤其适合户外运动爱好者和追求高性价比的用户。在当前的促销活动中,购买荣耀X70焕新版不仅能享受丰富的福利,还能为您的生活带来便利和乐趣。\n您最看重手机的哪些方面?是否还有其他手机您想了解的?欢迎在评论区留言,与我们分享您的看法! 返回搜狐,查看更多",
+        "Url": "https://www.sohu.com/a/1026745646_122471764",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1779554580,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.236075
+      },
+      {
+        "Title": "2026年荣耀手机选购指南:五大热门机型横向对比_用户_技术_Magic",
+        "ContentType": "",
+        "ContentID": "-5467859964664812792",
+        "ContentText": "2026年荣耀手机选购指南:五大热门机型横向对比\n在智能手机市场中,荣耀手机凭借其卓越的性能和性价比,赢得了众多用户的青睐。2026年,荣耀推出了多款新机型,满足不同用户的需求。本文将从测评官和推荐官的角度,为您详细解析五款热门荣耀手机,帮助您找到最适合自己的那一款。\n荣耀X70:护眼屏与超长续航的完美结合\n荣耀X70是一款兼具护眼和续航优势的手机。它搭载了8300mAh的电池,经过实测,待机时长可达19天,连续刷短视频12小时仅耗电35%。这款手机的独特之处在于其绿洲护眼屏技术,经过认证,采用动态刷新率调节技术,有效降低42%的蓝光伤害,保护用户的视力。\n荣耀X70的十面抗摔设计经过军工级测试,从1.5米高度跌落26次仍能正常工作,展现出其卓越的耐用性。此外,IP69防水等级意味着它不仅能抵御暴雨天气,甚至可以在沙滩游玩时短暂浸泡海水中,极大地提升了使用场景的多样性。\nAI智能调度系统会根据使用场景自动优化性能,确保流畅体验的同时最大限度节省电量。对于需要长时间使用手机的用户,荣耀X70无疑是一个理想的选择。\n荣耀Magic7:AI技术赋能摄影的全新体验\n荣耀Magic7配备了荣耀AI鹰眼相机,能够捕捉每一个精彩瞬间。其骁龙处理器引领速度,确保流畅的操作体验。手机的3D超声波指纹识别技术和自然光护眼屏为用户提供了更为舒适的使用体验。\n荣耀Magic7的IP69级防尘抗水设计,使得这款手机在各种环境下都能稳定运行,适合日常使用、拍照和娱乐等多种场景。年轻人和手机摄影爱好者绝对会对这款手机情有独钟。\n荣耀Play10C:性价比之王的全面进化\n荣耀Play10C是一款性价比极高的手机,配备6000mAh高能电池,结合AI省电技术,中度使用可坚持两天半,满足日常使用毫无压力。其360°整机抗摔防水设计让它成为户外工作者的理想选择。\n荣耀Play10C还具备一键直达功能,可自定义5个快捷操作,极大地方便了用户的日常生活。AI影像系统支持多种场景自动识别优化,让您在拍照时轻松获得理想效果。\n选购建议:找到最适合你的荣耀手机\n在选择荣耀手机时,您可以根据自己的需求和预算做出合理的选择:\n无论选择哪款荣耀手机,都能享受到AI智能体验、超长续航和卓越的信号表现。2026年国家补贴政策让这些机型更具购买价值,建议根据自身需求和预算做出选择。 返回搜狐,查看更多",
+        "Url": "https://www.sohu.com/a/1027261745_122471764",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1779680160,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.235338
       }
     ],
-    "fetchedAt": "2026-05-25T02:52:45.811Z"
+    "fetchedAt": "2026-05-25T07:16:17.440Z"
+  },
+  "荣耀 X60 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀X60 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "6600mAh",
+        "screen": "",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "绿洲护眼屏"
+      },
+      "features": [
+        "6600mAh 荣耀青海湖电池 66W荣耀超快充",
+        "绿洲护眼屏 120Hz",
+        "1亿像素 超清影像需进入高像素拍照模式"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "荣耀安卓手机怎么样 千元机卷王驾到!荣耀X60 Pro:3840Hz护眼屏+6600mAh巨电+1亿..._什么值得买",
+        "ContentType": "",
+        "ContentID": "1815735591342732463",
+        "ContentText": "这手机真香!续航超长,摔不坏,屏幕护眼,千元价还带曲面屏和卫星消息,太划算了\n荣耀X60 Pro凭借其3840Hz护眼屏、6600mAh大电池和1亿像素摄像头,成为了一款耐用的千元机。该手机在续航、耐摔和护眼方面表现出色,适合预算有限但追求实用性的用户。它还支持360°全身防水和66W超级快充,具备太极缓震架构和超深度钢化玻璃,抗摔能力提升。屏幕获得Vico A+级别护眼认证,搭载荣耀绿洲护眼技术,减少眼疲劳。处理器为高通骁龙6 Gen 1,后置主摄一亿像素,满足日常使用需求。目前8GB+256GB版本在国家补贴后价格约为1270元,性价比高,适合寻找耐用千元机的消费者。",
+        "Url": "https://post.smzdm.com/zz/p/a7g9g4wo/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1756181543,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.4878938
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀X60Pro:轻薄大电池,摄影与护眼双重升级_什么值得买",
+        "ContentType": "",
+        "ContentID": "-6834368884214973372",
+        "ContentText": "这手机也太良心了,续航猛、拍照强,关键是还扛摔防水,千元机里真找不出几个这么全面的\n荣耀X60Pro在2025年千元机市场中以其轻薄设计、超大电池容量、卓越影像能力和护眼技术脱颖而出。该手机拥有7.98mm薄度、188g重量和6600mAh电池,支持66W快充。后置1.08亿像素主摄,具备先进的摄影功能和AI抓拍技术。屏幕采用AMOLED材质,支持高刷新率和高频PWM调光,具备护眼模式和助眠显示功能。搭载高通骁龙6Gen1处理器,具备良好的散热性能和抗摔防水能力。荣耀X60Pro满足了不同用户群体的需求,成为千元机市场中的高性能均衡之选。",
+        "Url": "https://post.smzdm.com/zz/p/a44kqwek/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1751515373,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.4573116
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 荣耀X60 Pro上手体验,1499起真的香吗?_什么值得买",
+        "ContentType": "",
+        "ContentID": "7041812972773341672",
+        "ContentText": "这手机续航太猛了,6600mAh电池两天都用不完,屏幕护眼又清晰,千元机里真不多见,适合不折腾换机、追求实用的小伙伴\n荣耀X60 Pro起售价1499元,提供玄武灰配色,外观设计大气。机身内置6600mAh大电池,支持66W快充,续航表现出色,轻中度使用可两天一充。机身重量191克,采用二代太极缓震架构,具备良好的抗摔能力。正面搭载6.78英寸OLED屏幕,分辨率为2700×1224,支持120Hz刷新率和3840Hz高频PWM调光,局部峰值亮度达3000nit,适合户外使用。影像方面,后置1.08亿像素主摄,支持AI消除功能,日常拍照表现良好。性能方面搭载骁龙6Gen1处理器,王者荣耀可稳定运行90帧。系统动画流畅,支持YOYO助理、灵动胶囊、任意门等功能。扬声器升级为双扬,最大音量可达300%,适合中老年人使用。支持双向北斗卫星短信,仅限512GB顶配版。总体而言,该机适合对续航、屏幕护眼、系统稳定性有需求的用户,性价比高。",
+        "Url": "https://post.smzdm.com/zz/p/amvrk79d/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1753937964,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.3986635
+      },
+      {
+        "Title": "荣耀安卓手机怎么样 这可能是未来的销冠 荣耀X60 Pro开箱体验_什么值得买",
+        "ContentType": "",
+        "ContentID": "-2938467731602617343",
+        "ContentText": "双曲面屏+素皮手感太赞了,北斗短信功能实用性强,1亿像素主摄够用,大电池续航给力,性价比高\n荣耀X60 Pro采用双曲面屏幕设计,背板为素皮材质,配金属铭牌装饰。搭载第一代骁龙6处理器,配备12GB运行内存和512GB存储空间,屏幕尺寸为6.78英寸,分辨率为2700×1224,支持最高120Hz刷新率。具备荣耀绿洲护眼屏、类自然光护眼及3840Hz高频PWM调光功能。支持北斗双向卫星消息,仅限中国移动卡使用。机身自带贴膜,重量为192.8克,并内置6600mAh青海湖电池。",
+        "Url": "https://post.smzdm.com/zz/p/adzlr34d/",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1750914083,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.3700614
+      },
+      {
+        "Title": "荣耀x60pro(荣耀X60 Pro)怎么样?体验6天优缺点测评 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "-6184468828302253509",
+        "ContentText": "・荣耀X60 Pro 十面抗摔防水耐磨 6600mAh青海湖电池 荣耀绿洲护眼屏  5G AI 新品手机\n・荣耀X60 Pro（荣耀x60pro）怎么样？体验6天优缺点测评\n・本文将为你选购做出精确建议，结合实际优惠力度，协助你选到高性价比荣耀X60 Pro（荣耀x60pro）\n目录\n・一：荣耀X60 Pro（荣耀x60pro）参数配置\n・二：荣耀X60 Pro（荣耀x60pro）优点\n・三：荣耀X60 Pro（荣耀x60pro）缺点\n・四：荣耀X60 Pro（荣耀x60pro）网友测评看是否值得买吗\n卡片显示价格虚高，获取最低活动价格↓↓↓\n一：荣耀X60 Pro（荣耀x60pro）参数配置\n基础测试\t商品名称：荣耀X60 Pro 商品编号：100121120211 CPU型号：第一代骁龙6 运行内存：12GB 机身内存：512GB 屏幕分辨率：1.5K 特征特质：轻薄，高频PWM调光，大底主摄 机身色系：青色系 屏幕材质：OLED曲面屏 后摄主像素：1亿像素 风格：科技，大气，简约风\n主体\t入网型号：BRP-AN80 机型：荣耀 X60 Pro 上市日期：2024-10-16 电信设备进网许可证：是\n基本信息\t机身重量：188g 机身尺寸：宽75.5mm；长162.8mm；厚7.98mm 机身颜色：黑色,灰色,橙色,青色\n存储\t运行内存：12GB 机身内存：512GB\n屏幕\t屏幕尺寸：6.78英寸 屏幕材质：AMOLED 屏幕色数：10.7亿色数 屏幕分辨率：2700×1224像素 像素密度：437PPI 屏幕刷新率：120Hz 触控采样率：300Hz 屏占比：93.7% 触控方式：电容屏(多点触控) 触摸特性：手势操作\n电池信息\t电池容量：6600mAh(typ) 充电功率：66W\n操作系统\t操作系统：MagicOS 8.0 CPU型号：高通第一代骁龙6移动平台 核心数：八核 主频：2218MHz CPU制程：4nm CPU架构：Cortex-A78,Cortex-A55 GPU型号：Adreno\n网络支持\t5G网络：支持5G 4G网络：4G TD-LTE；4G FDD-LTE 卫星网络：支持 SIM卡类型：Nano SIM 双卡机类型：双卡双待 SIM卡数量：2个\n数据接口\t充电接口：Type-C\n手机特性\t生物识别：人脸识别；屏幕指纹\n摄像头\t后置相机：10800万像素 光圈：F1.75 前置相机：800万像素 光圈：F2.0 闪光灯：后置LED闪光灯 视频拍摄：支持4K视频拍摄 拍照特性：全景拍照",
+        "Url": "https://zhuanlan.zhihu.com/p/3329040795?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 2,
+        "VoteUpCount": 37,
+        "AuthorName": "小白同学",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-a5778cc68749bda24ed5095d1f84ed2f_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1729950086,
+        "CommentInfoList": [
+          {
+            "Content": "荣耀x60PRO抖音评论区反映不好"
+          },
+          {
+            "Content": "荣耀x60PRO抖音评论区反映不好"
+          }
+        ],
+        "AuthorityLevel": "4",
+        "RankingScore": 2.262556
+      },
+      {
+        "Title": "荣耀X60 Pro:防摔防水、6600mAh电池,买到就是赚到!_手机_用户_功能",
+        "ContentType": "",
+        "ContentID": "8002465154219991677",
+        "ContentText": "荣耀X60 Pro:防摔防水、6600mAh电池,买到就是赚到!\n在现代快节奏的生活中,智能手机已经成为人们不可或缺的工具。无论是工作、娱乐还是社交,手机的功能和性能都直接影响着我们的生活品质。今天,我们将深入评测一款颇具竞争力的手机——荣耀X60 Pro。这款手机以其十面抗摔、防水耐磨的特点,6600mAh的超大电池,成为了众多消费者的关注焦点。它究竟能为你带来什么样的使用体验?让我们一探究竟。\n1. 荣耀X60 Pro的核心卖点\n荣耀X60 Pro的推出,意在满足追求高性能与高耐用性的用户需求。首先,它的十面抗摔设计和防水耐磨特性,使得这款手机在户外活动中表现出色,无论是登山、露营还是日常使用,都能有效避免意外损坏。其次,6600mAh的青海湖电池,确保了用户可以在长时间使用中不必频繁充电,适合那些工作繁忙或喜欢长时间使用手机的用户。此外,荣耀X60 Pro还配备了一亿像素的AI影像系统,能够捕捉到超清晰的照片,适合摄影爱好者。\n2. 功能与性能的全面对比\n在功能方面,荣耀X60 Pro不仅具备强大的拍照能力,还支持双向北斗卫星短信功能。在偏远地区或信号不佳的环境中,这一功能可以为用户提供额外的通讯保障,避免因信号问题而无法联系到他人。此外,荣耀X60 Pro的全天候荣耀绿洲护眼屏设计,能够有效减少蓝光对眼睛的伤害,适合长时间使用手机的用户。相比于市场上其他同类产品,荣耀X60 Pro的这些功能显得尤为突出。\n3. 设计与材料\n荣耀X60 Pro在设计上,采用了时尚的典雅黑配色,既显得低调又不失优雅。机身的材料经过精心选择,确保了防水和耐磨的特性。与一些仅仅注重外观的手机不同,荣耀X60 Pro在美观与实用之间找到了平衡,适合各种场合的使用。\n4. 性价比分析\n在同类产品中,荣耀X60 Pro的价格相对合理,尤其是在当前的促销活动中,消费者可以享受到国家补贴带来的优惠。这意味着,你不仅可以拥有一款高性能的手机,还能在价格上获得实惠,真正实现“买到就是赚到”的体验。\n5. 适用人群与使用场景\n荣耀X60 Pro主要面向年轻人、户外运动爱好者以及追求高性能手机的用户。无论是喜欢摄影的用户,还是需要长时间使用手机的上班族,这款手机都能提供优质的使用体验。它的防水防摔特性,尤其适合户外活动频繁的人群,让他们在享受活动的同时,无需担心手机的安全问题。\n6. 当前促销活动与用户利益\n目前,荣耀X60 Pro正在进行促销活动,消费者可以享受到国家补贴的优惠,购买后可节省不少开支。假设原价为4999元,现在优惠至4299元,用户可节省700元。这无疑是一个难得的机会,抓住这个时机,升级你的手机,享受更高的生活品质!\n7. 开放性问题\n在选择手机时,你最看重的是什么?是强大的性能,还是超长的续航?或者是时尚的外观设计?欢迎在评论区分享你的看法,或询问你想了解的其他产品信息。荣耀X60 Pro的强大功能与优惠价格,绝对值得你拥有!\n返回搜狐,查看更多",
+        "Url": "https://www.sohu.com/a/976763833_122471764",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1768548780,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.2888043
+      },
+      {
+        "Title": "荣耀X60 Pro:防摔防水,6600mAh电池,畅享超清影像,智能生活从此开启!_用户_手机",
+        "ContentType": "",
+        "ContentID": "-5553067830439556457",
+        "ContentText": "在这个科技迅猛发展的时代,智能手机已经成为我们生活中不可或缺的一部分。你是否曾在户外活动时担心手机意外摔落或进水?又或者在长途旅行中对电量的焦虑让你无比烦恼?荣耀X60 Pro正是为了满足这些痛点而生,它不仅具备出色的防摔防水功能,更搭载了6600mAh的大电池,让你无惧电量不足的烦恼。此外,它的超清晰影像和双向北斗卫星短信功能,提升了用户的使用体验。这篇文章将深入对比荣耀X60 Pro与市面上其他同类产品,帮助你更好地了解它的独特优势。\n1. 功能对比:荣耀X60 Pro的全面实力\n荣耀X60 Pro的核心卖点在于其十面抗摔防水耐磨的设计,6600mAh青海湖电池和超清晰一亿像素AI影像。与同类产品相比,荣耀X60 Pro在防护性能上无疑占据优势,适合那些热爱户外活动和极限运动的人群。无论是攀岩、潜水还是长途旅行,荣耀X60 Pro都能确保你的手机在各种极端环境下依然正常工作。\n相较于其他品牌的手机,荣耀X60 Pro还具备全天候荣耀绿洲护眼屏,减少蓝光对眼睛的伤害,适合长时间使用的用户。而在音质方面,荣耀X60 Pro的双扬立体音场设计,提供了300%大音量的清晰入耳体验,适合喜欢听音乐和观看视频的用户。\n2. 电池续航:6600mAh的无忧体验\n对于现代用户而言,电池续航能力是选购手机时必须考虑的因素之一。荣耀X60 Pro搭载的6600mAh青海湖电池,能够满足用户全天候的使用需求。即使在高强度的使用情况下,荣耀X60 Pro也能提供持久的电量支持。与市场上其他手机相比,荣耀X60 Pro的续航能力显然更为突出。\n一些竞争对手的产品虽然也具备大电池,但往往在软件优化和能耗控制方面不及荣耀X60 Pro,导致实际使用体验大打折扣。荣耀X60 Pro通过智能AI算法,合理调配电量使用,确保用户在需要的时候不会遭遇“没电”的尴尬。\n3. 摄像头:超清晰一亿像素的影像体验\n在影像方面,荣耀X60 Pro配备了超清晰的一亿像素AI影像系统,让用户能够捕捉到每一个精彩瞬间。无论是在阳光明媚的日子还是在夜晚昏暗的环境下,荣耀X60 Pro都能提供出色的拍摄效果。与同类产品相比,荣耀X60 Pro在图像处理能力上表现优异,其AI算法可以智能识别场景,自动调整拍摄参数,确保每一张照片都清晰动人。\n而一些竞争品牌的手机虽然也声称拥有高像素摄像头,但在实际拍摄中往往无法达到荣耀X60 Pro的效果,尤其是在低光环境下的表现更是逊色。这使得荣耀X60 Pro成为了摄影爱好者和社交媒体活跃用户的理想选择。\n4. 防护性能:十面抗摔与防水设计\n荣耀X60 Pro的十面抗摔防水耐磨设计,让它在防护性能上领先于许多同类产品。无论是在户外运动、旅行还是日常使用中,用户都不必过于担心意外摔落或进水的问题。与一些品牌的手机相比,荣耀X60 Pro在耐用性上表现得更加出色,能够承受更为严苛的环境考验。\n此外,荣耀X60 Pro的防水性能也为用户提供了更多的使用场景,例如在雨天或游泳时依然能够安心使用。这种设计理念无疑迎合了现代用户对手机耐用性和实用性的高要求。\n5. 价格与性价比:国家补贴的优势\n荣耀X60 Pro在市场上的定价策略也颇具吸引力,尤其是在国家补贴政策的支持下,用户可以以更具性价比的价格购买到这款高端手机。相比于同类产品,荣耀X60 Pro在性能、功能和设计上的优势,结合合理的价格,让它成为了市场上最具竞争力的选择之一。\n一些品牌的高端手机虽然功能强大,但价格往往高得令人望而却步。而荣耀X60 Pro则以更亲民的价格,提供了同样甚至更为出色的性能,值得用户选择。\n6. 当前优惠活动:让你“赚到”\n现在购买荣耀X60 Pro还有额外的促销活动,用户不仅可以享受到国家补贴,还能获得额外的优惠折扣,极大地提升了购买的性价比。这样的活动无疑是让消费者心动的机会,错过了就再等一年。\n例如,当前活动期间,用户在购买荣耀X60 Pro时可以享受最高达500元的优惠,让这款手机的价格更加亲民。这样的优惠措施将大大提升用户的购买欲望,让你感受到“赚到了”。\n在这一波优惠活动中,不仅是荣耀X60 Pro,其他荣耀产品也在进行促销,适合不同需求的用户选择。无论是追求性价比的用户,还是对摄影有较高要求的用户,都能在荣耀的产品中找到合适的选择。\n你最看重手机的哪些方面?是出色的防护性能,还是超长的续航能力?荣耀X60 Pro是否是你心目中的完美选择?让我们一起在评论区讨论,分享你的看法吧! 返回搜狐,查看更多",
+        "Url": "https://www.sohu.com/a/995347093_122471764",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1773264720,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.2873273
+      },
+      {
+        "Title": "荣耀X60 Pro:抗摔防水,6600mAh超长续航,让你随时随地无忧沟通!_用户_手机_功能",
+        "ContentType": "",
+        "ContentID": "6194812879131850253",
+        "ContentText": "荣耀X60 Pro:抗摔防水,6600mAh超长续航,让你随时随地无忧沟通!\n在这个信息快速流通的时代,手机已经成为我们生活中不可或缺的一部分。然而,许多用户在使用手机时都面临着续航不足、抗摔能力差等问题。想象一下,你正在户外探险,手机却因为意外跌落而损坏,或是在旅行途中电量告急,无法与亲友保持联系。今天,我们将重点评测一款颇具竞争力的手机—— 荣耀X60 Pro ,它以其十面抗摔防水、6600mAh超长续航等特点,成为用户解决痛点的理想选择。\n1. 核心卖点\n荣耀X60 Pro的最大卖点在于其十面抗摔设计和6600mAh青海湖电池。无论是在户外运动还是日常使用,这款手机都能有效降低意外损坏的风险。同时,超长续航确保了用户在各种场合下都能随时随地保持联系。此外,荣耀X60 Pro还配备了一亿像素的AI影像和双向北斗卫星短信功能,极大地提升了拍摄体验和沟通的便利性。\n2. 功能对比\n2.1 抗摔防水性能\n荣耀X60 Pro采用了十面抗摔设计,结合了先进的材料和结构,能够有效抵御意外跌落带来的冲击。此外,它还具备IP68级防水性能,无论是在雨天还是在潮湿环境中,都能安心使用。这一设计理念特别适合户外运动爱好者和经常出差的商务人士。\n2.2 超长续航能力\n6600mAh的电池容量使荣耀X60 Pro在续航能力上表现出色。无论是长时间的视频观看、游戏还是日常使用,用户无需频繁充电。结合AI智能省电技术,荣耀X60 Pro能够根据用户的使用习惯进行优化,最大程度地延长电池使用时间。\n2.3 摄影功能\n荣耀X60 Pro配备了一亿像素的AI影像系统,支持多种拍摄模式,能够轻松拍摄出清晰、细腻的照片。无论是风景、人像还是夜景,荣耀X60 Pro都能胜任。同时,双扬立体音场设计让用户在观看视频时享受到更好的音效体验。\n2.4 通信功能\n在通信方面,荣耀X60 Pro具备双向北斗卫星短信功能,即使在没有信号的环境中,用户也能通过卫星发送紧急信息。这一功能特别适合在偏远地区旅行的用户,提供了额外的安全保障。\n3. 性价比与市场定位\n荣耀X60 Pro的价格与同类产品相比,性价比相对较高。虽然市场上有不少手机具备抗摔和防水功能,但很少有产品能够在续航、摄影和通信等多方面做到如此出色。荣耀X60 Pro的目标用户群体主要是喜欢户外活动的年轻人和追求高性价比的消费者。\n4. 促销活动与用户利益\n目前,荣耀X60 Pro正在进行国家补贴活动,购买该手机的用户可以享受一定的价格优惠。这意味着,消费者不仅能够以更低的价格获得一款高性能的手机,还能享受其带来的丰富功能和便利体验。通过此次促销活动,用户能够节省至少几百元的开支,进一步提升了购买的吸引力。\n5. 结语与思考\n荣耀X60 Pro凭借其卓越的性能和合理的价格,成为了市场上不可忽视的选择。无论你是户外探险者,还是追求高效工作的商务人士,这款手机都能为你提供极大的便利和保障。在这个快节奏的时代,选择一款能够随时随地与世界保持联系的手机,显得尤为重要。\n你最看重手机的哪些方面?是续航、抗摔,还是拍照功能?欢迎在评论区分享你的看法! 返回搜狐,查看更多",
+        "Url": "https://www.sohu.com/a/1001940940_122471764",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1774603980,
+        "AuthorityLevel": "2",
+        "RankingScore": 2.285014
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:16:58.551Z"
+  },
+  "荣耀 X50": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀X50",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "第一代骁龙6",
+        "battery": "5800mAh",
+        "screen": "6.78英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "AMOLED"
+      },
+      "features": [
+        "5800mAh",
+        "第一代骁龙6 芯片",
+        "6.78英寸 AMOLED 120Hz",
+        "13.1亿像素 为摄像头像素点参数"
+      ]
+    },
+    "zhihuItems": [
+      {
+        "Title": "荣耀X50正式发布,首创太极缓震架构",
+        "ContentType": "",
+        "ContentID": "-3712636833328378109",
+        "ContentText": "【环球网科技综合报道】7月5日,荣耀X系列“十周年登峰之作”——荣耀X50正式发布。荣耀中国区CMO姜海荣表示,“荣耀X50既是荣耀X系列十周年的登峰之作,也是新十年的开篇之作。它在品质、屏幕、续航、性能、影像领域全面突破,为用户带来‘一步到位’的超能体验。”\n 作为新机的亮点之一,荣耀X50首创太极缓震架构,并使用创新缓冲材料,可以实现两面四边四角的“无死角”抗摔。目前,这款手机已获瑞士SGS整机五星抗跌耐摔认证。在屏幕方面,荣耀X50搭载全新一代1.5K的6.78英寸OLED曲屏,支持120Hz刷新率、10.7亿色显示、1000Hz瞬时触控采样率以及100%DCI-P3广色域和影院级广色域。值得一提的是,荣耀X50通过了硬件级低蓝光认证,并搭配高频 PWM调光技术、类自然光护眼与助眠显示技术,可带来更优质的护眼体验。在续航方面,荣耀X50采用5800mAh超耐久大电池,并且电池在1000次充放电循环后仍保持80%以上的电池健康度。在影像方面,荣耀X50搭载1亿大像素超清主摄、1/1.67英寸大底传感器、f/1.75大光圈,支持3倍无损变焦,在全场景RAW域算法的加持下可大幅提升夜景和人像效果。此外,荣耀X50首发新一代骁龙6芯片,采用旗舰级别的4nm工艺,并在荣耀全新一代MagicOS操作系统的加持下带来更智慧的交互体验。在外观方面,荣耀X50推出了勃朗蓝、燃橙色、雨后初晴、典雅黑四款配色,可以满足用户多元化的审美需求。据悉,荣耀X50起售价为1399元。",
+        "Url": "https://tech.huanqiu.com/article/4DbEsVYRQS5",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1778659763,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.8442044
+      },
+      {
+        "Title": "荣耀X50,拥有4大亮点,那是非常值得体验的_车家号_发现车生活_汽车之家",
+        "ContentType": "",
+        "ContentID": "-7691963581095080076",
+        "ContentText": "亮点1:防摔耐用\n荣耀X50在屏幕上提升了防摔标准,用首创太极缓震架构,跌落实现软着陆,让屏幕整体强度提升3倍,在1.5m高度情况下可以实现多角度防摔。同时荣耀X50也是全球首个获得瑞士SGS整机五星抗跌耐摔认证的产品。\n荣耀X50内置5800mAh超耐久大电池,可以1000次充放电循环后,电池健康度依然大于80,依旧能为用户带来长续航体验。\n亮点2:全新一代1.5K护眼曲屏\n荣耀X50采用全新一代1.5K护眼曲屏,支持10.7亿色,还原多彩世界,支持120Hz刷新率,带来畅快屏幕操作和观看体验,除了支持硬件级低蓝光、通过了德国莱茵认证外,还支持荣耀自研类自然光护眼技术,以及支持1920HzPWM高频调光,守护用户的用眼健康。\n亮点3:1亿像素主摄\n荣耀X50后置1亿像素超清主摄,拥有1/1.67英寸大底传感器,f/1.75大光圈,可以带来毫秒级抓拍体验。另外全场景RAW域算的加入,提升了夜景和人像效果。同时还支持3倍无损变焦,助力用户通过多种视角记录美好生活,并具有超级夜景模式、AI智能优化、人像模式、大光圈模式、多镜录像、微电影等功能。\n亮点4:高颜值\n荣耀X50采用了精致的工艺和流畅的线条,打造出了极具现代感的机身。其背部独特的纹理设计,不仅增加了手机的防滑性,还赋予了它独特的视觉效果。无论是握在手中还是放在桌面上,都能展现出您的品味与个性。\n荣耀 X50 提供了多种时尚的配色,从低调内敛的经典黑白色,到充满活力的炫彩配色,总有一款能与您的气质完美契合。金属边框的加入,不仅提升了手机的质感,还增加了整体的坚固性,让您在使用过程中更加放心。\n#图文夏日征集令#",
+        "Url": "https://chejiahao.autohome.com.cn/info/22694736",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1759436820,
+        "AuthorityLevel": "3",
+        "RankingScore": 2.5627155
+      },
+      {
+        "Title": "荣耀X50_百度百科",
+        "ContentType": "",
+        "ContentID": "3097681387667302219",
+        "ContentText": "订阅0有用+10荣耀X50播报讨论上传视频荣耀旗下智能手机荣耀X50是荣耀旗下的一款智能手机,于2023年7月14日上市。荣耀 X50 支持最高 35W 快充。配备前置 8MP 自拍相机,后置 108MP+2MP 相机,内置 5700mAh / 5800mAh 电池,国内首发三星 4nm 工艺的骁龙 6 Gen 1 芯片,厚度 7.98mm,机身重量 185g。 [1]中文名荣耀 X50所属品牌荣耀产品类型智能手机CPU型号高通骁龙 6 Gen 1 [4]电池容量 5800mAh 屏幕尺寸6.78 英寸 [1]机身颜色燃橙色、勃朗蓝、典雅黑、雨后初晴 [3]发布时间2023年7月5日 [2]开售时间2023年7月14日 [5]出厂系统 MagicOS 7.1.1(基于Android 13) [6]尺 寸163.6*75.5*7.98mm(长*宽*厚)重 量185g内存容量8GB,12GB,16GB存储空间128GB,256GB,512GB屏幕类型OLED超清护眼硬核曲屏屏幕比例20:9对比度1000000:1屏幕亮度最高1200nit局部峰值亮度,最高1000nit全局峰值亮度屏幕色彩10.7亿色,100%DCI-P3广色域,影院级广色域刷新率120Hz分辨率1200*2652触控采样率1000Hz摄像头后置:1亿像素高清主摄像头,f/1.75大光圈200万感光景深摄像头,f/2.4光圈;前置:800万像素前置摄像头,f/2.0光圈电池充电5800 mAh电池(典型值),35W超级快充5G网络频段n1/n5/n8/n28A/n41/n78操作系统Magic OS 7.1.1(基于Android 13)目录1外观特色2配置参数外观特色播报编辑颜色参数机身颜色勃朗蓝,燃橙色,典雅黑,雨后初晴尺寸重量长度163.6mm163.6mm163.6mm163.6mm宽度75.5mm75.5mm75.5mm75.5mm厚度7.98mm7.98mm7.98mm7.98mm重量185g185g185g185g配置参数播报编辑荣耀X50配置参数 荣耀X50传播名荣耀X50内存8GB+128GB8GB+256GB12GB+256GB16GB+512GB显示屏幕类型:OLED超清护眼硬核曲屏屏幕尺寸:6.78英寸屏幕比例:20:9屏幕对比度:1000000:1屏幕亮度:最高1200nit 局部峰值亮度,最高1000nit 全局峰值亮度屏幕色彩:10.7亿色,100%DCI-P3广色域,影院级广色域屏幕刷新率:120Hz屏幕分辨率:1200*2652像素屏幕特色功能:1920Hz高频PWM调光;类自然光护眼技术;助眠显示技术;瞬时触控采样率:1000Hz [3]后置摄像头1亿像素高清主摄像头,f/1.75大光圈200万感光景深摄像头,f/2.4光圈前置摄像头800万像素前置摄像头,f/2.0光圈电池及充电5800 mAh电池(典型值)35W超级快充5G网络频段n1/n5/n8/n28A/n41/n78处理器芯片第一代骁龙6移动平台高通骁龙6 Gen1操作系统Magic OS 7.1.1(基于Android 13)备注1. 由于操作系统和应用占用容量空间,受诸多因素影响,实际可用容量会减少并有所差异。 2. 各区域上市颜色种类不同,详情咨询当地经销商。3. 显示屏采用圆角设计,按照标准矩形测量时,屏幕的对角线长度是6.7英寸(实际可视区域略小)。不同界面及游戏画面下,屏幕刷新率可能略有不同,请以实际为准。4. 手机厚度不包含摄像头凸起部分;实际尺寸和重量依配置、制造工艺、测量方法的不同可能有所差异。5. 一亿像素摄像头是指后置摄像头主传感器具有1亿个物理像素点。不同拍照模式的照片像素可能有差异,请以实际为准。1亿像素需进入“高像素”拍照模式体验。6. 5800mAh为电池典型值,电池额定容量5700mAh。最大支持有线充电功率35W,需搭配标配的荣耀超级快充35W原装充电器套装使用,实际充电功率会随不同场景智能变化,实际使用中可能因产品个体差异,使用习惯和环境因素不同略有不同,请以实际使用情况为准。参考资料: [6-7]荣耀X50手机",
+        "Url": "https://baike.baidu.com/item/%E8%8D%A3%E8%80%80X50",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "",
+        "AuthorAvatar": "",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1757579429,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.3318057
+      },
+      {
+        "Title": "荣耀x50怎么样?值不值得买?掰开揉碎了更大家聊一聊! - 知乎",
+        "ContentType": "Article",
+        "ContentID": "1886665148511673008",
+        "ContentText": "首先问你们个问题，从外观看，你们觉得荣耀X50像不像千元机？\n好了，言归正传，先说缺点吧！如果你接受不了它的缺点，再多的优点你也看不上对不对！\n缺点一：没有NFC。我一直觉得NFC应该是标配了，但荣耀X50缺席了。\n缺点二：充电速度慢，荣耀X50配备的充电头仅35W，加上电池容量大的原因充满电大约需要1个半小时，在这个快充的时代，估计只有iPhone用户毫无违和感。\n下面我掰开揉碎了跟大家聊一聊荣耀x50这款手机！\n1、性能：荣耀x50搭载了新一代高通骁龙6 Gen 1处理器，说实话，这款处理器的性能谈不上有多好，但我可以负责任的告诉大家，日常使用一点问题都没有，玩一些像王者荣耀、吃鸡等手游也可以流畅运行。\n2、屏幕：6.78英寸的OLED曲面屏，我没记错的话这是继荣耀x40后最便宜的OLED曲面屏。",
+        "Url": "https://zhuanlan.zhihu.com/p/565076778?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 49,
+        "VoteUpCount": 77,
+        "AuthorName": "南宫云",
+        "AuthorAvatar": "https://pica.zhimg.com/50/v2-b83e0169811248462141216e49eda90e_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1729133320,
+        "CommentInfoList": [
+          {
+            "Content": "太差了，比我以前一千多的用了四五年的还差多了。"
+          },
+          {
+            "Content": "有这个钱我为什么不买iQOO？1600搭骁龙6系列也是绝绝子\n荣耀显得我爱国？[飙泪笑][飙泪笑]"
+          },
+          {
+            "Content": "除了拍照和游戏，其他无敌。"
+          }
+        ],
+        "AuthorityLevel": "4",
+        "RankingScore": 2.2528765
+      },
+      {
+        "Title": "千元级怪兽机!荣耀X50告别续航焦虑 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "8393843481267638478",
+        "ContentText": "荣耀的新机X50在京东商城预售开启，售价为1399元，提供典雅黑、雨后初晴、勃朗蓝和燃橙四种配色可供选择。其中，荣耀X50最吸引人的亮点之一是其长续航能力。荣耀X50搭载了一块容量为5800mAh的超耐久大电池，这也是荣耀X系列中容量最大的电池。在高能量密度电池技术的支持下，经过连续12小时的重度使用测试，荣耀X50的电量仍剩余24%，真正实现了无忧续航。\n在用户常见的高频使用场景下进行续航对比测试，荣耀X50在短视频APP方面的续航时间可达20小时，在长视频APP和购物APP方面的续航时间可达22小时，是非常出色的续航表现，堪称\"续航神器\"。\n此外，经过1000次充放电循环测试，荣耀X50的电池健康度依然超过80%，显示其电池品质优秀。",
+        "Url": "https://zhuanlan.zhihu.com/p/641960840?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "ZOL中关村在线",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-3ba2067c6e708d2d13da46e412698424_l.jpg?source=bbf6831d",
+        "AuthorBadge": "https://picx.zhimg.com/v2-2ddc5cc683982648f6f123616fb4ec09_l.png?source=32738c0c",
+        "AuthorBadgeText": "已认证机构号",
+        "EditTime": 1688640120,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.2338538
+      },
+      {
+        "Title": "如何看待起售价为 1399 元起的荣耀X50 ?有哪些亮点和不足? - 知乎",
+        "ContentType": "Answer",
+        "ContentID": "-7397057846586748570",
+        "ContentText": "谢邀！\n荣耀X系列不知不觉已走过了十年，作为十年登峰之作的荣耀X50终于和大家见面了。这次我也抢先各位一步，对新机体验了几周，今天就来和大家分享分享我自己的使用感受。\n这次荣耀X50有几大升级，我来给大家一一介绍。\n第一大升级，是品质更加硬核！\n抗摔抗造是X系列的灵魂，相信不少朋友还对荣耀9X开啤酒瓶盖印象深刻，荣耀X50在众多前代的基础上更进一步。\n这一次，我们从大家日常最容易出现的跌落场景重新出发，在屏幕上大幅提升了防摔标准，研发团队首创了“太极缓震架构”，对屏幕四周进行环绕式加固，并对内部元器件进行全面固定，让手机跌落实现软着陆。\n最终带来的结果，就是荣耀X50的屏幕整体强度提升3倍，即使是在1.5m高度情况下进行跌落，荣耀X50也可以实现整机十面抗摔。荣耀X50也成为了荣获全球首个获得瑞士SGS整机五星抗跌耐摔认证的产品。\n我和很多用户朋友的交流中，大屏、曲屏是否耐摔是大家经常顾虑的一个点，而荣耀X50就是为此而来，够硬，够抗造！我们也设置了一系列测试和挑战，大家可以看看。\n第二大升级，是一块跃级的护眼好屏！\n在千元价位，想要找到一块好屏有多难？在上一代荣耀X40我们给大家带来了同档位第一块曲面屏，这一次荣耀X50屏幕更往前走了一步，是档位首款采用1.5K分辨率的超清护眼曲屏的产品，做到遥遥领先！\n除了分辨率的优势，还有一些大家会关心的其他参数，比如120Hz高刷、10.7亿色、可达1200nit的峰值亮度，也很亮眼。而荣耀始终坚持推进的护眼技术，诸如1920Hz的高频调光和助眠显示技术，大家也会在荣耀X50上看到。它不仅好看，更要护眼，是真正从用户需求出发的一块好屏。\n我上手的这段时间，每天都在荣耀X50上办公和看消息，得益于荣耀护眼技术的加持，即使晚上长时间观看也未感到任何不适。荣耀X50的这块跃级好屏，极大拉近了千元档位手机屏幕和旗舰机的差距，是能让人放心沉浸其中的一块好屏。\n第三大升级，是长续航的进一步进阶！\n手机要多少续航才够用是一个好问题，我觉得，至少要从早用到晚不充电会刚刚好。\n这次荣耀X50在电池容量上也迎来了较大的突破，第一次在看到工程机时，我也很难想象5800mAh的超耐久大电池竟能塞进如此轻薄的机身。",
+        "Url": "https://www.zhihu.com/question/610537841/answer/3105251587?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 1498,
+        "VoteUpCount": 948,
+        "AuthorName": "姜海荣Harrison",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-dd5ed25958547c48e5c6a547aa7ef3f6_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1688625188,
+        "CommentInfoList": [
+          {
+            "Content": "给大家发个福利：关注、点赞、评论区互动，抽一台荣耀X50（8GB+128GB）！"
+          },
+          {
+            "Content": "7月14日荣耀X50首销当天给大家开奖[大笑]"
+          },
+          {
+            "Content": "高考完现在还没买手机的我：这个手机简直就是为我量身定做的[拜托][拜托]"
+          }
+        ],
+        "AuthorityLevel": "4",
+        "RankingScore": 2.1976876
+      },
+      {
+        "Title": "深挖丨荣耀X50评测:千元轻旗舰 对比红米Note 12T Pro各有优势 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "-2987910983330294863",
+        "ContentText": "荣耀X50发布，定价1399元，这价格眨眼一看，香到离谱。同样是8+128GB版本，比红米Note 12T Pro的1599元还要便宜200元。那么两者在配置上有什么差异？谁的性价比会更高一些？这篇文章就好好跟你聊聊。\n外观：荣耀X50更加轻薄/红米则主打厚重\n外观设计上面，荣耀改头换面。谁说千元机就得丑？谁说千元机就得又厚又重？千元机不能和旗舰机一样的设计？\n设计上面，更加偏向于旗舰机的方向，同时一改千元机“厚和重”的传统元素，185g的重量，很轻便。同时薄到7.98mm的厚度，也基本上是目前的旗舰机水平。\n红米Note 12T Pro这边，重量为200g，厚度为8.87mm，可以说和主流的千元机没什么区别。属于比较厚，而且比较重的范畴。\n性能：荣耀X50首发骁龙6gen1 强势对标红米\n处理器上，荣耀X50首发骁龙6gen1，而红米Note 12T Pro则为天玑8200-Ultra。\n两款处理器均为同档芯片，日常使用均足够应对，同时对于一些主流的游戏，如王者荣耀、原神等等，也能够流畅运行。\n荣耀X50的优势在于，新增了16GB+512GB的存储，而红米Note 12T Pro最高只有12GB+512GB的存储。更大的运行内存，意味着，荣耀X50的手机寿命会更长久，支撑手机3年以上的不卡顿。\n屏幕：高频调光下放到千元机\n屏幕方面，荣耀X50的6.78英寸，要比红米Note 12T Pro的6.6英寸更大，显示效果更好。\n同时，配备的OLED曲面屏，无论是手感，还是画面的细腻程度，也要比红米Note 12T Pro的LCD屏幕更加舒适。",
+        "Url": "https://zhuanlan.zhihu.com/p/641882983?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 11,
+        "VoteUpCount": 5,
+        "AuthorName": "深挖",
+        "AuthorAvatar": "https://picx.zhimg.com/50/v2-8375803e2f77e3c51761a0a5114877de_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1688628212,
+        "CommentInfoList": [
+          {
+            "Content": "天玑8200-Ultra与骁龙6 Gen1是同档芯片？\n虽然荣耀的护眼做得很好，但是LCD锤一下OLED的高频调光，问题不大吧？\n[飙泪笑]"
+          },
+          {
+            "Content": "第一次听说使用年限看运行内存不看CPU[惊喜][惊喜][惊喜]，你可是真聪明啊。"
+          },
+          {
+            "Content": "这soc相当于高通什么水平？"
+          }
+        ],
+        "AuthorityLevel": "4",
+        "RankingScore": 2.1958241
+      },
+      {
+        "Title": "十年登峰之作?搭载1亿像素主摄、超耐久大电池,荣耀X50震撼发布 - 知乎",
+        "ContentType": "Article",
+        "ContentID": "5942423563496587842",
+        "ContentText": "进入下半年，智能手机厂商仍然没有停下前进的步伐。除了持续深耕高端市场外，近段时间也有更多入门级机型进入大众视野，为消费者提供了多元化的选择。7月5日，荣耀就带来了一款性价比极高的新产品——荣耀X50。\n在7月5日这场发布会上，荣耀一口气发布了Magic Book X 16 2023、荣耀平板X8 Pro等多款X家族新产品，但最为引人注目的无疑还是荣耀X50。用荣耀中国区CMO姜海荣的话来说，荣耀X50堪称荣耀过去十年的“登峰之作”。\n \n官方信息显示，荣耀X50共有8GB+128GB、8GB+256GB、12GB+256GB和16GB+512GB四个版本，售价分别为1399、1599、1799和1999元。别看价格如此亲民，荣耀X50的配置一点都不含糊，主要有以下几个主要亮点：重新定义行业标准的抗摔设计，软硬结合的超清曲屏，行业首发的第一代骁龙6移动平台等。\n除此之外，为了回馈老用户，荣耀还会在7月5日至14日预售、首销时赠送购买新机的用户半年碎屏险。首销期间购买新机的用户，在满足一定标准的情况下还能享受两年免费换电池服务。\n总的来说，从配置、性能、性价比等各个维度来看，荣耀X50都是诚意满满。",
+        "Url": "https://zhuanlan.zhihu.com/p/641846972?utm_medium=openapi_platform&utm_source=5e44e06",
+        "CommentCount": 0,
+        "VoteUpCount": 0,
+        "AuthorName": "罗超频道",
+        "AuthorAvatar": "https://pic1.zhimg.com/50/v2-528610a41128dd29cb935585eec2b653_l.jpg?source=bbf6831d",
+        "AuthorBadge": "",
+        "AuthorBadgeText": "",
+        "EditTime": 1688614789,
+        "AuthorityLevel": "4",
+        "RankingScore": 2.1775293
+      }
+    ],
+    "fetchedAt": "2026-05-25T07:17:37.310Z"
+  },
+  "vivo X200": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X200",
+      "price": "¥4099",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4099"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥4399"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥4699"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥5199"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "辰夜黑",
+        "宝石蓝",
+        "钛色",
+        "白月光"
+      ],
+      "specs": {},
+      "features": [
+        "蓝晶×天玑 9400",
+        "5800mAh蓝海电池",
+        "蔡司超级长焦"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:38.181Z"
+  },
+  "vivo X200 Ultra": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X200 Ultra",
+      "price": "¥6499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥6499"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥6799"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥6999"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥7999"
+        },
+        {
+          "version": "16GB+1TB 摄影师套装",
+          "price": "¥9699"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "黑Ka",
+        "银调",
+        "红圈"
+      ],
+      "specs": {},
+      "features": [
+        "蔡司三大定焦大师镜头",
+        "蓝图自研影像双芯",
+        "全焦段4K 60fps 10bit Log",
+        "全焦段OIS光学防抖"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:38.993Z"
+  },
+  "vivo X200 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X200 Pro",
+      "price": "¥5299",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥5299"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥5999"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥6499"
+        },
+        {
+          "version": "16GB+1TB 卫星通信版",
+          "price": "¥6799"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "辰夜黑",
+        "白月光",
+        "宝石蓝",
+        "钛色"
+      ],
+      "specs": {},
+      "features": [
+        "蓝晶×天玑 9400",
+        "6000mAh蓝海电池",
+        "蔡司2 亿APO超级长焦"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:39.645Z"
+  },
+  "vivo X200s": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X200s",
+      "price": "¥4399",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4399"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥4599"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥4899"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥5299"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥5999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "简黑",
+        "直白",
+        "薄荷蓝",
+        "淡紫"
+      ],
+      "specs": {},
+      "features": [
+        "蓝晶x天玑 9400+",
+        "6200mAh蓝海电池",
+        "湿手秒开超声波指纹"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:40.353Z"
+  },
+  "vivo X300": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X300",
+      "price": "¥4599",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4599"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥4999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥5299"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥5699"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥6299"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "纯粹黑",
+        "惬意紫",
+        "自在蓝",
+        "幸运彩",
+        "好运红"
+      ],
+      "specs": {},
+      "features": [
+        "蔡司2亿超级主摄",
+        "蔡司APO超级长焦",
+        "5年持久流畅OriginOS 6"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:40.850Z"
+  },
+  "vivo X300 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X300 Pro",
+      "price": "¥5599",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥5599"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥6399"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥7199"
+        },
+        {
+          "version": "16GB+1TB 摄影师套装",
+          "price": "¥8799"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "纯粹黑",
+        "简单白",
+        "自在蓝",
+        "旷野棕"
+      ],
+      "specs": {},
+      "features": [
+        "蔡司2亿APO超级长焦·蓝图影像双芯",
+        "5年持久流畅OriginOS 6"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:41.552Z"
+  },
+  "vivo X300 Ultra": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X300 Ultra",
+      "price": "¥6999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥6999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥7499"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥7999"
+        },
+        {
+          "version": "16GB+1TB 卫星通信版",
+          "price": "¥8999"
+        },
+        {
+          "version": "16GB+1TB 摄影师套装",
+          "price": "¥11999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "黑Ka",
+        "银调",
+        "胶片绿"
+      ],
+      "specs": {},
+      "features": [
+        "蔡司大师镜头群",
+        "全焦段4K 120fps 10 bit Log",
+        "vivo色彩科学"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:42.010Z"
+  },
+  "vivo X300s": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo X300s",
+      "price": "¥4999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥5499"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥5999"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥6999"
+        },
+        {
+          "version": "16GB+1TB 摄影师套装",
+          "price": "¥7999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "钛黑",
+        "银白",
+        "梦核紫",
+        "胶片绿"
+      ],
+      "specs": {},
+      "features": [
+        "蔡司2亿超级主摄",
+        "蔡司APO超级长焦",
+        "144Hz 蔡司大师色彩屏"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:42.513Z"
+  },
+  "vivo S30": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo S30",
+      "price": "¥2999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥2999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥3299"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥3499"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "可可黑",
+        "桃桃粉",
+        "薄荷青",
+        "柠檬黄"
+      ],
+      "specs": {},
+      "features": [
+        "多彩轻薄直屏",
+        "5000 万索尼超级潜望长焦",
+        "全球首批高通第四代骁龙 7"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:43.287Z"
+  },
+  "vivo S30 Pro mini": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo S30 Pro mini",
+      "price": "¥3499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥3499"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥3799"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥3999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "可可黑",
+        "薄荷青",
+        "柠檬黄",
+        "酷莓粉"
+      ],
+      "specs": {},
+      "features": [
+        "6.31 英寸多彩小直屏",
+        "希区柯克变焦实况",
+        "6500mAh 小屏续航战神"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:43.746Z"
+  },
+  "vivo S50": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo S50",
+      "price": "¥3599",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥3599"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥3999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥3999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "深空黑",
+        "灵感紫",
+        "告白",
+        "悠悠蓝"
+      ],
+      "specs": {},
+      "features": [
+        "长焦Live神器",
+        "高通第三代骁龙 8s",
+        "湿手秒开超声波指纹 2.0"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:44.287Z"
+  },
+  "vivo S50 Pro mini": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo S50 Pro mini",
+      "price": "¥4199",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4199"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥4499"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥4799"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "告白",
+        "深空黑",
+        "灵感紫"
+      ],
+      "specs": {},
+      "features": [
+        "长焦Live神器",
+        "全球首批高通第五代骁龙 8",
+        "湿手秒开超声波指纹 2.0"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:44.713Z"
+  },
+  "vivo Y60": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo Y60",
+      "price": "¥1799",
+      "skuPrices": [
+        {
+          "version": "6GB+128GB",
+          "price": "¥1799"
+        },
+        {
+          "version": "6GB+256GB",
+          "price": "¥1999"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥2299"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "曜石黑",
+        "鸿运紫",
+        "山海青"
+      ],
+      "specs": {},
+      "features": [
+        "6500mAh耐用大电池"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:17:44.957Z"
+  },
+  "vivo Y300": {
+    "ok": false,
+    "source": "official",
+    "message": "vivo 官网未找到该产品。",
+    "product": null,
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:12.107Z"
+  },
+  "vivo Y500": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo Y500",
+      "price": "¥1699",
+      "skuPrices": [
+        {
+          "version": "8GB+128GB",
+          "price": "¥1699"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥1899"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥2099"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2299"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "玄武黑",
+        "冰川蓝",
+        "龙晶紫"
+      ],
+      "specs": {},
+      "features": [
+        "IP69+满级防水",
+        "360°穿墙天线",
+        "全景环绕立体声"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:12.884Z"
+  },
+  "vivo Y500i": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo Y500i",
+      "price": "¥1299",
+      "skuPrices": [
+        {
+          "version": "8GB+128GB",
+          "price": "¥1299"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥1499"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥1799"
+        },
+        {
+          "version": "8GB+512GB",
+          "price": "¥1799"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2199"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "曜石黑",
+        "星河银",
+        "凤迎金",
+        "幸运红"
+      ],
+      "specs": {},
+      "features": [
+        "6年长寿大电池",
+        "满级防水防尘全面抗摔",
+        "1200nits硬件级真护眼屏"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:13.721Z"
+  },
+  "vivo Y500 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo Y500 Pro",
+      "price": "¥1799",
+      "skuPrices": [
+        {
+          "version": "8GB+128GB",
+          "price": "¥1799"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥1999"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥2299"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2599"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "钛黑",
+        "柔粉",
+        "浅绿",
+        "祥云金"
+      ],
+      "specs": {},
+      "features": [
+        "2亿HP5旗舰级主摄",
+        "持久流畅OriginOS 6",
+        "7000mAh半固态蓝海电池",
+        "1.5K旗舰级护眼屏"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:14.403Z"
+  },
+  "vivo Y600 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo Y600 Pro",
+      "price": "¥2099",
+      "skuPrices": [
+        {
+          "version": "8GB+128GB",
+          "price": "¥2099"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥2299"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥2599"
+        },
+        {
+          "version": "8GB+512GB",
+          "price": "¥2599"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2899"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "皓月黑",
+        "浩渺蓝",
+        "浮光金",
+        "星曜紫"
+      ],
+      "specs": {},
+      "features": [
+        "10200mAh耐超低温蓝海电池",
+        "耐久抗摔防水",
+        "寰宇增强通信3.0",
+        "超安全流畅OriginOS 6"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:14.864Z"
+  },
+  "iQOO 15": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO 15",
+      "price": "¥4599",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4599"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥4899"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥5099"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥5399"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥5999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "传奇版",
+        "赛道版",
+        "凌云",
+        "旷野",
+        "iQOO×王者荣耀十周年典藏版"
+      ],
+      "specs": {},
+      "features": [
+        "第五代骁⻰8⾄尊版",
+        "自研电竞芯片 Q3",
+        "2K 三星珠峰屏",
+        "7000mAh蓝海大电池"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:15.441Z"
+  },
+  "iQOO 13": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO 13",
+      "price": "¥3999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥3999"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥4299"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥4499"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥4699"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥5199"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "赛道版",
+        "传奇版",
+        "纳多灰",
+        "曼岛"
+      ],
+      "specs": {},
+      "features": [
+        "骁⻰8⾄尊版移动平台",
+        "自研电竞芯片 Q2",
+        "2K Q10 珠峰屏",
+        "等效6150mAh蓝海双芯电池"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:15.947Z"
+  },
+  "iQOO Neo11": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO Neo11",
+      "price": "¥3099",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥3099"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥3399"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥3599"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥3899"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥4499"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "疾影黑",
+        "驰光白",
+        "面对疾风",
+        "像素方橙"
+      ],
+      "specs": {},
+      "features": [
+        "骁龙 8 至尊版",
+        "自研电竞芯片 Q2",
+        "Monster 超核引擎",
+        "2K 144Hz 珠峰屏"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:16.595Z"
+  },
+  "iQOO Neo10": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO Neo10",
+      "price": "¥2299",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥2299"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥2499"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2699"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥2999"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥3499"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "疾影黑",
+        "驰光白",
+        "拉力橙"
+      ],
+      "specs": {},
+      "features": [
+        "第三代骁龙8",
+        "自研电竞芯片 Q2",
+        "等效6100mAh*蓝海电池",
+        "120W超快闪充"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:16.907Z"
+  },
+  "iQOO Z11x": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO Z11x",
+      "price": "¥1599",
+      "skuPrices": [
+        {
+          "version": "8GB+128GB",
+          "price": "¥1599"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥1699"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥1999"
+        },
+        {
+          "version": "8GB+512GB",
+          "price": "¥2099"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2399"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "夜影黑",
+        "���青绿",
+        "雪屿白"
+      ],
+      "specs": {},
+      "features": [
+        "7200mAh 超薄蓝海电池",
+        "天玑 7400",
+        "LCD 莱茵护眼屏",
+        "5000 万索尼超清主摄"
+      ]
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-05-25T07:18:17.308Z"
   }
 }
