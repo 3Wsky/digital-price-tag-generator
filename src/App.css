@@ -889,3 +889,64 @@ input[type='color'] {
 .card-name-row label {
   width: 100%;
 }
+
+/* 精细化属性 Tab 样式 */
+.inspector-tabs {
+  display: flex;
+  background: #f1f5f9;
+  border-radius: 8px;
+  padding: 3px;
+  margin-bottom: 16px;
+  gap: 2px;
+}
+
+.tab-btn {
+  flex: 1;
+  border: none;
+  min-height: 28px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  background: transparent;
+  color: #64748b;
+  transition: all 0.15s ease;
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  color: #334155;
+}
+
+.tab-btn.active {
+  background: #ffffff;
+  color: #0f766e;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.tab-pane {
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 属性编辑器 checkbox */
+input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #0f766e;
+}
+
+/* 画布拖拽高亮边框和网格线 */
+.tag-canvas {
+  position: relative;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 15px 15px; /* 提供 15px 网格示意背景 */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #cbd5e1;
+  background-color: #ffffff;
+}

@@ -986,6 +986,8 @@ function App() {
   const [fillPickerOpen, setFillPickerOpen] = useState(false)
   const [confirmDialog, setConfirmDialog] = useState<{ message: string; onConfirm: () => void } | null>(null)
   const canvasRef = useRef<HTMLDivElement>(null)
+  const [snapToGrid, setSnapToGrid] = useState(true)
+  const [activeTab, setActiveTab] = useState<'text' | 'style' | 'pos'>('text')
 
   const selectedCard = state.cards.find((c) => c.id === state.selectedCardId) ?? null
   const selectedElement = selectedCard?.elements.find((e) => e.id === state.selectedElementId) ?? null
@@ -1439,15 +1441,31 @@ function App() {
     if (dragState && selectedCard) {
       const element = selectedCard.elements.find((e) => e.id === dragState.id)
       if (!element) return
-      const newX = clamp(dragState.baseX + (event.clientX - dragState.startX) / printableScale, 0, selectedCard.width - element.width)
-      const newY = clamp(dragState.baseY + (event.clientY - dragState.startY) / printableScale, 0, selectedCard.height - element.height)
+      let newX = dragState.baseX + (event.clientX - dragState.startX) / printableScale
+      let newY = dragState.baseY + (event.clientY - dragState.startY) / printableScale
+      
+      if (snapToGrid) {
+        newX = Math.round(newX / 5) * 5
+        newY = Math.round(newY / 5) * 5
+      }
+
+      newX = clamp(newX, 0, selectedCard.width - element.width)
+      newY = clamp(newY, 0, selectedCard.height - element.height)
       updateElement(selectedCard.id, dragState.id, { x: newX, y: newY })
     }
     if (resizeState && selectedCard) {
       const element = selectedCard.elements.find((e) => e.id === resizeState.id)
       if (!element) return
-      const newW = Math.max(5, resizeState.baseW + (event.clientX - resizeState.startX) / printableScale)
-      const newH = Math.max(5, resizeState.baseH + (event.clientY - resizeState.startY) / printableScale)
+      let newW = resizeState.baseW + (event.clientX - resizeState.startX) / printableScale
+      let newH = resizeState.baseH + (event.clientY - resizeState.startY) / printableScale
+
+      if (snapToGrid) {
+        newW = Math.round(newW / 5) * 5
+        newH = Math.round(newH / 5) * 5
+      }
+
+      newW = Math.max(5, newW)
+      newH = Math.max(5, newH)
       updateElement(selectedCard.id, resizeState.id, { width: newW, height: newH })
     }
   }
@@ -1871,49 +1889,108 @@ function App() {
             <h2>属性</h2>
             {selectedElement && selectedCard ? (
               <div className="property-stack">
-                <label>内容<textarea value={selectedElement.text} rows={4} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { text: e.target.value })} /></label>
-                <div className="size-grid">
-                  <label>X<input type="number" value={selectedElement.x} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { x: Number(e.target.value) })} /></label>
-                  <label>Y<input type="number" value={selectedElement.y} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { y: Number(e.target.value) })} /></label>
-                  <label>宽<input type="number" value={selectedElement.width} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { width: Number(e.target.value) })} /></label>
-                  <label>高<input type="number" value={selectedElement.height} step="0.5" onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { height: Number(e.target.value) })} /></label>
+                <div className="inspector-tabs">
+                  <button
+                    type="button"
+                    className={['tab-btn', activeTab === 'text' ? 'active' : ''].join(' ')}
+                    onClick={() => setActiveTab('text')}
+                  >内容</button>
+                  <button
+                    type="button"
+                    className={['tab-btn', activeTab === 'style' ? 'active' : ''].join(' ')}
+                    onClick={() => setActiveTab('style')}
+                  >外观</button>
+                  <button
+                    type="button"
+                    className={['tab-btn', activeTab === 'pos' ? 'active' : ''].join(' ')}
+                    onClick={() => setActiveTab('pos')}
+                  >尺寸位置</button>
                 </div>
-                <div className="size-grid">
-                  <label>字号<input type="number" value={selectedElement.fontSize} step="0.1" onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { fontSize: Number(e.target.value) })} /></label>
-                  <label>字重
-                    <select value={selectedElement.fontWeight} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { fontWeight: Number(e.target.value) })}>
-                      <option value={400}>常规</option>
-                      <option value={500}>中等</option>
-                      <option value={700}>粗体</option>
-                      <option value={900}>特粗</option>
-                    </select>
-                  </label>
-                </div>
-                <label>对齐
-                  <select value={selectedElement.align} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { align: e.target.value as TagElement['align'] })}>
-                    <option value="left">左对齐</option>
-                    <option value="center">居中</option>
-                    <option value="right">右对齐</option>
-                  </select>
-                </label>
-                {selectedElement.kind === 'iconSpec' ? (
-                  <>
-                    <label>卖点图标
-                      <select value={selectedElement.iconKey ?? 'phone'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconKey: e.target.value as FeatureIconKey })}>
-                        {featureIconOptions.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
+
+                {activeTab === 'text' && (
+                  <div className="tab-pane">
+                    <label>内容<textarea value={selectedElement.text} rows={4} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { text: e.target.value })} /></label>
+                    <div className="size-grid">
+                      <label>字号<input type="number" value={selectedElement.fontSize} step="0.1" onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { fontSize: Number(e.target.value) })} /></label>
+                      <label>字重
+                        <select value={selectedElement.fontWeight} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { fontWeight: Number(e.target.value) })}>
+                          <option value={400}>常规</option>
+                          <option value={500}>中等</option>
+                          <option value={700}>粗体</option>
+                          <option value={900}>特粗</option>
+                        </select>
+                      </label>
+                    </div>
+                    <label style={{ marginTop: '10px' }}>对齐
+                      <select value={selectedElement.align} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { align: e.target.value as TagElement['align'] })}>
+                        <option value="left">左对齐</option>
+                        <option value="center">居中</option>
+                        <option value="right">右对齐</option>
                       </select>
                     </label>
+                    {selectedElement.kind === 'iconSpec' ? (
+                      <label style={{ marginTop: '10px' }}>卖点图标
+                        <select value={selectedElement.iconKey ?? 'phone'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconKey: e.target.value as FeatureIconKey })}>
+                          {featureIconOptions.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
+                        </select>
+                      </label>
+                    ) : null}
+                  </div>
+                )}
+
+                {activeTab === 'style' && (
+                  <div className="tab-pane">
                     <div className="color-row">
-                      <label>图标底色<input type="color" value={selectedElement.iconBackground ?? '#b96c6b'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconBackground: e.target.value })} /></label>
-                      <label>图标线色<input type="color" value={selectedElement.iconColor ?? '#ffffff'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconColor: e.target.value })} /></label>
+                      <label>文字颜色<input type="color" value={selectedElement.color} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { color: e.target.value })} /></label>
+                      <label>背景颜色<input type="color" value={selectedElement.background === 'transparent' ? '#ffffff' : selectedElement.background} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { background: e.target.value })} /></label>
                     </div>
-                  </>
-                ) : null}
-                <div className="color-row">
-                  <label>文字<input type="color" value={selectedElement.color} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { color: e.target.value })} /></label>
-                  <label>背景<input type="color" value={selectedElement.background === 'transparent' ? '#ffffff' : selectedElement.background} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { background: e.target.value })} /></label>
-                </div>
-                <div className="action-row">
+                    <div style={{ marginTop: '12px' }}>
+                      <label style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span>透明背景</span>
+                        <input
+                          type="checkbox"
+                          style={{ width: 'auto' }}
+                          checked={selectedElement.background === 'transparent'}
+                          onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { background: e.target.checked ? 'transparent' : '#ffffff' })}
+                        />
+                      </label>
+                    </div>
+                    {selectedElement.kind === 'iconSpec' && (
+                      <div className="property-group" style={{ marginTop: '15px', borderTop: '1px solid #f1f5f9', paddingTop: '15px' }}>
+                        <span style={{ fontSize: '12px', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '8px' }}>图标色彩控制</span>
+                        <div className="color-row">
+                          <label>图标底色<input type="color" value={selectedElement.iconBackground ?? '#b96c6b'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconBackground: e.target.value })} /></label>
+                          <label>图标线色<input type="color" value={selectedElement.iconColor ?? '#ffffff'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconColor: e.target.value })} /></label>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {activeTab === 'pos' && (
+                  <div className="tab-pane">
+                    <div className="size-grid">
+                      <label>X (mm)<input type="number" value={selectedElement.x} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { x: Number(e.target.value) })} /></label>
+                      <label>Y (mm)<input type="number" value={selectedElement.y} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { y: Number(e.target.value) })} /></label>
+                      <label>宽 (mm)<input type="number" value={selectedElement.width} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { width: Number(e.target.value) })} /></label>
+                      <label>高 (mm)<input type="number" value={selectedElement.height} step="0.5" onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { height: Number(e.target.value) })} /></label>
+                    </div>
+                    <div style={{ marginTop: '15px', borderTop: '1px solid #f1f5f9', paddingTop: '15px' }}>
+                      <label style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span>对齐到 5mm 网格</span>
+                        <input
+                          type="checkbox"
+                          style={{ width: 'auto' }}
+                          checked={snapToGrid}
+                          onChange={(e) => setSnapToGrid(e.target.checked)}
+                        />
+                      </label>
+                      <p style={{ fontSize: '11px', color: '#94a3b8', margin: '6px 0 0 0', lineHeight: 1.4 }}>开启后，拖拽或调整尺寸会自动按 5mm 对齐，确保价签绝对工整。</p>
+                    </div>
+                  </div>
+                )}
+
+                <div className="action-row" style={{ marginTop: '20px', borderTop: '1px solid #e2e8f0', paddingTop: '15px' }}>
                   <button type="button" onClick={duplicateSelectedElement}><Copy size={16} />复制</button>
                   <button type="button" className="danger" onClick={deleteSelectedElement}><Trash2 size={16} />删除</button>
                 </div>
@@ -1925,7 +2002,19 @@ function App() {
                     <input value={selectedCard.name} onChange={(e) => updateCard(selectedCard.id, { name: e.target.value, customName: true })} />
                   </label>
                 </div>
-                <p className="empty-state">选择画布上的元素后可编辑内容和尺寸。</p>
+                <div style={{ marginTop: '20px', borderTop: '1px solid #f1f5f9', paddingTop: '15px' }}>
+                  <label style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#334155' }}>5mm 网格磁吸对齐</span>
+                    <input
+                      type="checkbox"
+                      style={{ width: 'auto' }}
+                      checked={snapToGrid}
+                      onChange={(e) => setSnapToGrid(e.target.checked)}
+                    />
+                  </label>
+                  <p style={{ fontSize: '11px', color: '#94a3b8', margin: '6px 0 0 0', lineHeight: 1.4 }}>专为门店员工精细化微调排版设计。开启后，拖拽与缩放时自动磁吸对齐，确保价签绝对工整。</p>
+                </div>
+                <p className="empty-state" style={{ marginTop: '25px' }}>选择画布上的元素后可编辑内容和尺寸。</p>
               </div>
             ) : (
               <p className="empty-state">选择一个卡片开始编辑。</p>
