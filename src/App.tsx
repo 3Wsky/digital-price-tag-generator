@@ -1695,11 +1695,6 @@ function App() {
         <div>
           <p className="eyebrow">Digital Price Tag Studio</p>
           <h1>数码产品价签编辑器</h1>
-          <div className="site-meta-links">
-            <span>定制开发 / 智能体 / 门店工具：微信 xj0991988</span>
-            <a href="https://1go.im/xhs/" target="_blank" rel="noreferrer">小红书工具站</a>
-            <a href="https://verify.1go.im" target="_blank" rel="noreferrer">验证工具</a>
-          </div>
         </div>
         <div className="topbar-actions">
           <button type="button" className="tool-button" onClick={exportCurrentCardPdf}><Download size={17} />导出当前卡</button>
@@ -2027,6 +2022,12 @@ function App() {
           </div>
         </aside>
       </section>
+
+      <footer className="site-footer">
+        <span>定制开发 / 智能体 / 门店工具：微信 xj0991988</span>
+        <a href="https://1go.im/xhs/" target="_blank" rel="noreferrer">小红书工具站</a>
+        <a href="https://verify.1go.im" target="_blank" rel="noreferrer">验证工具</a>
+      </footer>
 
       {/* Fill-to Picker Modal */}
       {fillPickerOpen && selectedCard ? (
