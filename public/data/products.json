@@ -27,14 +27,14 @@
       ],
       "careServices": [
         {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 299",
-          "sbomCode": "3201020132001"
-        },
-        {
           "name": "HUAWEI Care+（两年期）",
           "price": "¥ 599",
-          "sbomCode": "3201020134201"
+          "sbomCode": "3201020129001"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 299",
+          "sbomCode": "3201020129501"
         }
       ],
       "colors": [
@@ -53,7 +53,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:56:35.006Z"
+    "fetchedAt": "2026-05-27T22:06:28.838Z"
   },
   "华为 Mate 80 Pro": {
     "ok": true,
@@ -89,14 +89,14 @@
       ],
       "careServices": [
         {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 399",
-          "sbomCode": "3201020133901"
-        },
-        {
           "name": "HUAWEI Care+（两年期）",
           "price": "¥ 699",
-          "sbomCode": "3201020134401"
+          "sbomCode": "3201020129101"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020129601"
         }
       ],
       "colors": [
@@ -115,7 +115,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:57:04.094Z"
+    "fetchedAt": "2026-05-27T22:06:55.823Z"
   },
   "华为 Mate 80 Pro Max": {
     "ok": true,
@@ -139,14 +139,14 @@
       ],
       "careServices": [
         {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 499",
-          "sbomCode": "3201020134001"
-        },
-        {
           "name": "HUAWEI Care+（两年期）",
           "price": "¥ 899",
-          "sbomCode": "3201020134501"
+          "sbomCode": "3201020129201"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 499",
+          "sbomCode": "3201020129701"
         }
       ],
       "colors": [
@@ -165,7 +165,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:57:33.236Z"
+    "fetchedAt": "2026-05-27T22:07:22.862Z"
   },
   "华为 Mate 80 Pro Max 风驰版": {
     "ok": true,
@@ -189,14 +189,14 @@
       ],
       "careServices": [
         {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 499",
-          "sbomCode": "3201020134001"
-        },
-        {
           "name": "HUAWEI Care+（两年期）",
           "price": "¥ 899",
-          "sbomCode": "3201020134501"
+          "sbomCode": "3201020129201"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 499",
+          "sbomCode": "3201020129701"
         }
       ],
       "colors": [
@@ -215,7 +215,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:58:03.954Z"
+    "fetchedAt": "2026-05-27T22:07:50.384Z"
   },
   "华为 Mate 70": {
     "ok": true,
@@ -259,7 +259,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:58:32.536Z"
+    "fetchedAt": "2026-05-27T22:08:17.418Z"
   },
   "华为 Mate 70 Pro": {
     "ok": true,
@@ -309,7 +309,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:59:01.682Z"
+    "fetchedAt": "2026-05-27T22:08:43.985Z"
   },
   "华为 Mate 70 Pro+": {
     "ok": true,
@@ -353,7 +353,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:59:31.422Z"
+    "fetchedAt": "2026-05-27T22:09:11.035Z"
   },
   "华为 Mate 70 Pro 优享版": {
     "ok": true,
@@ -403,7 +403,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T21:59:59.950Z"
+    "fetchedAt": "2026-05-27T22:09:38.307Z"
   },
   "华为 Mate 70 Air": {
     "ok": true,
@@ -464,7 +464,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:00:29.112Z"
+    "fetchedAt": "2026-05-27T22:10:05.380Z"
   },
   "华为 Mate X5": {
     "ok": true,
@@ -523,14 +523,14 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:00:58.647Z"
+    "fetchedAt": "2026-05-27T22:10:33.339Z"
   },
   "华为 Mate X5 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "【华为官方翻新】HUAWEI Mate X5",
-      "price": "¥ 13599",
+      "price": "¥ 14499",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -582,7 +582,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:01:27.565Z"
+    "fetchedAt": "2026-05-27T22:11:00.754Z"
   },
   "华为 Mate X6": {
     "ok": true,
@@ -645,7 +645,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:01:57.137Z"
+    "fetchedAt": "2026-05-27T22:11:28.755Z"
   },
   "华为 Mate X6 典藏版": {
     "ok": true,
@@ -708,7 +708,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:02:26.959Z"
+    "fetchedAt": "2026-05-27T22:11:56.827Z"
   },
   "华为 Mate X7": {
     "ok": true,
@@ -778,7 +778,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:02:55.786Z"
+    "fetchedAt": "2026-05-27T22:12:23.687Z"
   },
   "华为 Mate X7 典藏版": {
     "ok": true,
@@ -848,7 +848,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:03:24.751Z"
+    "fetchedAt": "2026-05-27T22:12:52.293Z"
   },
   "华为 Pura X": {
     "ok": true,
@@ -908,14 +908,14 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:03:54.719Z"
+    "fetchedAt": "2026-05-27T22:13:19.232Z"
   },
   "华为 Pura X 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI Pura X",
-      "price": "¥ 9999",
+      "price": "¥ 8999",
       "skuPrices": [
         {
           "version": "16GB+512GB",
@@ -968,7 +968,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:04:23.696Z"
+    "fetchedAt": "2026-05-27T22:13:46.560Z"
   },
   "华为 Pura 80": {
     "ok": true,
@@ -986,7 +986,7 @@
         {
           "version": "12GB+1TB",
           "price": "¥ 6199",
-          "sbomCode": "2601010577113",
+          "sbomCode": "2601010577110",
           "colors": []
         },
         {
@@ -1010,8 +1010,8 @@
       ],
       "colors": [
         "丝绒金",
-        "丝绒黑",
         "丝绒白",
+        "丝绒黑",
         "丝绒绿"
       ],
       "specs": {
@@ -1024,7 +1024,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:04:52.620Z"
+    "fetchedAt": "2026-05-27T22:14:14.191Z"
   },
   "华为 Pura 80 Pro": {
     "ok": true,
@@ -1082,7 +1082,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:05:21.847Z"
+    "fetchedAt": "2026-05-27T22:14:40.974Z"
   },
   "华为 Pura 80 Pro+": {
     "ok": true,
@@ -1132,7 +1132,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:05:50.417Z"
+    "fetchedAt": "2026-05-27T22:15:07.898Z"
   },
   "华为 Pura 80 Ultra": {
     "ok": true,
@@ -1180,32 +1180,32 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:06:19.335Z"
+    "fetchedAt": "2026-05-27T22:15:35.110Z"
   },
   "华为 畅享 80": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "Hi畅享 80",
-      "price": "¥ 1099",
+      "title": "Hi畅享 80S",
+      "price": "¥ 1499",
       "skuPrices": [],
       "careServices": [],
       "colors": [
+        "晴空蓝",
         "曜石黑",
-        "珍珠白",
-        "流光金"
+        "珍珠白"
       ],
       "specs": {
         "chip": "",
         "battery": "5000mAh",
         "screen": "undefined英寸",
-        "charge": "10W",
+        "charge": "",
         "refreshRate": "60Hz",
         "screenTech": ""
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:06:49.069Z"
+    "fetchedAt": "2026-05-27T22:16:02.149Z"
   },
   "华为 畅享 70X": {
     "ok": true,
@@ -1236,7 +1236,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:07:18.305Z"
+    "fetchedAt": "2026-05-27T22:16:29.876Z"
   },
   "华为 畅享 70X 尊享版": {
     "ok": true,
@@ -1267,38 +1267,38 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:07:47.341Z"
+    "fetchedAt": "2026-05-27T22:16:57.088Z"
   },
   "华为 畅享 70S": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "华为畅享 90",
-      "price": "¥ 1599",
+      "title": "华为畅享 70X 尊享版",
+      "price": "¥ 1999",
       "skuPrices": [],
       "careServices": [
         {
           "name": "HUAWEI Care+（一年期）",
           "price": "¥ 159",
-          "sbomCode": "3201020145501"
+          "sbomCode": "3201020111301"
         }
       ],
       "colors": [
         "星海蓝",
-        "星空黑",
-        "羽沙白"
+        "流沙金",
+        "曜金黑"
       ],
       "specs": {
         "chip": "麒麟8000",
-        "battery": "6620mAh",
+        "battery": "6100mAh",
         "screen": "undefined英寸",
         "charge": "120W",
         "refreshRate": "",
-        "screenTech": ""
+        "screenTech": "OLED"
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:08:16.971Z"
+    "fetchedAt": "2026-05-27T22:17:23.920Z"
   },
   "华为 畅享 90 Plus": {
     "ok": true,
@@ -1329,7 +1329,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:08:45.751Z"
+    "fetchedAt": "2026-05-27T22:17:51.282Z"
   },
   "华为 畅享 90m Plus": {
     "ok": true,
@@ -1360,7 +1360,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:09:14.633Z"
+    "fetchedAt": "2026-05-27T22:18:17.992Z"
   },
   "华为 畅享 90 Pro Max": {
     "ok": true,
@@ -1392,7 +1392,7 @@
       }
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:09:44.377Z"
+    "fetchedAt": "2026-05-27T22:18:45.188Z"
   },
   "荣耀 Magic8": {
     "ok": true,
@@ -1436,7 +1436,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:10:17.901Z"
+    "fetchedAt": "2026-05-27T22:19:16.838Z"
   },
   "荣耀 Magic8 Pro": {
     "ok": true,
@@ -1480,7 +1480,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:10:51.564Z"
+    "fetchedAt": "2026-05-27T22:19:48.547Z"
   },
   "荣耀 Magic7": {
     "ok": true,
@@ -1513,7 +1513,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:11:31.963Z"
+    "fetchedAt": "2026-05-27T22:20:28.801Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1545,7 +1545,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:12:11.446Z"
+    "fetchedAt": "2026-05-27T22:21:06.545Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1576,7 +1576,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:12:53.743Z"
+    "fetchedAt": "2026-05-27T22:21:48.288Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1621,7 +1621,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:13:43.384Z"
+    "fetchedAt": "2026-05-27T22:22:30.610Z"
   },
   "荣耀 500 Pro": {
     "ok": true,
@@ -1666,7 +1666,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:14:28.987Z"
+    "fetchedAt": "2026-05-27T22:23:12.155Z"
   },
   "荣耀 400 Pro": {
     "ok": true,
@@ -1705,7 +1705,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:15:12.263Z"
+    "fetchedAt": "2026-05-27T22:23:54.208Z"
   },
   "荣耀 GT": {
     "ok": true,
@@ -1745,7 +1745,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:15:57.961Z"
+    "fetchedAt": "2026-05-27T22:24:37.843Z"
   },
   "荣耀 Power2": {
     "ok": true,
@@ -1785,7 +1785,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:16:32.058Z"
+    "fetchedAt": "2026-05-27T22:25:08.707Z"
   },
   "荣耀 WIN": {
     "ok": true,
@@ -1825,7 +1825,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:17:16.750Z"
+    "fetchedAt": "2026-05-27T22:25:42.011Z"
   },
   "荣耀 X70": {
     "ok": true,
@@ -1874,7 +1874,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:18:02.023Z"
+    "fetchedAt": "2026-05-27T22:26:25.417Z"
   },
   "荣耀 X60 Pro": {
     "ok": true,
@@ -1900,7 +1900,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:18:42.942Z"
+    "fetchedAt": "2026-05-27T22:27:04.559Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1927,7 +1927,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:19:24.111Z"
+    "fetchedAt": "2026-05-27T22:27:42.474Z"
   },
   "vivo X200": {
     "ok": true,
@@ -1968,7 +1968,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:19:34.450Z"
+    "fetchedAt": "2026-05-27T22:27:54.622Z"
   },
   "vivo X200 Ultra": {
     "ok": true,
@@ -2013,7 +2013,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:19:57.211Z"
+    "fetchedAt": "2026-05-27T22:28:15.124Z"
   },
   "vivo X200 Pro": {
     "ok": true,
@@ -2054,7 +2054,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:19:58.525Z"
+    "fetchedAt": "2026-05-27T22:28:16.510Z"
   },
   "vivo X200s": {
     "ok": true,
@@ -2099,7 +2099,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:00.009Z"
+    "fetchedAt": "2026-05-27T22:28:18.107Z"
   },
   "vivo X300": {
     "ok": true,
@@ -2145,7 +2145,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:01.627Z"
+    "fetchedAt": "2026-05-27T22:28:19.446Z"
   },
   "vivo X300 Pro": {
     "ok": true,
@@ -2185,7 +2185,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:03.178Z"
+    "fetchedAt": "2026-05-27T22:28:20.343Z"
   },
   "vivo X300 Ultra": {
     "ok": true,
@@ -2229,7 +2229,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:04.569Z"
+    "fetchedAt": "2026-05-27T22:28:21.757Z"
   },
   "vivo X300s": {
     "ok": true,
@@ -2274,7 +2274,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:05.586Z"
+    "fetchedAt": "2026-05-27T22:28:23.223Z"
   },
   "vivo S30": {
     "ok": true,
@@ -2311,7 +2311,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:06.944Z"
+    "fetchedAt": "2026-05-27T22:28:24.050Z"
   },
   "vivo S30 Pro mini": {
     "ok": true,
@@ -2348,7 +2348,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:08.282Z"
+    "fetchedAt": "2026-05-27T22:28:25.152Z"
   },
   "vivo S50": {
     "ok": true,
@@ -2385,7 +2385,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:09.256Z"
+    "fetchedAt": "2026-05-27T22:28:26.756Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2421,7 +2421,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:10.535Z"
+    "fetchedAt": "2026-05-27T22:28:27.740Z"
   },
   "vivo Y60": {
     "ok": true,
@@ -2455,7 +2455,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:35.764Z"
+    "fetchedAt": "2026-05-27T22:28:47.175Z"
   },
   "vivo Y500": {
     "ok": true,
@@ -2495,7 +2495,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:37.506Z"
+    "fetchedAt": "2026-05-27T22:28:48.289Z"
   },
   "vivo Y500i": {
     "ok": true,
@@ -2540,7 +2540,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:39.050Z"
+    "fetchedAt": "2026-05-27T22:28:50.548Z"
   },
   "vivo Y500 Pro": {
     "ok": true,
@@ -2582,7 +2582,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:40.370Z"
+    "fetchedAt": "2026-05-27T22:28:51.383Z"
   },
   "vivo Y600 Pro": {
     "ok": true,
@@ -2628,7 +2628,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:41.830Z"
+    "fetchedAt": "2026-05-27T22:28:52.864Z"
   },
   "iQOO 15": {
     "ok": true,
@@ -2675,7 +2675,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:43.275Z"
+    "fetchedAt": "2026-05-27T22:28:53.747Z"
   },
   "iQOO 13": {
     "ok": true,
@@ -2721,7 +2721,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:44.491Z"
+    "fetchedAt": "2026-05-27T22:28:54.742Z"
   },
   "iQOO Neo11": {
     "ok": true,
@@ -2767,7 +2767,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:45.635Z"
+    "fetchedAt": "2026-05-27T22:28:55.694Z"
   },
   "iQOO Neo10": {
     "ok": true,
@@ -2812,7 +2812,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:46.861Z"
+    "fetchedAt": "2026-05-27T22:28:56.553Z"
   },
   "iQOO Z11x": {
     "ok": true,
@@ -2857,7 +2857,7 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:48.218Z"
+    "fetchedAt": "2026-05-27T22:28:57.558Z"
   },
   "iQOO Z11 Turbo": {
     "ok": true,
@@ -2903,6 +2903,6 @@
       ]
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-05-26T22:20:49.585Z"
+    "fetchedAt": "2026-05-27T22:28:58.486Z"
   }
 }
