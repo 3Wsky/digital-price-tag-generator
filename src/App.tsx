@@ -667,7 +667,12 @@ function buildDraftFromDji(product: DjiProduct): ProductDraft {
     .slice(0, 4)
     .map(text => feature(iconForDjiFeature(text), text))
   const bundles = product.bundles.slice(0, 5).map(bundle => ({
-    label: compactLine(bundle.title.replace(product.title, '').replace(/[（）()]/g, ' ').trim() || bundle.bundleKind || '标准套装', 24),
+    label: compactLine(
+      bundle.bundleKind === '标准套装'
+        ? `整机标准版${bundle.controller ? `（${bundle.controller}）` : ''}`
+        : `整机${bundle.bundleKind}${bundle.controller ? `（${bundle.controller}）` : ''}`,
+      26,
+    ),
     price: bundle.price,
   }))
   const services = product.careServices.slice(0, 2).map(service => ({
@@ -1062,7 +1067,7 @@ function elementsFromDjiDraft(draft: ProductDraft, cardW = presets[0].width, car
   elements.push(
     { id: makeId(), kind: 'colors', text: metaText, x: contentX, y: r(cardH * 0.505), width: contentW, height: r(cardH * 0.04), fontSize: metaFontSize, fontWeight: 400, color: '#667085', background: 'transparent', align: 'left', radius: 0, singleLine: true },
     { id: makeId(), kind: 'divider', text: '', x: contentX, y: r(cardH * 0.545), width: contentW, height: r(0.35), fontSize: 1, fontWeight: 400, color: '#98a2b3', background: '#98a2b3', align: 'left', radius: 0 },
-    { id: makeId(), kind: 'text', text: '套装价格', x: contentX, y: r(priceTop), width: r(cardW * 0.3), height: r(cardH * 0.032), fontSize: metaFontSize, fontWeight: 700, color: '#475467', background: 'transparent', align: 'left', radius: 0 },
+    { id: makeId(), kind: 'text', text: '整机套装价（含飞行器）', x: contentX, y: r(priceTop), width: r(cardW * 0.48), height: r(cardH * 0.032), fontSize: metaFontSize, fontWeight: 700, color: '#475467', background: 'transparent', align: 'left', radius: 0 },
   )
 
   draft.skus.slice(0, 5).forEach((sku, index) => {
@@ -1219,6 +1224,7 @@ function App() {
   const [confirmDialog, setConfirmDialog] = useState<{ message: string; onConfirm: () => void } | null>(null)
   const canvasRef = useRef<HTMLDivElement>(null)
   const [snapToGrid, setSnapToGrid] = useState(true)
+  const [gridSize, setGridSize] = useState<2 | 5>(5)
   const [activeTab, setActiveTab] = useState<'text' | 'style' | 'pos'>('text')
 
   const selectedCard = state.cards.find((c) => c.id === state.selectedCardId) ?? null
@@ -1696,8 +1702,8 @@ function App() {
       let newY = dragState.baseY + (event.clientY - dragState.startY) / printableScale
       
       if (snapToGrid) {
-        newX = Math.round(newX / 5) * 5
-        newY = Math.round(newY / 5) * 5
+        newX = Math.round(newX / gridSize) * gridSize
+        newY = Math.round(newY / gridSize) * gridSize
       }
 
       newX = clamp(newX, 0, selectedCard.width - element.width)
@@ -1711,8 +1717,8 @@ function App() {
       let newH = resizeState.baseH + (event.clientY - resizeState.startY) / printableScale
 
       if (snapToGrid) {
-        newW = Math.round(newW / 5) * 5
-        newH = Math.round(newH / 5) * 5
+        newW = Math.round(newW / gridSize) * gridSize
+        newH = Math.round(newH / gridSize) * gridSize
       }
 
       newW = Math.max(5, newW)
@@ -2185,11 +2191,20 @@ function App() {
                       </select>
                     </label>
                     {selectedElement.kind === 'iconSpec' ? (
-                      <label style={{ marginTop: '10px' }}>卖点图标
-                        <select value={selectedElement.iconKey ?? 'phone'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconKey: e.target.value as FeatureIconKey })}>
-                          {featureIconOptions.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
-                        </select>
-                      </label>
+                      <>
+                        <label style={{ marginTop: '10px' }}>卖点图标
+                          <select value={selectedElement.iconKey ?? 'phone'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconKey: e.target.value as FeatureIconKey })}>
+                            {featureIconOptions.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
+                          </select>
+                        </label>
+                        <div className="property-group" style={{ marginTop: '15px', borderTop: '1px solid #f1f5f9', paddingTop: '15px' }}>
+                          <span style={{ fontSize: '12px', fontWeight: 700, color: '#475569', display: 'block', marginBottom: '8px' }}>图标色彩控制</span>
+                          <div className="color-row">
+                            <label>图标底色<input type="color" value={selectedElement.iconBackground ?? '#b96c6b'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconBackground: e.target.value })} /></label>
+                            <label>图标线色<input type="color" value={selectedElement.iconColor ?? '#ffffff'} onChange={(e) => updateElement(selectedCard.id, selectedElement.id, { iconColor: e.target.value })} /></label>
+                          </div>
+                        </div>
+                      </>
                     ) : null}
                   </div>
                 )}
@@ -2233,7 +2248,7 @@ function App() {
                     </div>
                     <div style={{ marginTop: '15px', borderTop: '1px solid #f1f5f9', paddingTop: '15px' }}>
                       <label style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                        <span>对齐到 5mm 网格</span>
+                        <span>对齐到 {gridSize}mm 网格</span>
                         <input
                           type="checkbox"
                           style={{ width: 'auto' }}
@@ -2241,7 +2256,11 @@ function App() {
                           onChange={(e) => setSnapToGrid(e.target.checked)}
                         />
                       </label>
-                      <p style={{ fontSize: '11px', color: '#94a3b8', margin: '6px 0 0 0', lineHeight: 1.4 }}>开启后，拖拽或调整尺寸会自动按 5mm 对齐，确保价签绝对工整。</p>
+                      <div className="action-row" style={{ marginTop: '10px' }}>
+                        <button type="button" className={['wide-action', gridSize === 2 ? 'primary-inline' : ''].join(' ')} onClick={() => setGridSize(2)}>2mm 精细</button>
+                        <button type="button" className={['wide-action', gridSize === 5 ? 'primary-inline' : ''].join(' ')} onClick={() => setGridSize(5)}>5mm 快速</button>
+                      </div>
+                      <p style={{ fontSize: '11px', color: '#94a3b8', margin: '6px 0 0 0', lineHeight: 1.4 }}>开启后，拖拽或调整尺寸会自动按当前网格对齐；2mm 适合精修，5mm 适合快速排版。</p>
                     </div>
                   </div>
                 )}
@@ -2260,7 +2279,7 @@ function App() {
                 </div>
                 <div style={{ marginTop: '20px', borderTop: '1px solid #f1f5f9', paddingTop: '15px' }}>
                   <label style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#334155' }}>5mm 网格磁吸对齐</span>
+                    <span style={{ fontSize: '13px', fontWeight: 700, color: '#334155' }}>{gridSize}mm 网格磁吸对齐</span>
                     <input
                       type="checkbox"
                       style={{ width: 'auto' }}
@@ -2268,7 +2287,11 @@ function App() {
                       onChange={(e) => setSnapToGrid(e.target.checked)}
                     />
                   </label>
-                  <p style={{ fontSize: '11px', color: '#94a3b8', margin: '6px 0 0 0', lineHeight: 1.4 }}>专为门店员工精细化微调排版设计。开启后，拖拽与缩放时自动磁吸对齐，确保价签绝对工整。</p>
+                  <div className="action-row" style={{ marginTop: '10px' }}>
+                    <button type="button" className={['wide-action', gridSize === 2 ? 'primary-inline' : ''].join(' ')} onClick={() => setGridSize(2)}>2mm 精细</button>
+                    <button type="button" className={['wide-action', gridSize === 5 ? 'primary-inline' : ''].join(' ')} onClick={() => setGridSize(5)}>5mm 快速</button>
+                  </div>
+                  <p style={{ fontSize: '11px', color: '#94a3b8', margin: '6px 0 0 0', lineHeight: 1.4 }}>专为门店员工精细化微调排版设计。2mm 适合细调，5mm 适合快速对齐。</p>
                 </div>
                 <p className="empty-state" style={{ marginTop: '25px' }}>选择画布上的元素后可编辑内容和尺寸。</p>
               </div>
