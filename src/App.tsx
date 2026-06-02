@@ -86,6 +86,7 @@ interface LayoutItem {
 
 interface ProductDraft {
   title: string
+  template?: 'standard' | 'dji'
   features: Array<{ iconKey: FeatureIconKey; text: string }>
   colors: string[]
   colorNames?: string[]
@@ -115,12 +116,51 @@ interface OfficialProduct {
   features?: string[]
 }
 
+interface DjiBundle {
+  title: string
+  slug: string
+  price: string
+  priceValue?: number | null
+  controller?: string
+  bundleKind?: string
+  includedItems?: Array<{ name: string; quantity: number; slug?: string }>
+}
+
+interface DjiProduct {
+  brand: 'DJI'
+  title: string
+  slug: string
+  url: string
+  price: string
+  priceStatus?: 'available' | 'pending'
+  bundles: DjiBundle[]
+  careServices: Array<{ name: string; price: string; slug?: string }>
+  highlights: string[]
+  specs: {
+    camera?: string
+    video?: string
+    safety?: string
+    transmission?: string
+    endurance?: string
+    weight?: string
+  }
+  fetchedFrom?: string
+}
+
 interface StaticProductEntry {
   ok: boolean
   source?: string
   message?: string
   product?: OfficialProduct
   zhihuItems?: ZhihuItem[]
+  fetchedAt?: string
+}
+
+interface StaticDjiEntry {
+  ok: boolean
+  source?: string
+  message?: string
+  product?: DjiProduct
   fetchedAt?: string
 }
 
@@ -158,11 +198,18 @@ const paperConfigs: PaperConfig[] = [
 ]
 
 let staticProductsPromise: Promise<Record<string, StaticProductEntry> | null> | null = null
+let staticDjiProductsPromise: Promise<Record<string, StaticDjiEntry> | null> | null = null
 
 const normalizeProductKey = (value: string) => value
   .toLowerCase()
   .replace(/[\s-]+/g, '')
   .replace(/^vivo(?=iqoo)/, '')
+
+const normalizeDjiKey = (value: string) => value
+  .toLowerCase()
+  .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '')
+  .replace(/^dji/, '')
+  .replace(/^大疆/, '')
 
 function loadStaticProducts() {
   if (!staticProductsPromise) {
@@ -173,12 +220,46 @@ function loadStaticProducts() {
   return staticProductsPromise
 }
 
+function loadStaticDjiProducts() {
+  if (!staticDjiProductsPromise) {
+    staticDjiProductsPromise = fetch('/data/dji-products.json', { cache: 'no-cache' })
+      .then((r) => r.ok ? r.json() : null)
+      .catch(() => null)
+  }
+  return staticDjiProductsPromise
+}
+
 function findStaticProductEntry(products: Record<string, StaticProductEntry> | null, model: string) {
   if (!products) return null
   const target = normalizeProductKey(model)
   const exactKey = Object.keys(products).find(key => normalizeProductKey(key) === target)
   if (exactKey) return products[exactKey]
   return Object.values(products).find(entry => entry?.product?.title && normalizeProductKey(entry.product.title) === target) || null
+}
+
+function findStaticDjiEntry(products: Record<string, StaticDjiEntry> | null, model: string) {
+  if (!products) return null
+  const target = normalizeDjiKey(model)
+  const knownAliases: Record<string, string> = {
+    mini4pro: 'dji-mini-4-pro',
+    djimini4pro: 'dji-mini-4-pro',
+    air3s: 'dji-air-3s',
+    djiair3s: 'dji-air-3s',
+    mavic4pro: 'dji-mavic-4-pro',
+    djimavic4pro: 'dji-mavic-4-pro',
+    pocket3: 'osmo-pocket-3',
+    osmopocket3: 'osmo-pocket-3',
+  }
+  const aliasKey = knownAliases[target]
+  if (aliasKey && products[aliasKey]) return products[aliasKey]
+  const exactKey = Object.keys(products).find(key => normalizeDjiKey(key) === target)
+  if (exactKey) return products[exactKey]
+  return Object.values(products).find(entry => {
+    const product = entry?.product
+    if (!product) return false
+    const titleKey = normalizeDjiKey(product.title)
+    return titleKey === target || titleKey.includes(target) || target.includes(titleKey)
+  }) || null
 }
 
 const featureIconOptions: Array<{ key: FeatureIconKey; label: string; Icon: typeof BatteryFull }> = [
@@ -566,6 +647,64 @@ function iconForOfficialFeature(value: string): FeatureIconKey {
   return 'phone'
 }
 
+function iconForDjiFeature(value: string): FeatureIconKey {
+  if (/续航|飞行时间|电池|分钟/i.test(value)) return 'battery'
+  if (/避障|全向|LiDAR|夜景/i.test(value)) return 'shield'
+  if (/图传|公里|信号/i.test(value)) return 'signal'
+  if (/4K|6K|HDR|CMOS|哈苏|像素|长焦|云台|D-Log/i.test(value)) return 'camera'
+  return 'camera'
+}
+
+function buildDraftFromDji(product: DjiProduct): ProductDraft {
+  const highlights = [
+    product.specs.camera,
+    product.specs.video,
+    product.specs.safety,
+    product.specs.endurance || product.specs.transmission,
+    ...product.highlights,
+  ].filter(Boolean) as string[]
+  const featureList = Array.from(new Set(highlights.map(text => compactLine(text, 30))))
+    .slice(0, 4)
+    .map(text => feature(iconForDjiFeature(text), text))
+  const bundles = product.bundles.slice(0, 5).map(bundle => ({
+    label: compactLine(bundle.title.replace(product.title, '').replace(/[（）()]/g, ' ').trim() || bundle.bundleKind || '标准套装', 24),
+    price: bundle.price,
+  }))
+  const services = product.careServices.slice(0, 2).map(service => ({
+    label: service.name.replace(`（${product.title}）`, '').replace(product.title, '').trim(),
+    price: service.price,
+  }))
+  const controllerNames = Array.from(new Set(product.bundles.map(bundle => bundle.controller).filter(Boolean))) as string[]
+  const packageNames = Array.from(new Set(product.bundles.map(bundle => bundle.bundleKind).filter(Boolean))) as string[]
+  return {
+    title: product.title,
+    template: 'dji',
+    features: featureList.length ? featureList : [
+      feature('camera', '影像创作设备', '官网套装价格'),
+      feature('battery', '套装配置可选', '按遥控器与配件区分'),
+      feature('shield', 'DJI Care 可选', '随心换服务另计'),
+      feature('signal', '参数详见官网', '门店销售请复核'),
+    ],
+    colors: ['#1f2937', '#667085', '#d0d5dd', '#f2f4f7'],
+    colorNames: [
+      controllerNames.length ? `遥控：${controllerNames.join(' / ')}` : '遥控器按套装配置',
+      packageNames.length ? `套装：${packageNames.join(' / ')}` : '标准 / 套装配置',
+    ],
+    skus: bundles.length ? bundles : [{ label: '官网套装价', price: product.price || '¥ --' }],
+    service: services[0] ?? { label: 'DJI Care 随心换', price: '¥ --' },
+    services,
+    footnote: '大疆产品价格按套装、遥控器、配件组合区分；DJI Care 随心换为增值服务，门店成交价与库存请以实际销售口径为准。',
+    source: 'official',
+    sourceNotes: [
+      `DJI 官网：${product.bundles.length} 个套装价格，${product.careServices.length} 个随心换服务。`,
+      ...product.bundles.slice(0, 3).map(bundle => {
+        const items = (bundle.includedItems || []).slice(0, 3).map(item => `${item.name}x${item.quantity}`).join('、')
+        return `${bundle.title}：${bundle.price}${items ? `；含 ${items}` : ''}`
+      }),
+    ],
+  }
+}
+
 function buildFallbackDraft(model: string): ProductDraft {
   return {
     title: model || '产品型号',
@@ -885,7 +1024,74 @@ function makeEmptyCard(preset: TagPreset): Card {
   return { id: makeId(), name: preset.name, customName: false, width: preset.width, height: preset.height, elements: [] }
 }
 
+function elementsFromDjiDraft(draft: ProductDraft, cardW = presets[0].width, cardH = presets[0].height): TagElement[] {
+  const r = (v: number) => Math.round(v * 10) / 10
+  const contentX = r(cardW * 0.085)
+  const contentW = r(cardW * 0.83)
+  const titleW = r(cardW - 10)
+  const titleBaseFontSize = Math.max(r(cardW * 6.6 / 100), 4.5)
+  const displayTitle = displayTitleForCard(draft.title, titleW, titleBaseFontSize)
+  const titleFontSize = fitSingleLineFontSize(displayTitle, titleW, titleBaseFontSize, 3.2)
+  const metaFontSize = Math.max(r(cardW * 2.35 / 100), 1.7)
+  const iconSpecFontSize = Math.max(r(cardW * 4.4 / 100), 3.2)
+  const featureTop = cardH * 0.15
+  const featureAreaH = cardH * 0.35
+  const priceTop = cardH * 0.56
+  const rowH = cardH * 0.039
+  const specX = contentX
+  const specW = r(cardW * 0.58)
+  const priceX = r(cardW * 0.64)
+  const priceW = r(cardW * 0.28)
+  const elements: TagElement[] = [
+    { id: makeId(), kind: 'text', text: displayTitle, x: 5, y: r(cardH * 0.04), width: titleW, height: r(cardH * 0.085), fontSize: titleFontSize, fontWeight: 700, color: '#1f2937', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+    { id: makeId(), kind: 'text', text: 'DJI 官网套装 / 随心换服务', x: contentX, y: r(cardH * 0.105), width: contentW, height: r(cardH * 0.035), fontSize: metaFontSize, fontWeight: 400, color: '#667085', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+  ]
+
+  draft.features.slice(0, 4).forEach((item, index) => {
+    const featureH = featureAreaH / 4
+    elements.push({
+      id: makeId(), kind: 'iconSpec', text: item.text,
+      x: contentX, y: r(featureTop + index * featureH),
+      width: contentW, height: r(featureH * 0.74), fontSize: iconSpecFontSize, fontWeight: 500,
+      color: '#344054', background: 'transparent', align: 'left', radius: 0,
+      iconKey: item.iconKey, iconBackground: '#111827', iconColor: '#ffffff',
+    })
+  })
+
+  const metaText = (draft.colorNames || []).join('；')
+  elements.push(
+    { id: makeId(), kind: 'colors', text: metaText, x: contentX, y: r(cardH * 0.505), width: contentW, height: r(cardH * 0.04), fontSize: metaFontSize, fontWeight: 400, color: '#667085', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+    { id: makeId(), kind: 'divider', text: '', x: contentX, y: r(cardH * 0.545), width: contentW, height: r(0.35), fontSize: 1, fontWeight: 400, color: '#98a2b3', background: '#98a2b3', align: 'left', radius: 0 },
+    { id: makeId(), kind: 'text', text: '套装价格', x: contentX, y: r(priceTop), width: r(cardW * 0.3), height: r(cardH * 0.032), fontSize: metaFontSize, fontWeight: 700, color: '#475467', background: 'transparent', align: 'left', radius: 0 },
+  )
+
+  draft.skus.slice(0, 5).forEach((sku, index) => {
+    const y = priceTop + cardH * 0.045 + index * rowH
+    elements.push(
+      { id: makeId(), kind: 'spec', text: sku.label, x: specX, y: r(y), width: specW, height: r(rowH * 0.94), fontSize: 2.55, fontWeight: 400, color: '#344054', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+      { id: makeId(), kind: 'price', text: sku.price, x: priceX, y: r(y - cardH * 0.002), width: priceW, height: r(rowH * 0.94), fontSize: 3.75, fontWeight: 800, color: '#111827', background: 'transparent', align: 'right', radius: 0, singleLine: true },
+    )
+  })
+
+  const serviceStart = priceTop + cardH * 0.055 + draft.skus.slice(0, 5).length * rowH
+  draft.services?.slice(0, 2).forEach((svc, index) => {
+    const y = serviceStart + index * rowH
+    elements.push(
+      { id: makeId(), kind: 'spec', text: svc.label, x: specX, y: r(y), width: specW, height: r(rowH * 0.94), fontSize: 2.45, fontWeight: 400, color: '#475467', background: 'transparent', align: 'left', radius: 0, singleLine: true },
+      { id: makeId(), kind: 'price', text: svc.price, x: priceX, y: r(y - cardH * 0.002), width: priceW, height: r(rowH * 0.94), fontSize: 3.35, fontWeight: 700, color: '#475467', background: 'transparent', align: 'right', radius: 0, singleLine: true },
+    )
+  })
+
+  elements.push({
+    id: makeId(), kind: 'footnote', text: draft.footnote,
+    x: contentX, y: r(cardH * 0.91), width: contentW, height: r(cardH * 0.075),
+    fontSize: 1.15, fontWeight: 400, color: '#667085', background: 'transparent', align: 'left', radius: 0,
+  })
+  return elements
+}
+
 function elementsFromDraft(draft: ProductDraft, cardW = presets[0].width, cardH = presets[0].height): TagElement[] {
+  if (draft.template === 'dji') return elementsFromDjiDraft(draft, cardW, cardH)
   const r = (v: number) => Math.round(v * 10) / 10
   const fontSize = (pct: number, min = 2.4) => Math.max(r(cardW * pct / 100), min)
   const shouldShowService = /华为|huawei/i.test(draft.title)
@@ -1197,6 +1403,11 @@ function App() {
   // ─── Auto Generate ───────────────────────────────────────────────
 
   const searchModel = async (model: string): Promise<ProductDraft> => {
+    const staticDjiEntry = findStaticDjiEntry(await loadStaticDjiProducts(), model)
+    if (staticDjiEntry?.ok && staticDjiEntry.product) {
+      return buildDraftFromDji(staticDjiEntry.product)
+    }
+
     const staticEntry = findStaticProductEntry(await loadStaticProducts(), model)
     if (staticEntry?.ok && staticEntry.product) {
       return buildDraftFromOfficial(model, staticEntry.product, staticEntry.zhihuItems || [])
@@ -1227,6 +1438,9 @@ function App() {
     const hasOfficial = official.ok && official.product
 
     if (hasOfficial) {
+      if (official.source === 'dji' && official.product?.bundles) {
+        return buildDraftFromDji(official.product)
+      }
       return buildDraftFromOfficial(model, official.product, zhihuItems)
     }
 

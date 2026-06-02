@@ -9,7 +9,8 @@
     "data:discover": "node server.mjs --discover-models",
     "data:build": "node server.mjs --build-data --refresh-limit 20 --stale-days 5 --delay-min-ms 3000 --delay-max-ms 8000",
     "data:build:full": "node server.mjs --build-data --full-refresh",
-    "data:refresh": "npm run data:discover && npm run data:build",
+    "data:dji": "node server.mjs --build-dji-data",
+    "data:refresh": "npm run data:discover && npm run data:build && npm run data:dji",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

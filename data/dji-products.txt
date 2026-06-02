@@ -1,0 +1,8 @@
+# DJI product pages for the independent DJI static library.
+# One slug per line. These are resolved as:
+# https://store.dji.com/cn/product/<slug>?set_region=CN
+
+dji-mini-4-pro
+dji-air-3s
+dji-mavic-4-pro
+osmo-pocket-3

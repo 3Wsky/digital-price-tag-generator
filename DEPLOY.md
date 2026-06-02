@@ -29,7 +29,9 @@ Important files to keep in Git:
 - `src/`
 - `public/`
 - `public/data/products.json`
+- `public/data/dji-products.json`
 - `data/models.txt`
+- `data/dji-products.txt`
 - `server.mjs`
 - `.github/workflows/refresh-products.yml`
 - `package.json`
@@ -135,6 +137,12 @@ node server.mjs --build-data --models data/models.txt --out public/data/products
 - Pending-price models are retried every day.
 - Existing priced models are refreshed in batches, up to 20 per day, after about 5 days.
 - Each real model refresh waits a random 3-8 seconds before the next one.
+
+DJI products are stored separately because prices are tied to bundles, controllers, accessories, and DJI Care plans:
+
+```powershell
+node server.mjs --build-dji-data --models data/dji-products.txt --out public/data/dji-products.json
+```
 
 ## 7. Local development
 

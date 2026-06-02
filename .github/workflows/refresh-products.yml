@@ -38,11 +38,14 @@ jobs:
           ZHIHU_ACCESS_SECRET: ${{ secrets.ZHIHU_ACCESS_SECRET }}
         run: node server.mjs --build-data --models data/models.txt --out public/data/products.json --refresh-limit 20 --stale-days 5 --delay-min-ms 3000 --delay-max-ms 8000
 
+      - name: Refresh DJI products
+        run: node server.mjs --build-dji-data --models data/dji-products.txt --out public/data/dji-products.json --delay-min-ms 2000 --delay-max-ms 5000
+
       - name: Validate JSON
-        run: node -e "const fs=require('fs');const p='public/data/products.json';const d=JSON.parse(fs.readFileSync(p,'utf8'));const ok=Object.values(d).filter(x=>x&&x.ok).length;console.log('entries',Object.keys(d).length,'ok',ok);if(!Object.keys(d).length)process.exit(1)"
+        run: node -e "const fs=require('fs');for(const p of ['public/data/products.json','public/data/dji-products.json']){const d=JSON.parse(fs.readFileSync(p,'utf8'));const ok=Object.values(d).filter(x=>x&&x.ok).length;console.log(p,'entries',Object.keys(d).length,'ok',ok);if(!Object.keys(d).length)process.exit(1)}"
 
       - name: Commit updated product data
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(data): refresh product data"
-          file_pattern: data/models.txt public/data/products.json
+          file_pattern: data/models.txt data/dji-products.txt public/data/products.json public/data/dji-products.json

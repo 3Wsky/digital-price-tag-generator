@@ -149,6 +149,19 @@ npm run data:refresh
 public/data/products.json
 ```
 
+大疆产品使用独立静态库，因为套装、遥控器、配件和 DJI Care 随心换价格体系不同：
+
+```text
+data/dji-products.txt
+public/data/dji-products.json
+```
+
+手动刷新大疆静态库：
+
+```powershell
+npm run data:dji
+```
+
 线上部署时，GitHub Actions 会定时运行数据更新任务，并把新的 `products.json` 提交到仓库。
 
 ## 部署

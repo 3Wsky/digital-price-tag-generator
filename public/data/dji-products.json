@@ -1,0 +1,1349 @@
+{
+  "dji-mini-4-pro": {
+    "ok": true,
+    "source": "dji",
+    "product": {
+      "brand": "DJI",
+      "title": "DJI Mini 4 Pro",
+      "slug": "dji-mini-4-pro",
+      "url": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN",
+      "price": "¥5940",
+      "priceStatus": "available",
+      "bundles": [
+        {
+          "title": "DJI Mini 4 Pro 畅飞套装（带屏遥控器）",
+          "slug": "dji-mini-4-pro-combo-rc-2-sb",
+          "type": "SpuBundle",
+          "price": "¥5940",
+          "priceValue": 5940,
+          "controller": "带屏遥控器",
+          "bundleKind": "畅飞套装",
+          "includedItems": [
+            {
+              "name": "DJI Mini 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "双向充电管家",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 数据线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "备用螺丝",
+              "quantity": 18,
+              "slug": ""
+            },
+            {
+              "name": "螺丝刀",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护锁扣",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "束桨器",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Mini 4 Pro 长续航畅飞套装（带屏遥控器）",
+          "slug": "dji-mini-4-pro-combo-plus-rc-2-sb",
+          "type": "SpuBundle",
+          "price": "¥6280",
+          "priceValue": 6280,
+          "controller": "带屏遥控器",
+          "bundleKind": "长续航畅飞",
+          "includedItems": [
+            {
+              "name": "DJI Mini 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "长续航智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "双向充电管家",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 数据线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "备用螺丝",
+              "quantity": 18,
+              "slug": ""
+            },
+            {
+              "name": "螺丝刀",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护锁扣",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "束桨器",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Mini 4 Pro（普通遥控器）",
+          "slug": "dji-mini-4-pro",
+          "type": "Spu",
+          "price": "¥4070",
+          "priceValue": 4070,
+          "controller": "普通遥控器",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Mini 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺丝",
+              "quantity": 6,
+              "slug": ""
+            },
+            {
+              "name": "螺丝刀",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N2 遥控器转接线（USB-C 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N2 遥控器转接线（Lightning 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护锁扣",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "束桨器",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Mini 4 Pro（带屏遥控器）",
+          "slug": "dji-mini-4-pro-rc-2",
+          "type": "Spu",
+          "price": "¥5090",
+          "priceValue": 5090,
+          "controller": "带屏遥控器",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Mini 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺丝",
+              "quantity": 6,
+              "slug": ""
+            },
+            {
+              "name": "螺丝刀",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护锁扣",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "束桨器",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        }
+      ],
+      "careServices": [
+        {
+          "name": "DJI Care 随心换 1 年版（DJI Mini 4 Pro）",
+          "price": "¥478",
+          "slug": "dji-care-refresh-dji-mini-4-pro"
+        },
+        {
+          "name": "DJI Care 随心换 2 年版（DJI Mini 4 Pro）",
+          "price": "¥788",
+          "slug": "dji-care-refresh-2-year-dji-mini-4-pro"
+        }
+      ],
+      "highlights": [
+        "4K/60fps HDR 无损竖拍",
+        "户外旅拍 - 4K/100fps 慢动作",
+        "4K/60fps HDR",
+        "4K/100fps 慢动作",
+        "4K/30fps HDR",
+        "2. HDR 视频规格从 4K/30fps 提升至 4K/60fps；",
+        "配备 1/1.3 英寸 CMOS，支持拍摄 4K/60fps HDR 无损竖拍及 4K/100fps 慢动作视频，更有 10-bit D-Log M 和 HLG 色彩模式，记录多达 10 亿种颜色。",
+        "4K 高分辨率显著提升画面清晰度、100fps 高帧率带来顺滑的创作体验，助你轻松拍摄骑行、滑板等户外场景，以慢动作视频再现绝妙瞬间。"
+      ],
+      "specs": {
+        "camera": "配备 1/1.3 英寸 CMOS，支持拍摄 4K/60fps HDR 无损竖拍及 4K/100fps 慢动作视频，更有 10-bit D-Log M 和 HLG 色彩模式，记录多达 10 亿种颜色。",
+        "video": "4K/60fps HDR 无损竖拍",
+        "safety": "",
+        "transmission": "",
+        "endurance": "",
+        "weight": ""
+      },
+      "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
+    },
+    "message": "",
+    "fetchedAt": "2026-06-02T19:12:36.385Z"
+  },
+  "dji-air-3s": {
+    "ok": true,
+    "source": "dji",
+    "product": {
+      "brand": "DJI",
+      "title": "DJI Air 3S",
+      "slug": "dji-air-3s",
+      "url": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN",
+      "price": "¥9988",
+      "priceStatus": "available",
+      "bundles": [
+        {
+          "title": "DJI Air 3S 畅飞套装 (带屏遥控器)",
+          "slug": "dji-air-3s-fly-more-combo-rc-2-new",
+          "type": "SpuBundle",
+          "price": "¥9988",
+          "priceValue": 9988,
+          "controller": "带屏遥控器",
+          "bundleKind": "畅飞套装",
+          "includedItems": [
+            {
+              "name": "DJI Air 3S",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "充电管家",
+              "quantity": 1,
+              "slug": "dji-air-3-battery-charging-hub"
+            },
+            {
+              "name": "ND 镜套装（ND8/32/128）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护罩",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Air 3S（普通遥控器）",
+          "slug": "dji-air-3s",
+          "type": "Spu",
+          "price": "¥6289",
+          "priceValue": 6289,
+          "controller": "普通遥控器",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Air 3S",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N3 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "遥控器转接线（USB-C 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "遥控器转接线（Lightning 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护罩",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Air 3S 畅飞套装（普通遥控器）",
+          "slug": "dji-air-3s-fly-more-combo",
+          "type": "Spu",
+          "price": "¥7909",
+          "priceValue": 7909,
+          "controller": "普通遥控器",
+          "bundleKind": "畅飞套装",
+          "includedItems": [
+            {
+              "name": "DJI Air 3S",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N3 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "充电管家",
+              "quantity": 1,
+              "slug": "dji-air-3-battery-charging-hub"
+            },
+            {
+              "name": "ND 镜套装（ND8/32/128）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "遥控器转接线（USB-C 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "遥控器转接线（Lightning 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护罩",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Air 3S 畅飞套装（带屏遥控器）",
+          "slug": "dji-air-3s-fly-more-combo-rc-2",
+          "type": "Spu",
+          "price": "¥8989",
+          "priceValue": 8989,
+          "controller": "带屏遥控器",
+          "bundleKind": "畅飞套装",
+          "includedItems": [
+            {
+              "name": "DJI Air 3S",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "充电管家",
+              "quantity": 1,
+              "slug": "dji-air-3-battery-charging-hub"
+            },
+            {
+              "name": "ND 镜套装（ND8/32/128）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护罩",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        }
+      ],
+      "careServices": [
+        {
+          "name": "DJI Care 随心换 1 年版（DJI Air 3S）",
+          "price": "¥698",
+          "slug": "dji-care-refresh-dji-air-3s"
+        },
+        {
+          "name": "DJI Care 随心换 2 年版（DJI Air 3S）",
+          "price": "¥1188",
+          "slug": "dji-care-refresh-2-year-dji-air-3s"
+        }
+      ],
+      "highlights": [
+        "双摄 4K/60fps HDR 视频、14 挡动态范围",
+        "双摄 4K/60fps HDR 视频",
+        "** 仅在慢动作模式下支持录制 4K/120fps 视频。",
+        "广角和中长焦相机均支持竖拍（9:16），最大视频录制规格为 2.7K/60fps。",
+        "2. 慢动作视频录制规格支持 1080p/240fps、4K/120fps**。",
+        "3. 仅在慢动作模式下支持录制 4K/120fps 视频。",
+        "两个相机均可在普通模式下采用 H.265 编码录制 10-bit 视频，并支持 4K/60fps HDR、4K/120fps 视频录制",
+        "1. 升级一英寸 CMOS 主摄，使用全新图像处理平台，视频动态范围高达 14 挡*，最高支持 4K/120fps 视频录制规格**；新增自由全景功能，广角相机和中长焦相机均支持自由选取全景照片拍摄区域。"
+      ],
+      "specs": {
+        "camera": "广角和中长焦相机均支持竖拍（9:16），最大视频录制规格为 2.7K/60fps。",
+        "video": "双摄 4K/60fps HDR 视频、14 挡动态范围",
+        "safety": "",
+        "transmission": "",
+        "endurance": "",
+        "weight": ""
+      },
+      "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
+    },
+    "message": "",
+    "fetchedAt": "2026-06-02T19:12:41.750Z"
+  },
+  "dji-mavic-4-pro": {
+    "ok": true,
+    "source": "dji",
+    "product": {
+      "brand": "DJI",
+      "title": "DJI Mavic 4 Pro",
+      "slug": "dji-mavic-4-pro",
+      "url": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN",
+      "price": "¥14387",
+      "priceStatus": "available",
+      "bundles": [
+        {
+          "title": "DJI Mavic 4 Pro 畅拍套装（DJI RC 2）",
+          "slug": "dji-mavic-4-pro-capture-combo",
+          "type": "SpuBundle",
+          "price": "¥14387",
+          "priceValue": 14387,
+          "controller": "DJI RC 2",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Mavic 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2",
+              "quantity": 1,
+              "slug": "dji-rc-2"
+            },
+            {
+              "name": "DJI Mavic 4 Pro 智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 收纳保护罩",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 至 USB-C 数据线",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI 100W 桌面充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "雷克沙 Professional SILVER PLUS 256GB U3 A2 V30 microSDXC",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Mavic 4 Pro（DJI RC 2）",
+          "slug": "dji-mavic-4-pro",
+          "type": "Spu",
+          "price": "¥13888",
+          "priceValue": 13888,
+          "controller": "DJI RC 2",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Mavic 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2",
+              "quantity": 1,
+              "slug": "dji-rc-2"
+            },
+            {
+              "name": "DJI Mavic 4 Pro 智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 收纳保护罩",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 至 USB-C 数据线",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI 100W 桌面充电器",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Mavic 4 Pro 畅飞套装（DJI RC 2，增强图传）",
+          "slug": "dji-mavic-4-pro-fly-more-combo-dji-rc-2-enhanced-transmission",
+          "type": "Spu",
+          "price": "¥17888",
+          "priceValue": 17888,
+          "controller": "DJI RC 2",
+          "bundleKind": "畅飞套装",
+          "includedItems": [
+            {
+              "name": "DJI Mavic 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2",
+              "quantity": 1,
+              "slug": "dji-rc-2"
+            },
+            {
+              "name": "DJI 增强图传模块 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 备用螺旋桨（对）",
+              "quantity": 4,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 收纳保护罩",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 至 USB-C 数据线",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI 100W 桌面充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 并充充电管家",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "DJI Mavic 4 Pro 512GB 创作者套装（DJI RC Pro 2，增强图传）",
+          "slug": "dji-mavic-4-pro-512gb-creator-combo-dji-rc-pro-2-enhanced-transmission",
+          "type": "Spu",
+          "price": "¥23988",
+          "priceValue": 23988,
+          "controller": "DJI RC Pro 2",
+          "bundleKind": "创作者套装",
+          "includedItems": [
+            {
+              "name": "DJI Mavic 4 Pro 512GB",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC Pro 2",
+              "quantity": 1,
+              "slug": "dji-rc-2"
+            },
+            {
+              "name": "DJI 增强图传模块 3",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 智能飞行电池",
+              "quantity": 3,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 备用螺旋桨（对）",
+              "quantity": 4,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 收纳保护罩",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 至 USB-C 高速数据线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 240W 桌面充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 单肩包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 并充充电管家",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        }
+      ],
+      "careServices": [
+        {
+          "name": "DJI Care 随心换 1 年版（DJI Mavic 4 Pro）",
+          "price": "¥1488",
+          "slug": "dji-care-refresh-dji-mavic-4-pro"
+        },
+        {
+          "name": "DJI Care 随心换 2 年版（DJI Mavic 4 Pro）",
+          "price": "¥2488",
+          "slug": "dji-care-refresh-2-year-dji-mavic-4-pro"
+        }
+      ],
+      "highlights": [
+        "一亿像素 4/3 CMOS 哈苏相机，6K/60fps HDR 视频",
+        "DJI O4+ 30 公里 10-bit HDR 图传",
+        "哈苏相机：6K/60fps HDR、4K/120fps 慢动作",
+        "中长焦相机：4K/60fps HDR、 4K/120fps 慢动作",
+        "长焦相机：4K/60fps HDR、4K/100fps 慢动作",
+        "哈苏相机：5.1K/50fps、DCI 4K/120fps",
+        "中长焦与长焦相机：4K/60fps",
+        "4K/60fps HDR"
+      ],
+      "specs": {
+        "camera": "一亿像素 4/3 CMOS 哈苏相机，6K/60fps HDR 视频",
+        "video": "一亿像素 4/3 CMOS 哈苏相机，6K/60fps HDR 视频",
+        "safety": "",
+        "transmission": "DJI O4+ 30 公里 10-bit HDR 图传",
+        "endurance": "",
+        "weight": ""
+      },
+      "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
+    },
+    "message": "",
+    "fetchedAt": "2026-06-02T19:12:44.649Z"
+  },
+  "osmo-pocket-3": {
+    "ok": true,
+    "source": "dji",
+    "product": {
+      "brand": "DJI",
+      "title": "Osmo Pocket 3",
+      "slug": "osmo-pocket-3",
+      "url": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN",
+      "price": "¥3594",
+      "priceStatus": "available",
+      "bundles": [
+        {
+          "title": "Osmo Pocket 3 即刻开拍套装",
+          "slug": "osmo-pocket-3-ready-to-go-combo",
+          "type": "SpuBundle",
+          "price": "¥3594",
+          "priceValue": 3594,
+          "controller": "",
+          "bundleKind": "即刻开拍",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "金士顿 Canvas Go!Plus microSD 卡 128GB",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 2）",
+          "slug": "osmo-pocket-3-vlog-combo",
+          "type": "SpuBundle",
+          "price": "¥5198",
+          "priceValue": 5198,
+          "controller": "",
+          "bundleKind": "Vlog 套装",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 接收器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 发射器（透明黑）",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 充电盒",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 相机连接线（3.5 毫米 TRS）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 手机连接头（Type-C 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 手机连接头（Lightning 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 防风毛套",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 背夹磁铁",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 收纳包",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic USB-C 充电线",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 碳素黑）",
+          "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini",
+          "type": "SpuBundle",
+          "price": "¥2398",
+          "priceValue": 2398,
+          "controller": "",
+          "bundleKind": "Vlog 套装",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 发射器（碳素黑）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 发射器充电底座（碳素黑）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic USB-C 充电线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 防风毛套（黑灰）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 防风毛套（黑）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 背夹磁铁",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 小型收纳袋",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 云感白）",
+          "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini-transmitter-arctic-white",
+          "type": "SpuBundle",
+          "price": "¥2398",
+          "priceValue": 2398,
+          "controller": "",
+          "bundleKind": "Vlog 套装",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 发射器（云感白）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 发射器充电底座（云感白）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic USB-C 充电线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 防风毛套（黑灰）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 防风毛套（灰）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 背夹磁铁",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic Mini 小型收纳袋",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 3 发射器）",
+          "slug": "osmo-pocket-3-vlog-combo-dji-mic-3-transmitter",
+          "type": "SpuBundle",
+          "price": "¥2828",
+          "priceValue": 2828,
+          "controller": "",
+          "bundleKind": "Vlog 套装",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 发射器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 发射器磁吸充电线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 防风毛套（黑灰）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 防风毛套（黑）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 磁铁",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 磁吸背夹",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 3 小型收纳袋",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "Osmo Pocket 3",
+          "slug": "osmo-pocket-3",
+          "type": "Spu",
+          "price": "¥2299",
+          "priceValue": 2299,
+          "controller": "",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
+          "title": "Osmo Pocket 3 全能套装",
+          "slug": "osmo-pocket-3-creator-combo",
+          "type": "Spu",
+          "price": "¥3099",
+          "priceValue": 3099,
+          "controller": "",
+          "bundleKind": "全能套装",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 增广镜",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 发射器（透明黑）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 防风毛套",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mic 2 背夹磁铁",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 续航手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo 迷你三脚架",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 收纳包",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        }
+      ],
+      "careServices": [
+        {
+          "name": "DJI Care 随心换 1 年版（Osmo Pocket 3）",
+          "price": "¥219",
+          "slug": "dji-care-refresh-osmo-pocket-3"
+        },
+        {
+          "name": "DJI Care 随心换 2 年版（Osmo Pocket 3）",
+          "price": "¥349",
+          "slug": "dji-care-refresh-2-year-osmo-pocket-3"
+        }
+      ],
+      "highlights": [
+        "1 英寸 CMOS & 4K/120fps",
+        "支持，最高支持拍摄 1080p/240fps 8 倍慢动作及 4K/120fps 4 倍慢动作。",
+        "1. 仅在慢动作模式下支持录制 4K/120fps 视频。",
+        "搭载强劲的 1 英寸影像传感器，支持 10-bit D-Log M 色彩模式，实现影像质感大跃升；4K/120fps",
+        "Pocket 3 夜景拍摄经过专项画质优化，低光场景下画面依旧清晰、色彩纯净。且最高支持 4K/30fps 低光视频录制，与你见证夜色里的高光时刻。",
+        "1. 影像实力：传感器从 1/1.7 英寸升级到 1 英寸，带来各种场景下的高清成片、画质纯净的夜景拍摄，以及大光比场景下的高动态范围拍摄能力，且支持拍摄 4K/120fps。",
+        "不一样，Osmo Pocket 3 采用全新一英寸堆栈式 CMOS，支持最高规格无裁切 4K/120fps（仅在慢动作模式下支持）拍录以及全像素相位对焦，综合性能更好。",
+        "三轴云台机械增稳"
+      ],
+      "specs": {
+        "camera": "1 英寸 CMOS & 4K/120fps",
+        "video": "1 英寸 CMOS & 4K/120fps",
+        "safety": "Pocket 3 夜景拍摄经过专项画质优化，低光场景下画面依旧清晰、色彩纯净。且最高支持 4K/30fps 低光视频录制，与你见证夜色里的高光时刻。",
+        "transmission": "",
+        "endurance": "",
+        "weight": ""
+      },
+      "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
+    },
+    "message": "",
+    "fetchedAt": "2026-06-02T19:12:47.611Z"
+  }
+}

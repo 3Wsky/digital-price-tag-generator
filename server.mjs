@@ -10,7 +10,7 @@ const zhihuSearchUrl = 'https://developer.zhihu.com/api/v1/content/global_search
 
 // CLI batch modes skip HTTP/Vite. `--discover-models` refreshes data/models.txt;
 // `--build-data` scrapes that list into public/data/products.json.
-const CLI_MODE = process.argv.includes('--build-data') || process.argv.includes('--discover-models')
+const CLI_MODE = process.argv.includes('--build-data') || process.argv.includes('--discover-models') || process.argv.includes('--build-dji-data')
 
 // Resolve the Chrome executable Playwright should use. On the dev box we use
 // the system Chrome; in CI / Linux we fall back to whatever `npx playwright
@@ -1555,6 +1555,7 @@ async function handleOfficialSearch(req, res) {
     : /xiaomi|小米|redmi/i.test(model) ? 'xiaomi'
     : /apple|苹果|iphone/i.test(model) ? 'apple'
     : /荣耀|honor/i.test(model) ? 'honor'
+    : /dji|大疆|mini\s*\d|air\s*\d|mavic|osmo|pocket/i.test(model) ? 'dji'
     : 'unknown'
 
   if (brand === 'vivo') {
@@ -1567,6 +1568,10 @@ async function handleOfficialSearch(req, res) {
   }
   if (brand === 'apple') {
     await handleAppleSearch(req, res, model)
+    return
+  }
+  if (brand === 'dji') {
+    await handleDjiSearch(req, res, model)
     return
   }
   if (brand !== 'huawei') {
@@ -1774,6 +1779,8 @@ if (!CLI_MODE) {
 } else {
   if (process.argv.includes('--discover-models')) {
     await runCliDiscoverModels()
+  } else if (process.argv.includes('--build-dji-data')) {
+    await runCliBuildDjiData()
   } else {
     await runCliBuild()
   }
@@ -2022,6 +2029,284 @@ function normalizeDiscoveredModel(brand, raw) {
   if (model.length < 5 || model.length > 40) return ''
   if (/(?:\u8033\u673a|\u5e73\u677f|\u624b\u8868|\u8def\u7531|\u7535\u8111|\u4fdd\u62a4|\u5145\u7535|\u914d\u4ef6|\u670d\u52a1|\u4e13\u9898|\u6d3b\u52a8|\u56fe\u5e93|\u65b0\u95fb)/.test(model)) return ''
   return model
+}
+
+function extractPreloadedState(html) {
+  const marker = 'window.__PRELOADED_STATE__ = '
+  const start = html.indexOf(marker)
+  if (start < 0) return null
+  const jsonStart = start + marker.length
+  const jsonEnd = html.indexOf(';\nwindow.__ENABLE_HYDRATE__', jsonStart)
+  if (jsonEnd < 0) return null
+  try {
+    return JSON.parse(html.slice(jsonStart, jsonEnd))
+  } catch {
+    return null
+  }
+}
+
+function normalizeDjiKey(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '')
+    .replace(/^dji/, '')
+    .replace(/^大疆/, '')
+}
+
+function cleanDjiLines(html) {
+  return Array.from(new Set(html
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, '\n')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .split(/\n+/)
+    .map(line => line.trim())
+    .filter(line => line.length > 1 && line.length < 140)))
+}
+
+function djiTitleFromHtml(html) {
+  return (html.match(/<title[^>]*>([^<]+)/i)?.[1] || '')
+    .replace(/^购买\s*/i, '')
+    .replace(/\s*-\s*DJI.*$/i, '')
+    .replace(/\s*-\s*大疆.*$/i, '')
+    .trim()
+}
+
+function djiModelSlugFromInput(input) {
+  const raw = String(input || '').trim()
+  if (/^[a-z0-9-]+$/i.test(raw)) return raw.toLowerCase()
+  const key = normalizeDjiKey(raw)
+  const known = {
+    djimini4pro: 'dji-mini-4-pro',
+    mini4pro: 'dji-mini-4-pro',
+    djiair3s: 'dji-air-3s',
+    air3s: 'dji-air-3s',
+    djimavic4pro: 'dji-mavic-4-pro',
+    mavic4pro: 'dji-mavic-4-pro',
+    osmopocket3: 'osmo-pocket-3',
+    pocket3: 'osmo-pocket-3',
+  }
+  return known[key] || ''
+}
+
+function djiVariantPrice(variants, slug) {
+  return variants.find(v => v.product === slug) || variants.find(v => v.slug === slug) || null
+}
+
+function isDjiUsablePrice(value) {
+  const price = Number(value)
+  return Number.isFinite(price) && price > 0 && price < 50000
+}
+
+function djiIncludedItems(product) {
+  return (product?.inTheBoxes || [])
+    .filter(item => Number(item.quantity) > 0)
+    .map(item => ({
+      name: String(item.name || '').trim(),
+      quantity: Number(item.quantity),
+      slug: item.slug || '',
+    }))
+}
+
+function djiControllerFromTitle(title) {
+  if (/RC Pro 2/i.test(title)) return 'DJI RC Pro 2'
+  if (/RC 2/i.test(title)) return 'DJI RC 2'
+  if (/RC-N3/i.test(title)) return 'DJI RC-N3'
+  if (/RC-N2/i.test(title)) return 'DJI RC-N2'
+  if (/带屏遥控器/.test(title)) return '带屏遥控器'
+  if (/普通遥控器/.test(title)) return '普通遥控器'
+  return ''
+}
+
+function djiBundleKind(title) {
+  if (/创作者|Creator/i.test(title)) return '创作者套装'
+  if (/全能/.test(title)) return '全能套装'
+  if (/Vlog/i.test(title)) return 'Vlog 套装'
+  if (/长续航/.test(title)) return '长续航畅飞'
+  if (/畅飞|Fly More/i.test(title)) return '畅飞套装'
+  if (/即刻开拍/.test(title)) return '即刻开拍'
+  return '标准套装'
+}
+
+function extractDjiHighlights(html, title) {
+  const lines = cleanDjiLines(html)
+  const scoreLine = (line) => {
+    let score = 0
+    if (/(4K|6K|HDR|CMOS|哈苏|像素|D-Log|云台|长焦|一英寸|1 英寸|1英寸)/i.test(line)) score += 4
+    if (/(避障|图传|飞行时间|续航|全向|LiDAR|夜景|fps|克|249)/i.test(line)) score += 4
+    if (line.includes(title)) score -= 4
+    if (/套装|购买|选择|服务|增值|配件|DJI Care/.test(line)) score -= 3
+    if (line.length > 48) score -= 1
+    return score
+  }
+  return lines
+    .map(line => ({ line, score: scoreLine(line) }))
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .map(item => item.line)
+    .filter((line, index, arr) => arr.findIndex(other => normalizeDjiKey(other) === normalizeDjiKey(line)) === index)
+    .slice(0, 8)
+}
+
+function extractDjiSpecsFromHighlights(highlights) {
+  const text = highlights.join('。')
+  return {
+    camera: highlights.find(line => /(CMOS|哈苏|像素|一英寸|1 英寸|1英寸|长焦)/i.test(line)) || '',
+    video: highlights.find(line => /(4K|6K|HDR|fps|D-Log)/i.test(line)) || '',
+    safety: highlights.find(line => /(避障|全向|LiDAR|夜景)/i.test(line)) || '',
+    transmission: highlights.find(line => /(图传|公里)/i.test(line)) || '',
+    endurance: highlights.find(line => /(续航|飞行时间|\d+\s*分钟)/i.test(line)) || '',
+    weight: text.match(/(?:轻于\s*)?\d+\s*克/)?.[0] || '',
+  }
+}
+
+async function fetchDjiProductBySlug(slug) {
+  const url = `https://store.dji.com/cn/product/${encodeURIComponent(slug)}?set_region=CN`
+  const response = await fetch(url, { headers: COMMON_HEADERS, redirect: 'follow' })
+  const html = await response.text()
+  const data = extractPreloadedState(html)
+  if (!response.ok || !data?.products) {
+    return { ok: false, source: 'dji', message: `DJI 商品页读取失败：${response.status}`, product: null }
+  }
+
+  const variants = data.products.variants || []
+  const products = data.products.products || []
+  const rootProduct = products.find(product => product.slug === slug)
+  const pageTitle = djiTitleFromHtml(html) || rootProduct?.title || slug
+  const baseTitle = (rootProduct?.title || pageTitle)
+    .replace(/[（(].*?[）)]/g, '')
+    .replace(/\s*-\s*.*$/g, '')
+    .trim()
+  const titleKey = normalizeDjiKey(baseTitle).slice(0, Math.min(12, normalizeDjiKey(baseTitle).length))
+  const productRows = products
+    .filter(product => product?.inTheBoxes?.length && (product.slug === slug || normalizeDjiKey(product.title).includes(titleKey)))
+    .map(product => {
+      const variant = djiVariantPrice(variants, product.slug)
+      const usablePrice = isDjiUsablePrice(variant?.price)
+      return {
+        title: product.title,
+        slug: product.slug,
+        type: product.type,
+        price: usablePrice ? (variant?.priceLabel || `¥${variant.price}`) : '',
+        priceValue: usablePrice ? variant.price : null,
+        controller: djiControllerFromTitle(product.title),
+        bundleKind: djiBundleKind(product.title),
+        includedItems: djiIncludedItems(product),
+      }
+    })
+    .filter(bundle => bundle.price)
+
+  const seenBundles = new Set()
+  const bundles = productRows.filter(bundle => {
+    const key = `${bundle.title}|${bundle.price}`
+    if (seenBundles.has(key)) return false
+    seenBundles.add(key)
+    return true
+  })
+
+  const careServices = variants
+    .filter(variant => /DJI Care|随心换/i.test(variant.title || '') && normalizeDjiKey(variant.title).includes(normalizeDjiKey(baseTitle).slice(0, 10)))
+    .map(variant => ({
+      name: variant.title,
+      price: isDjiUsablePrice(variant.price) ? (variant.priceLabel || `¥${variant.price}`) : '',
+      slug: variant.slug,
+    }))
+    .filter(service => service.price)
+    .slice(0, 4)
+
+  const highlights = extractDjiHighlights(html, pageTitle)
+  const specs = extractDjiSpecsFromHighlights(highlights)
+  const mainPrice = bundles[0]?.price || ''
+  const result = {
+    ok: Boolean(bundles.length),
+    source: 'dji',
+    product: bundles.length ? {
+      brand: 'DJI',
+      title: baseTitle,
+      slug,
+      url,
+      price: mainPrice,
+      priceStatus: mainPrice ? 'available' : 'pending',
+      bundles,
+      careServices,
+      highlights,
+      specs,
+      fetchedFrom: response.url,
+    } : null,
+    message: bundles.length ? '' : 'DJI 商城未找到可用套装价格。',
+  }
+  return result
+}
+
+async function handleDjiSearch(req, res, model) {
+  const slug = djiModelSlugFromInput(model)
+  if (!slug) {
+    sendJson(res, 200, { ok: false, source: 'dji', message: '暂未识别该 DJI 型号。', product: null })
+    return
+  }
+  const result = await fetchDjiProductBySlug(slug).catch(error => ({
+    ok: false,
+    source: 'dji',
+    message: error?.message || String(error),
+    product: null,
+  }))
+  sendJson(res, 200, result)
+}
+
+async function runCliBuildDjiData() {
+  const fs = await import('node:fs')
+  const path = await import('node:path')
+  const argv = process.argv
+  const modelsArgIdx = argv.indexOf('--models')
+  const outArgIdx = argv.indexOf('--out')
+  const delayMinArgIdx = argv.indexOf('--delay-min-ms')
+  const delayMaxArgIdx = argv.indexOf('--delay-max-ms')
+  const modelsFile = modelsArgIdx >= 0 ? argv[modelsArgIdx + 1] : 'data/dji-products.txt'
+  const outFile = outArgIdx >= 0 ? argv[outArgIdx + 1] : 'public/data/dji-products.json'
+  const delayMinMs = delayMinArgIdx >= 0 ? Number(argv[delayMinArgIdx + 1]) : 2000
+  const delayMaxMs = delayMaxArgIdx >= 0 ? Number(argv[delayMaxArgIdx + 1]) : 5000
+
+  if (!fs.existsSync(modelsFile)) {
+    console.error(`DJI models file not found: ${modelsFile}`)
+    process.exit(1)
+  }
+
+  let prevResults = {}
+  if (fs.existsSync(outFile)) {
+    try { prevResults = JSON.parse(fs.readFileSync(outFile, 'utf8')) } catch {}
+  }
+
+  const slugs = readModelLines(fs.readFileSync(modelsFile, 'utf8'))
+  const results = {}
+  console.log(`[build-dji-data] ${slugs.length} DJI product pages from ${modelsFile}`)
+  for (let i = 0; i < slugs.length; i++) {
+    const slug = slugs[i]
+    const t0 = Date.now()
+    if (i > 0) await sleep(randomInt(delayMinMs, delayMaxMs))
+    try {
+      const data = await fetchDjiProductBySlug(slug)
+      results[slug] = { ...data, fetchedAt: new Date().toISOString() }
+      console.log(`[${i + 1}/${slugs.length}] ${slug} -> ${data.ok ? 'OK' : 'MISS'} (${Date.now() - t0}ms)`)
+    } catch (err) {
+      const fallback = prevResults[slug]
+      if (fallback) {
+        results[slug] = { ...fallback, error: err?.message || String(err), errorAt: new Date().toISOString() }
+        console.warn(`[${i + 1}/${slugs.length}] ${slug} -> FAIL, kept previous (${err?.message || err})`)
+      } else {
+        results[slug] = { ok: false, source: 'dji', message: err?.message || String(err), fetchedAt: new Date().toISOString() }
+        console.warn(`[${i + 1}/${slugs.length}] ${slug} -> FAIL (${err?.message || err})`)
+      }
+    }
+  }
+
+  fs.mkdirSync(path.dirname(outFile), { recursive: true })
+  fs.writeFileSync(outFile, JSON.stringify(results, null, 2))
+  const okCount = Object.values(results).filter(item => item?.ok).length
+  console.log(`[build-dji-data] wrote ${Object.keys(results).length} entries (${okCount} OK) -> ${outFile}`)
+  process.exit(0)
 }
 
 async function runCliBuild() {
