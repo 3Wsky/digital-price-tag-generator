@@ -8,10 +8,9 @@ const port = Number(process.env.PORT ?? 5173)
 const host = process.env.HOST ?? '127.0.0.1'
 const zhihuSearchUrl = 'https://developer.zhihu.com/api/v1/content/global_search'
 
-// CLI batch mode: `node server.mjs --build-data` skips HTTP/Vite and runs the
-// scraper across a list of models, writing public/data/products.json. Used by
-// GitHub Actions and any one-off local refresh.
-const CLI_MODE = process.argv.includes('--build-data')
+// CLI batch modes skip HTTP/Vite. `--discover-models` refreshes data/models.txt;
+// `--build-data` scrapes that list into public/data/products.json.
+const CLI_MODE = process.argv.includes('--build-data') || process.argv.includes('--discover-models')
 
 // Resolve the Chrome executable Playwright should use. On the dev box we use
 // the system Chrome; in CI / Linux we fall back to whatever `npx playwright
@@ -895,6 +894,7 @@ if (existsSync(vivoCacheFile)) {
 }
 
 function saveVivoLocalCache() {
+  if (process.argv.includes('--discover-models')) return
   try { writeFileSync(vivoCacheFile, JSON.stringify(vivoLocalCache, null, 2)) } catch {}
 }
 
@@ -1772,7 +1772,11 @@ if (!CLI_MODE) {
     console.log(`Server running at http://${host}:${port}`)
   })
 } else {
-  await runCliBuild()
+  if (process.argv.includes('--discover-models')) {
+    await runCliDiscoverModels()
+  } else {
+    await runCliBuild()
+  }
 }
 
 // ─── CLI Batch Build ──────────────────────────────────────────────────
@@ -1782,6 +1786,244 @@ if (!CLI_MODE) {
 // merges Zhihu results for Honor models, and writes a single JSON file the
 // frontend can read directly. Failures are recorded so we can see them in CI
 // logs without aborting the whole batch.
+async function runCliDiscoverModels() {
+  const fs = await import('node:fs')
+  const path = await import('node:path')
+
+  const argv = process.argv
+  const modelsArgIdx = argv.indexOf('--models')
+  const maxNewArgIdx = argv.indexOf('--max-new')
+  const candidateLimitArgIdx = argv.indexOf('--candidate-limit')
+  const modelsFile = modelsArgIdx >= 0 ? argv[modelsArgIdx + 1] : 'data/models.txt'
+  const maxNew = maxNewArgIdx >= 0 ? Number(argv[maxNewArgIdx + 1]) : 12
+  const candidateLimit = candidateLimitArgIdx >= 0 ? Number(argv[candidateLimitArgIdx + 1]) : 18
+  const dryRun = argv.includes('--dry-run')
+  const validate = !argv.includes('--skip-validate')
+
+  const existingText = fs.existsSync(modelsFile) ? fs.readFileSync(modelsFile, 'utf8') : ''
+  const existingModels = readModelLines(existingText)
+  console.log(`[discover-models] ${existingModels.length} existing models from ${modelsFile}`)
+
+  const discovered = await discoverOfficialModels()
+  const existingKeys = new Set(existingModels.map(modelKey))
+  const candidates = balanceDiscoveredCandidates(discovered
+    .filter(model => !existingKeys.has(modelKey(model))))
+  const maxNewCount = Number.isFinite(maxNew) && maxNew > 0 ? maxNew : candidates.length
+  const candidateCount = Number.isFinite(candidateLimit) && candidateLimit > 0 ? candidateLimit : candidates.length
+  const newModels = validate
+    ? await validateDiscoveredModels(candidates.slice(0, candidateCount), maxNewCount)
+    : candidates.slice(0, maxNewCount)
+
+  console.log(`[discover-models] discovered ${discovered.length} models, ${candidates.length} candidates, ${newModels.length} new`)
+  for (const model of newModels) console.log(`[discover-models] + ${model}`)
+
+  if (!newModels.length || dryRun) {
+    if (dryRun) console.log('[discover-models] dry run, models file not changed')
+    process.exit(0)
+  }
+
+  const nextText = appendModelsToList(existingText, newModels)
+  fs.mkdirSync(path.dirname(modelsFile), { recursive: true })
+  fs.writeFileSync(modelsFile, nextText)
+  console.log(`[discover-models] wrote ${modelsFile}`)
+  process.exit(0)
+}
+
+function readModelLines(text) {
+  return text
+    .split(/\r?\n/)
+    .map(s => s.trim())
+    .filter(s => s && !s.startsWith('#'))
+}
+
+function balanceDiscoveredCandidates(candidates) {
+  const groups = {
+    huawei: [],
+    honor: [],
+    vivo: [],
+    other: [],
+  }
+  for (const model of candidates) {
+    groups[discoveredBrandKey(model)].push(model)
+  }
+
+  const result = []
+  const keys = ['huawei', 'honor', 'vivo', 'other']
+  while (keys.some(key => groups[key].length)) {
+    for (const key of keys) {
+      const next = groups[key].shift()
+      if (next) result.push(next)
+    }
+  }
+  return result
+}
+
+function discoveredBrandKey(model) {
+  if (/^\u534e\u4e3a|^huawei|^mate|^pura|^nova|^\u7545\u4eab/i.test(model)) return 'huawei'
+  if (/^\u8363\u8000|^honor/i.test(model)) return 'honor'
+  if (/^vivo|^iqoo/i.test(model)) return 'vivo'
+  return 'other'
+}
+
+async function validateDiscoveredModels(candidates, maxNew) {
+  const accepted = []
+  for (let i = 0; i < candidates.length && accepted.length < maxNew; i++) {
+    const model = candidates[i]
+    const t0 = Date.now()
+    const data = await invokeOfficialSearch(model)
+    if (data?.ok && data.product) {
+      accepted.push(model)
+      console.log(`[discover-models] verified ${model} (${Date.now() - t0}ms)`)
+    } else {
+      console.log(`[discover-models] skipped ${model}: ${data?.message || 'not supported'} (${Date.now() - t0}ms)`)
+    }
+  }
+  return accepted
+}
+
+function appendModelsToList(text, models) {
+  const prefix = text.endsWith('\n') ? text : `${text}\n`
+  return `${prefix}\n# Auto-discovered by node server.mjs --discover-models.\n${models.join('\n')}\n`
+}
+
+function modelKey(model) {
+  return model
+    .toLowerCase()
+    .replace(/\s+/g, '')
+    .replace(/[\-_/()（）[\]【】]/g, '')
+}
+
+function hasPublishedPrice(product) {
+  if (!product) return false
+  const values = [
+    product.price,
+    ...(product.skuPrices || []).map(sku => sku?.price),
+  ]
+  return values.some(value => {
+    const text = String(value || '')
+    return /\d{3,6}/.test(text) && !/--|\u5f85\u516c\u5e03|\u6682\u65e0/.test(text)
+  })
+}
+
+function markProductPriceStatus(data) {
+  if (!data?.ok || !data.product) return data
+  return {
+    ...data,
+    product: {
+      ...data.product,
+      priceStatus: hasPublishedPrice(data.product) ? 'available' : 'pending',
+    },
+  }
+}
+
+async function discoverOfficialModels() {
+  const browser = await chromium.launch({
+    executablePath: CHROME_EXECUTABLE_PATH,
+    headless: true,
+    args: ['--no-sandbox', '--disable-gpu'],
+  })
+  const sources = [
+    { brand: 'huawei', url: 'https://consumer.huawei.com/cn/phones/' },
+    { brand: 'honor', url: 'https://www.honor.com/cn/phones/' },
+    { brand: 'vivo', url: 'https://www.vivo.com.cn/products-x.html' },
+    { brand: 'vivo', url: 'https://www.vivo.com.cn/products-s.html' },
+    { brand: 'vivo', url: 'https://www.vivo.com.cn/products-y.html' },
+    { brand: 'vivo', url: 'https://www.vivo.com.cn/products-iqoo.html' },
+  ]
+
+  const all = []
+  try {
+    const page = await browser.newPage({ viewport: { width: 1440, height: 1200 } })
+    for (const source of sources) {
+      const t0 = Date.now()
+      try {
+        await page.goto(source.url, { waitUntil: 'domcontentloaded', timeout: 30000 })
+        await page.waitForTimeout(2500)
+        const text = await page.evaluate(() => {
+          const attrs = Array.from(document.querySelectorAll('a, img, [title], [aria-label]'))
+            .flatMap(el => [
+              el.textContent,
+              el.getAttribute('title'),
+              el.getAttribute('alt'),
+              el.getAttribute('aria-label'),
+            ])
+          return [document.body?.innerText || '', ...attrs].filter(Boolean).join('\n')
+        })
+        const models = extractModelsFromText(source.brand, text)
+        console.log(`[discover-models] ${source.brand} ${models.length} models (${Date.now() - t0}ms)`)
+        all.push(...models)
+      } catch (err) {
+        console.warn(`[discover-models] ${source.url} failed: ${err?.message || err}`)
+      }
+    }
+  } finally {
+    await browser.close().catch(() => {})
+  }
+
+  const seen = new Set()
+  return all.filter(model => {
+    const key = modelKey(model)
+    if (!key || seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
+function extractModelsFromText(brand, text) {
+  const patterns = brand === 'huawei' ? [
+    /(?:\u534e\u4e3a\s*)?Mate\s*(?:X\s*)?\d{1,3}\s*(?:RS\s*)?(?:Pro\s*\+?|Pro\s*Max|Ultra|Max|Air|SE)?(?:\s*(?:\u5178\u85cf\u7248|\u98ce\u9a70\u7248|\u4f18\u4eab\u7248))?/gi,
+    /(?:\u534e\u4e3a\s*)?Pura\s*(?:X|\d{1,3})\s*(?:Pro\s*\+?|Pro|Ultra)?(?:\s*(?:\u5178\u85cf\u7248))?/gi,
+    /(?:\u534e\u4e3a\s*)?nova\s*\d{1,3}\s*(?:Pro|Ultra|SE)?/gi,
+    /(?:\u534e\u4e3a\s*)?\u7545\u4eab\s*\d{1,3}[A-Za-z]?\s*(?:Plus|Pro|Max)?/gi,
+  ] : brand === 'honor' ? [
+    /(?:\u8363\u8000\s*)?Magic\s*(?:V\s*)?\d{1,2}\s*(?:Pro|Lite|RSR|Ultimate)?/gi,
+    /(?:\u8363\u8000\s*)?(?:\d{2,3}|X\d{2,3}|GT|Power\d?|WIN)\s*(?:Pro|Plus|Max|Ultra|GT)?/gi,
+  ] : [
+    /vivo\s*(?:X|S|Y|T)\s*\d{2,3}[A-Za-z]?\s*(?:Pro\s*mini|Pro|Ultra|mini|s|e|i|t|Turbo)?/gi,
+    /iQOO\s*(?:Neo\s*)?(?:Z\s*)?\d{1,2}[A-Za-z]?\s*(?:Pro|Turbo|x|Max|Plus)?/gi,
+  ]
+
+  return patterns
+    .flatMap(pattern => Array.from(text.matchAll(pattern), m => normalizeDiscoveredModel(brand, m[0])))
+    .filter(Boolean)
+}
+
+function normalizeDiscoveredModel(brand, raw) {
+  let model = raw
+    .replace(/\s+/g, ' ')
+    .replace(/\bNEW\b/gi, '')
+    .replace(/[\u3000]/g, ' ')
+    .trim()
+
+  model = model
+    .replace(/^(?:\u624b\u673a|\u7cfb\u5217|\u4ea7\u54c1)\s*/g, '')
+    .replace(/\s*(?:\u624b\u673a|\u7cfb\u5217|\u4ea7\u54c1|\u5b98\u7f51|\u5546\u57ce)$/g, '')
+    .trim()
+
+  if (brand === 'huawei' && !/^\u534e\u4e3a|^huawei/i.test(model)) {
+    model = `\u534e\u4e3a ${model}`
+  }
+  if (brand === 'honor' && !/^\u8363\u8000|^honor/i.test(model)) {
+    model = `\u8363\u8000 ${model}`
+  }
+  model = model
+    .replace(/^\u534e\u4e3a(?=\S)/, '\u534e\u4e3a ')
+    .replace(/^\u8363\u8000(?=\S)/, '\u8363\u8000 ')
+    .replace(/^vivo\s+/i, 'vivo ')
+    .replace(/^iqoo\s+/i, 'iQOO ')
+    .replace(/\bpro\b/gi, 'Pro')
+    .replace(/\bultra\b/gi, 'Ultra')
+    .replace(/\bmax\b/gi, 'Max')
+    .replace(/\bplus\b/gi, 'Plus')
+    .replace(/\bmini\b/gi, 'mini')
+    .replace(/\s+/g, ' ')
+    .trim()
+
+  if (model.length < 5 || model.length > 40) return ''
+  if (/(?:\u8033\u673a|\u5e73\u677f|\u624b\u8868|\u8def\u7531|\u7535\u8111|\u4fdd\u62a4|\u5145\u7535|\u914d\u4ef6|\u670d\u52a1|\u4e13\u9898|\u6d3b\u52a8|\u56fe\u5e93|\u65b0\u95fb)/.test(model)) return ''
+  return model
+}
+
 async function runCliBuild() {
   const fs = await import('node:fs')
   const path = await import('node:path')
@@ -1789,8 +2031,17 @@ async function runCliBuild() {
   const argv = process.argv
   const modelsArgIdx = argv.indexOf('--models')
   const outArgIdx = argv.indexOf('--out')
+  const refreshLimitArgIdx = argv.indexOf('--refresh-limit')
+  const staleDaysArgIdx = argv.indexOf('--stale-days')
+  const delayMinArgIdx = argv.indexOf('--delay-min-ms')
+  const delayMaxArgIdx = argv.indexOf('--delay-max-ms')
   const modelsFile = modelsArgIdx >= 0 ? argv[modelsArgIdx + 1] : 'data/models.txt'
   const outFile = outArgIdx >= 0 ? argv[outArgIdx + 1] : 'public/data/products.json'
+  const fullRefresh = argv.includes('--full-refresh')
+  const refreshLimit = refreshLimitArgIdx >= 0 ? Number(argv[refreshLimitArgIdx + 1]) : 20
+  const staleDays = staleDaysArgIdx >= 0 ? Number(argv[staleDaysArgIdx + 1]) : 5
+  const delayMinMs = delayMinArgIdx >= 0 ? Number(argv[delayMinArgIdx + 1]) : 3000
+  const delayMaxMs = delayMaxArgIdx >= 0 ? Number(argv[delayMaxArgIdx + 1]) : 8000
 
   if (!fs.existsSync(modelsFile)) {
     console.error(`models file not found: ${modelsFile}`)
@@ -1809,24 +2060,46 @@ async function runCliBuild() {
     try { prevResults = JSON.parse(fs.readFileSync(outFile, 'utf8')) } catch {}
   }
 
+  const refreshPlan = buildRefreshPlan(models, prevResults, {
+    fullRefresh,
+    refreshLimit,
+    staleDays,
+  })
+  console.log(`[build-data] refresh ${refreshPlan.refreshModels.size}/${models.length} models (${refreshPlan.reasonCounts.join(', ')})`)
+
   const results = {}
+  let refreshedCount = 0
   for (let i = 0; i < models.length; i++) {
     const model = models[i]
     const tag = `[${i + 1}/${models.length}] ${model}`
+    const prev = prevResults[model]
+
+    if (!refreshPlan.refreshModels.has(model) && prev) {
+      results[model] = prev
+      console.log(`${tag} -> KEEP (${refreshPlan.reasons.get(model) || 'fresh'})`)
+      continue
+    }
+
+    if (refreshedCount > 0) {
+      await sleep(randomInt(delayMinMs, delayMaxMs))
+    }
+
     const t0 = Date.now()
     try {
       const data = await invokeOfficialSearch(model)
+      const normalizedData = markProductPriceStatus(data)
       let zhihuItems = []
-      if (data?.ok && /\u8363\u8000|honor/i.test(model)) {
+      if (normalizedData?.ok && /\u8363\u8000|honor/i.test(model)) {
         const z = await invokeZhihuSearch(`${model} \u5356\u70b9 \u53c2\u6570 \u8bc4\u6d4b`, 8)
         zhihuItems = z.items || []
       }
-      results[model] = { ...data, zhihuItems, fetchedAt: new Date().toISOString() }
-      const okFlag = data?.ok ? 'OK' : 'MISS'
-      console.log(`${tag} -> ${okFlag} (${Date.now() - t0}ms)`)
+      results[model] = { ...normalizedData, zhihuItems, fetchedAt: new Date().toISOString() }
+      const okFlag = normalizedData?.ok ? 'OK' : 'MISS'
+      refreshedCount += 1
+      console.log(`${tag} -> ${okFlag} ${refreshPlan.reasons.get(model) || 'refresh'} (${Date.now() - t0}ms)`)
     } catch (err) {
       // Keep last good entry on failure to avoid losing data on transient errors.
-      const fallback = prevResults[model]
+      const fallback = prev
       if (fallback) {
         results[model] = { ...fallback, error: err?.message || String(err), errorAt: new Date().toISOString() }
         console.warn(`${tag} -> FAIL, kept previous (${err?.message || err})`)
@@ -1840,8 +2113,75 @@ async function runCliBuild() {
   fs.mkdirSync(path.dirname(outFile), { recursive: true })
   fs.writeFileSync(outFile, JSON.stringify(results, null, 2))
   const okCount = Object.values(results).filter(r => r?.ok).length
-  console.log(`[build-data] wrote ${Object.keys(results).length} entries (${okCount} OK) -> ${outFile}`)
+  console.log(`[build-data] wrote ${Object.keys(results).length} entries (${okCount} OK, ${refreshedCount} refreshed) -> ${outFile}`)
   process.exit(0)
+}
+
+function buildRefreshPlan(models, prevResults, options) {
+  const refreshModels = new Set()
+  const reasons = new Map()
+  const staleModels = []
+  const counts = new Map()
+
+  const add = (model, reason) => {
+    refreshModels.add(model)
+    reasons.set(model, reason)
+    counts.set(reason, (counts.get(reason) || 0) + 1)
+  }
+
+  for (const model of models) {
+    const prev = prevResults[model]
+    if (options.fullRefresh) {
+      add(model, 'full-refresh')
+      continue
+    }
+    if (!prev) {
+      add(model, 'new')
+      continue
+    }
+    if (isPendingPriceEntry(prev)) {
+      add(model, 'pending-price')
+      continue
+    }
+    if (isStaleEntry(prev, options.staleDays)) {
+      staleModels.push(model)
+    }
+  }
+
+  const limit = Number.isFinite(options.refreshLimit) && options.refreshLimit >= 0 ? options.refreshLimit : staleModels.length
+  for (const model of staleModels.slice(0, limit)) {
+    add(model, 'stale')
+  }
+  for (const model of staleModels.slice(limit)) {
+    reasons.set(model, 'stale-deferred')
+  }
+
+  return {
+    refreshModels,
+    reasons,
+    reasonCounts: Array.from(counts.entries()).map(([reason, count]) => `${reason}:${count}`),
+  }
+}
+
+function isPendingPriceEntry(entry) {
+  return entry?.ok && entry.product && (entry.product.priceStatus === 'pending' || !hasPublishedPrice(entry.product))
+}
+
+function isStaleEntry(entry, staleDays) {
+  const timestamp = Date.parse(entry?.fetchedAt || entry?.errorAt || '')
+  if (!Number.isFinite(timestamp)) return true
+  const maxAgeMs = Math.max(1, Number(staleDays) || 5) * 24 * 60 * 60 * 1000
+  return Date.now() - timestamp >= maxAgeMs
+}
+
+function randomInt(min, max) {
+  const safeMin = Math.max(0, Number.isFinite(min) ? min : 0)
+  const safeMax = Math.max(safeMin, Number.isFinite(max) ? max : safeMin)
+  return Math.floor(safeMin + Math.random() * (safeMax - safeMin + 1))
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms))
 }
 
 // Adapter: invoke the existing HTTP-style handlers with a stub req/res to

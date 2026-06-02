@@ -6,7 +6,7 @@ This project is deployed as a static Cloudflare Pages site. Product data is pre-
 
 - Frontend: React + Vite, deployed to Cloudflare Pages.
 - Data source: `public/data/products.json` committed to GitHub.
-- Data refresh: GitHub Actions runs `node server.mjs --build-data` on a schedule.
+- Data refresh: GitHub Actions discovers new supported models, then runs `node server.mjs --build-data` on a schedule.
 - Runtime backend: none required on Cloudflare Pages.
 
 The original HTTP server is still useful for local development, but production reads static JSON first.
@@ -114,6 +114,27 @@ Then either:
 - Manually run `Refresh Product Data` from GitHub Actions.
 
 After the workflow commits a new `products.json`, Cloudflare Pages will redeploy automatically.
+
+The workflow also runs:
+
+```powershell
+node server.mjs --discover-models --models data/models.txt --max-new 12 --candidate-limit 18
+```
+
+before building the static JSON. This can append newly published supported phone models from official brand list pages to `data/models.txt`, then include them in the next static data refresh. Candidate models are verified through the existing official scraper before being written.
+
+If a new phone has an official page before pricing is announced, the generated product entry is kept with `priceStatus: "pending"` and the frontend shows `价格待公布` / `¥ --`. Once the official page exposes prices or SKUs, the next scheduled refresh replaces the placeholder with real prices.
+
+The daily static data build uses rolling refresh limits:
+
+```powershell
+node server.mjs --build-data --models data/models.txt --out public/data/products.json --refresh-limit 20 --stale-days 5 --delay-min-ms 3000 --delay-max-ms 8000
+```
+
+- Newly discovered models are refreshed immediately.
+- Pending-price models are retried every day.
+- Existing priced models are refreshed in batches, up to 20 per day, after about 5 days.
+- Each real model refresh waits a random 3-8 seconds before the next one.
 
 ## 7. Local development
 

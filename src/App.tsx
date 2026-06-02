@@ -107,6 +107,7 @@ interface ZhihuItem {
 interface OfficialProduct {
   title: string
   price: string
+  priceStatus?: 'available' | 'pending'
   skuPrices: Array<{ version: string; price: string; colors?: string[] }>
   careServices: Array<{ name: string; price: string }>
   colors: string[]
@@ -663,6 +664,7 @@ function buildDraftFromOfficial(
   model: string,
   product: {
     title: string; price: string;
+    priceStatus?: 'available' | 'pending';
     skuPrices: Array<{ version: string; price: string; colors?: string[] }>;
     careServices: Array<{ name: string; price: string }>;
     colors: string[];
@@ -728,6 +730,9 @@ function buildDraftFromOfficial(
   const colors = colorNames.map(colorHexFromName).slice(0, 4)
 
   // SKUs: use official data
+  const hasPublishedPrice = Boolean(product.price && /\d{3,6}/.test(product.price) && !/--/.test(product.price))
+    || product.skuPrices.some(sku => Boolean(sku.price && /\d{3,6}/.test(sku.price) && !/--/.test(sku.price)))
+  const pricePending = product.priceStatus === 'pending' || !hasPublishedPrice
   const skus = product.skuPrices.map(sku => ({
     label: sku.version,
     price: sku.price,
@@ -735,6 +740,9 @@ function buildDraftFromOfficial(
   // If no SKU prices from official, use the base price
   if (!skus.length && product.price) {
     skus.push({ label: '标准版', price: product.price })
+  }
+  if (!skus.length && pricePending) {
+    skus.push({ label: '价格待公布', price: '¥ --' })
   }
 
   // Services: use official data
@@ -747,6 +755,13 @@ function buildDraftFromOfficial(
     : /荣耀|honor/i.test(`${model} ${product.title}`) ? '荣耀'
     : /iphone|苹果|apple/i.test(`${model} ${product.title}`) ? 'Apple'
     : '品牌'
+
+  const sourceNotes = zhihuFeatureDraft
+    ? ['官网数据：标题、价格、颜色、版本。', ...zhihuFeatureDraft.sourceNotes.slice(0, 3).map(text => `知乎卖点参考：${text}`)]
+    : officialFeatureTexts.length ? officialFeatureTexts.map(text => `官网功能特色：${text}`) : ['仅使用官网数据生成。']
+  if (pricePending) {
+    sourceNotes.unshift('官网已收录该产品，价格待发布会后公布。')
+  }
 
   return {
     title: product.title || model.trim(),
@@ -762,9 +777,7 @@ function buildDraftFromOfficial(
         ? genericFootnote
         : genericFootnote,
     source: 'official',
-    sourceNotes: zhihuFeatureDraft
-      ? ['官网数据：标题、价格、颜色、版本。', ...zhihuFeatureDraft.sourceNotes.slice(0, 3).map(text => `知乎卖点参考：${text}`)]
-      : officialFeatureTexts.length ? officialFeatureTexts.map(text => `官网功能特色：${text}`) : ['仅使用官网数据生成。'],
+    sourceNotes,
   }
 }
 

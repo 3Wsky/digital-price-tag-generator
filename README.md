@@ -122,6 +122,27 @@ data/models.txt
 node server.mjs --build-data
 ```
 
+自动发现官网产品列表里的新增型号，并合并到型号清单：
+
+```powershell
+node server.mjs --discover-models
+```
+
+发现新型号后再刷新静态产品数据：
+
+```powershell
+npm run data:refresh
+```
+
+如果新机先上官网链接但暂未公布价格，静态库会先收录该产品并标记为“价格待公布”；发布会后官网放出价格/SKU，下一次刷新会自动补齐。
+
+为降低官网访问压力，日常任务不会每天全量刷新所有旧型号：
+
+- 新发现型号：当天抓取
+- 价格待公布型号：每天重试
+- 已有价格的旧型号：默认最多每天刷新 20 个，约 5 天轮换一遍
+- 必要时全量刷新：`npm run data:build:full`
+
 生成结果：
 
 ```text
