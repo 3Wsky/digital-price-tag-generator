@@ -83,3 +83,17 @@ iQOO Neo11
 iQOO Neo10
 iQOO Z11x
 iQOO Z11 Turbo
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 Mate 80 RS
+荣耀 Magic V6
+华为 Mate 70 RS
+荣耀 Magic8 RSR
+华为 Mate 60
+荣耀 Magic V5
+华为 Pura 90 Pro
+荣耀 Magic7 RSR
+华为 Pura 90
+荣耀 Magic V3
+华为 nova 16 Pro
+荣耀 Magic6

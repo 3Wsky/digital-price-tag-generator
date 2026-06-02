@@ -1527,10 +1527,11 @@
         "骁龙®8至尊版移动平台 芯片",
         "6.78英寸 绿洲护眼屏 120Hz",
         "5000万像素 超动态高清影像"
-      ]
+      ],
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:49:46.336Z"
+    "fetchedAt": "2026-06-02T22:34:41.503Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1559,10 +1560,11 @@
         "骁龙®8至尊版移动平台 芯片",
         "6.8英寸 绿洲护眼屏 120Hz",
         "2亿像素 潜望长焦8"
-      ]
+      ],
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:50:23.716Z"
+    "fetchedAt": "2026-06-02T22:35:28.889Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1590,10 +1592,11 @@
         "第三代骁龙8 芯片",
         "6.80英寸 LTPO 120Hz",
         "1.8亿像素 潜望式"
-      ]
+      ],
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:51:02.898Z"
+    "fetchedAt": "2026-06-02T22:36:15.333Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1914,10 +1917,11 @@
         "6600mAh 荣耀青海湖电池 66W荣耀超快充",
         "绿洲护眼屏 120Hz",
         "1亿像素 超清影像需进入高像素拍照模式"
-      ]
+      ],
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:56:12.490Z"
+    "fetchedAt": "2026-06-02T22:37:01.765Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1941,10 +1945,11 @@
         "第一代骁龙6 芯片",
         "6.78英寸 AMOLED 120Hz",
         "13.1亿像素 为摄像头像素点参数"
-      ]
+      ],
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:56:50.236Z"
+    "fetchedAt": "2026-06-02T22:37:45.429Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2921,5 +2926,507 @@
     },
     "zhihuItems": [],
     "fetchedAt": "2026-06-01T22:58:00.234Z"
+  },
+  "华为 Mate 80 RS": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Mate 80 Pro",
+      "price": "¥ 5999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 5999",
+          "sbomCode": "2601010586419",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010586421",
+          "colors": []
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 6999",
+          "sbomCode": "2601010586425",
+          "colors": []
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥ 7999",
+          "sbomCode": "2601010586429",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 699",
+          "sbomCode": "3201020129101"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020129601"
+        }
+      ],
+      "colors": [
+        "晨曦金",
+        "曜石黑",
+        "雪域白",
+        "云杉绿"
+      ],
+      "specs": {
+        "chip": "麒麟9030",
+        "battery": "5750mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:38:16.459Z"
+  },
+  "荣耀 Magic V6": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic V6",
+      "price": "¥ 8999",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "雪域白",
+        "绒黑色",
+        "旭日金"
+      ],
+      "specs": {
+        "chip": "第五代骁龙8至尊版",
+        "battery": "7150mAh",
+        "screen": "7.95英寸",
+        "charge": "120W",
+        "refreshRate": "4320Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "7150mAh 荣耀青海湖电池 120W荣耀超快充",
+        "第五代骁龙8至尊版 芯片",
+        "7.95英寸 LTPO 4320Hz"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:39:02.622Z"
+  },
+  "华为 Mate 70 RS": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "【华为官方翻新】HUAWEI Mate 70",
+      "price": "¥ 3699",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 3699",
+          "sbomCode": "2601010608908",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 4199",
+          "sbomCode": "2601010608901",
+          "colors": []
+        },
+        {
+          "version": "12GB+1TB",
+          "price": "¥ 5299",
+          "sbomCode": "2601010608912",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 899",
+          "sbomCode": "3201020088701"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020089201"
+        }
+      ],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "5300mAh",
+        "screen": "6.7英寸",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:39:39.097Z"
+  },
+  "荣耀 Magic8 RSR": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic8 RSR 保时捷设计",
+      "price": "¥ 7999",
+      "skuPrices": [
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 7999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "月光石",
+        "板岩灰"
+      ],
+      "specs": {
+        "chip": "骁龙®️8至尊版移动平台",
+        "battery": "7200mAh",
+        "screen": "6.71英寸",
+        "charge": "120W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "features": [
+        "7200mAh 120W荣耀超快充",
+        "骁龙®️8至尊版移动平台 芯片",
+        "6.71英寸 OLED 120Hz"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:40:25.086Z"
+  },
+  "华为 Mate 60": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "华为超级快充无线车充（Max 80 W）",
+      "price": "¥ 399",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "10000mAh",
+        "screen": "undefined英寸",
+        "charge": "80W",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:40:57.108Z"
+  },
+  "荣耀 Magic V5": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic V5",
+      "price": "¥ 8999",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "绒黑色",
+        "丝路敦煌",
+        "曙光金",
+        "暖白色"
+      ],
+      "specs": {
+        "chip": "骁龙8 至尊版",
+        "battery": "6100mAh",
+        "screen": "7.95英寸",
+        "charge": "66W",
+        "refreshRate": "4320Hz",
+        "screenTech": ""
+      },
+      "features": [
+        "6100mAh 荣耀青海湖电池 66W荣耀超快充",
+        "骁龙8 至尊版 芯片",
+        "7.95英寸 4320Hz",
+        "6400万像素 超感知长焦影像7"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:41:38.796Z"
+  },
+  "华为 Pura 90 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 90 Pro",
+      "price": "¥ 5499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 5499",
+          "sbomCode": "2601010614420",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5999",
+          "sbomCode": "2601010614421",
+          "colors": []
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010614425",
+          "colors": []
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥ 7499",
+          "sbomCode": "2601010614429",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020141401"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 699",
+          "sbomCode": "3201020141501"
+        }
+      ],
+      "colors": [
+        "粉红芭乐",
+        "桑果黑",
+        "椰青白",
+        "橘子汽水"
+      ],
+      "specs": {
+        "chip": "麒麟9030",
+        "battery": "6000mAh",
+        "screen": "6.6英寸",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:42:14.960Z"
+  },
+  "荣耀 Magic7 RSR": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic7 RSR 保时捷设计",
+      "price": "¥ 7999",
+      "skuPrices": [
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 7999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "普罗旺斯紫"
+      ],
+      "specs": {
+        "chip": "骁龙®8至尊版移动平台",
+        "battery": "5850mAh",
+        "screen": "6.8英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "features": [
+        "5850mAh 荣耀青海湖电池 100W荣耀超快充",
+        "骁龙®8至尊版移动平台 芯片",
+        "6.8英寸 OLED 120Hz",
+        "2亿像素 潜望式长焦摄像头：ƒ/1.8"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:43:02.836Z"
+  },
+  "华为 Pura 90": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Pura 90",
+      "price": "¥ 4699",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 4699",
+          "sbomCode": "2601010620702",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5199",
+          "sbomCode": "2601010620704",
+          "colors": []
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 5699",
+          "sbomCode": "2601010620707",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 299",
+          "sbomCode": "3201020141201"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 599",
+          "sbomCode": "3201020141301"
+        }
+      ],
+      "colors": [
+        "雪域白",
+        "丝绒黑",
+        "罗兰紫"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "6500mAh",
+        "screen": "6.8英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:43:39.761Z"
+  },
+  "荣耀 Magic V3": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic V3",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "绒黑色",
+        "丝路敦煌",
+        "祁连雪",
+        "苔原绿"
+      ],
+      "specs": {
+        "chip": "第三代骁龙8",
+        "battery": "5150mAh",
+        "screen": "7.92英寸",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5150mAh 荣耀青海湖电池 66W荣耀超快充",
+        "第三代骁龙8 芯片",
+        "7.92英寸 LTPO 120Hz",
+        "5000万像素"
+      ],
+      "priceStatus": "pending"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:44:23.168Z"
+  },
+  "华为 nova 16 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "nova 16 Pro",
+      "price": "¥ 3899",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 3899",
+          "sbomCode": "2601010625815",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 4399",
+          "sbomCode": "2601010625817",
+          "colors": []
+        },
+        {
+          "version": "12GB+1TB",
+          "price": "¥ 4999",
+          "sbomCode": "2601010625821",
+          "colors": []
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "全网通版"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "7000mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:44:58.915Z"
+  },
+  "荣耀 Magic6": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic6 至臻版",
+      "price": "¥ 4499",
+      "skuPrices": [
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 4499"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "墨岩黑",
+        "天穹紫"
+      ],
+      "specs": {
+        "chip": "第三代骁龙8",
+        "battery": "5600mAh",
+        "screen": "6.8英寸",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "features": [
+        "5600mAh 荣耀青海湖电池 66W荣耀超快充",
+        "第三代骁龙8 芯片",
+        "6.8英寸 OLED 120Hz",
+        "1.8亿像素 潜望式长焦摄像头"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-02T22:45:45.862Z"
   }
 }
