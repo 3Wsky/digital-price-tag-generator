@@ -97,3 +97,17 @@ iQOO Z11 Turbo
 荣耀 Magic V3
 华为 nova 16 Pro
 荣耀 Magic6
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 nova 16 Ultra
+荣耀 Magic6 RSR
+iQOO Z11
+华为 nova 16
+iQOO 15T
+华为 nova 15 Ultra
+荣耀 Magic V2
+iQOO Z10 Turbo
+华为 nova 15 Pro
+荣耀 Magic5
+华为 nova 15
+荣耀 Magic5 Pro

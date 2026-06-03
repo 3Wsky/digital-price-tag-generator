@@ -1531,7 +1531,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-02T22:34:41.503Z"
+    "fetchedAt": "2026-06-03T22:39:27.530Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1564,7 +1564,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-02T22:35:28.889Z"
+    "fetchedAt": "2026-06-03T22:40:11.821Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1596,7 +1596,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-02T22:36:15.333Z"
+    "fetchedAt": "2026-06-03T22:40:56.263Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1921,7 +1921,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-02T22:37:01.765Z"
+    "fetchedAt": "2026-06-03T22:41:44.372Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1949,7 +1949,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-02T22:37:45.429Z"
+    "fetchedAt": "2026-06-03T22:42:27.446Z"
   },
   "vivo X200": {
     "ok": true,
@@ -3348,7 +3348,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-02T22:44:23.168Z"
+    "fetchedAt": "2026-06-03T22:43:10.348Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3428,5 +3428,450 @@
     },
     "zhihuItems": [],
     "fetchedAt": "2026-06-02T22:45:45.862Z"
+  },
+  "华为 nova 16 Ultra": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "nova 16 Ultra",
+      "price": "¥ 4699",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 4699",
+          "sbomCode": "2601010625710",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 5199",
+          "sbomCode": "2601010625713",
+          "colors": []
+        },
+        {
+          "version": "12GB+1TB",
+          "price": "¥ 5799",
+          "sbomCode": "2601010625716",
+          "colors": []
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "全网通版"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "7000mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:43:41.670Z"
+  },
+  "荣耀 Magic6 RSR": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic6 RSR 保时捷设计 | 荣耀官方网站",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "玛瑙灰",
+        "冰莓粉"
+      ],
+      "specs": {
+        "chip": "第三代骁龙8",
+        "battery": "5600mAh",
+        "screen": "6.80英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "绿洲护眼屏"
+      },
+      "features": [
+        "5600mAh 荣耀青海湖电池",
+        "第三代骁龙8 芯片",
+        "6.80英寸 绿洲护眼屏 120Hz",
+        "1.8亿像素 潜望式长焦摄像头"
+      ],
+      "priceStatus": "pending"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:44:27.442Z"
+  },
+  "iQOO Z11": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO Z11",
+      "price": "¥2299",
+      "skuPrices": [
+        {
+          "version": "8GB+256GB",
+          "price": "¥2299"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥2499"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥2799"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2999"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥3399"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "极夜黑",
+        "天光白",
+        "沧浪浮光"
+      ],
+      "specs": {},
+      "features": [
+        "天玑 8500 满血版",
+        "9020mAh 超薄蓝海电池",
+        "165Hz 护眼电竞屏",
+        "Monster 超核引擎"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:44:42.540Z"
+  },
+  "华为 nova 16": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "nova 16",
+      "price": "¥ 2999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 2999",
+          "sbomCode": "2601010625916",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 3499",
+          "sbomCode": "2601010625909",
+          "colors": []
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "全网通版"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "7000mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:45:13.780Z"
+  },
+  "iQOO 15T": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO 15T",
+      "price": "¥4099",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥4099"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥4499"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥4799"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥5199"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥5999"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "赛道版",
+        "传奇版",
+        "青云"
+      ],
+      "specs": {},
+      "features": [
+        "2K 珠峰屏×电竞芯片Q3",
+        "天玑9500 Monster版",
+        "8000mAh 超薄蓝海电池",
+        "2亿大底超级主摄"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:45:22.384Z"
+  },
+  "华为 nova 15 Ultra": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "nova 15 Ultra",
+      "price": "¥ 4199",
+      "skuPrices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 249",
+          "sbomCode": "3201020116401"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 449",
+          "sbomCode": "3201020135601"
+        }
+      ],
+      "colors": [
+        "昆仑玻璃"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "6500mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:45:57.025Z"
+  },
+  "荣耀 Magic V2": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic V2",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "绒黑色"
+      ],
+      "specs": {
+        "chip": "第二代骁龙8",
+        "battery": "5000mAh",
+        "screen": "6.43英寸",
+        "charge": "66W",
+        "refreshRate": "3840Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5000mAh 66W荣耀超快充",
+        "第二代骁龙8 芯片",
+        "6.43英寸 LTPO 3840Hz",
+        "5000万像素"
+      ],
+      "priceStatus": "pending"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:46:39.620Z"
+  },
+  "iQOO Z10 Turbo": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO Z10 Turbo",
+      "price": "¥2099",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥2099"
+        },
+        {
+          "version": "16GB+256GB",
+          "price": "¥2299"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥2499"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥2699"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "星穹黑",
+        "云海白",
+        "沙漠色",
+        "燃"
+      ],
+      "specs": {},
+      "features": [
+        "天玑8400满血版",
+        "自研电竞芯片 Q1",
+        "7620mAh超薄蓝海电池",
+        "旗舰144Hz光域护眼屏"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:46:46.787Z"
+  },
+  "华为 nova 15 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "nova 15 Pro",
+      "price": "¥ 3499",
+      "skuPrices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 229",
+          "sbomCode": "3201020116501"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 399",
+          "sbomCode": "3201020135401"
+        }
+      ],
+      "colors": [
+        "全网通版",
+        "昆仑玻璃"
+      ],
+      "specs": {
+        "chip": "麒麟9010",
+        "battery": "6500mAh",
+        "screen": "undefined英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:47:21.760Z"
+  },
+  "荣耀 Magic5": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic5 至臻版",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "雅黑色",
+        "燃橙色"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5450mAh",
+        "screen": "",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "features": [
+        "5450mAh",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:48:05.370Z"
+  },
+  "华为 nova 15": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "nova 15",
+      "price": "¥ 2699",
+      "skuPrices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 199",
+          "sbomCode": "3201020116601"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 349",
+          "sbomCode": "3201020135301"
+        }
+      ],
+      "colors": [
+        "全网通版"
+      ],
+      "specs": {
+        "chip": "麒麟8020",
+        "battery": "6000mAh",
+        "screen": "6.7英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:48:40.350Z"
+  },
+  "荣耀 Magic5 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀Magic5 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "苔原绿",
+        "查看更多细节",
+        "勃朗蓝",
+        "珊瑚紫",
+        "燃橙色",
+        "亮黑色"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5450mAh",
+        "screen": "6.81英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5450mAh",
+        "6.81英寸 LTPO 120Hz",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-03T22:49:21.845Z"
   }
 }
