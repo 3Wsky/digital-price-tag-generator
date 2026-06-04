@@ -111,3 +111,15 @@ iQOO Z10 Turbo
 荣耀 Magic5
 华为 nova 15
 荣耀 Magic5 Pro
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 nova 14 Ultra
+华为 nova 14
+荣耀 Magic4
+华为 nova 14 Pro
+荣耀 Magic4 Pro
+华为 nova 13 Pro
+华为 nova 13
+荣耀 Magic3 Pro
+华为 畅享 90 Pro
+荣耀 618
