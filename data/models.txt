@@ -128,3 +128,6 @@ iQOO Z10 Turbo
 华为 畅享 90
 荣耀 Magic3
 荣耀 600 Pro
+
+# Auto-discovered by node server.mjs --discover-models.
+荣耀 Power
