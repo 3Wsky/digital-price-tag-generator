@@ -50,10 +50,11 @@
         "charge": "66W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:36:02.323Z"
+    "fetchedAt": "2026-06-07T21:31:16.891Z"
   },
   "华为 Mate 80 Pro": {
     "ok": true,
@@ -112,10 +113,11 @@
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:36:29.248Z"
+    "fetchedAt": "2026-06-07T21:31:48.089Z"
   },
   "华为 Mate 80 Pro Max": {
     "ok": true,
@@ -162,10 +164,11 @@
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "灵珑屏"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:36:55.886Z"
+    "fetchedAt": "2026-06-07T21:32:19.959Z"
   },
   "华为 Mate 80 Pro Max 风驰版": {
     "ok": true,
@@ -212,10 +215,11 @@
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "灵珑屏"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:37:22.920Z"
+    "fetchedAt": "2026-06-07T21:32:54.221Z"
   },
   "华为 Mate 70": {
     "ok": true,
@@ -227,7 +231,7 @@
         {
           "version": "12GB+256GB",
           "price": "¥ 4199",
-          "sbomCode": "2601010585501",
+          "sbomCode": "2601010585502",
           "colors": []
         },
         {
@@ -262,8 +266,8 @@
         }
       ],
       "colors": [
-        "曜金黑",
         "羽衣白",
+        "曜金黑",
         "金丝银锦"
       ],
       "specs": {
@@ -273,10 +277,11 @@
         "charge": "66W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:37:49.471Z"
+    "fetchedAt": "2026-06-07T21:33:27.743Z"
   },
   "华为 Mate 70 Pro": {
     "ok": true,
@@ -323,10 +328,11 @@
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:38:16.032Z"
+    "fetchedAt": "2026-06-07T21:33:59.857Z"
   },
   "华为 Mate 70 Pro+": {
     "ok": true,
@@ -367,10 +373,11 @@
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:38:43.183Z"
+    "fetchedAt": "2026-06-07T21:34:31.807Z"
   },
   "华为 Mate 70 Pro 优享版": {
     "ok": true,
@@ -417,10 +424,11 @@
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:39:09.920Z"
+    "fetchedAt": "2026-06-07T21:35:05.180Z"
   },
   "华为 Mate 70 Air": {
     "ok": true,
@@ -432,7 +440,7 @@
         {
           "version": "12GB+256GB",
           "price": "¥ 4199",
-          "sbomCode": "2601010585501",
+          "sbomCode": "2601010585502",
           "colors": []
         },
         {
@@ -467,8 +475,8 @@
         }
       ],
       "colors": [
-        "曜金黑",
         "羽衣白",
+        "曜金黑",
         "金丝银锦"
       ],
       "specs": {
@@ -478,17 +486,18 @@
         "charge": "66W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:39:36.386Z"
+    "fetchedAt": "2026-06-07T21:35:37.898Z"
   },
   "华为 Mate X5": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "【华为官方翻新】HUAWEI Mate X5",
-      "price": "¥ 8999",
+      "price": "¥ 9799",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -537,17 +546,18 @@
         "charge": "50W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:40:04.048Z"
+    "fetchedAt": "2026-06-07T21:36:10.763Z"
   },
   "华为 Mate X5 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "【华为官方翻新】HUAWEI Mate X5",
-      "price": "¥ 13599",
+      "price": "¥ 14499",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -596,10 +606,11 @@
         "charge": "50W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:40:31.010Z"
+    "fetchedAt": "2026-06-07T21:36:45.079Z"
   },
   "华为 Mate X6": {
     "ok": true,
@@ -659,17 +670,18 @@
         "charge": "50W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:40:57.868Z"
+    "fetchedAt": "2026-06-07T21:37:17.301Z"
   },
   "华为 Mate X6 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI Mate X6",
-      "price": "¥ 15999",
+      "price": "¥ 14999",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -722,10 +734,11 @@
         "charge": "50W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:41:24.784Z"
+    "fetchedAt": "2026-06-07T21:37:47.249Z"
   },
   "华为 Mate X7": {
     "ok": true,
@@ -792,10 +805,11 @@
         "charge": "66W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:41:51.741Z"
+    "fetchedAt": "2026-06-07T21:38:17.186Z"
   },
   "华为 Mate X7 典藏版": {
     "ok": true,
@@ -862,10 +876,11 @@
         "charge": "66W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:42:18.405Z"
+    "fetchedAt": "2026-06-07T21:38:47.458Z"
   },
   "华为 Pura X": {
     "ok": true,
@@ -922,17 +937,18 @@
         "charge": "66W",
         "refreshRate": "",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:42:45.803Z"
+    "fetchedAt": "2026-06-07T21:39:21.636Z"
   },
   "华为 Pura X 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI Pura X",
-      "price": "¥ 9999",
+      "price": "¥ 8999",
       "skuPrices": [
         {
           "version": "16GB+512GB",
@@ -982,10 +998,11 @@
         "charge": "66W",
         "refreshRate": "",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:43:11.844Z"
+    "fetchedAt": "2026-06-07T21:39:52.555Z"
   },
   "华为 Pura 80": {
     "ok": true,
@@ -1038,10 +1055,11 @@
         "charge": "50W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:43:38.410Z"
+    "fetchedAt": "2026-06-07T21:40:26.957Z"
   },
   "华为 Pura 80 Pro": {
     "ok": true,
@@ -1096,10 +1114,11 @@
         "charge": "80W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:44:05.673Z"
+    "fetchedAt": "2026-06-07T21:41:01.223Z"
   },
   "华为 Pura 80 Pro+": {
     "ok": true,
@@ -1146,10 +1165,11 @@
         "charge": "80W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
-      }
+      },
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:44:32.381Z"
+    "fetchedAt": "2026-06-07T21:41:32.520Z"
   },
   "华为 Pura 80 Ultra": {
     "ok": true,
@@ -1531,7 +1551,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:23:41.474Z"
+    "fetchedAt": "2026-06-07T21:42:17.069Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1564,7 +1584,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:24:24.166Z"
+    "fetchedAt": "2026-06-07T21:43:01.219Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1596,7 +1616,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:25:06.197Z"
+    "fetchedAt": "2026-06-07T21:43:44.447Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1905,32 +1925,12 @@
     "fetchedAt": "2026-06-06T21:25:43.823Z"
   },
   "荣耀 X50": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀X50",
-      "price": "",
-      "skuPrices": [],
-      "careServices": [],
-      "colors": [],
-      "specs": {
-        "chip": "第一代骁龙6",
-        "battery": "5800mAh",
-        "screen": "6.78英寸",
-        "charge": "",
-        "refreshRate": "120Hz",
-        "screenTech": "AMOLED"
-      },
-      "features": [
-        "5800mAh",
-        "第一代骁龙6 芯片",
-        "6.78英寸 AMOLED 120Hz",
-        "13.1亿像素 为摄像头像素点参数"
-      ],
-      "priceStatus": "pending"
-    },
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20X50\", waiting until \"domcontentloaded\"\n",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:26:30.907Z"
+    "fetchedAt": "2026-06-07T21:44:24.917Z"
   },
   "vivo X200": {
     "ok": true,
@@ -3714,7 +3714,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:28:32.301Z"
+    "fetchedAt": "2026-06-07T21:45:08.660Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3783,7 +3783,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:29:14.101Z"
+    "fetchedAt": "2026-06-07T21:45:54.327Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3881,7 +3881,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:29:59.372Z"
+    "fetchedAt": "2026-06-07T21:46:38.781Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3945,7 +3945,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:30:42.418Z"
+    "fetchedAt": "2026-06-07T21:47:22.824Z"
   },
   "华为 nova 13 Pro": {
     "ok": true,
@@ -4019,31 +4019,12 @@
     "fetchedAt": "2026-06-04T22:12:18.899Z"
   },
   "荣耀 Magic3 Pro": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀Magic3 Pro",
-      "price": "",
-      "skuPrices": [],
-      "careServices": [],
-      "colors": [],
-      "specs": {
-        "chip": "",
-        "battery": "4600mAh",
-        "screen": "6.76英寸",
-        "charge": "",
-        "refreshRate": "120Hz",
-        "screenTech": "OLED"
-      },
-      "features": [
-        "4600mAh",
-        "6.76英寸 OLED 120Hz",
-        "6400万像素"
-      ],
-      "priceStatus": "pending"
-    },
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic3%20Pro\", waiting until \"domcontentloaded\"\n",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:31:26.767Z"
+    "fetchedAt": "2026-06-07T21:48:01.568Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -4106,7 +4087,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:32:15.654Z"
+    "fetchedAt": "2026-06-07T21:48:49.440Z"
   },
   "华为 畅享 90": {
     "ok": true,
@@ -4165,7 +4146,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-06T21:32:57.745Z"
+    "fetchedAt": "2026-06-07T21:49:34.268Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -4257,5 +4238,35 @@
     },
     "zhihuItems": [],
     "fetchedAt": "2026-06-06T21:33:40.678Z"
+  },
+  "荣耀 600": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "荣耀600系列1元权益包",
+      "price": "¥ 1",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "1元权益",
+        "花呗分期",
+        "掌上生活分期",
+        "白条分期",
+        "抖音月付",
+        "默认排序"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "",
+        "screen": "",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "features": [],
+      "priceStatus": "pending"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-07T21:50:16.512Z"
   }
 }

@@ -131,3 +131,6 @@ iQOO Z10 Turbo
 
 # Auto-discovered by node server.mjs --discover-models.
 荣耀 Power
+
+# Auto-discovered by node server.mjs --discover-models.
+荣耀 600
