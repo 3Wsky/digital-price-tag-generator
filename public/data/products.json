@@ -1557,7 +1557,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:15:02.914Z"
+    "fetchedAt": "2026-06-09T22:06:47.042Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1590,7 +1590,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:15:49.465Z"
+    "fetchedAt": "2026-06-09T22:07:32.100Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1622,7 +1622,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:16:35.631Z"
+    "fetchedAt": "2026-06-09T22:08:14.377Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -2077,10 +2077,11 @@
         "蓝晶x天玑 9400+",
         "6200mAh蓝海电池",
         "湿手秒开超声波指纹"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:22.871Z"
+    "fetchedAt": "2026-06-09T22:08:32.553Z"
   },
   "vivo X300": {
     "ok": true,
@@ -2123,10 +2124,11 @@
         "蔡司2亿超级主摄",
         "蔡司APO超级长焦",
         "5年持久流畅OriginOS 6"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:24.347Z"
+    "fetchedAt": "2026-06-09T22:08:41.783Z"
   },
   "vivo X300 Pro": {
     "ok": true,
@@ -2163,10 +2165,11 @@
       "features": [
         "蔡司2亿APO超级长焦·蓝图影像双芯",
         "5年持久流畅OriginOS 6"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:25.473Z"
+    "fetchedAt": "2026-06-09T22:08:46.057Z"
   },
   "vivo X300 Ultra": {
     "ok": true,
@@ -2207,10 +2210,11 @@
         "蔡司大师镜头群",
         "全焦段4K 120fps 10 bit Log",
         "vivo色彩科学"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:26.504Z"
+    "fetchedAt": "2026-06-09T22:08:50.715Z"
   },
   "vivo X300s": {
     "ok": true,
@@ -2252,10 +2256,11 @@
         "蔡司2亿超级主摄",
         "蔡司APO超级长焦",
         "144Hz 蔡司大师色彩屏"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:27.586Z"
+    "fetchedAt": "2026-06-09T22:08:56.337Z"
   },
   "vivo S30": {
     "ok": true,
@@ -2289,10 +2294,11 @@
         "多彩轻薄直屏",
         "5000 万索尼超级潜望长焦",
         "全球首批高通第四代骁龙 7"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:28.688Z"
+    "fetchedAt": "2026-06-09T22:09:04.991Z"
   },
   "vivo S30 Pro mini": {
     "ok": true,
@@ -2326,10 +2332,11 @@
         "6.31 英寸多彩小直屏",
         "希区柯克变焦实况",
         "6500mAh 小屏续航战神"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:29.596Z"
+    "fetchedAt": "2026-06-09T22:09:14.524Z"
   },
   "vivo S50": {
     "ok": true,
@@ -2349,6 +2356,10 @@
         {
           "version": "12GB+512GB",
           "price": "¥3699"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥3999"
         }
       ],
       "careServices": [],
@@ -2363,10 +2374,11 @@
         "长焦Live神器",
         "高通第三代骁龙 8s",
         "湿手秒开超声波指纹 2.0"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:30.575Z"
+    "fetchedAt": "2026-06-09T22:09:23.768Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2399,10 +2411,11 @@
         "长焦Live神器",
         "全球首批高通第五代骁龙 8",
         "湿手秒开超声波指纹 2.0"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:31.612Z"
+    "fetchedAt": "2026-06-09T22:09:28.307Z"
   },
   "vivo Y60": {
     "ok": true,
@@ -2433,10 +2446,11 @@
       "specs": {},
       "features": [
         "6500mAh耐用大电池"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:48.307Z"
+    "fetchedAt": "2026-06-09T22:09:50.556Z"
   },
   "vivo Y500": {
     "ok": true,
@@ -2473,10 +2487,11 @@
         "IP69+满级防水",
         "360°穿墙天线",
         "全景环绕立体声"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:49.975Z"
+    "fetchedAt": "2026-06-09T22:09:57.493Z"
   },
   "vivo Y500i": {
     "ok": true,
@@ -2518,10 +2533,11 @@
         "6年长寿大电池",
         "满级防水防尘全面抗摔",
         "1200nits硬件级真护眼屏"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:51.622Z"
+    "fetchedAt": "2026-06-09T22:10:04.804Z"
   },
   "vivo Y500 Pro": {
     "ok": true,
@@ -2560,10 +2576,11 @@
         "持久流畅OriginOS 6",
         "7000mAh半固态蓝海电池",
         "1.5K旗舰级护眼屏"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:52.735Z"
+    "fetchedAt": "2026-06-09T22:10:12.229Z"
   },
   "vivo Y600 Pro": {
     "ok": true,
@@ -2606,10 +2623,11 @@
         "耐久抗摔防水",
         "寰宇增强通信3.0",
         "超安全流畅OriginOS 6"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:53.831Z"
+    "fetchedAt": "2026-06-09T22:10:19.863Z"
   },
   "iQOO 15": {
     "ok": true,
@@ -2653,10 +2671,11 @@
         "自研电竞芯片 Q3",
         "2K 三星珠峰屏",
         "7000mAh蓝海大电池"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:55.285Z"
+    "fetchedAt": "2026-06-09T22:10:27.518Z"
   },
   "iQOO 13": {
     "ok": true,
@@ -2699,10 +2718,11 @@
         "自研电竞芯片 Q2",
         "2K Q10 珠峰屏",
         "等效6150mAh蓝海双芯电池"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:56.643Z"
+    "fetchedAt": "2026-06-09T22:10:32.436Z"
   },
   "iQOO Neo11": {
     "ok": true,
@@ -2745,10 +2765,11 @@
         "自研电竞芯片 Q2",
         "Monster 超核引擎",
         "2K 144Hz 珠峰屏"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:57.704Z"
+    "fetchedAt": "2026-06-09T22:10:41.441Z"
   },
   "iQOO Neo10": {
     "ok": true,
@@ -2790,10 +2811,11 @@
         "自研电竞芯片 Q2",
         "等效6100mAh*蓝海电池",
         "120W超快闪充"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:58.533Z"
+    "fetchedAt": "2026-06-09T22:10:49.535Z"
   },
   "iQOO Z11x": {
     "ok": true,
@@ -2826,7 +2848,7 @@
       "careServices": [],
       "colors": [
         "夜影黑",
-        "���青绿",
+        "冰青绿",
         "雪屿白"
       ],
       "specs": {},
@@ -2835,10 +2857,11 @@
         "天玑 7400",
         "LCD 莱茵护眼屏",
         "5000 万索尼超清主摄"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:57:59.384Z"
+    "fetchedAt": "2026-06-09T22:10:57.347Z"
   },
   "iQOO Z11 Turbo": {
     "ok": true,
@@ -2881,10 +2904,11 @@
         "自研电竞芯片 Q2",
         "Monster 超核引擎",
         "7600mAh 超薄蓝海大电池"
-      ]
+      ],
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-01T22:58:00.234Z"
+    "fetchedAt": "2026-06-09T22:11:01.831Z"
   },
   "华为 Mate 80 RS": {
     "ok": true,
@@ -3692,7 +3716,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:23:16.082Z"
+    "fetchedAt": "2026-06-09T22:11:48.638Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3761,7 +3785,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:23:59.864Z"
+    "fetchedAt": "2026-06-09T22:12:31.557Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3859,7 +3883,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:24:44.169Z"
+    "fetchedAt": "2026-06-09T22:13:17.718Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3923,7 +3947,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:25:30.275Z"
+    "fetchedAt": "2026-06-09T22:14:03.250Z"
   },
   "华为 nova 13 Pro": {
     "ok": true,
@@ -4065,7 +4089,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:26:18.283Z"
+    "fetchedAt": "2026-06-09T22:14:50.795Z"
   },
   "华为 畅享 90": {
     "ok": true,
@@ -4124,7 +4148,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:27:02.961Z"
+    "fetchedAt": "2026-06-09T22:15:32.977Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -4245,7 +4269,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-08T22:27:49.987Z"
+    "fetchedAt": "2026-06-09T22:16:17.411Z"
   },
   "荣耀 300": {
     "ok": true,
