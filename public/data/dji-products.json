@@ -308,7 +308,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-13T21:43:39.390Z"
+    "fetchedAt": "2026-06-14T21:54:35.570Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -584,7 +584,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-13T21:43:42.928Z"
+    "fetchedAt": "2026-06-14T21:54:42.135Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -850,7 +850,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-13T21:43:47.965Z"
+    "fetchedAt": "2026-06-14T21:54:47.162Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1344,6 +1344,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-13T21:43:52.136Z"
+    "fetchedAt": "2026-06-14T21:54:52.641Z"
   }
 }
