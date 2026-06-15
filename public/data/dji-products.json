@@ -7,9 +7,85 @@
       "title": "DJI Mini 4 Pro",
       "slug": "dji-mini-4-pro",
       "url": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN",
-      "price": "¥5940",
+      "price": "¥4309",
       "priceStatus": "available",
       "bundles": [
+        {
+          "title": "DJI Mini 4 Pro 140W 氮化镓充电套装",
+          "slug": "dji-mini-4-pro-140w-gan-charging-combo",
+          "type": "SpuBundle",
+          "price": "¥4309",
+          "priceValue": 4309,
+          "controller": "",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Mini 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N2 遥控器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "备用螺丝",
+              "quantity": 6,
+              "slug": ""
+            },
+            {
+              "name": "螺丝刀",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N2 遥控器转接线（USB-C 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC-N2 遥控器转接线（Lightning 接头）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "云台保护锁扣",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "束桨器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Power 140W 氮化镓充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
         {
           "title": "DJI Mini 4 Pro 畅飞套装（带屏遥控器）",
           "slug": "dji-mini-4-pro-combo-rc-2-sb",
@@ -308,7 +384,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-14T21:54:35.570Z"
+    "fetchedAt": "2026-06-15T22:47:38.745Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -584,7 +660,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-14T21:54:42.135Z"
+    "fetchedAt": "2026-06-15T22:47:44.516Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -594,9 +670,65 @@
       "title": "DJI Mavic 4 Pro",
       "slug": "dji-mavic-4-pro",
       "url": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN",
-      "price": "¥14387",
+      "price": "¥14127",
       "priceStatus": "available",
       "bundles": [
+        {
+          "title": "DJI Mavic 4 Pro 140W 氮化镓充电套装",
+          "slug": "dji-mavic-4-pro-140w-gan-charging-combo",
+          "type": "SpuBundle",
+          "price": "¥14127",
+          "priceValue": 14127,
+          "controller": "",
+          "bundleKind": "标准套装",
+          "includedItems": [
+            {
+              "name": "DJI Mavic 4 Pro",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI RC 2",
+              "quantity": 1,
+              "slug": "dji-rc-2"
+            },
+            {
+              "name": "DJI Mavic 4 Pro 智能飞行电池",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 备用螺旋桨（对）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Mavic 4 Pro 收纳保护罩",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "USB-C 至 USB-C 数据线",
+              "quantity": 2,
+              "slug": ""
+            },
+            {
+              "name": "DJI 100W 桌面充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Power 140W 氮化镓充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
         {
           "title": "DJI Mavic 4 Pro 畅拍套装（DJI RC 2）",
           "slug": "dji-mavic-4-pro-capture-combo",
@@ -850,7 +982,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-14T21:54:47.162Z"
+    "fetchedAt": "2026-06-15T22:47:50.880Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -860,17 +992,17 @@
       "title": "Osmo Pocket 3",
       "slug": "osmo-pocket-3",
       "url": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN",
-      "price": "¥3594",
+      "price": "¥3738",
       "priceStatus": "available",
       "bundles": [
         {
-          "title": "Osmo Pocket 3 即刻开拍套装",
-          "slug": "osmo-pocket-3-ready-to-go-combo",
+          "title": "Osmo Pocket 3 140W 氮化镓充电套装",
+          "slug": "osmo-pocket-3-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥3594",
-          "priceValue": 3594,
+          "price": "¥3738",
+          "priceValue": 3738,
           "controller": "",
-          "bundleKind": "即刻开拍",
+          "bundleKind": "标准套装",
           "includedItems": [
             {
               "name": "Osmo Pocket 3",
@@ -878,12 +1010,17 @@
               "slug": ""
             },
             {
-              "name": "Osmo Pocket 3 保护壳",
+              "name": "DJI Power 140W 氮化镓充电器",
               "quantity": 1,
               "slug": ""
             },
             {
               "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
               "quantity": 1,
               "slug": ""
             },
@@ -898,7 +1035,7 @@
               "slug": ""
             },
             {
-              "name": "金士顿 Canvas Go!Plus microSD 卡 128GB",
+              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
               "quantity": 1,
               "slug": ""
             }
@@ -1204,6 +1341,47 @@
           ]
         },
         {
+          "title": "Osmo Pocket 3 即刻开拍套装",
+          "slug": "osmo-pocket-3-ready-to-go-combo",
+          "type": "SpuBundle",
+          "price": "¥3594",
+          "priceValue": 3594,
+          "controller": "",
+          "bundleKind": "即刻开拍",
+          "includedItems": [
+            {
+              "name": "Osmo Pocket 3",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 保护壳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Type-C to Type-C PD 快充线",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI 手绳",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "金士顿 Canvas Go!Plus microSD 卡 128GB",
+              "quantity": 1,
+              "slug": ""
+            }
+          ]
+        },
+        {
           "title": "Osmo Pocket 3",
           "slug": "osmo-pocket-3",
           "type": "Spu",
@@ -1344,6 +1522,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-14T21:54:52.641Z"
+    "fetchedAt": "2026-06-15T22:47:56.524Z"
   }
 }
