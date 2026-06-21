@@ -37,3 +37,9 @@ server.log
 show*.mjs
 test*.mjs
 check-*.mjs
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
