@@ -1543,7 +1543,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T21:52:31.763Z"
+    "fetchedAt": "2026-06-21T21:35:16.962Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1576,7 +1576,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T21:53:15.562Z"
+    "fetchedAt": "2026-06-21T21:35:59.662Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1608,7 +1608,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T21:54:00.275Z"
+    "fetchedAt": "2026-06-21T21:36:42.053Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1940,7 +1940,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T21:59:47.976Z"
+    "fetchedAt": "2026-06-21T21:37:26.843Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1968,7 +1968,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:00:32.899Z"
+    "fetchedAt": "2026-06-21T21:38:08.355Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2144,7 +2144,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:36:57.790Z"
+    "fetchedAt": "2026-06-21T21:38:27.311Z"
   },
   "vivo X300": {
     "ok": true,
@@ -2191,7 +2191,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:04.203Z"
+    "fetchedAt": "2026-06-21T21:38:33.790Z"
   },
   "vivo X300 Pro": {
     "ok": true,
@@ -2232,7 +2232,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:10.572Z"
+    "fetchedAt": "2026-06-21T21:38:38.759Z"
   },
   "vivo X300 Ultra": {
     "ok": true,
@@ -2277,7 +2277,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:20.511Z"
+    "fetchedAt": "2026-06-21T21:38:47.686Z"
   },
   "vivo X300s": {
     "ok": true,
@@ -2323,7 +2323,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:29.654Z"
+    "fetchedAt": "2026-06-21T21:38:52.196Z"
   },
   "vivo S30": {
     "ok": true,
@@ -2361,7 +2361,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:38.983Z"
+    "fetchedAt": "2026-06-21T21:38:58.164Z"
   },
   "vivo S30 Pro mini": {
     "ok": true,
@@ -2399,7 +2399,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:47.287Z"
+    "fetchedAt": "2026-06-21T21:39:05.102Z"
   },
   "vivo S50": {
     "ok": true,
@@ -2419,10 +2419,6 @@
         {
           "version": "12GB+512GB",
           "price": "¥3699"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥3999"
         }
       ],
       "careServices": [],
@@ -2441,7 +2437,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:37:53.056Z"
+    "fetchedAt": "2026-06-21T21:39:11.452Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2478,7 +2474,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:38:00.893Z"
+    "fetchedAt": "2026-06-21T21:39:20.624Z"
   },
   "vivo Y60": {
     "ok": true,
@@ -2513,7 +2509,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:38:27.179Z"
+    "fetchedAt": "2026-06-21T21:39:44.073Z"
   },
   "vivo Y500": {
     "ok": true,
@@ -2554,7 +2550,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:38:33.850Z"
+    "fetchedAt": "2026-06-21T21:39:50.342Z"
   },
   "vivo Y500i": {
     "ok": true,
@@ -2600,7 +2596,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:38:43.500Z"
+    "fetchedAt": "2026-06-21T21:39:55.590Z"
   },
   "vivo Y500 Pro": {
     "ok": true,
@@ -2643,7 +2639,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:38:52.185Z"
+    "fetchedAt": "2026-06-21T21:40:04.081Z"
   },
   "vivo Y600 Pro": {
     "ok": true,
@@ -2690,7 +2686,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:38:58.120Z"
+    "fetchedAt": "2026-06-21T21:40:08.604Z"
   },
   "iQOO 15": {
     "ok": true,
@@ -2738,7 +2734,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:39:05.931Z"
+    "fetchedAt": "2026-06-21T21:40:13.617Z"
   },
   "iQOO 13": {
     "ok": true,
@@ -2785,7 +2781,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:39:13.569Z"
+    "fetchedAt": "2026-06-21T21:40:22.425Z"
   },
   "iQOO Neo11": {
     "ok": true,
@@ -2832,7 +2828,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:39:20.119Z"
+    "fetchedAt": "2026-06-21T21:40:26.991Z"
   },
   "iQOO Neo10": {
     "ok": true,
@@ -2878,7 +2874,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:39:29.933Z"
+    "fetchedAt": "2026-06-21T21:40:35.299Z"
   },
   "iQOO Z11x": {
     "ok": true,
@@ -2924,7 +2920,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:39:39.396Z"
+    "fetchedAt": "2026-06-21T21:40:44.166Z"
   },
   "iQOO Z11 Turbo": {
     "ok": true,
@@ -2971,7 +2967,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-15T22:39:44.556Z"
+    "fetchedAt": "2026-06-21T21:40:49.718Z"
   },
   "华为 Mate 80 RS": {
     "ok": true,
@@ -3388,7 +3384,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:02:10.978Z"
+    "fetchedAt": "2026-06-21T21:41:31.329Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3541,7 +3537,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:02:56.152Z"
+    "fetchedAt": "2026-06-21T21:42:14.456Z"
   },
   "iQOO Z11": {
     "ok": true,
@@ -3735,7 +3731,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:03:44.654Z"
+    "fetchedAt": "2026-06-21T21:43:00.984Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3843,7 +3839,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:04:29.803Z"
+    "fetchedAt": "2026-06-21T21:43:44.940Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3912,7 +3908,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:05:13.588Z"
+    "fetchedAt": "2026-06-21T21:44:30.064Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -4010,7 +4006,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:05:55.792Z"
+    "fetchedAt": "2026-06-21T21:45:16.891Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -4074,7 +4070,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:06:40.355Z"
+    "fetchedAt": "2026-06-21T21:46:02.915Z"
   },
   "华为 nova 13 Pro": {
     "ok": true,
@@ -4171,7 +4167,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:07:23.380Z"
+    "fetchedAt": "2026-06-21T21:46:47.765Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -4228,7 +4224,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:08:13.391Z"
+    "fetchedAt": "2026-06-21T21:47:34.491Z"
   },
   "华为 畅享 90": {
     "ok": true,
@@ -4389,7 +4385,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-20T22:09:00.231Z"
+    "fetchedAt": "2026-06-21T21:48:18.658Z"
   },
   "荣耀 300": {
     "ok": true,

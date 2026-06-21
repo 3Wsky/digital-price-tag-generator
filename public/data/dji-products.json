@@ -384,7 +384,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-20T22:09:01.854Z"
+    "fetchedAt": "2026-06-21T21:48:21.071Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -660,7 +660,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-20T22:09:07.291Z"
+    "fetchedAt": "2026-06-21T21:48:27.115Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -670,65 +670,9 @@
       "title": "DJI Mavic 4 Pro",
       "slug": "dji-mavic-4-pro",
       "url": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN",
-      "price": "¥14127",
+      "price": "¥14387",
       "priceStatus": "available",
       "bundles": [
-        {
-          "title": "DJI Mavic 4 Pro 140W 氮化镓充电套装",
-          "slug": "dji-mavic-4-pro-140w-gan-charging-combo",
-          "type": "SpuBundle",
-          "price": "¥14127",
-          "priceValue": 14127,
-          "controller": "",
-          "bundleKind": "标准套装",
-          "includedItems": [
-            {
-              "name": "DJI Mavic 4 Pro",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI RC 2",
-              "quantity": 1,
-              "slug": "dji-rc-2"
-            },
-            {
-              "name": "DJI Mavic 4 Pro 智能飞行电池",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Mavic 4 Pro 备用螺旋桨（对）",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Mavic 4 Pro 收纳保护罩",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "USB-C 至 USB-C 数据线",
-              "quantity": 2,
-              "slug": ""
-            },
-            {
-              "name": "DJI 100W 桌面充电器",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Power 140W 氮化镓充电器",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
-              "quantity": 1,
-              "slug": ""
-            }
-          ]
-        },
         {
           "title": "DJI Mavic 4 Pro 畅拍套装（DJI RC 2）",
           "slug": "dji-mavic-4-pro-capture-combo",
@@ -982,7 +926,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-20T22:09:12.828Z"
+    "fetchedAt": "2026-06-21T21:48:31.032Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1131,8 +1075,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 碳素黑）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini",
           "type": "SpuBundle",
-          "price": "¥2398",
-          "priceValue": 2398,
+          "price": "¥3648",
+          "priceValue": 3648,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1202,8 +1146,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 云感白）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini-transmitter-arctic-white",
           "type": "SpuBundle",
-          "price": "¥2398",
-          "priceValue": 2398,
+          "price": "¥3648",
+          "priceValue": 3648,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1273,8 +1217,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 3 发射器）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-3-transmitter",
           "type": "SpuBundle",
-          "price": "¥2828",
-          "priceValue": 2828,
+          "price": "¥4198",
+          "priceValue": 4198,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1385,8 +1329,8 @@
           "title": "Osmo Pocket 3",
           "slug": "osmo-pocket-3",
           "type": "Spu",
-          "price": "¥2299",
-          "priceValue": 2299,
+          "price": "¥3499",
+          "priceValue": 3499,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -1421,8 +1365,8 @@
           "title": "Osmo Pocket 3 全能套装",
           "slug": "osmo-pocket-3-creator-combo",
           "type": "Spu",
-          "price": "¥3099",
-          "priceValue": 3099,
+          "price": "¥4499",
+          "priceValue": 4499,
           "controller": "",
           "bundleKind": "全能套装",
           "includedItems": [
@@ -1522,6 +1466,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-06-20T22:09:18.207Z"
+    "fetchedAt": "2026-06-21T21:48:35.581Z"
   }
 }
