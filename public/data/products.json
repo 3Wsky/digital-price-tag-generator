@@ -54,7 +54,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:27:20.987Z"
+    "fetchedAt": "2026-06-23T21:58:16.805Z"
   },
   "华为 Mate 80 Pro": {
     "ok": true,
@@ -117,7 +117,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:27:54.647Z"
+    "fetchedAt": "2026-06-23T21:58:53.820Z"
   },
   "华为 Mate 80 Pro Max": {
     "ok": true,
@@ -168,7 +168,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:28:27.559Z"
+    "fetchedAt": "2026-06-23T21:59:29.931Z"
   },
   "华为 Mate 80 Pro Max 风驰版": {
     "ok": true,
@@ -219,71 +219,9 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:29:00.971Z"
+    "fetchedAt": "2026-06-23T22:00:06.586Z"
   },
   "华为 Mate 70": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "HUAWEI Mate 70 Air",
-      "price": "¥ 5199",
-      "skuPrices": [
-        {
-          "version": "16GB+512GB",
-          "price": "¥ 5199",
-          "sbomCode": "2601010585511",
-          "colors": []
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 4199",
-          "sbomCode": "2601010585501",
-          "colors": []
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 4699",
-          "sbomCode": "2601010585504",
-          "colors": []
-        },
-        {
-          "version": "16GB+256GB",
-          "price": "¥ 4699",
-          "sbomCode": "2601010585507",
-          "colors": []
-        }
-      ],
-      "careServices": [
-        {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 299",
-          "sbomCode": "3201020126801"
-        },
-        {
-          "name": "HUAWEI Care+（两年期）",
-          "price": "¥ 599",
-          "sbomCode": "3201020126901"
-        }
-      ],
-      "colors": [
-        "羽衣白",
-        "曜金黑",
-        "金丝银锦"
-      ],
-      "specs": {
-        "chip": "麒麟9020",
-        "battery": "6500mAh",
-        "screen": "undefined英寸",
-        "charge": "66W",
-        "refreshRate": "120Hz",
-        "screenTech": "OLED"
-      },
-      "priceStatus": "available"
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:29:37.171Z"
-  },
-  "华为 Mate 70 Pro": {
     "ok": true,
     "source": "official",
     "product": {
@@ -293,7 +231,7 @@
         {
           "version": "12GB+256GB",
           "price": "¥ 6499",
-          "sbomCode": "2601010519580",
+          "sbomCode": "2601010519504",
           "colors": []
         }
       ],
@@ -326,7 +264,52 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:30:13.143Z"
+    "fetchedAt": "2026-06-23T22:00:43.327Z"
+  },
+  "华为 Mate 70 Pro": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI Mate 70 Pro",
+      "price": "¥ 6499",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010519504",
+          "colors": []
+        }
+      ],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 1199",
+          "sbomCode": "3201020088901"
+        },
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 499",
+          "sbomCode": "3201020089301"
+        }
+      ],
+      "colors": [
+        "风信紫",
+        "曜石黑",
+        "雪域白",
+        "云杉绿"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5500mAh",
+        "screen": "6.9英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-06-23T22:01:15.942Z"
   },
   "华为 Mate 70 Pro+": {
     "ok": true,
@@ -371,7 +354,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:30:47.653Z"
+    "fetchedAt": "2026-06-23T22:01:52.868Z"
   },
   "华为 Mate 70 Pro 优享版": {
     "ok": true,
@@ -422,7 +405,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:31:19.994Z"
+    "fetchedAt": "2026-06-23T22:02:25.857Z"
   },
   "华为 Mate 70 Air": {
     "ok": true,
@@ -484,7 +467,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:31:54.348Z"
+    "fetchedAt": "2026-06-23T22:02:58.792Z"
   },
   "华为 Mate X5": {
     "ok": true,
@@ -544,14 +527,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:32:30.457Z"
+    "fetchedAt": "2026-06-23T22:03:32.012Z"
   },
   "华为 Mate X5 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "【华为官方翻新】HUAWEI Mate X5",
-      "price": "¥ 13599",
+      "price": "¥ 14499",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -604,7 +587,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:33:04.512Z"
+    "fetchedAt": "2026-06-23T22:04:08.197Z"
   },
   "华为 Mate X6": {
     "ok": true,
@@ -667,7 +650,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:33:38.559Z"
+    "fetchedAt": "2026-06-23T22:04:45.606Z"
   },
   "华为 Mate X6 典藏版": {
     "ok": true,
@@ -730,7 +713,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:34:14.503Z"
+    "fetchedAt": "2026-06-23T22:05:19.209Z"
   },
   "华为 Mate X7": {
     "ok": true,
@@ -801,14 +784,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:34:48.807Z"
+    "fetchedAt": "2026-06-23T22:05:51.852Z"
   },
   "华为 Mate X7 典藏版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI Mate X7",
-      "price": "¥ 15999",
+      "price": "¥ 14999",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -872,7 +855,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:35:23.577Z"
+    "fetchedAt": "2026-06-23T22:06:26.502Z"
   },
   "华为 Pura X": {
     "ok": true,
@@ -933,7 +916,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:35:55.302Z"
+    "fetchedAt": "2026-06-23T22:07:02.523Z"
   },
   "华为 Pura X 典藏版": {
     "ok": true,
@@ -994,7 +977,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:36:29.622Z"
+    "fetchedAt": "2026-06-23T22:07:37.651Z"
   },
   "华为 Pura 80": {
     "ok": true,
@@ -1051,7 +1034,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:37:02.813Z"
+    "fetchedAt": "2026-06-23T22:08:12.961Z"
   },
   "华为 Pura 80 Pro": {
     "ok": true,
@@ -1110,7 +1093,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:37:37.506Z"
+    "fetchedAt": "2026-06-23T22:08:46.569Z"
   },
   "华为 Pura 80 Pro+": {
     "ok": true,
@@ -1161,7 +1144,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-17T22:38:14.252Z"
+    "fetchedAt": "2026-06-23T22:09:19.432Z"
   },
   "华为 Pura 80 Ultra": {
     "ok": true,
@@ -1543,7 +1526,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:22:04.140Z"
+    "fetchedAt": "2026-06-23T22:10:03.769Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
@@ -1576,7 +1559,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:22:51.856Z"
+    "fetchedAt": "2026-06-23T22:10:53.377Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1608,7 +1591,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:23:40.152Z"
+    "fetchedAt": "2026-06-23T22:11:40.708Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1940,7 +1923,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:24:26.334Z"
+    "fetchedAt": "2026-06-23T22:12:22.535Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1968,7 +1951,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:25:10.752Z"
+    "fetchedAt": "2026-06-23T22:13:08.361Z"
   },
   "vivo X200": {
     "ok": true,
@@ -3291,7 +3274,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:30:59.049Z"
+    "fetchedAt": "2026-06-23T22:13:52.039Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -3380,7 +3363,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:32:20.499Z"
+    "fetchedAt": "2026-06-23T22:14:36.986Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3533,7 +3516,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:35:10.570Z"
+    "fetchedAt": "2026-06-23T22:15:24.538Z"
   },
   "iQOO Z11": {
     "ok": true,
@@ -3727,7 +3710,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:37:34.866Z"
+    "fetchedAt": "2026-06-23T22:16:09.098Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3835,7 +3818,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:39:10.522Z"
+    "fetchedAt": "2026-06-23T22:16:52.540Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3904,7 +3887,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:40:32.635Z"
+    "fetchedAt": "2026-06-23T22:17:38.740Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -4002,7 +3985,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:41:16.645Z"
+    "fetchedAt": "2026-06-23T22:18:25.441Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -4066,7 +4049,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:42:04.770Z"
+    "fetchedAt": "2026-06-23T22:19:11.818Z"
   },
   "华为 nova 13 Pro": {
     "ok": true,
@@ -4163,7 +4146,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:42:52.201Z"
+    "fetchedAt": "2026-06-23T22:19:57.154Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -4359,7 +4342,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-06-22T22:44:21.239Z"
+    "fetchedAt": "2026-06-23T22:20:45.936Z"
   },
   "荣耀 300": {
     "ok": true,
