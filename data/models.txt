@@ -139,3 +139,6 @@ iQOO Z10 Turbo
 荣耀 300
 荣耀 300 Pro
 荣耀 200
+
+# Auto-discovered by node server.mjs --discover-models.
+iQOO Z11i
