@@ -367,7 +367,7 @@
         "4K/60fps HDR 无损竖拍",
         "户外旅拍 - 4K/100fps 慢动作",
         "4K/60fps HDR",
-        "4K/100fps 慢动作",
+        "4K/100fps",
         "4K/30fps HDR",
         "2. HDR 视频规格从 4K/30fps 提升至 4K/60fps；",
         "配备 1/1.3 英寸 CMOS，支持拍摄 4K/60fps HDR 无损竖拍及 4K/100fps 慢动作视频，更有 10-bit D-Log M 和 HLG 色彩模式，记录多达 10 亿种颜色。",
@@ -384,7 +384,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-08T21:49:55.931Z"
+    "fetchedAt": "2026-07-09T22:00:09.011Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -394,15 +394,15 @@
       "title": "DJI Air 3S",
       "slug": "dji-air-3s",
       "url": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN",
-      "price": "¥6516",
+      "price": "¥7215",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Air 3S 140W 氮化镓充电套装",
           "slug": "dji-air-3s-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥6516",
-          "priceValue": 6516,
+          "price": "¥7215",
+          "priceValue": 7215,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -462,8 +462,8 @@
           "title": "DJI Air 3S 畅飞套装（普通遥控器）",
           "slug": "dji-air-3s-fly-more-combo",
           "type": "Spu",
-          "price": "¥7909",
-          "priceValue": 7909,
+          "price": "¥8788",
+          "priceValue": 8788,
           "controller": "普通遥控器",
           "bundleKind": "畅飞套装",
           "includedItems": [
@@ -528,8 +528,8 @@
           "title": "DJI Air 3S 畅飞套装（带屏遥控器）",
           "slug": "dji-air-3s-fly-more-combo-rc-2",
           "type": "Spu",
-          "price": "¥8989",
-          "priceValue": 8989,
+          "price": "¥9988",
+          "priceValue": 9988,
           "controller": "带屏遥控器",
           "bundleKind": "畅飞套装",
           "includedItems": [
@@ -640,8 +640,8 @@
           "title": "DJI Air 3S（普通遥控器）",
           "slug": "dji-air-3s",
           "type": "Spu",
-          "price": "¥6289",
-          "priceValue": 6289,
+          "price": "¥6988",
+          "priceValue": 6988,
           "controller": "普通遥控器",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -721,7 +721,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-08T21:50:00.692Z"
+    "fetchedAt": "2026-07-09T22:00:13.680Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -1043,7 +1043,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-08T21:50:05.501Z"
+    "fetchedAt": "2026-07-09T22:00:18.815Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1583,6 +1583,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-08T21:50:10.308Z"
+    "fetchedAt": "2026-07-09T22:00:24.645Z"
   }
 }
