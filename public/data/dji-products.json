@@ -7,15 +7,15 @@
       "title": "DJI Mini 4 Pro",
       "slug": "dji-mini-4-pro",
       "url": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN",
-      "price": "¥4297",
+      "price": "¥4309",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Mini 4 Pro 140W 氮化镓充电套装",
           "slug": "dji-mini-4-pro-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥4297",
-          "priceValue": 4297,
+          "price": "¥4309",
+          "priceValue": 4309,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-17T21:30:58.910Z"
+    "fetchedAt": "2026-07-18T21:26:34.827Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-17T21:31:03.693Z"
+    "fetchedAt": "2026-07-18T21:26:40.289Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-17T21:31:10.323Z"
+    "fetchedAt": "2026-07-18T21:26:44.344Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-17T21:31:16.435Z"
+    "fetchedAt": "2026-07-18T21:26:49.283Z"
   }
 }
