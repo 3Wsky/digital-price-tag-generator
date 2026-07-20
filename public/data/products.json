@@ -1131,7 +1131,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:19:38.151Z"
+    "fetchedAt": "2026-07-20T21:28:47.134Z"
   },
   "华为 畅享 80": {
     "ok": true,
@@ -1157,7 +1157,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:20:12.588Z"
+    "fetchedAt": "2026-07-20T21:29:20.791Z"
   },
   "华为 畅享 70X": {
     "ok": true,
@@ -1189,7 +1189,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:20:47.872Z"
+    "fetchedAt": "2026-07-20T21:29:55.321Z"
   },
   "华为 畅享 70X 尊享版": {
     "ok": true,
@@ -1221,39 +1221,39 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:21:17.971Z"
+    "fetchedAt": "2026-07-20T21:30:27.164Z"
   },
   "华为 畅享 70S": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "华为畅享 70X 尊享版",
-      "price": "¥ 1999",
+      "title": "华为畅享 90 Plus",
+      "price": "¥ 1499",
       "skuPrices": [],
       "careServices": [
         {
           "name": "HUAWEI Care+（一年期）",
           "price": "¥ 159",
-          "sbomCode": "3201020111301"
+          "sbomCode": "3201020145401"
         }
       ],
       "colors": [
+        "星空黑",
         "星海蓝",
-        "流沙金",
-        "曜金黑"
+        "羽沙白"
       ],
       "specs": {
         "chip": "麒麟8000",
-        "battery": "6100mAh",
+        "battery": "6620mAh",
         "screen": "undefined英寸",
-        "charge": "120W",
+        "charge": "40W",
         "refreshRate": "",
-        "screenTech": "OLED"
+        "screenTech": ""
       },
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:21:49.755Z"
+    "fetchedAt": "2026-07-20T21:31:00.693Z"
   },
   "华为 畅享 90 Plus": {
     "ok": true,
@@ -1285,7 +1285,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:22:23.587Z"
+    "fetchedAt": "2026-07-20T21:31:33.913Z"
   },
   "华为 畅享 90m Plus": {
     "ok": true,
@@ -1317,7 +1317,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:22:55.761Z"
+    "fetchedAt": "2026-07-20T21:32:10.372Z"
   },
   "华为 畅享 90 Pro Max": {
     "ok": true,
@@ -1336,7 +1336,7 @@
       "specs": {
         "chip": "麒麟8000",
         "battery": "8500mAh",
-        "screen": "6.8英寸",
+        "screen": "undefined英寸",
         "charge": "40W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
@@ -1344,7 +1344,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:23:27.539Z"
+    "fetchedAt": "2026-07-20T21:32:42.342Z"
   },
   "荣耀 Magic8": {
     "ok": true,
@@ -1389,7 +1389,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:24:05.896Z"
+    "fetchedAt": "2026-07-20T21:33:22.203Z"
   },
   "荣耀 Magic8 Pro": {
     "ok": true,
@@ -1430,7 +1430,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:24:42.552Z"
+    "fetchedAt": "2026-07-20T21:34:00.065Z"
   },
   "荣耀 Magic7": {
     "ok": false,
@@ -1471,7 +1471,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:12:43.990Z"
+    "fetchedAt": "2026-07-20T21:34:46.647Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1503,7 +1503,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:13:29.864Z"
+    "fetchedAt": "2026-07-20T21:35:35.017Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1549,7 +1549,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:26:58.527Z"
+    "fetchedAt": "2026-07-20T21:36:26.380Z"
   },
   "荣耀 500 Pro": {
     "ok": true,
@@ -1595,7 +1595,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:27:44.564Z"
+    "fetchedAt": "2026-07-20T21:37:16.455Z"
   },
   "荣耀 400 Pro": {
     "ok": true,
@@ -1635,7 +1635,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:28:34.516Z"
+    "fetchedAt": "2026-07-20T21:38:09.037Z"
   },
   "荣耀 GT": {
     "ok": true,
@@ -1676,7 +1676,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:29:21.522Z"
+    "fetchedAt": "2026-07-20T21:38:58.973Z"
   },
   "荣耀 Power2": {
     "ok": true,
@@ -1717,7 +1717,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:29:59.411Z"
+    "fetchedAt": "2026-07-20T21:39:35.771Z"
   },
   "荣耀 WIN": {
     "ok": true,
@@ -1733,14 +1733,6 @@
         {
           "version": "16GB+512GB",
           "price": "¥ 4199"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 3499"
-        },
-        {
-          "version": "16GB+256GB",
-          "price": "¥ 3799"
         }
       ],
       "careServices": [],
@@ -1766,7 +1758,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:30:33.979Z"
+    "fetchedAt": "2026-07-20T21:40:16.279Z"
   },
   "荣耀 X70": {
     "ok": true,
@@ -1816,7 +1808,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:31:20.501Z"
+    "fetchedAt": "2026-07-20T21:41:05.832Z"
   },
   "荣耀 X60 Pro": {
     "ok": true,
@@ -1843,7 +1835,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:14:13.949Z"
+    "fetchedAt": "2026-07-20T21:41:51.768Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1871,7 +1863,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:14:59.962Z"
+    "fetchedAt": "2026-07-20T21:42:38.362Z"
   },
   "vivo X200": {
     "ok": true,
@@ -1913,7 +1905,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:33:06.055Z"
+    "fetchedAt": "2026-07-20T21:42:56.749Z"
   },
   "vivo X200 Ultra": {
     "ok": true,
@@ -1959,7 +1951,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:33:40.314Z"
+    "fetchedAt": "2026-07-20T21:43:22.224Z"
   },
   "vivo X200 Pro": {
     "ok": true,
@@ -2001,7 +1993,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-14T21:33:46.476Z"
+    "fetchedAt": "2026-07-20T21:43:41.128Z"
   },
   "vivo X200s": {
     "ok": true,
@@ -3256,7 +3248,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:15:47.609Z"
+    "fetchedAt": "2026-07-20T21:44:30.282Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3431,7 +3423,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:16:33.817Z"
+    "fetchedAt": "2026-07-20T21:45:15.959Z"
   },
   "iQOO Z11": {
     "ok": true,
@@ -3636,7 +3628,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:17:18.161Z"
+    "fetchedAt": "2026-07-20T21:46:04.621Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3792,7 +3784,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:18:03.232Z"
+    "fetchedAt": "2026-07-20T21:46:47.874Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3934,7 +3926,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-19T21:18:45.976Z"
+    "fetchedAt": "2026-07-20T21:47:35.083Z"
   },
   "华为 nova 13 Pro": {
     "ok": true,
