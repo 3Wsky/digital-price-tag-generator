@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-28T21:33:20.636Z"
+    "fetchedAt": "2026-07-29T21:28:21.360Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-28T21:33:26.678Z"
+    "fetchedAt": "2026-07-29T21:28:25.431Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -785,8 +785,8 @@
           "title": "DJI Mavic 4 Pro 畅拍套装（DJI RC 2）",
           "slug": "dji-mavic-4-pro-capture-combo",
           "type": "SpuBundle",
-          "price": "¥14387",
-          "priceValue": 14387,
+          "price": "¥14327",
+          "priceValue": 14327,
           "controller": "DJI RC 2",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-28T21:33:31.950Z"
+    "fetchedAt": "2026-07-29T21:28:31.052Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-28T21:33:38.724Z"
+    "fetchedAt": "2026-07-29T21:28:36.768Z"
   }
 }
