@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-30T21:44:03.697Z"
+    "fetchedAt": "2026-07-31T21:51:20.146Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -385,15 +385,15 @@
       "title": "DJI Air 3S",
       "slug": "dji-air-3s",
       "url": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN",
-      "price": "¥7215",
+      "price": "¥7227",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Air 3S 140W 氮化镓充电套装",
           "slug": "dji-air-3s-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥7215",
-          "priceValue": 7215,
+          "price": "¥7227",
+          "priceValue": 7227,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-30T21:44:09.561Z"
+    "fetchedAt": "2026-07-31T21:51:25.497Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-30T21:44:15.937Z"
+    "fetchedAt": "2026-07-31T21:51:29.674Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1062,6 +1062,11 @@
               "slug": ""
             },
             {
+              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
               "name": "DJI Power 140W 氮化镓充电器",
               "quantity": 1,
               "slug": ""
@@ -1085,11 +1090,6 @@
               "name": "Osmo Pocket 3 1/4\" 螺纹手柄",
               "quantity": 1,
               "slug": ""
-            },
-            {
-              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
-              "quantity": 1,
-              "slug": ""
             }
           ]
         },
@@ -1097,8 +1097,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 2）",
           "slug": "osmo-pocket-3-vlog-combo",
           "type": "SpuBundle",
-          "price": "¥5198",
-          "priceValue": 5198,
+          "price": "¥4098",
+          "priceValue": 4098,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1325,8 +1325,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 3 发射器）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-3-transmitter",
           "type": "SpuBundle",
-          "price": "¥2988",
-          "priceValue": 2988,
+          "price": "¥3098",
+          "priceValue": 3098,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1396,8 +1396,8 @@
           "title": "Osmo Pocket 3 即刻开拍套装",
           "slug": "osmo-pocket-3-ready-to-go-combo",
           "type": "SpuBundle",
-          "price": "¥3594",
-          "priceValue": 3594,
+          "price": "¥2494",
+          "priceValue": 2494,
           "controller": "",
           "bundleKind": "即刻开拍",
           "includedItems": [
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-07-30T21:44:20.626Z"
+    "fetchedAt": "2026-07-31T21:51:34.330Z"
   }
 }
