@@ -1887,7 +1887,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:45:58.410Z"
+    "fetchedAt": "2026-08-01T21:15:06.583Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1915,7 +1915,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:46:44.682Z"
+    "fetchedAt": "2026-08-01T21:15:52.152Z"
   },
   "vivo X200": {
     "ok": true,
@@ -3290,7 +3290,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:48:20.133Z"
+    "fetchedAt": "2026-08-01T21:16:40.804Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3685,7 +3685,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:49:01.870Z"
+    "fetchedAt": "2026-08-01T21:17:28.229Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3767,12 +3767,33 @@
     "fetchedAt": "2026-07-30T21:41:46.388Z"
   },
   "荣耀 Magic5": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic5\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic5 至臻版",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "雅黑色",
+        "燃橙色"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5450mAh",
+        "screen": "",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "features": [
+        "5450mAh",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-24T21:42:36.043Z"
+    "fetchedAt": "2026-08-01T21:18:14.738Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3807,15 +3828,41 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:19:58.164Z"
+    "fetchedAt": "2026-08-01T21:18:47.654Z"
   },
   "荣耀 Magic5 Pro": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic5%20Pro\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic5 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "苔原绿",
+        "查看更多细节",
+        "勃朗蓝",
+        "珊瑚紫",
+        "燃橙色",
+        "亮黑色"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5450mAh",
+        "screen": "6.81英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5450mAh",
+        "6.81英寸 LTPO 120Hz",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-24T21:43:15.542Z"
+    "fetchedAt": "2026-08-01T21:19:37.903Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3850,7 +3897,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:20:33.895Z"
+    "fetchedAt": "2026-08-01T21:20:13.676Z"
   },
   "华为 nova 14": {
     "ok": true,
@@ -3886,7 +3933,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:21:12.118Z"
+    "fetchedAt": "2026-08-01T21:20:48.039Z"
   },
   "荣耀 Magic4": {
     "ok": true,
@@ -3914,14 +3961,14 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:49:44.807Z"
+    "fetchedAt": "2026-08-01T21:21:38.822Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "nova 14 Pro",
-      "price": "¥ 3999",
+      "price": "¥ 3499",
       "skuPrices": [],
       "careServices": [
         {
@@ -3950,42 +3997,69 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:22:36.243Z"
+    "fetchedAt": "2026-08-01T21:22:14.746Z"
   },
   "荣耀 Magic4 Pro": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic4%20Pro\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic4 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "骁龙8移动平台",
+        "battery": "4600mAh",
+        "screen": "6.81英寸",
+        "charge": "100W",
+        "refreshRate": "1920Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "4600mAh 100W荣耀超快充",
+        "骁龙8移动平台 芯片",
+        "6.81英寸 LTPO 1920Hz",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-24T21:43:53.576Z"
+    "fetchedAt": "2026-08-01T21:23:04.451Z"
   },
   "华为 nova 13 Pro": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "nova 14 Pro",
-      "price": "¥ 3999",
-      "skuPrices": [],
-      "careServices": [
+      "title": "nova 16 Pro",
+      "price": "¥ 4999",
+      "skuPrices": [
         {
-          "name": "HUAWEI Care+（两年期）",
-          "price": "¥ 399",
-          "sbomCode": "3201020116201"
+          "version": "12GB+256GB",
+          "price": "¥ 3899",
+          "sbomCode": "2601010625815",
+          "colors": []
         },
         {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 229",
-          "sbomCode": "3201020116501"
+          "version": "12GB+512GB",
+          "price": "¥ 4399",
+          "sbomCode": "2601010625817",
+          "colors": []
+        },
+        {
+          "version": "12GB+1TB",
+          "price": "¥ 4999",
+          "sbomCode": "2601010625821",
+          "colors": []
         }
       ],
+      "careServices": [],
       "colors": [
-        "昆仑玻璃",
         "全网通版"
       ],
       "specs": {
-        "chip": "",
-        "battery": "5500mAh",
+        "chip": "麒麟9010",
+        "battery": "7000mAh",
         "screen": "undefined英寸",
         "charge": "100W",
         "refreshRate": "120Hz",
@@ -3994,34 +4068,36 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:23:08.157Z"
+    "fetchedAt": "2026-08-01T21:23:37.490Z"
   },
   "华为 nova 13": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "nova 15",
+      "title": "nova 16",
       "price": "¥ 2999",
-      "skuPrices": [],
-      "careServices": [
+      "skuPrices": [
         {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 199",
-          "sbomCode": "3201020116601"
+          "version": "12GB+256GB",
+          "price": "¥ 2999",
+          "sbomCode": "2601010625916",
+          "colors": []
         },
         {
-          "name": "HUAWEI Care+（两年期）",
-          "price": "¥ 349",
-          "sbomCode": "3201020135301"
+          "version": "12GB+512GB",
+          "price": "¥ 3499",
+          "sbomCode": "2601010625909",
+          "colors": []
         }
       ],
+      "careServices": [],
       "colors": [
         "全网通版"
       ],
       "specs": {
-        "chip": "麒麟8020",
-        "battery": "6000mAh",
-        "screen": "6.7英寸",
+        "chip": "麒麟9010",
+        "battery": "7000mAh",
+        "screen": "undefined英寸",
         "charge": "100W",
         "refreshRate": "120Hz",
         "screenTech": "OLED"
@@ -4029,7 +4105,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:23:45.117Z"
+    "fetchedAt": "2026-08-01T21:24:09.631Z"
   },
   "荣耀 Magic3 Pro": {
     "ok": true,
@@ -4056,21 +4132,27 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:50:28.671Z"
+    "fetchedAt": "2026-08-01T21:24:53.541Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "华为畅享 90 Pro Max",
-      "price": "¥ 1699",
+      "price": "¥ 1999",
       "skuPrices": [],
-      "careServices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 199",
+          "sbomCode": "3201020145301"
+        }
+      ],
       "colors": [
-        "晨曦金",
+        "曜金黑",
         "飞天青",
-        "雪域白",
-        "曜金黑"
+        "晨曦金",
+        "雪域白"
       ],
       "specs": {
         "chip": "麒麟8000",
@@ -4083,7 +4165,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:25:11.990Z"
+    "fetchedAt": "2026-08-01T21:25:29.204Z"
   },
   "荣耀 618": {
     "ok": false,
@@ -4091,14 +4173,14 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:25:50.340Z"
+    "fetchedAt": "2026-08-01T21:26:06.484Z"
   },
   "华为 畅享 90": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "华为畅享 90",
-      "price": "¥ 1599",
+      "price": "¥ 1299",
       "skuPrices": [],
       "careServices": [
         {
@@ -4108,22 +4190,22 @@
         }
       ],
       "colors": [
-        "星海蓝",
+        "羽沙白",
         "星空黑",
-        "羽沙白"
+        "星海蓝"
       ],
       "specs": {
         "chip": "麒麟8000",
         "battery": "6620mAh",
         "screen": "undefined英寸",
-        "charge": "120W",
+        "charge": "40W",
         "refreshRate": "",
         "screenTech": ""
       },
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:26:28.054Z"
+    "fetchedAt": "2026-08-01T21:26:39.240Z"
   },
   "荣耀 Magic3": {
     "ok": true,
@@ -4150,7 +4232,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-31T21:51:17.504Z"
+    "fetchedAt": "2026-08-01T21:27:24.272Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -4196,7 +4278,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:27:55.218Z"
+    "fetchedAt": "2026-08-01T21:28:01.060Z"
   },
   "荣耀 Power": {
     "ok": true,
@@ -4241,52 +4323,49 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:28:50.723Z"
+    "fetchedAt": "2026-08-01T21:28:49.905Z"
   },
   "荣耀 600": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "荣耀600 元气版",
-      "price": "¥ 2999",
+      "title": "荣耀600 超级版",
+      "price": "¥ 3299",
       "skuPrices": [
         {
           "version": "12GB+256GB",
-          "price": "¥ 2999"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥ 2699"
+          "price": "¥ 3299"
         },
         {
           "version": "12GB+512GB",
-          "price": "¥ 3399"
+          "price": "¥ 3699"
         }
       ],
       "careServices": [],
       "colors": [
+        "青苹果",
         "曜石黑",
-        "元气白",
-        "好事橙"
+        "光羽蓝",
+        "幸运星"
       ],
       "specs": {
         "chip": "第四代骁龙7",
-        "battery": "7000mAh",
+        "battery": "8600mAh",
         "screen": "6.57英寸",
         "charge": "80W",
         "refreshRate": "120Hz",
         "screenTech": "AMOLED"
       },
       "features": [
-        "7000mAh 80W荣耀超快充",
+        "8600mAh 荣耀青海湖电池 80W荣耀超快充",
         "第四代骁龙7 芯片",
         "6.57英寸 AMOLED 120Hz",
-        "5000万像素 广角摄像头"
+        "2亿像素 广角摄像头"
       ],
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:29:40.447Z"
+    "fetchedAt": "2026-08-01T21:29:42.154Z"
   },
   "荣耀 300": {
     "ok": false,
@@ -4294,7 +4373,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:30:17.994Z"
+    "fetchedAt": "2026-08-01T21:30:17.313Z"
   },
   "荣耀 300 Pro": {
     "ok": false,
@@ -4302,7 +4381,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:30:54.048Z"
+    "fetchedAt": "2026-08-01T21:30:53.135Z"
   },
   "荣耀 200": {
     "ok": false,
@@ -4310,7 +4389,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:31:30.835Z"
+    "fetchedAt": "2026-08-01T21:31:30.985Z"
   },
   "iQOO Z11i": {
     "ok": true,
@@ -4348,6 +4427,6 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-07-25T21:31:47.186Z"
+    "fetchedAt": "2026-08-01T21:31:47.723Z"
   }
 }
