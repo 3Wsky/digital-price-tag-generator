@@ -142,3 +142,6 @@ iQOO Z10 Turbo
 
 # Auto-discovered by node server.mjs --discover-models.
 iQOO Z11i
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 nova 16 SE
