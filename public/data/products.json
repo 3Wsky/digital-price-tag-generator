@@ -1911,7 +1911,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:15:56.031Z"
+    "fetchedAt": "2026-08-07T21:02:23.711Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2370,7 +2370,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:17:19.422Z"
+    "fetchedAt": "2026-08-07T21:03:01.963Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -3284,7 +3284,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:18:39.384Z"
+    "fetchedAt": "2026-08-07T21:03:46.635Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3732,7 +3732,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:20:03.155Z"
+    "fetchedAt": "2026-08-07T21:04:28.394Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3767,7 +3767,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:18:47.654Z"
+    "fetchedAt": "2026-08-07T21:05:01.210Z"
   },
   "荣耀 Magic5 Pro": {
     "ok": true,
@@ -3801,7 +3801,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:20:51.060Z"
+    "fetchedAt": "2026-08-07T21:05:43.554Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3836,7 +3836,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:20:13.676Z"
+    "fetchedAt": "2026-08-07T21:06:16.735Z"
   },
   "华为 nova 14": {
     "ok": true,
@@ -3872,7 +3872,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:20:48.039Z"
+    "fetchedAt": "2026-08-07T21:06:50.037Z"
   },
   "荣耀 Magic4": {
     "ok": true,
@@ -3900,7 +3900,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:21:39.740Z"
+    "fetchedAt": "2026-08-07T21:07:33.132Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3936,7 +3936,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:22:14.746Z"
+    "fetchedAt": "2026-08-07T21:08:07.392Z"
   },
   "荣耀 Magic4 Pro": {
     "ok": false,
@@ -3987,7 +3987,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:23:37.490Z"
+    "fetchedAt": "2026-08-07T21:08:37.326Z"
   },
   "华为 nova 13": {
     "ok": true,
@@ -4024,7 +4024,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:24:09.631Z"
+    "fetchedAt": "2026-08-07T21:09:07.520Z"
   },
   "荣耀 Magic3 Pro": {
     "ok": true,
@@ -4051,7 +4051,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:23:04.502Z"
+    "fetchedAt": "2026-08-07T21:09:49.952Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -4084,7 +4084,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:25:29.204Z"
+    "fetchedAt": "2026-08-07T21:10:24.484Z"
   },
   "荣耀 618": {
     "ok": false,
@@ -4092,14 +4092,14 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:26:06.484Z"
+    "fetchedAt": "2026-08-07T21:10:58.347Z"
   },
   "华为 畅享 90": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "华为畅享 90",
-      "price": "¥ 1299",
+      "price": "¥ 1599",
       "skuPrices": [],
       "careServices": [
         {
@@ -4109,9 +4109,9 @@
         }
       ],
       "colors": [
-        "羽沙白",
         "星空黑",
-        "星海蓝"
+        "星海蓝",
+        "羽沙白"
       ],
       "specs": {
         "chip": "麒麟8000",
@@ -4124,7 +4124,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:26:39.240Z"
+    "fetchedAt": "2026-08-07T21:11:31.550Z"
   },
   "荣耀 Magic3": {
     "ok": true,
@@ -4151,7 +4151,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T01:23:51.814Z"
+    "fetchedAt": "2026-08-07T21:12:13.529Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -4197,7 +4197,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:28:01.060Z"
+    "fetchedAt": "2026-08-07T21:12:50.284Z"
   },
   "荣耀 Power": {
     "ok": true,
@@ -4242,7 +4242,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:28:49.905Z"
+    "fetchedAt": "2026-08-07T21:13:36.802Z"
   },
   "荣耀 600": {
     "ok": true,
@@ -4284,7 +4284,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:29:42.154Z"
+    "fetchedAt": "2026-08-07T21:14:24.365Z"
   },
   "荣耀 300": {
     "ok": false,
@@ -4292,7 +4292,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:30:17.313Z"
+    "fetchedAt": "2026-08-07T21:14:58.401Z"
   },
   "荣耀 300 Pro": {
     "ok": false,
@@ -4300,7 +4300,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:30:53.135Z"
+    "fetchedAt": "2026-08-07T21:15:34.847Z"
   },
   "荣耀 200": {
     "ok": false,
@@ -4308,7 +4308,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:31:30.985Z"
+    "fetchedAt": "2026-08-07T21:16:10.597Z"
   },
   "iQOO Z11i": {
     "ok": true,
@@ -4346,7 +4346,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-01T21:31:47.723Z"
+    "fetchedAt": "2026-08-07T21:16:21.122Z"
   },
   "华为 nova 16 SE": {
     "ok": true,
