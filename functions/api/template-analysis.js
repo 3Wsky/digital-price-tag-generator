@@ -131,6 +131,22 @@ export function normalizeFastApiLines(payload) {
     .slice(0, 80)
 }
 
+function getVisionModelCandidates(env) {
+  const primary = env.FASTAPI_VISION_MODEL || DEFAULT_MODEL
+  const fallbacks = (env.FASTAPI_VISION_FALLBACKS || 'gpt-image2')
+    .split(',')
+    .map((model) => model.trim())
+    .filter(Boolean)
+  return Array.from(new Set([primary, ...fallbacks]))
+}
+
+function isModelAvailabilityError(response, payload) {
+  if (response.status === 404) return true
+  const message = payload?.error?.message
+  return typeof message === 'string'
+    && /model.*(?:does not exist|not exist|not found|access|permission)|模型.*(?:不存在|无权限|权限)/i.test(message)
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context
   const fetchImpl = typeof context.fetch === 'function' ? context.fetch : fetch
@@ -161,17 +177,26 @@ export async function onRequestPost(context) {
   const controller = new AbortController()
   const timeoutId = setTimeout(() => controller.abort(), 55_000)
   try {
-    const upstream = await fetchImpl(FASTAPI_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(buildFastApiRequest(imageDataUrl, env.FASTAPI_VISION_MODEL || DEFAULT_MODEL)),
-      signal: controller.signal,
-    })
+    const modelCandidates = getVisionModelCandidates(env)
+    let selectedModel = modelCandidates[0]
+    let upstream
+    let payload
+    for (let index = 0; index < modelCandidates.length; index += 1) {
+      selectedModel = modelCandidates[index]
+      upstream = await fetchImpl(FASTAPI_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(buildFastApiRequest(imageDataUrl, selectedModel)),
+        signal: controller.signal,
+      })
+      payload = await upstream.json().catch(() => null)
+      if (upstream.ok) break
+      if (!isModelAvailabilityError(upstream, payload) || index === modelCandidates.length - 1) break
+    }
 
-    const payload = await upstream.json().catch(() => null)
     if (!upstream.ok) {
       const upstreamMessage = payload?.error?.message
       const message = upstream.status === 401 || upstream.status === 403
@@ -191,7 +216,7 @@ export async function onRequestPost(context) {
 
     return jsonResponse({
       ok: true,
-      model: payload.model || env.FASTAPI_VISION_MODEL || DEFAULT_MODEL,
+      model: payload.model || selectedModel,
       lines,
     })
   } catch (error) {

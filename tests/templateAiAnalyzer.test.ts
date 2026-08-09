@@ -114,3 +114,41 @@ test('AI proxy forwards through the server and returns normalized lines', async 
   assert.equal(upstreamUrl, 'https://api.fastapi.ai/v1/chat/completions')
   assert.equal(upstreamAuthorization, 'Bearer test-only-key')
 })
+
+test('AI proxy retries gpt-image2 when the configured model is unavailable', async () => {
+  const request = new Request('https://tag.1go.im/api/template-analysis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Origin: 'https://tag.1go.im',
+    },
+    body: JSON.stringify({ imageDataUrl: 'data:image/jpeg;base64,ZmFrZQ==' }),
+  })
+  const attemptedModels: string[] = []
+  const response = await onRequestPost({
+    request,
+    env: {
+      FASTAPI_API_KEY: 'test-only-key',
+      FASTAPI_VISION_MODEL: 'gpt-4o',
+      FASTAPI_VISION_FALLBACKS: 'gpt-image2',
+    },
+    fetch: async (_url, options) => {
+      const body = JSON.parse(options.body)
+      attemptedModels.push(body.model)
+      if (body.model === 'gpt-4o') {
+        return new Response(JSON.stringify({
+          error: { message: 'The model does not exist or you do not have access to it.' },
+        }), { status: 404, headers: { 'Content-Type': 'application/json' } })
+      }
+      return new Response(JSON.stringify({
+        model: 'gpt-image2',
+        choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } })
+    },
+  })
+  const payload = await response.json()
+  assert.equal(response.status, 200)
+  assert.equal(payload.ok, true)
+  assert.equal(payload.model, 'gpt-image2')
+  assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-image2'])
+})
