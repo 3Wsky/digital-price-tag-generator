@@ -115,7 +115,7 @@ test('AI proxy forwards through the server and returns normalized lines', async 
   assert.equal(upstreamAuthorization, 'Bearer test-only-key')
 })
 
-test('AI proxy retries image2 when the configured model is unavailable', async () => {
+test('AI proxy retries gpt-image2 when the configured model is unavailable', async () => {
   const request = new Request('https://tag.1go.im/api/template-analysis', {
     method: 'POST',
     headers: {
@@ -130,7 +130,7 @@ test('AI proxy retries image2 when the configured model is unavailable', async (
     env: {
       FASTAPI_API_KEY: 'test-only-key',
       FASTAPI_VISION_MODEL: 'gpt-4o',
-      FASTAPI_VISION_FALLBACKS: 'image2',
+      FASTAPI_VISION_FALLBACKS: 'gpt-image2',
     },
     fetch: async (_url, options) => {
       const body = JSON.parse(options.body)
@@ -141,7 +141,7 @@ test('AI proxy retries image2 when the configured model is unavailable', async (
         }), { status: 404, headers: { 'Content-Type': 'application/json' } })
       }
       return new Response(JSON.stringify({
-        model: 'image2',
+        model: 'gpt-image2',
         choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
       }), { status: 200, headers: { 'Content-Type': 'application/json' } })
     },
@@ -149,6 +149,6 @@ test('AI proxy retries image2 when the configured model is unavailable', async (
   const payload = await response.json()
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
-  assert.equal(payload.model, 'image2')
-  assert.deepEqual(attemptedModels, ['gpt-4o', 'image2'])
+  assert.equal(payload.model, 'gpt-image2')
+  assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-image2'])
 })

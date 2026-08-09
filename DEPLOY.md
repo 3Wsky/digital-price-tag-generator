@@ -90,7 +90,7 @@ In the Cloudflare Pages project:
 1. Open `Settings` → `Variables and Secrets`.
 2. Add an encrypted production secret named `FASTAPI_API_KEY`.
 3. Optionally add `FASTAPI_VISION_MODEL=gpt-4o`.
-4. Optionally add `FASTAPI_VISION_FALLBACKS=image2`. If the primary model is unavailable for the key, the proxy retries these comma-separated model IDs in order.
+4. Optionally add `FASTAPI_VISION_FALLBACKS=gpt-image2`. If the primary model is unavailable for the key, the proxy retries these comma-separated model IDs in order.
 5. Add `ALLOWED_ORIGINS=https://tag.1go.im`.
 6. Redeploy the latest production commit after changing variables.
 

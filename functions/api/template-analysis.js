@@ -133,7 +133,7 @@ export function normalizeFastApiLines(payload) {
 
 function getVisionModelCandidates(env) {
   const primary = env.FASTAPI_VISION_MODEL || DEFAULT_MODEL
-  const fallbacks = (env.FASTAPI_VISION_FALLBACKS || 'image2')
+  const fallbacks = (env.FASTAPI_VISION_FALLBACKS || 'gpt-image2')
     .split(',')
     .map((model) => model.trim())
     .filter(Boolean)
