@@ -258,6 +258,63 @@ input[type='color'] {
   line-height: 1.45;
 }
 
+.template-import-section {
+  background: linear-gradient(180deg, #f0fdfa 0%, #ffffff 92%);
+}
+
+.template-import-copy {
+  margin-top: -4px;
+}
+
+.template-upload-button {
+  min-height: 42px;
+  border-color: #0f766e;
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.template-upload-button:hover {
+  border-color: #115e59;
+  background: #115e59;
+}
+
+.template-upload-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
+.template-progress {
+  margin-top: 12px;
+}
+
+.template-progress-track {
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ccfbf1;
+}
+
+.template-progress-track span {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  border-radius: inherit;
+  background: #0f766e;
+  transition: width 180ms ease;
+}
+
+.template-progress p,
+.template-privacy-note {
+  margin: 7px 0 0;
+  color: #475569;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.template-privacy-note {
+  color: #64748b;
+}
+
 .source-list {
   display: grid;
   gap: 6px;
@@ -498,7 +555,7 @@ input[type='color'] {
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: clip;
 }
 
 .tag-element.single-line {

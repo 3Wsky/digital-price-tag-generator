@@ -11,6 +11,7 @@ import {
   Loader2,
   Printer,
   Rows3,
+  ScanText,
   Search,
   ShieldCheck,
   Signal,
@@ -23,6 +24,12 @@ import {
 import html2canvas from 'html2canvas'
 import * as XLSX from 'xlsx'
 import { jsPDF } from 'jspdf'
+import {
+  analyzeTemplateImage,
+  constrainElementToBounds,
+  fitElementFontSize,
+  type TemplateAnalysisProgress,
+} from './templateImageAnalyzer'
 import './App.css'
 
 // ─── Types ───────────────────────────────────────────────────────────
@@ -278,7 +285,7 @@ const featureIconOptions: Array<{ key: FeatureIconKey; label: string; Icon: type
 const genericFootnote =
   '产品功能参数详见官网或咨询店员。\n1. 手机作为精密电子产品，跌落仍有损坏风险，请注意避免跌落碰撞。\n2. 规格、价格、库存、服务内容及活动政策请以门店实际销售口径为准。'
 
-const officialFootnote = (_brand: string) =>
+const officialFootnote = () =>
   genericFootnote
 
 const zhihuFootnote =
@@ -363,17 +370,17 @@ const appendExportFeatureIcon = (target: HTMLElement, iconKey: FeatureIconKey = 
   target.appendChild(svg)
 }
 
-function scaleElements(elements: TagElement[], sw: number, sh: number): TagElement[] {
+function scaleElements(elements: TagElement[], sw: number, sh: number, cardWidth: number, cardHeight: number): TagElement[] {
   if (sw === 1 && sh === 1) return elements
   const sf = (sw + sh) / 2
-  return elements.map((el) => ({
+  return elements.map((el) => constrainElementToBounds({
     ...el,
     x: Math.round(el.x * sw * 10) / 10,
     y: Math.round(el.y * sh * 10) / 10,
     width: Math.max(1, Math.round(el.width * sw * 10) / 10),
     height: Math.max(0.3, Math.round(el.height * sh * 10) / 10),
     fontSize: Math.round(el.fontSize * sf * 100) / 100,
-  }))
+  }, cardWidth, cardHeight))
 }
 
 function stripHtml(value = '') {
@@ -563,7 +570,7 @@ function extractColorNamesFromSearch(model: string, text: string) {
   // Fallback: if nothing found, try split-by-delimiter approach
   if (ranked.size === 0) {
     for (const w of windows) {
-      const segments = w.split(/[、，,\/；;]+/)
+      const segments = w.split(/[、，,/；;]+/)
       for (const seg of segments) {
         const match = seg.match(new RegExp(`^\\s*([一-龥]{2,3}(?:${colorEndings}))\\s*$`))
         if (!match) continue
@@ -733,7 +740,7 @@ function buildFallbackDraft(model: string): ProductDraft {
   }
 }
 
-export function buildDraftFromSearch(model: string, search: ZhihuItem[] | SearchBundle): ProductDraft {
+function buildDraftFromSearch(model: string, search: ZhihuItem[] | SearchBundle): ProductDraft {
   const items = Array.isArray(search)
     ? search
     : [...search.overview, ...search.sellingPoints, ...search.colors, ...search.prices, ...search.service]
@@ -894,12 +901,6 @@ function buildDraftFromOfficial(
   const services = isHuawei && product.careServices.length
     ? product.careServices.map(s => ({ label: s.name, price: s.price }))
     : []
-  const brandName = isHuawei ? '华为'
-    : /vivo/i.test(`${model} ${product.title}`) ? 'vivo'
-    : /荣耀|honor/i.test(`${model} ${product.title}`) ? '荣耀'
-    : /iphone|苹果|apple/i.test(`${model} ${product.title}`) ? 'Apple'
-    : '品牌'
-
   const sourceNotes = zhihuFeatureDraft
     ? ['官网数据：标题、价格、颜色、版本。', ...zhihuFeatureDraft.sourceNotes.slice(0, 3).map(text => `知乎卖点参考：${text}`)]
     : officialFeatureTexts.length ? officialFeatureTexts.map(text => `官网功能特色：${text}`) : ['仅使用官网数据生成。']
@@ -916,7 +917,7 @@ function buildDraftFromOfficial(
     service: services[0] ?? defaultServiceForBrand(model),
     services,
     footnote: isHuawei
-      ? officialFootnote(brandName)
+      ? officialFootnote()
       : isHonor && zhihuFeatureDraft
         ? genericFootnote
         : genericFootnote,
@@ -984,7 +985,7 @@ function computeLayout(paper: PaperConfig, cards: Card[]): LayoutItem[] {
     if (result.length > bestResult.length) bestResult = result
   }
 
-  let page = 0
+  const page = 0
   return bestResult.map((p, i) => {
     if (i > 0 && paper.width * paper.height > 0) {
       // all on same page for now
@@ -1222,6 +1223,8 @@ function App() {
   const [previewScale] = useState(4.5)
   const [fillPickerOpen, setFillPickerOpen] = useState(false)
   const [confirmDialog, setConfirmDialog] = useState<{ message: string; onConfirm: () => void } | null>(null)
+  const [isAnalyzingTemplate, setIsAnalyzingTemplate] = useState(false)
+  const [templateProgress, setTemplateProgress] = useState<TemplateAnalysisProgress | null>(null)
   const canvasRef = useRef<HTMLDivElement>(null)
   const [snapToGrid, setSnapToGrid] = useState(true)
   const [gridSize, setGridSize] = useState<2 | 5>(5)
@@ -1232,10 +1235,12 @@ function App() {
 
   useEffect(() => {
     if (selectedCard) {
+      // These controlled inputs intentionally mirror the newly selected card.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setInputWidth(String(selectedCard.width))
       setInputHeight(String(selectedCard.height))
     }
-  }, [state.selectedCardId])
+  }, [selectedCard])
 
   const printableScale = useMemo(
     () => selectedCard ? Math.min(720 / selectedCard.width, 700 / selectedCard.height, previewScale) : previewScale,
@@ -1246,6 +1251,8 @@ function App() {
   const paperKey = `${state.paper.width}x${state.paper.height}`
   const cardDims = selectedCard ? `${selectedCard.width}x${selectedCard.height}` : ''
   useEffect(() => {
+    // Paper/card changes intentionally reconcile the number of printable slots.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setState((s) => {
       const cw = s.cards[0]?.width ?? presets[0].width
       const ch = s.cards[0]?.height ?? presets[0].height
@@ -1296,12 +1303,12 @@ function App() {
       if (!card) return s
       const sw = newWidth / card.width
       const sh = newHeight / card.height
-      const scaledElements = scaleElements(card.elements, sw, sh)
+      const scaledElements = scaleElements(card.elements, sw, sh, newWidth, newHeight)
       return {
         ...s,
         cards: s.cards.map((c) =>
           c.id === cardId
-            ? { ...c, width: newWidth, height: newHeight, name: name ?? c.name, elements: scaledElements }
+            ? { ...c, width: newWidth, height: newHeight, name: c.customName ? c.name : (name ?? c.name), elements: scaledElements }
             : c,
         ),
       }
@@ -1530,6 +1537,7 @@ function App() {
   // ─── Capture & Export ────────────────────────────────────────────
 
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const templateImageInputRef = useRef<HTMLInputElement>(null)
 
   const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -1567,6 +1575,69 @@ function App() {
     e.target.value = ''
   }
 
+  const openTemplateImagePicker = () => {
+    if (!selectedCard) return
+    if (selectedCard.elements.length > 0) {
+      setConfirmDialog({
+        message: `照片识别会覆盖「${selectedCard.name || '当前价签'}」的现有内容，是否继续选择模板照片？`,
+        onConfirm: () => {
+          setConfirmDialog(null)
+          window.setTimeout(() => templateImageInputRef.current?.click(), 0)
+        },
+      })
+      return
+    }
+    templateImageInputRef.current?.click()
+  }
+
+  const handleTemplateImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (!file || !selectedCard) return
+    if (!file.type.startsWith('image/')) {
+      setTemplateProgress({ status: '请选择 JPG、PNG 或 WebP 图片。', progress: 0 })
+      return
+    }
+    if (file.size > 12 * 1024 * 1024) {
+      setTemplateProgress({ status: '图片超过 12MB，请压缩后再识别，避免浏览器内存不足。', progress: 0 })
+      return
+    }
+
+    const cardId = selectedCard.id
+    const cardWidth = selectedCard.width
+    const cardHeight = selectedCard.height
+    setIsAnalyzingTemplate(true)
+    setTemplateProgress({ status: '正在准备文字识别模型', progress: 0 })
+    try {
+      const result = await analyzeTemplateImage(file, cardWidth, cardHeight, setTemplateProgress)
+      if (!result.elements.length) {
+        setTemplateProgress({ status: '没有识别到可用文字，请换用清晰、正面拍摄的照片。', progress: 0 })
+        return
+      }
+      const templateName = file.name.replace(/\.[^.]+$/, '').trim() || '照片模板'
+      setState((current) => ({
+        ...current,
+        cards: current.cards.map((card) => card.id === cardId
+          ? { ...card, name: `${templateName} 模板`, customName: true, elements: result.elements as TagElement[] }
+          : card),
+        selectedCardId: cardId,
+        selectedElementId: '',
+        viewMode: 'card',
+      }))
+      setTemplateProgress({
+        status: `已识别 ${result.elements.length} 个文字元素，可继续调整内容、位置和实际尺寸。`,
+        progress: 1,
+      })
+    } catch (error) {
+      setTemplateProgress({
+        status: error instanceof Error ? `识别失败：${error.message}` : '识别失败，请换一张更清晰的照片。',
+        progress: 0,
+      })
+    } finally {
+      setIsAnalyzingTemplate(false)
+    }
+  }
+
   // ─── Capture & Export ────────────────────────────────────────────
   const captureCardImage = useCallback(async (card: Card) => {
     const scale = Math.min(720 / card.width, 700 / card.height, 4.5)
@@ -1589,7 +1660,7 @@ function App() {
         border-radius:${el.radius * scale}px;
         justify-content:${getAlignOffset(el.align)};
         text-align:${el.align};
-        font-size:${el.fontSize * scale}px;font-weight:${el.fontWeight};
+        font-size:${fitElementFontSize(el) * scale}px;font-weight:${el.fontWeight};
         line-height:1.08;white-space:${whiteSpace};overflow:hidden;
         padding:0.12em 0.2em;
       `
@@ -1860,7 +1931,7 @@ function App() {
                     borderRadius: (el.radius / item.card.width) * 100 + '%',
                     justifyContent: getAlignOffset(el.align),
                     textAlign: el.align,
-                    fontSize: (el.fontSize / item.card.width) * item.renderW * pageScale * 0.65 + 'px',
+                    fontSize: (fitElementFontSize(el) / item.card.width) * item.renderW * pageScale * 0.65 + 'px',
                     fontWeight: el.fontWeight,
                   }}
                 >
@@ -1918,7 +1989,7 @@ function App() {
                 borderRadius: element.radius * printableScale,
                 justifyContent: getAlignOffset(element.align),
                 textAlign: element.align,
-                fontSize: element.fontSize * printableScale,
+                fontSize: fitElementFontSize(element) * printableScale,
                 fontWeight: element.fontWeight,
               }}
             >
@@ -2012,7 +2083,7 @@ function App() {
                       let emptyIdx = 0
                       const scaled = s.cards.map((c) => {
                         const sw = w / c.width, sh = h / c.height
-                        const els = scaleElements(c.elements, sw, sh)
+                        const els = scaleElements(c.elements, sw, sh, w, h)
                         let newName: string
                         if (c.elements.length === 0 || !c.name) {
                           emptyIdx++
@@ -2098,6 +2169,37 @@ function App() {
             </>
           ) : (
             <>
+              {/* Photo Template Import */}
+              <div className="panel-section template-import-section">
+                <h2>照片生成模板</h2>
+                <p className="hint template-import-copy">上传标准价签照片，在浏览器本地识别文字和位置，并转换为可编辑元素。</p>
+                <input
+                  ref={templateImageInputRef}
+                  type="file"
+                  accept="image/jpeg,image/png,image/webp"
+                  style={{ display: 'none' }}
+                  onChange={handleTemplateImageUpload}
+                />
+                <button
+                  type="button"
+                  className="wide-action template-upload-button"
+                  disabled={isAnalyzingTemplate}
+                  onClick={openTemplateImagePicker}
+                >
+                  {isAnalyzingTemplate ? <Loader2 className="spin" size={17} /> : <ScanText size={17} />}
+                  {isAnalyzingTemplate ? '正在分析照片' : '上传模板照片并分析'}
+                </button>
+                {templateProgress ? (
+                  <div className="template-progress" role="status" aria-live="polite">
+                    <div className="template-progress-track">
+                      <span style={{ width: `${Math.round(templateProgress.progress * 100)}%` }} />
+                    </div>
+                    <p>{templateProgress.status}{isAnalyzingTemplate && templateProgress.progress > 0 ? ` ${Math.round(templateProgress.progress * 100)}%` : ''}</p>
+                  </div>
+                ) : null}
+                <p className="template-privacy-note">照片只在当前浏览器中处理，不会上传到项目服务器。</p>
+              </div>
+
               {/* Auto Generate */}
               <div className="panel-section">
                 <h2>自动生成</h2>
