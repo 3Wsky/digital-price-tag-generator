@@ -43,6 +43,7 @@ https://tag.1go.im
 - **静态数据加速**：线上版本优先读取预生成的 `products.json`，访问速度快，不依赖实时后端。
 - **傻瓜式操作**：输入型号即可生成初稿，适合门店员工快速使用。
 - **精细化控制**：支持进一步调整文字、颜色、图标、价格、规格、布局和打印效果。
+- **照片生成模板**：支持浏览器本地 OCR；识别不理想时可由用户主动使用 AI 深度识别。
 - **可视化编辑**：支持文字、价格、卖点、颜色、规格等模块的拖拽和编辑。
 - **多格式导出**：支持导出 PNG、PDF，也支持浏览器打印。
 - **批量数据更新**：可通过 GitHub Actions 定时刷新产品数据。
@@ -81,6 +82,8 @@ https://tag.1go.im
 - `html2canvas`
 - `jspdf`
 - `lucide-react`
+- `tesseract.js`
+- FastAPI.AI OpenAI 兼容视觉接口（可选）
 
 ## 本地运行
 
@@ -89,6 +92,14 @@ https://tag.1go.im
 ```powershell
 npm install
 ```
+
+如需在本地测试“AI 深度识别”，复制 `.env.example` 为 `.env`，填写 `FASTAPI_API_KEY` 后运行：
+
+```powershell
+npm run dev
+```
+
+密钥只允许放在本地 `.env` 或 Cloudflare 加密变量中，不能写入 `src/`、提交到 Git，或通过 `VITE_` 前缀暴露给浏览器。
 
 启动开发环境：
 

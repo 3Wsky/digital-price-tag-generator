@@ -7,7 +7,7 @@ This project is deployed as a static Cloudflare Pages site. Product data is pre-
 - Frontend: React + Vite, deployed to Cloudflare Pages.
 - Data source: `public/data/products.json` committed to GitHub.
 - Data refresh: GitHub Actions discovers new supported models, then runs `node server.mjs --build-data` on a schedule.
-- Runtime backend: none required on Cloudflare Pages.
+- Runtime backend: the optional `functions/api/template-analysis.js` Pages Function proxies AI deep recognition requests without exposing the API key.
 
 The original HTTP server is still useful for local development, but production reads static JSON first.
 
@@ -80,6 +80,22 @@ In Cloudflare dashboard:
    - Root directory: leave empty
    - Node.js version: `24` if available; otherwise set environment variable `NODE_VERSION=24`
 5. Deploy.
+
+### Configure AI deep recognition
+
+The normal photo OCR remains browser-local and requires no secret. The separate “AI 深度识别” button sends a compressed copy of the selected photo through a Cloudflare Pages Function.
+
+In the Cloudflare Pages project:
+
+1. Open `Settings` → `Variables and Secrets`.
+2. Add an encrypted production secret named `FASTAPI_API_KEY`.
+3. Optionally add `FASTAPI_VISION_MODEL=gpt-4o`.
+4. Add `ALLOWED_ORIGINS=https://tag.1go.im`.
+5. Redeploy the latest production commit after changing variables.
+
+Never use a `VITE_` prefix for the API key. Vite variables are embedded in browser JavaScript and would expose the credential.
+
+The proxy calls `POST https://api.fastapi.ai/v1/chat/completions` with structured JSON output. Configure Cloudflare rate limiting for `/api/template-analysis` if the public site receives untrusted or high-volume traffic.
 
 ## 5. Add a subdomain for `1go.im`
 
@@ -167,6 +183,6 @@ node server.mjs --build-data
 
 ## Notes
 
-- Cloudflare Pages cannot run Playwright or the Node scraping backend at request time.
+- Cloudflare Pages cannot run Playwright or the Node scraping backend at request time. The small AI proxy runs as a Pages Function and does not include the scraping backend.
 - Production therefore uses static JSON generated ahead of time.
 - If a user searches a model not in `data/models.txt`, the deployed static site will not be able to scrape it live. Add the model to `data/models.txt` and rerun the workflow.

@@ -15,6 +15,7 @@ import {
   Search,
   ShieldCheck,
   Signal,
+  Sparkles,
   Smartphone,
   Trash2,
   Upload,
@@ -30,6 +31,7 @@ import {
   fitElementFontSize,
   type TemplateAnalysisProgress,
 } from './templateImageAnalyzer'
+import { analyzeTemplateImageWithAi } from './templateAiAnalyzer'
 import './App.css'
 
 // ─── Types ───────────────────────────────────────────────────────────
@@ -1224,6 +1226,8 @@ function App() {
   const [fillPickerOpen, setFillPickerOpen] = useState(false)
   const [confirmDialog, setConfirmDialog] = useState<{ message: string; onConfirm: () => void } | null>(null)
   const [isAnalyzingTemplate, setIsAnalyzingTemplate] = useState(false)
+  const [isAiAnalyzingTemplate, setIsAiAnalyzingTemplate] = useState(false)
+  const [templateImageSource, setTemplateImageSource] = useState<{ file: File; cardId: string } | null>(null)
   const [templateProgress, setTemplateProgress] = useState<TemplateAnalysisProgress | null>(null)
   const canvasRef = useRef<HTMLDivElement>(null)
   const [snapToGrid, setSnapToGrid] = useState(true)
@@ -1606,6 +1610,7 @@ function App() {
     const cardId = selectedCard.id
     const cardWidth = selectedCard.width
     const cardHeight = selectedCard.height
+    setTemplateImageSource({ file, cardId })
     setIsAnalyzingTemplate(true)
     setTemplateProgress({ status: '正在准备文字识别模型', progress: 0 })
     try {
@@ -1635,6 +1640,46 @@ function App() {
       })
     } finally {
       setIsAnalyzingTemplate(false)
+    }
+  }
+
+  const handleAiTemplateAnalysis = async () => {
+    if (!selectedCard || !templateImageSource || templateImageSource.cardId !== selectedCard.id) {
+      setTemplateProgress({ status: '请先上传一张模板照片，再使用 AI 深度识别。', progress: 0 })
+      return
+    }
+
+    const cardId = selectedCard.id
+    const cardWidth = selectedCard.width
+    const cardHeight = selectedCard.height
+    setIsAiAnalyzingTemplate(true)
+    try {
+      const result = await analyzeTemplateImageWithAi(
+        templateImageSource.file,
+        cardWidth,
+        cardHeight,
+        setTemplateProgress,
+      )
+      setState((current) => ({
+        ...current,
+        cards: current.cards.map((card) => card.id === cardId
+          ? { ...card, elements: result.elements as TagElement[] }
+          : card),
+        selectedCardId: cardId,
+        selectedElementId: '',
+        viewMode: 'card',
+      }))
+      setTemplateProgress({
+        status: `AI 深度识别完成：${result.lineCount} 个文字元素（${result.model}），请重点复核价格和型号。`,
+        progress: 1,
+      })
+    } catch (error) {
+      setTemplateProgress({
+        status: error instanceof Error ? error.message : 'AI 深度识别失败，请稍后重试。',
+        progress: 0,
+      })
+    } finally {
+      setIsAiAnalyzingTemplate(false)
     }
   }
 
@@ -2180,15 +2225,27 @@ function App() {
                   style={{ display: 'none' }}
                   onChange={handleTemplateImageUpload}
                 />
-                <button
-                  type="button"
-                  className="wide-action template-upload-button"
-                  disabled={isAnalyzingTemplate}
-                  onClick={openTemplateImagePicker}
-                >
-                  {isAnalyzingTemplate ? <Loader2 className="spin" size={17} /> : <ScanText size={17} />}
-                  {isAnalyzingTemplate ? '正在分析照片' : '上传模板照片并分析'}
-                </button>
+                <div className="template-action-row">
+                  <button
+                    type="button"
+                    className="wide-action template-upload-button"
+                    disabled={isAnalyzingTemplate || isAiAnalyzingTemplate}
+                    onClick={openTemplateImagePicker}
+                  >
+                    {isAnalyzingTemplate ? <Loader2 className="spin" size={17} /> : <ScanText size={17} />}
+                    {isAnalyzingTemplate ? '正在本地识别' : '上传照片并识别'}
+                  </button>
+                  <button
+                    type="button"
+                    className="wide-action template-ai-button"
+                    disabled={isAnalyzingTemplate || isAiAnalyzingTemplate || templateImageSource?.cardId !== selectedCard?.id}
+                    onClick={handleAiTemplateAnalysis}
+                    title={templateImageSource?.cardId === selectedCard?.id ? '将当前照片发送给 AI 深度识别' : '请先上传模板照片'}
+                  >
+                    {isAiAnalyzingTemplate ? <Loader2 className="spin" size={17} /> : <Sparkles size={17} />}
+                    {isAiAnalyzingTemplate ? 'AI 识别中' : 'AI 深度识别'}
+                  </button>
+                </div>
                 {templateProgress ? (
                   <div className="template-progress" role="status" aria-live="polite">
                     <div className="template-progress-track">
@@ -2197,7 +2254,7 @@ function App() {
                     <p>{templateProgress.status}{isAnalyzingTemplate && templateProgress.progress > 0 ? ` ${Math.round(templateProgress.progress * 100)}%` : ''}</p>
                   </div>
                 ) : null}
-                <p className="template-privacy-note">照片只在当前浏览器中处理，不会上传到项目服务器。</p>
+                <p className="template-privacy-note">普通识别只在浏览器本地处理；仅在点击“AI 深度识别”后，压缩照片才会发送给第三方 AI 服务。</p>
               </div>
 
               {/* Auto Generate */}
