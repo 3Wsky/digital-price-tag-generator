@@ -266,6 +266,18 @@ input[type='color'] {
   margin-top: -4px;
 }
 
+.template-action-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.template-action-row .wide-action {
+  min-width: 0;
+  margin-top: 0;
+}
+
 .template-upload-button {
   min-height: 42px;
   border-color: #0f766e;
@@ -281,6 +293,25 @@ input[type='color'] {
 .template-upload-button:disabled {
   cursor: wait;
   opacity: 0.72;
+}
+
+.template-ai-button {
+  min-height: 42px;
+  border-color: #7c3aed;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #ffffff;
+}
+
+.template-ai-button:hover {
+  border-color: #6d28d9;
+  background: linear-gradient(135deg, #6d28d9, #4338ca);
+}
+
+.template-ai-button:disabled {
+  cursor: not-allowed;
+  border-color: #cbd5e1;
+  background: #e2e8f0;
+  color: #94a3b8;
 }
 
 .template-progress {

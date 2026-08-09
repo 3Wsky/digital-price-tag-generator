@@ -3,6 +3,7 @@ import http from 'node:http'
 import https from 'node:https'
 import { createServer as createViteServer } from 'vite'
 import { existsSync as fileExistsSync } from 'node:fs'
+import { onRequestPost as handleAiTemplateFunction } from './functions/api/template-analysis.js'
 
 const port = Number(process.env.PORT ?? 5173)
 const host = process.env.HOST ?? '127.0.0.1'
@@ -38,6 +39,28 @@ function fetchJson(url) {
       res.on('end', () => { try { resolve(JSON.parse(body)) } catch { reject(new Error('Invalid JSON')) } })
     }).on('error', reject)
   })
+}
+
+async function handleAiTemplateAnalysis(req, res) {
+  try {
+    const chunks = []
+    for await (const chunk of req) chunks.push(chunk)
+    const headers = new Headers()
+    for (const [name, value] of Object.entries(req.headers)) {
+      if (Array.isArray(value)) value.forEach((item) => headers.append(name, item))
+      else if (value !== undefined) headers.set(name, value)
+    }
+    const request = new Request(`http://${req.headers.host || `${host}:${port}`}/api/template-analysis`, {
+      method: 'POST',
+      headers,
+      body: Buffer.concat(chunks),
+    })
+    const response = await handleAiTemplateFunction({ request, env: process.env })
+    res.writeHead(response.status, Object.fromEntries(response.headers.entries()))
+    res.end(Buffer.from(await response.arrayBuffer()))
+  } catch {
+    sendJson(res, 500, { ok: false, message: '本地 AI 代理处理失败。' })
+  }
 }
 
 // ─── Zhihu Search ────────────────────────────────────────────────────
@@ -1744,6 +1767,14 @@ async function handleOfficialSearch(req, res) {
 // ─── Server ───────────────────────────────────────────────────────────
 
 const server = CLI_MODE ? null : http.createServer(async (req, res) => {
+  if (req.url?.startsWith('/api/template-analysis')) {
+    if (req.method !== 'POST') {
+      sendJson(res, 405, { ok: false, message: '请使用 POST 请求。' })
+      return
+    }
+    await handleAiTemplateAnalysis(req, res)
+    return
+  }
   if (req.url?.startsWith('/api/zhihu/global-search')) {
     await handleZhihuSearch(req, res)
     return
