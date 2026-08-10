@@ -1908,7 +1908,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:01:44.799Z"
+    "fetchedAt": "2026-08-10T21:05:01.459Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1936,7 +1936,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:02:29.900Z"
+    "fetchedAt": "2026-08-10T21:05:45.931Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2395,7 +2395,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:03:25.921Z"
+    "fetchedAt": "2026-08-10T21:06:19.856Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2832,7 +2832,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-04T21:32:30.801Z"
+    "fetchedAt": "2026-08-10T21:06:25.537Z"
   },
   "iQOO Z11x": {
     "ok": true,
@@ -2878,7 +2878,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-04T21:32:38.921Z"
+    "fetchedAt": "2026-08-10T21:06:30.301Z"
   },
   "iQOO Z11 Turbo": {
     "ok": true,
@@ -2925,58 +2925,70 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-04T21:32:47.398Z"
+    "fetchedAt": "2026-08-10T21:06:37.698Z"
   },
   "华为 Mate 80 RS": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "HUAWEI Mate 80 Pro Max",
+      "title": "HUAWEI Mate 80 Pro",
       "price": "¥ 7999",
       "skuPrices": [
         {
+          "version": "12GB+256GB",
+          "price": "¥ 5999",
+          "sbomCode": "2601010586419",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 6499",
+          "sbomCode": "2601010586421",
+          "colors": []
+        },
+        {
           "version": "16GB+512GB",
-          "price": "¥ 7999",
-          "sbomCode": "2601010586509",
+          "price": "¥ 6999",
+          "sbomCode": "2601010586425",
           "colors": []
         },
         {
           "version": "16GB+1TB",
-          "price": "¥ 8999",
-          "sbomCode": "2601010586513",
+          "price": "¥ 7999",
+          "sbomCode": "2601010586429",
           "colors": []
         }
       ],
       "careServices": [
         {
           "name": "HUAWEI Care+（两年期）",
-          "price": "¥ 899",
-          "sbomCode": "3201020129201"
+          "price": "¥ 699",
+          "sbomCode": "3201020129101"
         },
         {
           "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 499",
-          "sbomCode": "3201020129701"
+          "price": "¥ 399",
+          "sbomCode": "3201020129601"
         }
       ],
       "colors": [
-        "极夜黑",
-        "极地银",
-        "极昼金",
-        "极光青"
+        "晨曦金",
+        "曜石黑",
+        "雪域白",
+        "云杉绿"
       ],
       "specs": {
         "chip": "麒麟9030",
-        "battery": "6000mAh",
-        "screen": "6.9英寸",
+        "battery": "5750mAh",
+        "screen": "undefined英寸",
         "charge": "100W",
         "refreshRate": "120Hz",
-        "screenTech": "灵珑屏"
+        "screenTech": "OLED"
       },
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-04T21:33:22.446Z"
+    "fetchedAt": "2026-08-10T21:07:14.332Z"
   },
   "荣耀 Magic V6": {
     "ok": true,
@@ -3309,7 +3321,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:05:24.420Z"
+    "fetchedAt": "2026-08-10T21:08:01.523Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3757,7 +3769,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:06:11.038Z"
+    "fetchedAt": "2026-08-10T21:08:47.465Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3826,7 +3838,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:06:56.699Z"
+    "fetchedAt": "2026-08-10T21:09:35.741Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3925,7 +3937,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:07:45.212Z"
+    "fetchedAt": "2026-08-10T21:10:20.513Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -4076,7 +4088,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:08:33.410Z"
+    "fetchedAt": "2026-08-10T21:11:03.313Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -4176,7 +4188,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-09T21:09:20.706Z"
+    "fetchedAt": "2026-08-10T21:11:49.532Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
