@@ -55,16 +55,19 @@ test('FastAPI request uses structured image output without embedding credentials
   const dataUrl = 'data:image/jpeg;base64,ZmFrZQ=='
   const request = buildFastApiRequest(dataUrl, 'gpt-5.6-terra')
   assert.equal(request.model, 'gpt-5.6-terra')
-  assert.equal(request.reasoning_effort, 'low')
+  assert.equal(request.reasoning.effort, 'low')
   assert.equal('temperature' in request, false)
-  assert.equal(request.response_format.type, 'json_schema')
-  assert.equal(request.messages[1].content[1].image_url.url, dataUrl)
+  assert.equal(request.text.format.type, 'json_schema')
+  assert.equal(request.input[0].content[1].image_url, dataUrl)
   assert.equal(JSON.stringify(request).includes('Authorization'), false)
 })
 
 test('FastAPI structured response is sanitized before returning to the browser', () => {
   const payload = {
-    choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
+    output: [{
+      type: 'message',
+      content: [{ type: 'output_text', text: JSON.stringify({ lines: aiLines }) }],
+    }],
   }
   const lines = normalizeFastApiLines(payload)
   assert.deepEqual(lines, aiLines)
@@ -107,7 +110,10 @@ test('AI proxy forwards through the server and returns normalized lines', async 
       upstreamModel = JSON.parse(options.body).model
       return new Response(JSON.stringify({
         model: 'gpt-5.6-terra',
-        choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
+        output: [{
+          type: 'message',
+          content: [{ type: 'output_text', text: JSON.stringify({ lines: aiLines }) }],
+        }],
       }), { status: 200, headers: { 'Content-Type': 'application/json' } })
     },
   })
@@ -115,7 +121,7 @@ test('AI proxy forwards through the server and returns normalized lines', async 
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
   assert.deepEqual(payload.lines, aiLines)
-  assert.equal(upstreamUrl, 'https://api.fastapi.ai/v1/chat/completions')
+  assert.equal(upstreamUrl, 'https://api.fastapi.ai/v1/responses')
   assert.equal(upstreamAuthorization, 'Bearer test-only-key')
   assert.equal(upstreamModel, 'gpt-5.6-terra')
 })
@@ -147,7 +153,10 @@ test('AI proxy retries supported vision models and ignores image-generation mode
       }
       return new Response(JSON.stringify({
         model: 'gpt-5.5',
-        choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
+        output: [{
+          type: 'message',
+          content: [{ type: 'output_text', text: JSON.stringify({ lines: aiLines }) }],
+        }],
       }), { status: 200, headers: { 'Content-Type': 'application/json' } })
     },
   })

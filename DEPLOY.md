@@ -96,7 +96,7 @@ In the Cloudflare Pages project:
 
 Never use a `VITE_` prefix for the API key. Vite variables are embedded in browser JavaScript and would expose the credential.
 
-The proxy calls `POST https://api.fastapi.ai/v1/chat/completions` with structured JSON output. Configure Cloudflare rate limiting for `/api/template-analysis` if the public site receives untrusted or high-volume traffic.
+The proxy calls `POST https://api.fastapi.ai/v1/responses` with image input and structured JSON output. Configure Cloudflare rate limiting for `/api/template-analysis` if the public site receives untrusted or high-volume traffic.
 
 ## 5. Add a subdomain for `1go.im`
 
