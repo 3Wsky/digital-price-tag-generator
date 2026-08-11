@@ -5,6 +5,7 @@ import {
   normalizeAiTemplateLines,
 } from '../src/templateAiAnalyzer.ts'
 import {
+  buildFastApiChatRequest,
   buildFastApiRequest,
   normalizeFastApiLines,
   onRequestPost,
@@ -59,6 +60,16 @@ test('FastAPI request uses structured image output without embedding credentials
   assert.equal('temperature' in request, false)
   assert.equal(request.text.format.type, 'json_schema')
   assert.equal(request.input[0].content[1].image_url, dataUrl)
+  assert.equal(JSON.stringify(request).includes('Authorization'), false)
+})
+
+test('FastAPI chat request uses a structured vision message without embedding credentials', () => {
+  const dataUrl = 'data:image/jpeg;base64,ZmFrZQ=='
+  const request = buildFastApiChatRequest(dataUrl, 'gpt-5.5')
+  assert.equal(request.model, 'gpt-5.5')
+  assert.equal(request.reasoning_effort, 'low')
+  assert.equal(request.response_format.type, 'json_schema')
+  assert.equal(request.messages[1].content[1].image_url.url, dataUrl)
   assert.equal(JSON.stringify(request).includes('Authorization'), false)
 })
 
@@ -164,7 +175,13 @@ test('AI proxy retries supported vision models and ignores image-generation mode
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
   assert.equal(payload.model, 'gpt-5.5')
-  assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-5.6-terra', 'gpt-5.5'])
+  assert.deepEqual(attemptedModels, [
+    'gpt-4o',
+    'gpt-4o',
+    'gpt-5.6-terra',
+    'gpt-5.6-terra',
+    'gpt-5.5',
+  ])
 })
 
 test('AI proxy retries the next model when a successful response contains no visible lines', async () => {
@@ -202,7 +219,52 @@ test('AI proxy retries the next model when a successful response contains no vis
   assert.equal(payload.ok, true)
   assert.equal(payload.model, 'gpt-5.5')
   assert.deepEqual(payload.lines, aiLines)
-  assert.deepEqual(attemptedModels, ['gpt-5.6-terra', 'gpt-5.5'])
+  assert.deepEqual(attemptedModels, ['gpt-5.6-terra', 'gpt-5.6-terra', 'gpt-5.5'])
+})
+
+test('AI proxy falls back to chat completions when responses returns no visible lines', async () => {
+  const request = new Request('https://tag.1go.im/api/template-analysis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Origin: 'https://tag.1go.im',
+    },
+    body: JSON.stringify({ imageDataUrl: 'data:image/jpeg;base64,ZmFrZQ==' }),
+  })
+  const upstreamUrls: string[] = []
+  const response = await onRequestPost({
+    request,
+    env: {
+      FASTAPI_API_KEY: 'test-only-key',
+      FASTAPI_VISION_MODEL: 'gpt-5.5',
+    },
+    fetch: async (url) => {
+      upstreamUrls.push(String(url))
+      if (String(url).endsWith('/v1/responses')) {
+        return new Response(JSON.stringify({
+          model: 'gpt-5.5',
+          output: [{
+            type: 'message',
+            content: [{ type: 'output_text', text: JSON.stringify({ lines: [] }) }],
+          }],
+        }), { status: 200, headers: { 'Content-Type': 'application/json' } })
+      }
+      return new Response(JSON.stringify({
+        model: 'gpt-5.5',
+        choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } })
+    },
+  })
+  const payload = await response.json()
+  assert.equal(response.status, 200)
+  assert.equal(payload.ok, true)
+  assert.equal(payload.model, 'gpt-5.5')
+  assert.equal(payload.endpoint, 'chat_completions')
+  assert.deepEqual(payload.lines, aiLines)
+  assert.deepEqual(upstreamUrls, [
+    'https://api.fastapi.ai/v1/responses',
+    'https://api.fastapi.ai/v1/chat/completions',
+  ])
 })
 
 test('AI proxy reports target models visible to the application key after model failures', async () => {
@@ -236,8 +298,6 @@ test('AI proxy reports target models visible to the application key after model 
   assert.deepEqual(payload.attemptedModels, [
     'gpt-5.6-terra',
     'gpt-5.5',
-    'gpt-5.6-sol',
-    'gpt-5.6-luna',
   ])
   assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
   assert.equal(payload.modelsEndpointStatus, 200)
