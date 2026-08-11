@@ -1,8 +1,9 @@
 const FASTAPI_ENDPOINT = 'https://api.fastapi.ai/v1/responses'
 const FASTAPI_CHAT_ENDPOINT = 'https://api.fastapi.ai/v1/chat/completions'
 const FASTAPI_MODELS_ENDPOINT = 'https://api.fastapi.ai/v1/models'
-const DEFAULT_MODEL = 'gpt-5.6-terra'
-const DEFAULT_FALLBACK_MODELS = ['gpt-5.5']
+const DEFAULT_MODEL = 'gpt-5.5'
+const DEFAULT_FALLBACK_MODELS = ['gpt-5.6-terra']
+const ALLOWED_VISION_MODELS = new Set([DEFAULT_MODEL, ...DEFAULT_FALLBACK_MODELS])
 const MAX_IMAGE_BYTES = 6 * 1024 * 1024
 
 const RESPONSE_HEADERS = {
@@ -188,11 +189,11 @@ function getVisionModelCandidates(env) {
     .map((model) => model.trim())
     .filter(Boolean)
   return Array.from(new Set([
-    primary,
     DEFAULT_MODEL,
+    primary,
     ...fallbacks,
     ...DEFAULT_FALLBACK_MODELS,
-  ].filter(Boolean))).filter((model) => !/^gpt-image/i.test(model))
+  ].filter(Boolean))).filter((model) => ALLOWED_VISION_MODELS.has(model))
 }
 
 function isModelAvailabilityError(response, payload) {
@@ -265,18 +266,19 @@ export async function onRequestPost(context) {
     modelLoop: for (let index = 0; index < modelCandidates.length; index += 1) {
       selectedModel = modelCandidates[index]
       attemptedModels.push(selectedModel)
-      const endpoints = [
-        {
-          name: 'responses',
-          url: FASTAPI_ENDPOINT,
-          body: buildFastApiRequest(imageDataUrl, selectedModel),
-        },
-        {
-          name: 'chat_completions',
-          url: FASTAPI_CHAT_ENDPOINT,
-          body: buildFastApiChatRequest(imageDataUrl, selectedModel),
-        },
-      ]
+      const responsesEndpoint = {
+        name: 'responses',
+        url: FASTAPI_ENDPOINT,
+        body: buildFastApiRequest(imageDataUrl, selectedModel),
+      }
+      const chatEndpoint = {
+        name: 'chat_completions',
+        url: FASTAPI_CHAT_ENDPOINT,
+        body: buildFastApiChatRequest(imageDataUrl, selectedModel),
+      }
+      const endpoints = selectedModel === 'gpt-5.5'
+        ? [chatEndpoint, responsesEndpoint]
+        : [responsesEndpoint, chatEndpoint]
       for (const endpoint of endpoints) {
         selectedEndpoint = endpoint.name
         attemptedEndpoints.push(`${endpoint.name}:${selectedModel}`)

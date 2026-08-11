@@ -120,11 +120,8 @@ test('AI proxy forwards through the server and returns normalized lines', async 
       upstreamAuthorization = options.headers.Authorization
       upstreamModel = JSON.parse(options.body).model
       return new Response(JSON.stringify({
-        model: 'gpt-5.6-terra',
-        output: [{
-          type: 'message',
-          content: [{ type: 'output_text', text: JSON.stringify({ lines: aiLines }) }],
-        }],
+        model: 'gpt-5.5',
+        choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
       }), { status: 200, headers: { 'Content-Type': 'application/json' } })
     },
   })
@@ -132,12 +129,12 @@ test('AI proxy forwards through the server and returns normalized lines', async 
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
   assert.deepEqual(payload.lines, aiLines)
-  assert.equal(upstreamUrl, 'https://api.fastapi.ai/v1/responses')
+  assert.equal(upstreamUrl, 'https://api.fastapi.ai/v1/chat/completions')
   assert.equal(upstreamAuthorization, 'Bearer test-only-key')
-  assert.equal(upstreamModel, 'gpt-5.6-terra')
+  assert.equal(upstreamModel, 'gpt-5.5')
 })
 
-test('AI proxy retries supported vision models and ignores image-generation models', async () => {
+test('AI proxy only uses approved vision models and ignores extra configured models', async () => {
   const request = new Request('https://tag.1go.im/api/template-analysis', {
     method: 'POST',
     headers: {
@@ -175,13 +172,7 @@ test('AI proxy retries supported vision models and ignores image-generation mode
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
   assert.equal(payload.model, 'gpt-5.5')
-  assert.deepEqual(attemptedModels, [
-    'gpt-4o',
-    'gpt-4o',
-    'gpt-5.6-terra',
-    'gpt-5.6-terra',
-    'gpt-5.5',
-  ])
+  assert.deepEqual(attemptedModels, ['gpt-5.5'])
 })
 
 test('AI proxy retries the next model when a successful response contains no visible lines', async () => {
@@ -204,7 +195,7 @@ test('AI proxy retries the next model when a successful response contains no vis
     fetch: async (_url, options) => {
       const body = JSON.parse(options.body)
       attemptedModels.push(body.model)
-      const lines = body.model === 'gpt-5.5' ? aiLines : []
+      const lines = body.model === 'gpt-5.6-terra' ? aiLines : []
       return new Response(JSON.stringify({
         model: body.model,
         output: [{
@@ -217,12 +208,12 @@ test('AI proxy retries the next model when a successful response contains no vis
   const payload = await response.json()
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
-  assert.equal(payload.model, 'gpt-5.5')
+  assert.equal(payload.model, 'gpt-5.6-terra')
   assert.deepEqual(payload.lines, aiLines)
-  assert.deepEqual(attemptedModels, ['gpt-5.6-terra', 'gpt-5.6-terra', 'gpt-5.5'])
+  assert.deepEqual(attemptedModels, ['gpt-5.5', 'gpt-5.5', 'gpt-5.6-terra'])
 })
 
-test('AI proxy falls back to chat completions when responses returns no visible lines', async () => {
+test('AI proxy prefers chat completions for gpt-5.5', async () => {
   const request = new Request('https://tag.1go.im/api/template-analysis', {
     method: 'POST',
     headers: {
@@ -261,10 +252,7 @@ test('AI proxy falls back to chat completions when responses returns no visible 
   assert.equal(payload.model, 'gpt-5.5')
   assert.equal(payload.endpoint, 'chat_completions')
   assert.deepEqual(payload.lines, aiLines)
-  assert.deepEqual(upstreamUrls, [
-    'https://api.fastapi.ai/v1/responses',
-    'https://api.fastapi.ai/v1/chat/completions',
-  ])
+  assert.deepEqual(upstreamUrls, ['https://api.fastapi.ai/v1/chat/completions'])
 })
 
 test('AI proxy reports target models visible to the application key after model failures', async () => {
@@ -296,8 +284,8 @@ test('AI proxy reports target models visible to the application key after model 
   const payload = await response.json()
   assert.equal(response.status, 404)
   assert.deepEqual(payload.attemptedModels, [
-    'gpt-5.6-terra',
     'gpt-5.5',
+    'gpt-5.6-terra',
   ])
   assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
   assert.equal(payload.modelsEndpointStatus, 200)
@@ -329,7 +317,7 @@ test('AI proxy diagnoses model visibility after an authorization rejection', asy
   const payload = await response.json()
   assert.equal(response.status, 403)
   assert.match(payload.message, /This endpoint is not allowed/)
-  assert.deepEqual(payload.attemptedModels, ['gpt-5.6-terra'])
+  assert.deepEqual(payload.attemptedModels, ['gpt-5.5'])
   assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
   assert.equal(payload.modelsEndpointStatus, 200)
 })
