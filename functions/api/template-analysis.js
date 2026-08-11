@@ -1,7 +1,7 @@
 const FASTAPI_ENDPOINT = 'https://api.fastapi.ai/v1/responses'
 const FASTAPI_MODELS_ENDPOINT = 'https://api.fastapi.ai/v1/models'
 const DEFAULT_MODEL = 'gpt-5.6-terra'
-const DEFAULT_FALLBACK_MODELS = ['gpt-5.6-sol', 'gpt-5.5', 'gpt-5.6-luna']
+const DEFAULT_FALLBACK_MODELS = ['gpt-5.5', 'gpt-5.6-sol', 'gpt-5.6-luna']
 const MAX_IMAGE_BYTES = 6 * 1024 * 1024
 
 const RESPONSE_HEADERS = {
@@ -218,6 +218,7 @@ export async function onRequestPost(context) {
     const attemptedModels = []
     let upstream
     let payload
+    let lines = []
     for (let index = 0; index < modelCandidates.length; index += 1) {
       selectedModel = modelCandidates[index]
       attemptedModels.push(selectedModel)
@@ -231,7 +232,15 @@ export async function onRequestPost(context) {
         signal: controller.signal,
       })
       payload = await upstream.json().catch(() => null)
-      if (upstream.ok) break
+      if (upstream.ok) {
+        try {
+          lines = normalizeFastApiLines(payload)
+        } catch {
+          lines = []
+        }
+        if (lines.length || index === modelCandidates.length - 1) break
+        continue
+      }
       if (!isModelAvailabilityError(upstream, payload) || index === modelCandidates.length - 1) break
     }
 
@@ -261,9 +270,13 @@ export async function onRequestPost(context) {
       }, upstream.status >= 500 ? 502 : upstream.status)
     }
 
-    const lines = normalizeFastApiLines(payload)
     if (!lines.length) {
-      return jsonResponse({ ok: false, message: 'AI 没有识别到可用文字，请换一张更清晰的照片。' }, 422)
+      return jsonResponse({
+        ok: false,
+        message: 'AI 没有识别到可用文字，请换一张更清晰的照片。',
+        model: selectedModel,
+        attemptedModels,
+      }, 422)
     }
 
     return jsonResponse({

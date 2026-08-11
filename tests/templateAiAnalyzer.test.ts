@@ -167,6 +167,44 @@ test('AI proxy retries supported vision models and ignores image-generation mode
   assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-5.6-terra', 'gpt-5.5'])
 })
 
+test('AI proxy retries the next model when a successful response contains no visible lines', async () => {
+  const request = new Request('https://tag.1go.im/api/template-analysis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Origin: 'https://tag.1go.im',
+    },
+    body: JSON.stringify({ imageDataUrl: 'data:image/jpeg;base64,ZmFrZQ==' }),
+  })
+  const attemptedModels: string[] = []
+  const response = await onRequestPost({
+    request,
+    env: {
+      FASTAPI_API_KEY: 'test-only-key',
+      FASTAPI_VISION_MODEL: 'gpt-5.6-terra',
+      FASTAPI_VISION_FALLBACKS: 'gpt-5.5',
+    },
+    fetch: async (_url, options) => {
+      const body = JSON.parse(options.body)
+      attemptedModels.push(body.model)
+      const lines = body.model === 'gpt-5.5' ? aiLines : []
+      return new Response(JSON.stringify({
+        model: body.model,
+        output: [{
+          type: 'message',
+          content: [{ type: 'output_text', text: JSON.stringify({ lines }) }],
+        }],
+      }), { status: 200, headers: { 'Content-Type': 'application/json' } })
+    },
+  })
+  const payload = await response.json()
+  assert.equal(response.status, 200)
+  assert.equal(payload.ok, true)
+  assert.equal(payload.model, 'gpt-5.5')
+  assert.deepEqual(payload.lines, aiLines)
+  assert.deepEqual(attemptedModels, ['gpt-5.6-terra', 'gpt-5.5'])
+})
+
 test('AI proxy reports target models visible to the application key after model failures', async () => {
   const request = new Request('https://tag.1go.im/api/template-analysis', {
     method: 'POST',
@@ -197,8 +235,8 @@ test('AI proxy reports target models visible to the application key after model 
   assert.equal(response.status, 404)
   assert.deepEqual(payload.attemptedModels, [
     'gpt-5.6-terra',
-    'gpt-5.6-sol',
     'gpt-5.5',
+    'gpt-5.6-sol',
     'gpt-5.6-luna',
   ])
   assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
