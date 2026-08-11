@@ -4,6 +4,7 @@ import {
   constrainElementToBounds,
   createTemplateElementsFromLines,
   fitElementFontSize,
+  inferIconKey,
   type TemplateOcrLine,
   type TemplateTagElement,
 } from '../src/templateImageAnalyzer.ts'
@@ -34,6 +35,20 @@ test('OCR lines become bounded, non-overlapping editable elements', () => {
       assert.equal(overlaps, false)
     }
   }
+})
+
+test('feature text gets a similar editable icon without changing ordinary text', () => {
+  assert.equal(inferIconKey('长续航电池 5000mAh'), 'battery')
+  assert.equal(inferIconKey('A19 Pro 芯片'), 'chip')
+  assert.equal(inferIconKey('4800万像素相机'), 'camera')
+  assert.equal(inferIconKey('普通产品标题'), undefined)
+
+  const elements = createTemplateElementsFromLines([
+    { text: '支持 67W 快充', confidence: 95, bbox: { x0: 80, y0: 200, x1: 480, y1: 260 } },
+  ], 900, 1200, 75, 121)
+  assert.equal(elements[0]?.kind, 'iconSpec')
+  assert.equal(elements[0]?.iconKey, 'charge')
+  assert.equal(elements[0]?.iconColor, '#ffffff')
 })
 
 test('font fitting keeps long text complete inside a small box', () => {

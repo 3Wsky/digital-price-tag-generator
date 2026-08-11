@@ -14,6 +14,9 @@ export interface TemplateTagElement {
   background: string
   align: 'left' | 'center' | 'right'
   radius: number
+  iconKey?: 'battery' | 'chip' | 'eye' | 'volume' | 'signal' | 'shield' | 'charge' | 'camera' | 'phone'
+  iconBackground?: string
+  iconColor?: string
   singleLine?: boolean
 }
 
@@ -107,9 +110,23 @@ export function constrainElementToBounds<T extends TemplateTagElement>(element: 
   return { ...bounded, fontSize: fitElementFontSize(bounded) }
 }
 
+export function inferIconKey(text: string): TemplateTagElement['iconKey'] {
+  if (/(?:电池|续航|电量|耐久)/i.test(text)) return 'battery'
+  if (/(?:芯片|处理器|性能|CPU|A\d{2,})/i.test(text)) return 'chip'
+  if (/(?:相机|摄像|影像|拍照|镜头|像素)/i.test(text)) return 'camera'
+  if (/(?:屏幕|显示|亮度|视觉|色彩)/i.test(text)) return 'eye'
+  if (/(?:音频|扬声|音质|立体声|喇叭)/i.test(text)) return 'volume'
+  if (/(?:信号|通信|网络|Wi[ -]?Fi|定位)/i.test(text)) return 'signal'
+  if (/(?:防水|耐用|安全|防护|保修|保障)/i.test(text)) return 'shield'
+  if (/(?:快充|充电|功率|电源|无线充)/i.test(text)) return 'charge'
+  if (/(?:手机|轻薄|机身|便携|掌上)/i.test(text)) return 'phone'
+  return undefined
+}
+
 function inferKind(text: string, yRatio: number, heightRatio: number): TemplateElementKind {
   if (/(?:¥|￥|RMB|CNY|USD|\$)\s*[\d,.]+/i.test(text)) return 'price'
   if (yRatio > 0.86 || text.length > 45) return 'footnote'
+  if (inferIconKey(text)) return 'iconSpec'
   if (heightRatio > 0.045 && text.length <= 18) return 'badge'
   if (/[：:]|\d+(?:GB|TB|Hz|W|mAh|MP|英寸)/i.test(text)) return 'spec'
   return 'text'
@@ -179,6 +196,7 @@ export function createTemplateElementsFromLines(
     const paddingY = clamp(safeCardHeight * 0.004, 0.25, 0.8)
     const rawHeight = heightRatio * usableHeight + paddingY * 2
     const kind = inferKind(line.text, yRatio, heightRatio)
+    const iconKey = kind === 'iconSpec' ? inferIconKey(line.text) : undefined
     const isLarge = (line.bbox.y1 - line.bbox.y0) >= medianHeight * 1.35
     const desiredFontSize = clamp(rawHeight * 0.72, 1.1, Math.min(safeCardWidth, safeCardHeight) * 0.085)
     const element: TemplateTagElement = {
@@ -195,6 +213,9 @@ export function createTemplateElementsFromLines(
       background: 'transparent',
       align: kind === 'price' && xRatio > 0.52 ? 'right' : 'left',
       radius: 0,
+      iconKey,
+      iconBackground: kind === 'iconSpec' ? '#b96c6b' : undefined,
+      iconColor: kind === 'iconSpec' ? '#ffffff' : undefined,
       singleLine: true,
     }
     return constrainElementToBounds(element, safeCardWidth, safeCardHeight)
