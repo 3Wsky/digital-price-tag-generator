@@ -1,4 +1,5 @@
 const FASTAPI_ENDPOINT = 'https://api.fastapi.ai/v1/responses'
+const FASTAPI_MODELS_ENDPOINT = 'https://api.fastapi.ai/v1/models'
 const DEFAULT_MODEL = 'gpt-5.6-terra'
 const DEFAULT_FALLBACK_MODELS = ['gpt-5.6-sol', 'gpt-5.5', 'gpt-5.6-luna']
 const MAX_IMAGE_BYTES = 6 * 1024 * 1024
@@ -160,6 +161,28 @@ function isModelAvailabilityError(response, payload) {
     && /model.*(?:does not exist|not exist|not found|access|permission)|模型.*(?:不存在|无权限|权限)/i.test(message)
 }
 
+async function getAccessibleVisionModels(fetchImpl, apiKey, modelCandidates, signal) {
+  try {
+    const response = await fetchImpl(FASTAPI_MODELS_ENDPOINT, {
+      headers: { Authorization: `Bearer ${apiKey}` },
+      signal,
+    })
+    const payload = await response.json().catch(() => null)
+    if (!response.ok || !Array.isArray(payload?.data)) {
+      return { status: response.status, models: [] }
+    }
+    const availableIds = new Set(payload.data
+      .map((model) => model?.id)
+      .filter((id) => typeof id === 'string'))
+    return {
+      status: response.status,
+      models: modelCandidates.filter((model) => availableIds.has(model)),
+    }
+  } catch {
+    return { status: 0, models: [] }
+  }
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context
   const fetchImpl = typeof context.fetch === 'function' ? context.fetch : fetch
@@ -214,6 +237,9 @@ export async function onRequestPost(context) {
 
     if (!upstream.ok) {
       const upstreamMessage = payload?.error?.message
+      const modelAccess = isModelAvailabilityError(upstream, payload)
+        ? await getAccessibleVisionModels(fetchImpl, apiKey, modelCandidates, controller.signal)
+        : null
       const message = upstream.status === 401 || upstream.status === 403
         ? 'AI 接口密钥无效或没有模型权限。'
         : upstream.status === 429
@@ -227,6 +253,8 @@ export async function onRequestPost(context) {
         model: selectedModel,
         attemptedModels,
         endpoint: 'responses',
+        accessibleModels: modelAccess?.models,
+        modelsEndpointStatus: modelAccess?.status,
       }, upstream.status >= 500 ? 502 : upstream.status)
     }
 

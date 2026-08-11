@@ -166,3 +166,41 @@ test('AI proxy retries supported vision models and ignores image-generation mode
   assert.equal(payload.model, 'gpt-5.5')
   assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-5.6-terra', 'gpt-5.5'])
 })
+
+test('AI proxy reports target models visible to the application key after model failures', async () => {
+  const request = new Request('https://tag.1go.im/api/template-analysis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Origin: 'https://tag.1go.im',
+    },
+    body: JSON.stringify({ imageDataUrl: 'data:image/jpeg;base64,ZmFrZQ==' }),
+  })
+  const response = await onRequestPost({
+    request,
+    env: { FASTAPI_API_KEY: 'test-only-key' },
+    fetch: async (url) => {
+      if (String(url).endsWith('/v1/models')) {
+        return new Response(JSON.stringify({
+          data: [
+            { id: 'gpt-5.6-terra' },
+            { id: 'gpt-image-2' },
+          ],
+        }), { status: 200, headers: { 'Content-Type': 'application/json' } })
+      }
+      return new Response(JSON.stringify({
+        error: { message: 'The model does not exist or you do not have access to it.' },
+      }), { status: 404, headers: { 'Content-Type': 'application/json' } })
+    },
+  })
+  const payload = await response.json()
+  assert.equal(response.status, 404)
+  assert.deepEqual(payload.attemptedModels, [
+    'gpt-5.6-terra',
+    'gpt-5.6-sol',
+    'gpt-5.5',
+    'gpt-5.6-luna',
+  ])
+  assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
+  assert.equal(payload.modelsEndpointStatus, 200)
+})
