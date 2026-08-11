@@ -67,8 +67,9 @@ test('FastAPI chat request uses a structured vision message without embedding cr
   const dataUrl = 'data:image/jpeg;base64,ZmFrZQ=='
   const request = buildFastApiChatRequest(dataUrl, 'gpt-5.5')
   assert.equal(request.model, 'gpt-5.5')
+  assert.equal(request.max_completion_tokens, 2000)
   assert.equal(request.reasoning_effort, 'low')
-  assert.equal(request.response_format.type, 'json_schema')
+  assert.equal(request.response_format.type, 'json_object')
   assert.equal(request.messages[1].content[1].image_url.url, dataUrl)
   assert.equal(JSON.stringify(request).includes('Authorization'), false)
 })
