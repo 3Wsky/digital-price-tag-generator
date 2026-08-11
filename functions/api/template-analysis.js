@@ -237,11 +237,14 @@ export async function onRequestPost(context) {
 
     if (!upstream.ok) {
       const upstreamMessage = payload?.error?.message
-      const modelAccess = isModelAvailabilityError(upstream, payload)
+      const isAuthenticationError = upstream.status === 401 || upstream.status === 403
+      const modelAccess = isAuthenticationError || isModelAvailabilityError(upstream, payload)
         ? await getAccessibleVisionModels(fetchImpl, apiKey, modelCandidates, controller.signal)
         : null
-      const message = upstream.status === 401 || upstream.status === 403
-        ? 'AI 接口密钥无效或没有模型权限。'
+      const message = isAuthenticationError
+        ? typeof upstreamMessage === 'string' && upstreamMessage.length < 180
+          ? `AI 接口拒绝请求：${upstreamMessage}`
+          : 'AI 接口密钥无效或没有模型权限。'
         : upstream.status === 429
           ? 'AI 接口请求过于频繁或余额不足，请稍后重试。'
           : typeof upstreamMessage === 'string' && upstreamMessage.length < 180

@@ -204,3 +204,34 @@ test('AI proxy reports target models visible to the application key after model 
   assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
   assert.equal(payload.modelsEndpointStatus, 200)
 })
+
+test('AI proxy diagnoses model visibility after an authorization rejection', async () => {
+  const request = new Request('https://tag.1go.im/api/template-analysis', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Origin: 'https://tag.1go.im',
+    },
+    body: JSON.stringify({ imageDataUrl: 'data:image/jpeg;base64,ZmFrZQ==' }),
+  })
+  const response = await onRequestPost({
+    request,
+    env: { FASTAPI_API_KEY: 'test-only-key' },
+    fetch: async (url) => {
+      if (String(url).endsWith('/v1/models')) {
+        return new Response(JSON.stringify({
+          data: [{ id: 'gpt-5.6-terra' }],
+        }), { status: 200, headers: { 'Content-Type': 'application/json' } })
+      }
+      return new Response(JSON.stringify({
+        error: { message: 'This endpoint is not allowed for the application key.' },
+      }), { status: 403, headers: { 'Content-Type': 'application/json' } })
+    },
+  })
+  const payload = await response.json()
+  assert.equal(response.status, 403)
+  assert.match(payload.message, /This endpoint is not allowed/)
+  assert.deepEqual(payload.attemptedModels, ['gpt-5.6-terra'])
+  assert.deepEqual(payload.accessibleModels, ['gpt-5.6-terra'])
+  assert.equal(payload.modelsEndpointStatus, 200)
+})
