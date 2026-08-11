@@ -53,8 +53,10 @@ test('invalid or low-confidence AI lines are discarded and edge boxes are clampe
 
 test('FastAPI request uses structured image output without embedding credentials', () => {
   const dataUrl = 'data:image/jpeg;base64,ZmFrZQ=='
-  const request = buildFastApiRequest(dataUrl, 'gpt-4o')
-  assert.equal(request.model, 'gpt-4o')
+  const request = buildFastApiRequest(dataUrl, 'gpt-5.6-terra')
+  assert.equal(request.model, 'gpt-5.6-terra')
+  assert.equal(request.reasoning_effort, 'low')
+  assert.equal('temperature' in request, false)
   assert.equal(request.response_format.type, 'json_schema')
   assert.equal(request.messages[1].content[1].image_url.url, dataUrl)
   assert.equal(JSON.stringify(request).includes('Authorization'), false)
@@ -95,14 +97,16 @@ test('AI proxy forwards through the server and returns normalized lines', async 
   })
   let upstreamUrl = ''
   let upstreamAuthorization = ''
+  let upstreamModel = ''
   const response = await onRequestPost({
     request,
-    env: { FASTAPI_API_KEY: 'test-only-key', FASTAPI_VISION_MODEL: 'gpt-4o' },
+    env: { FASTAPI_API_KEY: 'test-only-key' },
     fetch: async (url, options) => {
       upstreamUrl = String(url)
       upstreamAuthorization = options.headers.Authorization
+      upstreamModel = JSON.parse(options.body).model
       return new Response(JSON.stringify({
-        model: 'gpt-4o',
+        model: 'gpt-5.6-terra',
         choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
       }), { status: 200, headers: { 'Content-Type': 'application/json' } })
     },
@@ -113,9 +117,10 @@ test('AI proxy forwards through the server and returns normalized lines', async 
   assert.deepEqual(payload.lines, aiLines)
   assert.equal(upstreamUrl, 'https://api.fastapi.ai/v1/chat/completions')
   assert.equal(upstreamAuthorization, 'Bearer test-only-key')
+  assert.equal(upstreamModel, 'gpt-5.6-terra')
 })
 
-test('AI proxy retries gpt-image2 when the configured model is unavailable', async () => {
+test('AI proxy retries supported vision models and ignores image-generation models', async () => {
   const request = new Request('https://tag.1go.im/api/template-analysis', {
     method: 'POST',
     headers: {
@@ -130,18 +135,18 @@ test('AI proxy retries gpt-image2 when the configured model is unavailable', asy
     env: {
       FASTAPI_API_KEY: 'test-only-key',
       FASTAPI_VISION_MODEL: 'gpt-4o',
-      FASTAPI_VISION_FALLBACKS: 'gpt-image2',
+      FASTAPI_VISION_FALLBACKS: 'gpt-image-2,gpt-5.5',
     },
     fetch: async (_url, options) => {
       const body = JSON.parse(options.body)
       attemptedModels.push(body.model)
-      if (body.model === 'gpt-4o') {
+      if (body.model !== 'gpt-5.5') {
         return new Response(JSON.stringify({
           error: { message: 'The model does not exist or you do not have access to it.' },
         }), { status: 404, headers: { 'Content-Type': 'application/json' } })
       }
       return new Response(JSON.stringify({
-        model: 'gpt-image2',
+        model: 'gpt-5.5',
         choices: [{ message: { content: JSON.stringify({ lines: aiLines }) } }],
       }), { status: 200, headers: { 'Content-Type': 'application/json' } })
     },
@@ -149,6 +154,6 @@ test('AI proxy retries gpt-image2 when the configured model is unavailable', asy
   const payload = await response.json()
   assert.equal(response.status, 200)
   assert.equal(payload.ok, true)
-  assert.equal(payload.model, 'gpt-image2')
-  assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-image2'])
+  assert.equal(payload.model, 'gpt-5.5')
+  assert.deepEqual(attemptedModels, ['gpt-4o', 'gpt-5.6-terra', 'gpt-5.5'])
 })

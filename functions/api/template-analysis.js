@@ -1,5 +1,6 @@
 const FASTAPI_ENDPOINT = 'https://api.fastapi.ai/v1/chat/completions'
-const DEFAULT_MODEL = 'gpt-4o'
+const DEFAULT_MODEL = 'gpt-5.6-terra'
+const DEFAULT_FALLBACK_MODELS = ['gpt-5.6-sol', 'gpt-5.5', 'gpt-5.6-luna']
 const MAX_IMAGE_BYTES = 6 * 1024 * 1024
 
 const RESPONSE_HEADERS = {
@@ -63,8 +64,8 @@ function imageByteLength(dataUrl) {
 export function buildFastApiRequest(imageDataUrl, model = DEFAULT_MODEL) {
   return {
     model,
-    temperature: 0,
     max_completion_tokens: 4000,
+    reasoning_effort: 'low',
     response_format: {
       type: 'json_schema',
       json_schema: TEMPLATE_SCHEMA,
@@ -132,12 +133,17 @@ export function normalizeFastApiLines(payload) {
 }
 
 function getVisionModelCandidates(env) {
-  const primary = env.FASTAPI_VISION_MODEL || DEFAULT_MODEL
-  const fallbacks = (env.FASTAPI_VISION_FALLBACKS || 'gpt-image2')
+  const primary = env.FASTAPI_VISION_MODEL?.trim()
+  const fallbacks = (env.FASTAPI_VISION_FALLBACKS || '')
     .split(',')
     .map((model) => model.trim())
     .filter(Boolean)
-  return Array.from(new Set([primary, ...fallbacks]))
+  return Array.from(new Set([
+    primary,
+    DEFAULT_MODEL,
+    ...fallbacks,
+    ...DEFAULT_FALLBACK_MODELS,
+  ].filter(Boolean))).filter((model) => !/^gpt-image/i.test(model))
 }
 
 function isModelAvailabilityError(response, payload) {
