@@ -145,3 +145,6 @@ iQOO Z11i
 
 # Auto-discovered by node server.mjs --discover-models.
 华为 nova 16 SE
+
+# Auto-discovered by node server.mjs --discover-models.
+荣耀 300 Ultra
