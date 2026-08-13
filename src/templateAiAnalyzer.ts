@@ -1,6 +1,7 @@
 import {
   createTemplateElementsFromLines,
   type TemplateAnalysisProgress,
+  type TemplateFontRole,
   type TemplateOcrLine,
   type TemplateTagElement,
 } from './templateImageAnalyzer.ts'
@@ -12,7 +13,14 @@ export interface AiTemplateLine {
   y: number
   width: number
   height: number
+  /** 语义字段：AI 判断的字号档位 / 加粗 / 对齐，缺省时由下游回退到 bbox 推断 */
+  fontRole?: TemplateFontRole
+  bold?: boolean
+  align?: 'left' | 'center' | 'right'
 }
+
+const FONT_ROLES: readonly TemplateFontRole[] = ['title', 'price', 'normal', 'small']
+const ALIGNS = ['left', 'center', 'right'] as const
 
 interface AiTemplateResponse {
   ok?: boolean
@@ -66,7 +74,7 @@ export function normalizeAiTemplateLines(value: unknown): AiTemplateLine[] {
   if (!Array.isArray(value)) return []
   return value
     .map((line) => {
-      const candidate = line as Partial<AiTemplateLine>
+      const candidate = line as Partial<AiTemplateLine> & { fontRole?: unknown; bold?: unknown; align?: unknown }
       return {
         text: typeof candidate.text === 'string' ? candidate.text.replace(/\s+/g, ' ').trim() : '',
         confidence: Number(candidate.confidence),
@@ -74,6 +82,14 @@ export function normalizeAiTemplateLines(value: unknown): AiTemplateLine[] {
         y: Number(candidate.y),
         width: Number(candidate.width),
         height: Number(candidate.height),
+        // 语义字段仅在取值合法时保留，缺省时由下游回退到 bbox 推断
+        ...(FONT_ROLES.includes(candidate.fontRole as TemplateFontRole)
+          ? { fontRole: candidate.fontRole as TemplateFontRole }
+          : {}),
+        ...(typeof candidate.bold === 'boolean' ? { bold: candidate.bold } : {}),
+        ...(ALIGNS.includes(candidate.align as (typeof ALIGNS)[number])
+          ? { align: candidate.align as (typeof ALIGNS)[number] }
+          : {}),
       }
     })
     .filter((line) => line.text
@@ -107,6 +123,9 @@ export function createTemplateElementsFromAiLines(
       x1: (line.x + line.width) * virtualWidth,
       y1: (line.y + line.height) * virtualHeight,
     },
+    fontRole: line.fontRole,
+    bold: line.bold,
+    align: line.align,
   }))
   return createTemplateElementsFromLines(ocrLines, virtualWidth, virtualHeight, cardWidth, cardHeight)
 }

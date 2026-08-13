@@ -52,6 +52,59 @@ test('invalid or low-confidence AI lines are discarded and edge boxes are clampe
   assert.ok(Math.abs(edge.height - 0.06) < 0.000001)
 })
 
+test('AI semantic fields are preserved and invalid values dropped', () => {
+  const lines = normalizeAiTemplateLines([
+    { text: '产品标题', confidence: 95, x: 0.1, y: 0.05, width: 0.5, height: 0.08, fontRole: 'title', bold: true, align: 'center' },
+    { text: '普通文字', confidence: 90, x: 0.1, y: 0.3, width: 0.4, height: 0.05, fontRole: 'huge', bold: 'yes', align: 'middle' },
+  ])
+  assert.equal(lines.length, 2)
+  assert.equal(lines[0].fontRole, 'title')
+  assert.equal(lines[0].bold, true)
+  assert.equal(lines[0].align, 'center')
+  assert.equal('fontRole' in lines[1], false)
+  assert.equal('bold' in lines[1], false)
+  assert.equal('align' in lines[1], false)
+})
+
+test('semantic fields drive element weight, alignment and font tiers', () => {
+  const elements = createTemplateElementsFromAiLines([
+    { text: '产品大标题', confidence: 96, x: 0.2, y: 0.05, width: 0.6, height: 0.09, fontRole: 'title', bold: true, align: 'center' },
+    { text: '细则说明文字', confidence: 90, x: 0.1, y: 0.9, width: 0.5, height: 0.03, fontRole: 'small', bold: false, align: 'left' },
+  ], 75, 121)
+  const title = elements.find((element) => element.text === '产品大标题')
+  const footnote = elements.find((element) => element.text === '细则说明文字')
+  assert.ok(title && footnote)
+  assert.equal(title.fontWeight, 800)
+  assert.equal(title.align, 'center')
+  assert.equal(footnote.fontWeight, 500)
+  assert.ok(title.fontSize > footnote.fontSize)
+})
+
+test('FastAPI lines keep valid semantic fields and drop invalid ones', () => {
+  const payload = {
+    output: [{
+      type: 'message',
+      content: [{
+        type: 'output_text',
+        text: JSON.stringify({
+          lines: [
+            { text: '¥ 6999', confidence: 99, x: 0.5, y: 0.4, width: 0.3, height: 0.08, fontRole: 'price', bold: true, align: 'right' },
+            { text: '说明', confidence: 88, x: 0.1, y: 0.7, width: 0.2, height: 0.03, fontRole: 'giant', bold: 1, align: 'top' },
+          ],
+        }),
+      }],
+    }],
+  }
+  const lines = normalizeFastApiLines(payload)
+  assert.equal(lines.length, 2)
+  assert.equal(lines[0].fontRole, 'price')
+  assert.equal(lines[0].bold, true)
+  assert.equal(lines[0].align, 'right')
+  assert.equal('fontRole' in lines[1], false)
+  assert.equal('bold' in lines[1], false)
+  assert.equal('align' in lines[1], false)
+})
+
 test('FastAPI request uses structured image output without embedding credentials', () => {
   const dataUrl = 'data:image/jpeg;base64,ZmFrZQ=='
   const request = buildFastApiRequest(dataUrl, 'gpt-5.6-terra')

@@ -20,10 +20,19 @@ export interface TemplateTagElement {
   singleLine?: boolean
 }
 
+/** AI 视觉识别给出的字号档位：大标题 / 价格 / 正文 / 脚注小字 */
+export type TemplateFontRole = 'title' | 'price' | 'normal' | 'small'
+
 export interface TemplateOcrLine {
   text: string
   confidence: number
   bbox: { x0: number; y0: number; x1: number; y1: number }
+  /** 语义字号档位（AI 路径提供），用于把字号归一到少数几档 */
+  fontRole?: TemplateFontRole
+  /** 文字是否加粗（AI 路径提供） */
+  bold?: boolean
+  /** 该行在版面中的对齐方式（AI 路径提供） */
+  align?: 'left' | 'center' | 'right'
 }
 
 export interface TemplateAnalysisProgress {
@@ -147,6 +156,15 @@ function removeLayoutCollisions(elements: TemplateTagElement[], cardWidth: numbe
     let next = constrainElementToBounds(source, cardWidth, cardHeight)
     for (const previous of placed) {
       if (!overlaps(next, previous)) continue
+      // 同一视觉行的重叠优先水平错开，保持原图的行结构；放不下再退回下移
+      const sameRow = Math.abs(centerYOf(next) - centerYOf(previous)) < Math.max(next.height, previous.height) * 0.5
+      if (sameRow) {
+        const shiftedX = previous.x + previous.width + 0.35
+        if (shiftedX + next.width <= cardWidth - margin + 0.01) {
+          next = constrainElementToBounds({ ...next, x: shiftedX }, cardWidth, cardHeight)
+          continue
+        }
+      }
       const shiftedY = previous.y + previous.height + 0.35
       next = constrainElementToBounds({ ...next, y: shiftedY }, cardWidth, cardHeight)
     }
@@ -164,6 +182,133 @@ function removeLayoutCollisions(elements: TemplateTagElement[], cardWidth: numbe
     height: element.height * scale,
     fontSize: element.fontSize * scale,
   }, cardWidth, cardHeight))
+}
+
+const centerYOf = (element: TemplateTagElement) => element.y + element.height / 2
+
+const median = (values: number[]) => {
+  const sorted = [...values].sort((a, b) => a - b)
+  const middle = Math.floor(sorted.length / 2)
+  return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2
+}
+
+/** 参与字号统一的元素：有文字且不是纯图形类 */
+const hasClusterableFont = (element: TemplateTagElement) => (
+  Boolean(element.text.trim()) && !['divider', 'image', 'qr'].includes(element.kind)
+)
+
+/**
+ * 识别结果的排版归一：
+ * 1. 同一视觉行的元素垂直居中对齐（消除 bbox 抖动造成的错位）
+ * 2. 左边缘相近的元素对齐成列
+ * 3. 字号聚类成少数几档（有语义档位按档位统一，否则按数值聚类）
+ * 4. 统一字号后扩展单行元素的盒子，避免文字被二次压缩
+ */
+export function harmonizeTemplateLayout(
+  elements: TemplateTagElement[],
+  roleById: Map<string, TemplateFontRole | undefined>,
+  cardWidth: number,
+  cardHeight: number,
+): TemplateTagElement[] {
+  if (!elements.length) return elements
+  const result = elements.map((element) => ({ ...element }))
+
+  // 1. 行对齐：按 y 中心贪心分组，同组取平均中心
+  const byCenterY = [...result].sort((a, b) => centerYOf(a) - centerYOf(b))
+  const rows: TemplateTagElement[][] = []
+  for (const element of byCenterY) {
+    const lastRow = rows[rows.length - 1]
+    if (lastRow) {
+      const rowCenter = lastRow.reduce((sum, item) => sum + centerYOf(item), 0) / lastRow.length
+      const rowMinHeight = Math.min(...lastRow.map((item) => item.height))
+      const threshold = Math.min(element.height, rowMinHeight) * 0.6
+      if (Math.abs(centerYOf(element) - rowCenter) < threshold) {
+        lastRow.push(element)
+        continue
+      }
+    }
+    rows.push([element])
+  }
+  for (const row of rows) {
+    if (row.length < 2) continue
+    const averageCenter = row.reduce((sum, item) => sum + centerYOf(item), 0) / row.length
+    for (const element of row) element.y = averageCenter - element.height / 2
+  }
+
+  // 2. 列对齐：左对齐元素的左边缘相近时归一
+  const columnThreshold = cardWidth * 0.02
+  const leftAligned = result.filter((element) => element.align === 'left').sort((a, b) => a.x - b.x)
+  const columns: TemplateTagElement[][] = []
+  for (const element of leftAligned) {
+    const lastColumn = columns[columns.length - 1]
+    if (lastColumn) {
+      const columnX = lastColumn.reduce((sum, item) => sum + item.x, 0) / lastColumn.length
+      if (Math.abs(element.x - columnX) < columnThreshold) {
+        lastColumn.push(element)
+        continue
+      }
+    }
+    columns.push([element])
+  }
+  for (const column of columns) {
+    if (column.length < 2) continue
+    const averageX = column.reduce((sum, item) => sum + item.x, 0) / column.length
+    for (const element of column) element.x = averageX
+  }
+
+  // 3. 字号聚类
+  const cardMin = Math.min(cardWidth, cardHeight)
+  const roleFontRange: Record<TemplateFontRole, [number, number]> = {
+    title: [cardMin * 0.045, cardMin * 0.12],
+    price: [cardMin * 0.04, cardMin * 0.13],
+    normal: [1.4, cardMin * 0.055],
+    small: [1, cardMin * 0.035],
+  }
+  const withRole = result.filter((element) => hasClusterableFont(element) && roleById.get(element.id))
+  const withoutRole = result.filter((element) => hasClusterableFont(element) && !roleById.get(element.id))
+
+  const roleGroups = new Map<TemplateFontRole, TemplateTagElement[]>()
+  for (const element of withRole) {
+    const role = roleById.get(element.id) as TemplateFontRole
+    const group = roleGroups.get(role) ?? []
+    group.push(element)
+    roleGroups.set(role, group)
+  }
+  for (const [role, group] of roleGroups) {
+    const [minSize, maxSize] = roleFontRange[role]
+    const unified = clamp(median(group.map((item) => item.fontSize)), minSize, maxSize)
+    for (const element of group) element.fontSize = unified
+  }
+
+  // 无语义档位时按数值单链聚类：相邻字号差 < 14% 视为同档
+  const byFontSize = [...withoutRole].sort((a, b) => a.fontSize - b.fontSize)
+  const clusters: TemplateTagElement[][] = []
+  for (const element of byFontSize) {
+    const lastCluster = clusters[clusters.length - 1]
+    const lastSize = lastCluster ? lastCluster[lastCluster.length - 1].fontSize : 0
+    if (lastCluster && element.fontSize <= lastSize * 1.14) lastCluster.push(element)
+    else clusters.push([element])
+  }
+  for (const cluster of clusters) {
+    if (cluster.length < 2) continue
+    const unified = clamp(median(cluster.map((item) => item.fontSize)), 1, cardMin * 0.13)
+    for (const element of cluster) element.fontSize = unified
+  }
+
+  // 4. 统一字号后保证盒子能容纳文字，避免渲染时字号被二次压小
+  for (const element of result) {
+    if (!element.singleLine || !hasClusterableFont(element)) continue
+    const widthFactor = element.kind === 'iconSpec' ? 0.72 : 1
+    const neededWidth = (textMeasureUnits(element.text) * element.fontSize) / (0.92 * widthFactor) + 0.6
+    if (neededWidth > element.width) element.width = Math.min(neededWidth, cardWidth - element.x)
+    const neededHeight = element.fontSize * 1.25
+    if (neededHeight > element.height) {
+      element.y = clamp(element.y - (neededHeight - element.height) / 2, 0, cardHeight - neededHeight)
+      element.height = Math.min(neededHeight, cardHeight - element.y)
+    }
+  }
+
+  return result.map((element) => constrainElementToBounds(element, cardWidth, cardHeight))
 }
 
 export function createTemplateElementsFromLines(
@@ -187,6 +332,7 @@ export function createTemplateElementsFromLines(
   const heights = cleanLines.map((line) => line.bbox.y1 - line.bbox.y0).sort((a, b) => a - b)
   const medianHeight = heights[Math.floor(heights.length / 2)] || safeImageHeight * 0.03
 
+  const roleById = new Map<string, TemplateFontRole | undefined>()
   const elements = cleanLines.map((line) => {
     const xRatio = clamp(line.bbox.x0 / safeImageWidth, 0, 1)
     const yRatio = clamp(line.bbox.y0 / safeImageHeight, 0, 1)
@@ -198,7 +344,14 @@ export function createTemplateElementsFromLines(
     const kind = inferKind(line.text, yRatio, heightRatio)
     const iconKey = kind === 'iconSpec' ? inferIconKey(line.text) : undefined
     const isLarge = (line.bbox.y1 - line.bbox.y0) >= medianHeight * 1.35
-    const desiredFontSize = clamp(rawHeight * 0.72, 1.1, Math.min(safeCardWidth, safeCardHeight) * 0.085)
+    // 有语义档位时允许更大的字号上限（价格/标题可占卡片短边 13%）
+    const fontCeiling = Math.min(safeCardWidth, safeCardHeight) * (line.fontRole === 'title' || line.fontRole === 'price' ? 0.13 : 0.085)
+    const desiredFontSize = clamp(rawHeight * 0.72, 1.1, fontCeiling)
+    // AI 明确给出加粗标记时优先采纳；价格始终加粗
+    const inferredBold = kind === 'price' || kind === 'badge' || isLarge
+    const fontWeight = line.bold === undefined
+      ? (inferredBold ? 800 : 500)
+      : (line.bold || kind === 'price' ? 800 : 500)
     const element: TemplateTagElement = {
       id: crypto.randomUUID(),
       kind,
@@ -208,20 +361,23 @@ export function createTemplateElementsFromLines(
       width: Math.max(5, widthRatio * usableWidth + paddingX * 2),
       height: Math.max(2.2, rawHeight),
       fontSize: desiredFontSize,
-      fontWeight: kind === 'price' || kind === 'badge' || isLarge ? 800 : 500,
+      fontWeight,
       color: kind === 'price' ? '#111827' : '#27303f',
       background: 'transparent',
-      align: kind === 'price' && xRatio > 0.52 ? 'right' : 'left',
+      align: line.align ?? (kind === 'price' && xRatio > 0.52 ? 'right' : 'left'),
       radius: 0,
       iconKey,
       iconBackground: kind === 'iconSpec' ? '#b96c6b' : undefined,
       iconColor: kind === 'iconSpec' ? '#ffffff' : undefined,
       singleLine: true,
     }
-    return constrainElementToBounds(element, safeCardWidth, safeCardHeight)
+    const bounded = constrainElementToBounds(element, safeCardWidth, safeCardHeight)
+    roleById.set(bounded.id, line.fontRole)
+    return bounded
   })
 
-  return removeLayoutCollisions(elements, safeCardWidth, safeCardHeight, margin)
+  const harmonized = harmonizeTemplateLayout(elements, roleById, safeCardWidth, safeCardHeight)
+  return removeLayoutCollisions(harmonized, safeCardWidth, safeCardHeight, margin)
 }
 
 function fallbackLinesFromText(text: string, imageWidth: number, imageHeight: number): TemplateOcrLine[] {
@@ -265,16 +421,75 @@ function collectOcrLines(blocks: unknown): TemplateOcrLine[] {
   return lines
 }
 
+/**
+ * OCR 前的图像预处理：小图放大到足够分辨率、灰度化、按 5%/95% 分位做对比度拉伸。
+ * 手机翻拍的价签照片普遍偏灰偏暗，预处理能明显提升 tesseract 的中文识别率。
+ */
+async function preprocessImageForOcr(file: File): Promise<{ blob: Blob; width: number; height: number }> {
+  const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
+  try {
+    const longEdge = Math.max(bitmap.width, bitmap.height)
+    const scale = longEdge < 1600 ? 1600 / longEdge : longEdge > 2600 ? 2600 / longEdge : 1
+    const width = Math.max(1, Math.round(bitmap.width * scale))
+    const height = Math.max(1, Math.round(bitmap.height * scale))
+    const canvas = document.createElement('canvas')
+    canvas.width = width
+    canvas.height = height
+    const context = canvas.getContext('2d', { willReadFrequently: true })
+    if (!context) throw new Error('当前浏览器无法处理图片。')
+    context.imageSmoothingQuality = 'high'
+    context.drawImage(bitmap, 0, 0, width, height)
+
+    const imageData = context.getImageData(0, 0, width, height)
+    const pixels = imageData.data
+    const histogram = new Uint32Array(256)
+    for (let index = 0; index < pixels.length; index += 4) {
+      const gray = Math.round(pixels[index] * 0.299 + pixels[index + 1] * 0.587 + pixels[index + 2] * 0.114)
+      pixels[index] = gray
+      pixels[index + 1] = gray
+      pixels[index + 2] = gray
+      histogram[gray] += 1
+    }
+    // 找 5% / 95% 分位灰度，线性拉伸到 0-255
+    const totalPixels = width * height
+    let cumulative = 0
+    let lowCut = 0
+    let highCut = 255
+    for (let level = 0; level < 256; level += 1) {
+      cumulative += histogram[level]
+      if (cumulative >= totalPixels * 0.05) { lowCut = level; break }
+    }
+    cumulative = 0
+    for (let level = 255; level >= 0; level -= 1) {
+      cumulative += histogram[level]
+      if (cumulative >= totalPixels * 0.05) { highCut = level; break }
+    }
+    const range = Math.max(1, highCut - lowCut)
+    for (let index = 0; index < pixels.length; index += 4) {
+      const stretched = clamp(((pixels[index] - lowCut) / range) * 255, 0, 255)
+      pixels[index] = stretched
+      pixels[index + 1] = stretched
+      pixels[index + 2] = stretched
+    }
+    context.putImageData(imageData, 0, 0)
+
+    const blob = await new Promise<Blob>((resolve, reject) => {
+      canvas.toBlob((value) => (value ? resolve(value) : reject(new Error('图片预处理失败。'))), 'image/png')
+    })
+    return { blob, width, height }
+  } finally {
+    bitmap.close()
+  }
+}
+
 export async function analyzeTemplateImage(
   file: File,
   cardWidth: number,
   cardHeight: number,
   onProgress?: (progress: TemplateAnalysisProgress) => void,
 ): Promise<TemplateAnalysisResult> {
-  const bitmap = await createImageBitmap(file, { imageOrientation: 'from-image' })
-  const imageWidth = bitmap.width
-  const imageHeight = bitmap.height
-  bitmap.close()
+  onProgress?.({ status: '正在预处理图片', progress: 0.02 })
+  const { blob, width: imageWidth, height: imageHeight } = await preprocessImageForOcr(file)
 
   const { createWorker, PSM } = await import('tesseract.js')
   const worker = await createWorker(['chi_sim', 'eng'], 1, {
@@ -287,7 +502,7 @@ export async function analyzeTemplateImage(
       preserve_interword_spaces: '1',
       user_defined_dpi: '300',
     })
-    const result = await worker.recognize(file, { rotateAuto: true }, { text: true, blocks: true })
+    const result = await worker.recognize(blob, { rotateAuto: true }, { text: true, blocks: true })
     const recognizedText = result.data.text.trim()
     const ocrLines = collectOcrLines(result.data.blocks)
     const lines = ocrLines.length ? ocrLines : fallbackLinesFromText(recognizedText, imageWidth, imageHeight)
