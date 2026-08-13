@@ -10,6 +10,7 @@ import {
   Layout,
   Loader2,
   Printer,
+  Redo2,
   Rows3,
   ScanText,
   Search,
@@ -18,6 +19,7 @@ import {
   Sparkles,
   Smartphone,
   Trash2,
+  Undo2,
   Upload,
   Volume2,
   Zap,
@@ -1207,6 +1209,59 @@ const initialState: AppState = {
   pageZoom: 1,
 }
 
+// ─── Smart Snap ──────────────────────────────────────────────────────
+
+interface SnapResult {
+  x: number | null
+  y: number | null
+  vLines: number[]
+  hLines: number[]
+}
+
+/** 拖拽吸附：将移动中的元素与其他元素的边缘/中线及卡片边缘/中心对齐（单位 mm） */
+function computeSnapPosition(
+  rawX: number,
+  rawY: number,
+  width: number,
+  height: number,
+  others: TagElement[],
+  cardWidth: number,
+  cardHeight: number,
+): SnapResult {
+  const tolerance = 0.8
+  const vTargets = [0, cardWidth / 2, cardWidth]
+  const hTargets = [0, cardHeight / 2, cardHeight]
+  for (const other of others) {
+    vTargets.push(other.x, other.x + other.width / 2, other.x + other.width)
+    hTargets.push(other.y, other.y + other.height / 2, other.y + other.height)
+  }
+  const vOffsets = [0, width / 2, width]
+  const hOffsets = [0, height / 2, height]
+
+  let bestV: { delta: number; x: number; line: number } | null = null
+  for (const target of vTargets) {
+    for (const offset of vOffsets) {
+      const candidate = target - offset
+      const delta = Math.abs(candidate - rawX)
+      if (delta < tolerance && (!bestV || delta < bestV.delta)) bestV = { delta, x: candidate, line: target }
+    }
+  }
+  let bestH: { delta: number; y: number; line: number } | null = null
+  for (const target of hTargets) {
+    for (const offset of hOffsets) {
+      const candidate = target - offset
+      const delta = Math.abs(candidate - rawY)
+      if (delta < tolerance && (!bestH || delta < bestH.delta)) bestH = { delta, y: candidate, line: target }
+    }
+  }
+  return {
+    x: bestV ? bestV.x : null,
+    y: bestH ? bestH.y : null,
+    vLines: bestV ? [bestV.line] : [],
+    hLines: bestH ? [bestH.line] : [],
+  }
+}
+
 // ─── Main App ────────────────────────────────────────────────────────
 
 function App() {
@@ -1219,9 +1274,14 @@ function App() {
   const [draft, setDraft] = useState<ProductDraft>(initialDraft)
   const [isGenerating, setIsGenerating] = useState(false)
   const [statusText, setStatusText] = useState('输入型号后可自动生成价签草稿。')
-  const [dragState, setDragState] = useState<{ id: string; startX: number; startY: number; baseX: number; baseY: number } | null>(null)
-  const [resizeState, setResizeState] = useState<{ id: string; startX: number; startY: number; baseW: number; baseH: number } | null>(null)
+  const [dragState, setDragState] = useState<{ id: string; startX: number; startY: number; baseX: number; baseY: number; bases: Array<{ id: string; x: number; y: number }> } | null>(null)
+  const [resizeState, setResizeState] = useState<{ id: string; startX: number; startY: number; baseW: number; baseH: number; baseFontSize: number } | null>(null)
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number; elementId: string } | null>(null)
+  // 多选集合（包含主选中元素）；框选矩形；拖拽吸附辅助线；双击内联编辑目标
+  const [multiSelectedIds, setMultiSelectedIds] = useState<string[]>([])
+  const [marquee, setMarquee] = useState<{ x0: number; y0: number; x1: number; y1: number } | null>(null)
+  const [snapLines, setSnapLines] = useState<{ v: number[]; h: number[] }>({ v: [], h: [] })
+  const [editingElementId, setEditingElementId] = useState<string | null>(null)
   const [previewScale] = useState(4.5)
   const [fillPickerOpen, setFillPickerOpen] = useState(false)
   const [confirmDialog, setConfirmDialog] = useState<{ message: string; onConfirm: () => void } | null>(null)
@@ -1236,6 +1296,69 @@ function App() {
 
   const selectedCard = state.cards.find((c) => c.id === state.selectedCardId) ?? null
   const selectedElement = selectedCard?.elements.find((e) => e.id === state.selectedElementId) ?? null
+  // 当前卡片内实际存在的多选元素（防御切卡后的悬空 id）
+  const multiSelectedElements = useMemo(
+    () => (selectedCard ? selectedCard.elements.filter((e) => multiSelectedIds.includes(e.id)) : []),
+    [selectedCard, multiSelectedIds],
+  )
+
+  // ─── Undo / Redo ─────────────────────────────────────────────────
+  // 历史栈存 cards 快照（不可变数据，直接持有引用即可）；
+  // mergeKey 相同且间隔 <900ms 的操作合并为一条历史（拖拽、连续输入等高频修改）
+  const historyRef = useRef<{ past: Card[][]; future: Card[][] }>({ past: [], future: [] })
+  const lastPushRef = useRef<{ key: string; time: number }>({ key: '', time: 0 })
+  const cardsRef = useRef(state.cards)
+  useEffect(() => {
+    cardsRef.current = state.cards
+  }, [state.cards])
+  // 撤销/重做按钮的可用状态（ref 不能驱动渲染，用 state 镜像）
+  const [historyMeta, setHistoryMeta] = useState({ canUndo: false, canRedo: false })
+
+  const syncHistoryMeta = useCallback(() => {
+    setHistoryMeta({
+      canUndo: historyRef.current.past.length > 0,
+      canRedo: historyRef.current.future.length > 0,
+    })
+  }, [])
+
+  const pushHistory = useCallback((mergeKey = '') => {
+    const now = Date.now()
+    const last = lastPushRef.current
+    if (mergeKey && last.key === mergeKey && now - last.time < 900) {
+      last.time = now
+      return
+    }
+    lastPushRef.current = { key: mergeKey, time: now }
+    const history = historyRef.current
+    history.past.push(cardsRef.current)
+    if (history.past.length > 60) history.past.shift()
+    history.future = []
+    syncHistoryMeta()
+  }, [syncHistoryMeta])
+
+  const undo = useCallback(() => {
+    const history = historyRef.current
+    const previous = history.past.pop()
+    if (!previous) return
+    history.future.push(cardsRef.current)
+    lastPushRef.current = { key: '', time: 0 }
+    setMultiSelectedIds([])
+    setEditingElementId(null)
+    setState((s) => ({ ...s, cards: previous, selectedElementId: '' }))
+    syncHistoryMeta()
+  }, [syncHistoryMeta])
+
+  const redo = useCallback(() => {
+    const history = historyRef.current
+    const next = history.future.pop()
+    if (!next) return
+    history.past.push(cardsRef.current)
+    lastPushRef.current = { key: '', time: 0 }
+    setMultiSelectedIds([])
+    setEditingElementId(null)
+    setState((s) => ({ ...s, cards: next, selectedElementId: '' }))
+    syncHistoryMeta()
+  }, [syncHistoryMeta])
 
   useEffect(() => {
     if (selectedCard) {
@@ -1284,13 +1407,15 @@ function App() {
   // ─── State Updaters ──────────────────────────────────────────────
 
   const updateCard = useCallback((cardId: string, patch: Partial<Card>) => {
+    pushHistory(`card:${cardId}:${Object.keys(patch).sort().join(',')}`)
     setState((s) => ({
       ...s,
       cards: s.cards.map((c) => (c.id === cardId ? { ...c, ...patch } : c)),
     }))
-  }, [])
+  }, [pushHistory])
 
   const updateElement = useCallback((cardId: string, elementId: string, patch: Partial<TagElement>) => {
+    pushHistory(`element:${elementId}:${Object.keys(patch).sort().join(',')}`)
     setState((s) => ({
       ...s,
       cards: s.cards.map((c) =>
@@ -1299,9 +1424,35 @@ function App() {
           : c,
       ),
     }))
-  }, [])
+  }, [pushHistory])
+
+  /** 批量平移一组元素（多选拖拽/方向键微调共用），一次 setState 完成 */
+  const moveElements = useCallback((cardId: string, bases: Array<{ id: string; x: number; y: number }>, dx: number, dy: number) => {
+    pushHistory(`move:${bases.map((b) => b.id).sort().join(',')}`)
+    setState((s) => {
+      const card = s.cards.find((c) => c.id === cardId)
+      if (!card) return s
+      const baseById = new Map(bases.map((b) => [b.id, b]))
+      return {
+        ...s,
+        cards: s.cards.map((c) => (c.id !== cardId ? c : {
+          ...c,
+          elements: c.elements.map((e) => {
+            const base = baseById.get(e.id)
+            if (!base) return e
+            return {
+              ...e,
+              x: clamp(base.x + dx, 0, c.width - e.width),
+              y: clamp(base.y + dy, 0, c.height - e.height),
+            }
+          }),
+        })),
+      }
+    })
+  }, [pushHistory])
 
   const setCardSize = useCallback((cardId: string, newWidth: number, newHeight: number, name?: string) => {
+    pushHistory()
     setState((s) => {
       const card = s.cards.find((c) => c.id === cardId)
       if (!card) return s
@@ -1317,7 +1468,7 @@ function App() {
         ),
       }
     })
-  }, [])
+  }, [pushHistory])
 
   // ─── Card Management ─────────────────────────────────────────────
 
@@ -1326,6 +1477,7 @@ function App() {
 
   const fillAllWithSelected = useCallback(() => {
     if (!selectedCard) return
+    pushHistory()
     setState((s) => {
       const source = s.cards.find((c) => c.id === s.selectedCardId)
       if (!source || source.elements.length === 0) return s
@@ -1342,10 +1494,11 @@ function App() {
         }),
       }
     })
-  }, [selectedCard])
+  }, [selectedCard, pushHistory])
 
   const fillToCard = useCallback((targetId: string) => {
     if (!selectedCard || selectedCard.id === targetId) return
+    pushHistory()
     setState((s) => {
       const source = s.cards.find((c) => c.id === s.selectedCardId)
       if (!source) return s
@@ -1358,12 +1511,13 @@ function App() {
         ),
       }
     })
-  }, [selectedCard])
+  }, [selectedCard, pushHistory])
 
   // ─── Element Management ──────────────────────────────────────────
 
   const duplicateSelectedElement = useCallback(() => {
     if (!selectedCard || !selectedElement) return
+    pushHistory()
     const copy: TagElement = {
       ...selectedElement, id: makeId(),
       x: clamp(selectedElement.x + 4, 0, selectedCard.width - selectedElement.width),
@@ -1376,20 +1530,25 @@ function App() {
       ),
       selectedElementId: copy.id,
     }))
-  }, [selectedCard, selectedElement])
+  }, [selectedCard, selectedElement, pushHistory])
 
-  const deleteSelectedElement = useCallback(() => {
-    if (!selectedCard || !selectedElement) return
+  /** 删除当前选中（多选优先，其次单选） */
+  const deleteSelectedElements = useCallback(() => {
+    if (!selectedCard) return
+    const ids = multiSelectedElements.length ? multiSelectedElements.map((e) => e.id) : (selectedElement ? [selectedElement.id] : [])
+    if (!ids.length) return
+    pushHistory()
     setState((s) => ({
       ...s,
       cards: s.cards.map((c) =>
         c.id === s.selectedCardId
-          ? { ...c, elements: c.elements.filter((e) => e.id !== s.selectedElementId) }
+          ? { ...c, elements: c.elements.filter((e) => !ids.includes(e.id)) }
           : c,
       ),
       selectedElementId: '',
     }))
-  }, [selectedCard, selectedElement])
+    setMultiSelectedIds([])
+  }, [selectedCard, selectedElement, multiSelectedElements, pushHistory])
 
   const addNewElement = useCallback((kind: ElementKind) => {
     if (!selectedCard) return
@@ -1406,6 +1565,7 @@ function App() {
       footnote: () => ({ id: makeId(), kind: 'footnote', text: '备注信息', x: 15, y: 80, width: 65, height: 12, fontSize: 1.5, fontWeight: 400, color: '#696969', background: 'transparent', align: 'left', radius: 0 }),
     }
     const el = defaults[kind]()
+    pushHistory()
     setState((s) => ({
       ...s,
       cards: s.cards.map((c) =>
@@ -1413,7 +1573,7 @@ function App() {
       ),
       selectedElementId: el.id,
     }))
-  }, [selectedCard])
+  }, [selectedCard, pushHistory])
 
   // ─── Draft Loading ───────────────────────────────────────────────
 
@@ -1465,6 +1625,7 @@ function App() {
   }
 
   const loadDraftIntoCard = useCallback((cardId: string, nextDraft: ProductDraft) => {
+    pushHistory()
     setState((s) => {
       const card = s.cards.find((c) => c.id === cardId)
       const cw = card?.width ?? presets[0].width
@@ -1479,7 +1640,7 @@ function App() {
         ),
       }
     })
-  }, [])
+  }, [pushHistory])
 
   const generateCurrent = async () => {
     const model = productModel.split('\n').map((l) => l.trim()).filter(Boolean)[0]
@@ -1805,8 +1966,26 @@ function App() {
 
   const onPointerDown = (event: React.PointerEvent, element: TagElement) => {
     if (!selectedCard) return
+    if (editingElementId) return
+    // Shift 点选：切换该元素的多选状态，不启动拖拽
+    if (event.shiftKey) {
+      const base = multiSelectedElements.map((e) => e.id)
+      const seed = base.length ? base : (state.selectedElementId ? [state.selectedElementId] : [])
+      const next = seed.includes(element.id) ? seed.filter((id) => id !== element.id) : [...seed, element.id]
+      setMultiSelectedIds(next)
+      setState((s) => ({ ...s, selectedElementId: next.includes(element.id) ? element.id : (next[next.length - 1] ?? '') }))
+      return
+    }
+    // 点击已多选的成员 → 整组拖动；否则重置为单选
+    const groupIds = multiSelectedElements.length > 1 && multiSelectedElements.some((e) => e.id === element.id)
+      ? multiSelectedElements.map((e) => e.id)
+      : [element.id]
+    setMultiSelectedIds(groupIds)
     setState((s) => ({ ...s, selectedElementId: element.id }))
-    setDragState({ id: element.id, startX: event.clientX, startY: event.clientY, baseX: element.x, baseY: element.y })
+    const bases = selectedCard.elements
+      .filter((e) => groupIds.includes(e.id))
+      .map((e) => ({ id: e.id, x: e.x, y: e.y }))
+    setDragState({ id: element.id, startX: event.clientX, startY: event.clientY, baseX: element.x, baseY: element.y, bases })
     event.currentTarget.setPointerCapture(event.pointerId)
   }
 
@@ -1814,17 +1993,22 @@ function App() {
     if (dragState && selectedCard) {
       const element = selectedCard.elements.find((e) => e.id === dragState.id)
       if (!element) return
-      let newX = dragState.baseX + (event.clientX - dragState.startX) / printableScale
-      let newY = dragState.baseY + (event.clientY - dragState.startY) / printableScale
-      
+      const rawX = dragState.baseX + (event.clientX - dragState.startX) / printableScale
+      const rawY = dragState.baseY + (event.clientY - dragState.startY) / printableScale
+      // 智能吸附优先；未命中时按网格取整
+      const movingIds = new Set(dragState.bases.map((b) => b.id))
+      const others = selectedCard.elements.filter((e) => !movingIds.has(e.id))
+      const snap = computeSnapPosition(rawX, rawY, element.width, element.height, others, selectedCard.width, selectedCard.height)
+      let newX = snap.x ?? rawX
+      let newY = snap.y ?? rawY
       if (snapToGrid) {
-        newX = Math.round(newX / gridSize) * gridSize
-        newY = Math.round(newY / gridSize) * gridSize
+        if (snap.x === null) newX = Math.round(newX / gridSize) * gridSize
+        if (snap.y === null) newY = Math.round(newY / gridSize) * gridSize
       }
-
       newX = clamp(newX, 0, selectedCard.width - element.width)
       newY = clamp(newY, 0, selectedCard.height - element.height)
-      updateElement(selectedCard.id, dragState.id, { x: newX, y: newY })
+      setSnapLines({ v: snap.vLines, h: snap.hLines })
+      moveElements(selectedCard.id, dragState.bases, newX - dragState.baseX, newY - dragState.baseY)
     }
     if (resizeState && selectedCard) {
       const element = selectedCard.elements.find((e) => e.id === resizeState.id)
@@ -1838,15 +2022,123 @@ function App() {
       }
 
       newW = Math.max(5, newW)
-      newH = Math.max(5, newH)
-      updateElement(selectedCard.id, resizeState.id, { width: newW, height: newH })
+      newH = Math.max(2, newH)
+      const patch: Partial<TagElement> = { width: newW, height: newH }
+      // 默认字号随高度等比缩放；按住 Alt 只改盒子不改字号
+      if (!event.altKey && resizeState.baseH > 0) {
+        const ratio = newH / resizeState.baseH
+        patch.fontSize = Math.round(clamp(resizeState.baseFontSize * ratio, 0.8, 120) * 100) / 100
+      }
+      updateElement(selectedCard.id, resizeState.id, patch)
+    }
+    if (marquee && canvasRef.current) {
+      const rect = canvasRef.current.getBoundingClientRect()
+      const x1 = clamp((event.clientX - rect.left) / printableScale, 0, selectedCard?.width ?? 0)
+      const y1 = clamp((event.clientY - rect.top) / printableScale, 0, selectedCard?.height ?? 0)
+      setMarquee((m) => (m ? { ...m, x1, y1 } : m))
     }
   }
 
   const onResizePointerDown = (event: React.PointerEvent, element: TagElement) => {
     event.stopPropagation()
-    setResizeState({ id: element.id, startX: event.clientX, startY: event.clientY, baseW: element.width, baseH: element.height })
+    setResizeState({ id: element.id, startX: event.clientX, startY: event.clientY, baseW: element.width, baseH: element.height, baseFontSize: element.fontSize })
     event.currentTarget.setPointerCapture(event.pointerId)
+  }
+
+  /** 画布空白处按下：清空选择并开始框选 */
+  const onCanvasPointerDown = (event: React.PointerEvent) => {
+    if (event.target !== event.currentTarget || !selectedCard || !canvasRef.current) return
+    setEditingElementId(null)
+    const rect = canvasRef.current.getBoundingClientRect()
+    const x = clamp((event.clientX - rect.left) / printableScale, 0, selectedCard.width)
+    const y = clamp((event.clientY - rect.top) / printableScale, 0, selectedCard.height)
+    setMarquee({ x0: x, y0: y, x1: x, y1: y })
+    setMultiSelectedIds([])
+    setState((s) => ({ ...s, selectedElementId: '' }))
+    event.currentTarget.setPointerCapture(event.pointerId)
+  }
+
+  /** 指针交互结束：结算框选、清理拖拽/缩放状态与吸附线，关闭历史合并窗口 */
+  const finishPointerInteraction = () => {
+    if (marquee && selectedCard) {
+      const minX = Math.min(marquee.x0, marquee.x1)
+      const maxX = Math.max(marquee.x0, marquee.x1)
+      const minY = Math.min(marquee.y0, marquee.y1)
+      const maxY = Math.max(marquee.y0, marquee.y1)
+      // 面积过小视为点击空白（仅清空选择）
+      if (maxX - minX > 1 || maxY - minY > 1) {
+        const hit = selectedCard.elements
+          .filter((e) => e.x < maxX && e.x + e.width > minX && e.y < maxY && e.y + e.height > minY)
+          .map((e) => e.id)
+        setMultiSelectedIds(hit)
+        if (hit.length) setState((s) => ({ ...s, selectedElementId: hit[hit.length - 1] }))
+      }
+      setMarquee(null)
+    }
+    setDragState(null)
+    setResizeState(null)
+    setSnapLines({ v: [], h: [] })
+    lastPushRef.current = { key: '', time: 0 }
+  }
+
+  // ─── Multi-select Align & Distribute ─────────────────────────────
+
+  const alignSelectedElements = (mode: 'left' | 'centerX' | 'right' | 'top' | 'centerY' | 'bottom') => {
+    if (!selectedCard || multiSelectedElements.length < 2) return
+    const ids = new Set(multiSelectedElements.map((e) => e.id))
+    const minX = Math.min(...multiSelectedElements.map((e) => e.x))
+    const maxRight = Math.max(...multiSelectedElements.map((e) => e.x + e.width))
+    const minY = Math.min(...multiSelectedElements.map((e) => e.y))
+    const maxBottom = Math.max(...multiSelectedElements.map((e) => e.y + e.height))
+    pushHistory()
+    setState((s) => ({
+      ...s,
+      cards: s.cards.map((c) => (c.id !== s.selectedCardId ? c : {
+        ...c,
+        elements: c.elements.map((e) => {
+          if (!ids.has(e.id)) return e
+          switch (mode) {
+            case 'left': return { ...e, x: minX }
+            case 'centerX': return { ...e, x: (minX + maxRight) / 2 - e.width / 2 }
+            case 'right': return { ...e, x: maxRight - e.width }
+            case 'top': return { ...e, y: minY }
+            case 'centerY': return { ...e, y: (minY + maxBottom) / 2 - e.height / 2 }
+            case 'bottom': return { ...e, y: maxBottom - e.height }
+            default: return e
+          }
+        }),
+      })),
+    }))
+  }
+
+  const distributeSelectedElements = (axis: 'h' | 'v') => {
+    if (!selectedCard || multiSelectedElements.length < 3) return
+    const sorted = [...multiSelectedElements].sort((a, b) => (axis === 'h' ? a.x - b.x : a.y - b.y))
+    const first = sorted[0]
+    const last = sorted[sorted.length - 1]
+    const totalSize = sorted.reduce((sum, e) => sum + (axis === 'h' ? e.width : e.height), 0)
+    const span = axis === 'h'
+      ? (last.x + last.width) - first.x
+      : (last.y + last.height) - first.y
+    const gap = (span - totalSize) / (sorted.length - 1)
+    const positions = new Map<string, number>()
+    let cursor = axis === 'h' ? first.x : first.y
+    for (const element of sorted) {
+      positions.set(element.id, cursor)
+      cursor += (axis === 'h' ? element.width : element.height) + gap
+    }
+    pushHistory()
+    setState((s) => ({
+      ...s,
+      cards: s.cards.map((c) => (c.id !== s.selectedCardId ? c : {
+        ...c,
+        elements: c.elements.map((e) => {
+          const position = positions.get(e.id)
+          if (position === undefined) return e
+          return axis === 'h' ? { ...e, x: position } : { ...e, y: position }
+        }),
+      })),
+    }))
   }
 
   // ─── Context Menu ─────────────────────────────────────────────
@@ -1862,6 +2154,7 @@ function App() {
       if (!selectedCard || !contextMenu) return
       const el = selectedCard.elements.find(e => e.id === contextMenu.elementId)
       if (!el) return
+      pushHistory()
       const newEl: TagElement = { ...el, id: makeId(), x: el.x + 5, y: el.y + 5 }
       setState((s) => ({
         ...s,
@@ -1872,15 +2165,22 @@ function App() {
     },
     delete: () => {
       if (!selectedCard || !contextMenu) return
+      // 右键目标属于多选集合时整组删除，否则只删目标元素
+      const ids = multiSelectedElements.some((e) => e.id === contextMenu.elementId)
+        ? multiSelectedElements.map((e) => e.id)
+        : [contextMenu.elementId]
+      pushHistory()
       setState((s) => ({
         ...s,
         selectedElementId: '',
-        cards: s.cards.map(c => c.id === selectedCard.id ? { ...c, elements: c.elements.filter(e => e.id !== contextMenu.elementId) } : c),
+        cards: s.cards.map(c => c.id === selectedCard.id ? { ...c, elements: c.elements.filter(e => !ids.includes(e.id)) } : c),
       }))
+      setMultiSelectedIds([])
       setContextMenu(null)
     },
     toFront: () => {
       if (!selectedCard || !contextMenu) return
+      pushHistory()
       setState((s) => ({
         ...s,
         cards: s.cards.map(c => {
@@ -1894,6 +2194,7 @@ function App() {
     },
     toBack: () => {
       if (!selectedCard || !contextMenu) return
+      pushHistory()
       setState((s) => ({
         ...s,
         cards: s.cards.map(c => {
@@ -1906,6 +2207,68 @@ function App() {
       setContextMenu(null)
     },
   }
+
+  // ─── Keyboard Shortcuts ───────────────────────────────────────────
+
+  useEffect(() => {
+    if (state.viewMode !== 'card') return
+    const onKeyDown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) return
+      const ctrl = event.ctrlKey || event.metaKey
+      const key = event.key.toLowerCase()
+      if (ctrl && key === 'z') {
+        event.preventDefault()
+        if (event.shiftKey) redo()
+        else undo()
+        return
+      }
+      if (ctrl && key === 'y') {
+        event.preventDefault()
+        redo()
+        return
+      }
+      if (ctrl && key === 'd') {
+        event.preventDefault()
+        duplicateSelectedElement()
+        return
+      }
+      if (event.key === 'Escape') {
+        setMultiSelectedIds([])
+        setEditingElementId(null)
+        setContextMenu(null)
+        setState((s) => ({ ...s, selectedElementId: '' }))
+        return
+      }
+      if (!selectedCard) return
+      const ids = multiSelectedElements.length
+        ? multiSelectedElements.map((e) => e.id)
+        : (state.selectedElementId ? [state.selectedElementId] : [])
+      if (!ids.length) return
+      if (event.key === 'Delete' || event.key === 'Backspace') {
+        event.preventDefault()
+        deleteSelectedElements()
+        return
+      }
+      // 方向键微调：0.5mm，按住 Shift 2mm
+      const step = event.shiftKey ? 2 : 0.5
+      const deltas: Record<string, [number, number]> = {
+        ArrowLeft: [-step, 0],
+        ArrowRight: [step, 0],
+        ArrowUp: [0, -step],
+        ArrowDown: [0, step],
+      }
+      const delta = deltas[event.key]
+      if (!delta) return
+      event.preventDefault()
+      const bases = selectedCard.elements
+        .filter((e) => ids.includes(e.id))
+        .map((e) => ({ id: e.id, x: e.x, y: e.y }))
+      moveElements(selectedCard.id, bases, delta[0], delta[1])
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [state.viewMode, state.selectedElementId, selectedCard, multiSelectedElements, undo, redo, duplicateSelectedElement, deleteSelectedElements, moveElements])
 
   // ─── Page View Render ────────────────────────────────────────────
 
@@ -2002,27 +2365,57 @@ function App() {
           <button type="button" className="back-btn" onClick={() => setState((s) => ({ ...s, viewMode: 'page' }))}>
             <Layout size={14} /> 返回页面视图
           </button>
+          <div className="history-buttons">
+            <button type="button" disabled={!historyMeta.canUndo} onClick={undo} title="撤销 (Ctrl+Z)">
+              <Undo2 size={14} /> 撤销
+            </button>
+            <button type="button" disabled={!historyMeta.canRedo} onClick={redo} title="重做 (Ctrl+Y)">
+              <Redo2 size={14} /> 重做
+            </button>
+          </div>
           <span>{selectedCard.width}mm x {selectedCard.height}mm</span>
         </div>
+        {multiSelectedElements.length >= 2 ? (
+          <div className="align-toolbar">
+            <span className="align-count">已选 {multiSelectedElements.length} 项</span>
+            <button type="button" onClick={() => alignSelectedElements('left')} title="左对齐">左</button>
+            <button type="button" onClick={() => alignSelectedElements('centerX')} title="水平居中">水平中</button>
+            <button type="button" onClick={() => alignSelectedElements('right')} title="右对齐">右</button>
+            <i className="align-divider" />
+            <button type="button" onClick={() => alignSelectedElements('top')} title="顶对齐">顶</button>
+            <button type="button" onClick={() => alignSelectedElements('centerY')} title="垂直居中">垂直中</button>
+            <button type="button" onClick={() => alignSelectedElements('bottom')} title="底对齐">底</button>
+            <i className="align-divider" />
+            <button type="button" disabled={multiSelectedElements.length < 3} onClick={() => distributeSelectedElements('h')} title="水平等间距">水平等距</button>
+            <button type="button" disabled={multiSelectedElements.length < 3} onClick={() => distributeSelectedElements('v')} title="垂直等间距">垂直等距</button>
+          </div>
+        ) : null}
         <div
           ref={canvasRef}
           className="tag-canvas"
           style={{ width: selectedCard.width * printableScale, height: selectedCard.height * printableScale }}
+          onPointerDown={onCanvasPointerDown}
           onPointerMove={onPointerMove}
-          onPointerUp={() => { setDragState(null); setResizeState(null) }}
-          onPointerLeave={() => { setDragState(null); setResizeState(null) }}
+          onPointerUp={finishPointerInteraction}
+          onPointerLeave={finishPointerInteraction}
         >
           {selectedCard.elements.map((element) => (
             <div
               role="button"
               tabIndex={0}
-              className={['tag-element', `kind-${element.kind}`, element.singleLine ? 'single-line' : '', element.id === state.selectedElementId ? 'selected' : ''].filter(Boolean).join(' ')}
+              className={[
+                'tag-element',
+                `kind-${element.kind}`,
+                element.singleLine ? 'single-line' : '',
+                element.id === state.selectedElementId ? 'selected' : '',
+                multiSelectedElements.length > 1 && multiSelectedIds.includes(element.id) ? 'multi-selected' : '',
+              ].filter(Boolean).join(' ')}
               key={element.id}
               onPointerDown={(e) => onPointerDown(e, element)}
               onContextMenu={(e) => onElementContextMenu(e, element)}
               onDoubleClick={() => {
-                const text = window.prompt('编辑内容', element.text)
-                if (text !== null) updateElement(selectedCard.id, element.id, { text })
+                if (['divider', 'qr', 'image'].includes(element.kind)) return
+                setEditingElementId(element.id)
               }}
               style={{
                 left: element.x * printableScale,
@@ -2041,12 +2434,59 @@ function App() {
               {element.kind === 'iconSpec' ? <FeatureIcon background={element.iconBackground} color={element.iconColor} iconKey={element.iconKey} /> : null}
               {element.kind === 'qr' ? <QrPreview /> : null}
               {element.kind === 'image' ? <ImagePreview /> : null}
-              {element.kind !== 'divider' ? <span>{element.text}</span> : null}
+              {element.kind !== 'divider' && element.id !== editingElementId ? <span>{element.text}</span> : null}
+              {element.id === editingElementId ? (
+                <textarea
+                  className="inline-editor"
+                  defaultValue={element.text}
+                  autoFocus
+                  onFocus={(e) => e.currentTarget.select()}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  onDoubleClick={(e) => e.stopPropagation()}
+                  onBlur={(e) => {
+                    const nextText = String(e.currentTarget.value)
+                    const cancelled = e.currentTarget.dataset.cancel === '1'
+                    if (!cancelled && nextText !== element.text) {
+                      // eslint-disable-next-line react-hooks/refs -- blur 事件处理器中提交文本，不在渲染期读 ref
+                      updateElement(selectedCard.id, element.id, { text: nextText })
+                    }
+                    setEditingElementId(null)
+                  }}
+                  onKeyDown={(e) => {
+                    e.stopPropagation()
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault()
+                      e.currentTarget.blur()
+                    }
+                    if (e.key === 'Escape') {
+                      e.currentTarget.dataset.cancel = '1'
+                      e.currentTarget.blur()
+                    }
+                  }}
+                />
+              ) : null}
               {element.id === state.selectedElementId ? (
                 <div className="resize-handle" onPointerDown={(e) => onResizePointerDown(e, element)} />
               ) : null}
             </div>
           ))}
+          {snapLines.v.map((x) => (
+            <div key={`v-${x}`} className="snap-line vertical" style={{ left: x * printableScale }} />
+          ))}
+          {snapLines.h.map((y) => (
+            <div key={`h-${y}`} className="snap-line horizontal" style={{ top: y * printableScale }} />
+          ))}
+          {marquee ? (
+            <div
+              className="marquee-box"
+              style={{
+                left: Math.min(marquee.x0, marquee.x1) * printableScale,
+                top: Math.min(marquee.y0, marquee.y1) * printableScale,
+                width: Math.abs(marquee.x1 - marquee.x0) * printableScale,
+                height: Math.abs(marquee.y1 - marquee.y0) * printableScale,
+              }}
+            />
+          ) : null}
           {contextMenu ? (
             <div className="context-menu" style={{ left: contextMenu.x, top: contextMenu.y }} onClick={() => setContextMenu(null)}>
               <button type="button" onClick={contextMenuActions.copy}>复制元素</button>
@@ -2426,7 +2866,7 @@ function App() {
 
                 <div className="action-row" style={{ marginTop: '20px', borderTop: '1px solid #e2e8f0', paddingTop: '15px' }}>
                   <button type="button" onClick={duplicateSelectedElement}><Copy size={16} />复制</button>
-                  <button type="button" className="danger" onClick={deleteSelectedElement}><Trash2 size={16} />删除</button>
+                  <button type="button" className="danger" onClick={deleteSelectedElements}><Trash2 size={16} />删除</button>
                 </div>
               </div>
             ) : selectedCard ? (
