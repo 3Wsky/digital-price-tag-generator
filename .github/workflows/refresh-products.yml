@@ -8,6 +8,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   refresh:
@@ -49,3 +50,34 @@ jobs:
         with:
           commit_message: "chore(data): refresh product data"
           file_pattern: data/models.txt data/dji-products.txt public/data/products.json public/data/dji-products.json
+
+      # 失败通知：定时任务挂掉时自动开 issue（已有未关闭的则追加评论），避免静默失败
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+            const body = `定时数据刷新任务失败，请查看运行日志排查：${runUrl}`
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'data-refresh-failure',
+            })
+            if (issues.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues[0].number,
+                body,
+              })
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: '数据刷新任务失败，需要人工排查',
+                body,
+                labels: ['data-refresh-failure'],
+              })
+            }
