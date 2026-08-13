@@ -154,6 +154,14 @@ const COMMON_HEADERS = {
 
 // ─── VMall (Huawei) Scraper ──────────────────────────────────────────
 
+// 归一化容量版本：兼容手机 "12GB+512GB"、笔记本/平板 "24GB 1TB"（空格分隔）等格式，
+// 统一输出 "24GB+1TB"，返回 { raw, version }；无内存+存储组合时返回 null（如手表）。
+function matchSkuVersion(text) {
+  const m = String(text || '').match(/(\d{1,2})\s*GB\s*[+＋\s]\s*(\d{2,4}\s*GB|[124]\s*TB)/i)
+  if (!m) return null
+  return { raw: m[0], version: `${m[1]}GB+${m[2].replace(/\s+/g, '').toUpperCase()}` }
+}
+
 function extractSkuPrices(html) {
   const skuMap = new Map()
   const pattern =
@@ -163,10 +171,11 @@ function extractSkuPrices(html) {
     const price = Number(match[2])
     const sbomAbbr = match[3]
     const sbomCode = match[4]
-    const version = sbomAbbr.match(/(\d{1,2}GB\+\d{3}GB|\d{1,2}GB\+1TB|\d{1,2}GB\+2TB)/)?.[1]
+    const versionHit = matchSkuVersion(sbomAbbr)
+    const version = versionHit?.version
     const color = sbomAbbr
       .replace(name, '')
-      .replace(version ?? '', '')
+      .replace(versionHit?.raw ?? '', '')
       .trim()
     if (!version || !price || price < 1000) continue
     const key = version
@@ -651,24 +660,40 @@ async function handleHonorSearch(req, res, model) {
     const modelNorm = modelClean.replace(/\s+/g, '')
 
     const modifierAlt = '(?:pro|plus|max|air|ultra|rsr|gt|mini|焕新版|青春版|活力版|标准版)'
-    const tokenRe = new RegExp(`荣耀\\s*([a-z0-9]+(?:\\s*${modifierAlt})*)`, 'i')
+    // 系列名支持中文前缀（平板/手表），如"荣耀平板X10 Pro"、"荣耀手表5 Ultra"、"荣耀平板MagicPad2"；
+    // 末尾允许小数尺寸后缀，用于区分"MagicPad3 Pro 12.3 / 13.3"这类同名双尺寸型号。
+    const tokenRe = new RegExp(`荣耀\\s*((?:平板|手表)?\\s*[a-z0-9]+(?:\\s*${modifierAlt})*(?:\\s*\\d{1,2}\\.\\d)?)`, 'i')
     const extractToken = (text) => {
       const m = text.replace(/^new\s+/i, '').match(tokenRe)
       return m ? m[1].toLowerCase().replace(/\s+/g, '') : ''
     }
-    const findMatch = (links) => {
+    // 返回按优先级排序的候选链接列表：带价格文本的商品卡优先（首页 banner 常指向
+    // 无法提取价格的营销/预约页），slug 匹配兜底。主流程会依次尝试，跳过失效商品页。
+    // 型号不带尺寸时容忍链接 token 尾部多出的小数尺寸（"MagicPad3" 可匹配 "MagicPad3 12.5"，
+    // 该系列在售仅一个尺寸时成立；带 Pro 等后缀的差异 token 仍严格区分）。
+    const findMatches = (links) => {
       const annotated = links
         .map((l) => ({ ...l, normModel: extractToken(l.text) }))
         .filter((l) => l.normModel)
-      return (
-        annotated.find((l) => l.normModel === modelNorm) ||
-        annotated.find((l) => {
-          const slug = l.href.match(/honor-([\w-]+)\//)?.[1]?.replace(/-/g, '') || ''
-          return slug === modelNorm
-        }) ||
-        null
-      )
+      const exact = annotated.filter((l) =>
+        l.normModel === modelNorm || l.normModel.replace(/\d{1,2}\.\d$/, '') === modelNorm)
+      const slugMatches = annotated.filter((l) => {
+        const slug = l.href.match(/honor-([\w-]+)\//)?.[1]?.replace(/-/g, '') || ''
+        return slug === modelNorm
+      })
+      const ordered = [
+        ...exact.filter((l) => /[¥￥]/.test(l.text)),
+        ...exact.filter((l) => !/[¥￥]/.test(l.text)),
+        ...slugMatches,
+      ]
+      const seen = new Set()
+      return ordered.filter((l) => {
+        if (seen.has(l.href)) return false
+        seen.add(l.href)
+        return true
+      })
     }
+    const findMatch = (links) => findMatches(links)[0] ?? null
 
     const collectShopLinks = async (url) => {
       await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 })
@@ -684,25 +709,37 @@ async function handleHonorSearch(req, res, model) {
         return Array.from(document.querySelectorAll('a[href*="/cn/shop/product/"]')).map((a) => ({
           href: a.href,
           text: (a.textContent || '').replace(/\s+/g, ' ').trim(),
-        })).filter((l) => l.text.length >= 3 && !l.text.includes('荣耀亲选'))
+        })).filter((l) => l.text.length >= 3
+          && !l.text.includes('荣耀亲选')
+          // 排除配件商品，避免"MagicPad3 智能键盘"这类链接抢先匹配平板本体
+          && !/键盘|保护套|表带|手写笔|笔尖|贴膜|充电底座|保护壳/.test(l.text))
       })
     }
 
-    let match = null
+    // 搜索页候选按需加载：搜索关键词去掉尾部小数尺寸（商城搜索对"MagicPad3 Pro 12.3"
+    // 这类词返回空，去掉尺寸能召回该系列全部尺寸，再由 token 精确区分）。
+    let searchTried = false
+    const fetchSearchCandidates = async () => {
+      searchTried = true
+      const searchKeyword = model.replace(/\s*\d{1,2}\.\d\s*$/, '').trim()
+      const searchLinks = await collectShopLinks(`https://www.honor.com/cn/shop/v/search?keyword=${encodeURIComponent(searchKeyword)}`)
+      return findMatches(searchLinks)
+    }
+
     const homeLinks = await collectShopLinks('https://www.honor.com/cn/shop/')
-    match = findMatch(homeLinks)
+    let candidates = findMatches(homeLinks)
 
-    if (!match) {
-      const searchLinks = await collectShopLinks(`https://www.honor.com/cn/shop/v/search?keyword=${encodeURIComponent(model)}`)
-      match = findMatch(searchLinks)
+    // 首页没有带价格文本的商品卡时（banner 常指向营销/预约页），先补搜索页候选
+    if (!candidates.some((l) => /[¥￥]/.test(l.text))) {
+      candidates = (await fetchSearchCandidates()).concat(candidates)
     }
 
-    if (!match && /power/i.test(modelClean)) {
+    if (!candidates.length && /power/i.test(modelClean)) {
       const shopLinks = await collectShopLinks('https://www.honor.com/cn/shop/v/search?categoryId=908')
-      match = findMatch(shopLinks)
+      candidates = findMatches(shopLinks)
     }
 
-    if (!match) {
+    if (!candidates.length) {
       await page.goto('https://www.honor.com/cn/phones/', { waitUntil: 'domcontentloaded', timeout: 20000 })
       await page.waitForTimeout(5000)
       const links = await page.evaluate(() => {
@@ -713,21 +750,47 @@ async function handleHonorSearch(req, res, model) {
           l.href.includes('honor-magic') || l.href.includes('honor-play') || l.href.includes('honor-x')
         )
       })
-      match = findMatch(links)
+      candidates = findMatches(links)
     }
 
-    if (!match) {
+    if (!candidates.length) {
       const result = { ok: false, source: 'official', message: '荣耀官网未找到该产品。', product: null }
       vmallCache.set(`honor_${model}`, result)
       sendJson(res, 200, result)
       return
     }
 
-    // Step 2: Visit product page
-    await page.goto(match.href, { waitUntil: 'domcontentloaded', timeout: 25000 })
-    await page.waitForTimeout(8000)
+    // Step 2: Visit product page.
+    // 首页缓存可能给出已下架的商品 ID（页面显示"找不到商品"），依次尝试候选直至进入有效页；
+    // 候选耗尽且未查过搜索页时，补充搜索页候选再试。
+    let match = null
+    let pageText = ''
+    const triedHrefs = new Set()
+    const queue = [...candidates]
+    while (queue.length && triedHrefs.size < 4) {
+      const candidate = queue.shift()
+      if (triedHrefs.has(candidate.href)) continue
+      triedHrefs.add(candidate.href)
+      await page.goto(candidate.href, { waitUntil: 'domcontentloaded', timeout: 25000 })
+      await page.waitForTimeout(8000)
+      pageText = await page.evaluate(() => document.body.innerText)
+      if (pageText.includes('找不到商品')) {
+        if (!queue.length && !searchTried) {
+          queue.push(...(await fetchSearchCandidates()).filter((l) => !triedHrefs.has(l.href)))
+        }
+        continue
+      }
+      match = candidate
+      break
+    }
 
-    const pageText = await page.evaluate(() => document.body.innerText)
+    if (!match) {
+      const result = { ok: false, source: 'official', message: '荣耀商城商品页已失效。', product: null }
+      vmallCache.set(`honor_${model}`, result)
+      sendJson(res, 200, result)
+      return
+    }
+
     const pageLines = pageText.split('\n').map(line => line.trim()).filter(Boolean)
 
     let title = await page.evaluate(() => document.title.split('-')[0].trim())
@@ -760,7 +823,9 @@ async function handleHonorSearch(req, res, model) {
       const els = document.querySelectorAll('[class*="color"] a, [class*="sku"] span, [data-color]')
       return Array.from(els).map(el => el.textContent?.trim()).filter(c => c && c.length >= 2 && c.length <= 6 && /[一-龥]/.test(c))
     })
-    const notColors = ['全部', '对比', '了解更多', '购买', '到货通知', '规格参数', '概述', '玩机技巧', '服务支持']
+    const notColors = ['全部', '对比', '了解更多', '购买', '到货通知', '规格参数', '概述', '玩机技巧', '服务支持',
+      // 支付/分期入口文本会混进 DOM 颜色提取（手表/平板页尤甚），一并排除
+      '花呗分期', '掌上生活分期', '白条分期', '抖音月付', '默认排序', '积分抵现', '以旧换新', '销量优先', '价格优先']
     for (const c of domColors) {
       if (!notColors.includes(c)) colorSet.add(c)
     }
@@ -828,10 +893,13 @@ async function handleHonorSearch(req, res, model) {
     const versionStart = pageLines.findIndex(line => line.includes('选择版本'))
     const versionEnd = pageLines.findIndex((line, index) => index > versionStart && line.includes('选择套餐'))
     const versions = versionStart >= 0 && versionEnd > versionStart
-      ? pageLines.slice(versionStart + 1, versionEnd).map(line => line.replace(/^5G全网通\s*/, '').trim()).filter(line => /\d+GB\+\d+GB/.test(line))
+      ? pageLines.slice(versionStart + 1, versionEnd).map(line => line.replace(/^5G全网通\s*/, '').trim()).filter(line => /\d+GB\+\d+(?:GB|TB)/.test(line))
       : []
     const skuPrices = versions.map(version => {
-      const skuPrice = honorSkuPrices.find(item => item.version === version)
+      // 页面版本名可能带"WiFi"等前缀（平板），归一化后做包含匹配，避免错用主价
+      const versionNorm = normModel(version)
+      const skuPrice = honorSkuPrices.find(item =>
+        normModel(item.version) === versionNorm || versionNorm.includes(normModel(item.version)))
       return { version, price: formatHonorPrice(skuPrice?.price) || price }
     })
     if (!skuPrices.length) {
@@ -925,12 +993,34 @@ function saveVivoLocalCache() {
 function vivoCacheKey(model) {
   const clean = normModel(model)
   const cleanNoBrand = vivoModelToken(model)
+  // vivo 与 iQOO 存在同名产品（如 Pad6 Pro），去品牌 token 相同，须先校验品牌一致
+  const wantIqoo = /iqoo/i.test(model)
   for (const key of Object.keys(vivoLocalCache)) {
+    if (/iqoo/i.test(key) !== wantIqoo) continue
     const keyClean = normModel(key)
     const keyNoBrand = vivoModelToken(key)
     if (keyClean === clean || keyNoBrand === cleanNoBrand) return key
   }
   return null
+}
+
+// 动态定位规格维度键：手机 SPU 的版本维度是 seq['0']，平板是 seq['3']（颜色是 seq['1']），
+// 以"值列表中出现 8GB+256GB 形式名称"为准找版本维度，品类无关。
+function findVivoVersionSeqKey(specItemSeq) {
+  for (const [key, list] of Object.entries(specItemSeq || {})) {
+    const names = (Array.isArray(list) ? list : []).map(v => typeof v === 'string' ? v : v?.name).filter(Boolean)
+    if (names.some(n => /\d+GB\+\d+(?:GB|TB)/i.test(n))) return key
+  }
+  return '0'
+}
+
+// 颜色维度：值列表带 #RRGGBB 色值的键
+function findVivoColorSeqKey(specItemSeq) {
+  for (const [key, list] of Object.entries(specItemSeq || {})) {
+    const first = (Array.isArray(list) ? list : [])[0]
+    if (first && typeof first === 'object' && /^#/.test(String(first.value || ''))) return key
+  }
+  return '1'
 }
 
 // Refresh only prices from Shop API for a cached product
@@ -947,18 +1037,19 @@ async function refreshVivoPrices(model, cached) {
     const result = { ...cached }
 
     // Fetch prices for one SKU per version (use first color variant)
+    const versionSeqKey = findVivoVersionSeqKey(info.data.specItem?.specItemSeq)
     const seenVersions = new Set()
     const skuIdsToFetch = []
     const versionMap = {}
-    if (info.data.specItem?.specItemSeq?.['0']) {
-      const vers = info.data.specItem.specItemSeq['0']
+    if (info.data.specItem?.specItemSeq?.[versionSeqKey]) {
+      const vers = info.data.specItem.specItemSeq[versionSeqKey]
       for (let i = 0; i < vers.length; i++) {
         const vName = typeof vers[i] === 'string' ? vers[i] : vers[i].name
         versionMap[String(i + 1)] = vName
       }
     }
     for (const spec of skuSpecList) {
-      const verName = versionMap[spec.sequences?.['0']]
+      const verName = versionMap[spec.sequences?.[versionSeqKey]]
       if (verName && !seenVersions.has(verName)) {
         seenVersions.add(verName)
         skuIdsToFetch.push({ skuId: spec.skuId, version: verName })
@@ -986,6 +1077,10 @@ async function refreshVivoPrices(model, cached) {
         ...s,
         price: priceMap[s.version] || s.price,
       }))
+      if (result.skuPrices[0]?.price) result.price = result.skuPrices[0].price
+    } else if (Object.keys(priceMap).length) {
+      // 缓存条目缺 SKU 列表时（如平板走 Playwright 路径入缓存），用本次拉到的版本价格重建
+      result.skuPrices = Object.entries(priceMap).map(([version, price]) => ({ version, price }))
       if (result.skuPrices[0]?.price) result.price = result.skuPrices[0].price
     }
 
@@ -1116,15 +1211,17 @@ async function fetchVivoShopDataBySpuId(modelClean, spuId) {
 
   const result = { spuName: info.data.commoditySpu?.spuName || '', spuId, features: [] }
 
-  // Versions and colors from getInfo
+  // Versions and colors from getInfo（维度键动态定位：手机版本在 seq['0']，平板在 seq['3']）
+  const versionSeqKey = findVivoVersionSeqKey(info.data.specItem?.specItemSeq)
+  const colorSeqKey = findVivoColorSeqKey(info.data.specItem?.specItemSeq)
   if (info.data.specItem?.specItemSeq) {
     const seq = info.data.specItem.specItemSeq
-    if (seq['0']) {
-      const allVersions = seq['0'].map(v => typeof v === 'string' ? v : v.name).filter(Boolean)
+    if (seq[versionSeqKey]) {
+      const allVersions = seq[versionSeqKey].map(v => typeof v === 'string' ? v : v.name).filter(Boolean)
       result.versions = filterVivoVersions(allVersions, modelClean)
     }
-    if (seq['1']) {
-      result.shopColors = seq['1'].map(v => typeof v === 'string' ? v : v.name).filter(Boolean)
+    if (seq[colorSeqKey]) {
+      result.shopColors = seq[colorSeqKey].map(v => typeof v === 'string' ? v : v.name).filter(Boolean)
     }
   }
 
@@ -1132,8 +1229,8 @@ async function fetchVivoShopDataBySpuId(modelClean, spuId) {
   const skuPrices = []
   const skuSpecList = info.data.specItem?.skuSpecList || []
   const versionMap = {} // seq index (1-based) -> version name
-  if (info.data.specItem?.specItemSeq?.['0']) {
-    const vers = info.data.specItem.specItemSeq['0']
+  if (info.data.specItem?.specItemSeq?.[versionSeqKey]) {
+    const vers = info.data.specItem.specItemSeq[versionSeqKey]
     for (let i = 0; i < vers.length; i++) {
       const vName = typeof vers[i] === 'string' ? vers[i] : vers[i].name
       versionMap[String(i + 1)] = vName
@@ -1144,7 +1241,7 @@ async function fetchVivoShopDataBySpuId(modelClean, spuId) {
   const wantedVersions = new Set(result.versions || [])
   const skuIdsToFetch = new Set()
   for (const spec of skuSpecList) {
-    const verSeq = spec.sequences?.['0']
+    const verSeq = spec.sequences?.[versionSeqKey]
     const verName = versionMap[verSeq]
     if (verName && wantedVersions.has(verName)) {
       skuIdsToFetch.add(spec.skuId)
@@ -1307,7 +1404,11 @@ async function handleVivoSearch(req, res, model) {
           text: (a.textContent || '').trim(),
         })).filter(l => l.text && l.text.length <= 30)
       })
-      const hit = searchLinks.find(l => vivoModelToken(l.text) === modelToken)
+      // vivo 与 iQOO 存在同名产品（如 Pad6 Pro），token 会剥掉品牌前缀，
+      // 匹配前先按品牌过滤链接，防止 iQOO 型号错拿 vivo 同名产品（反之亦然）
+      const wantIqoo = /iqoo/i.test(model)
+      const brandLinks = searchLinks.filter(l => wantIqoo ? /iqoo/i.test(l.text) : !/iqoo/i.test(l.text))
+      const hit = brandLinks.find(l => vivoModelToken(l.text) === modelToken)
       if (hit) {
         productUrl = hit.href
         productName = hit.text
@@ -1339,7 +1440,10 @@ async function handleVivoSearch(req, res, model) {
           )
         })
 
-        const match = links.find(l => vivoModelToken(l.text) === modelToken)
+        const wantIqooSeries = /iqoo/i.test(model)
+        const match = links
+          .filter(l => wantIqooSeries ? /iqoo/i.test(l.text) : !/iqoo/i.test(l.text))
+          .find(l => vivoModelToken(l.text) === modelToken)
 
         if (match) {
           productUrl = match.href
@@ -1559,6 +1663,195 @@ async function handleVivoSearch(req, res, model) {
   }
 }
 
+// ─── OPPO (欢太商城) Scraper ─────────────────────────────────────
+// 数据源：欢太商城 opposhop.cn / store.oppo.com 的匿名 oapi JSON 接口（无需登录与签名）：
+// 1. 品类接口 goods-business/category/first/detail 枚举在售 SPU（手机/平板/智能手表）；
+// 2. 详情接口 cms-business/goods/detail 取当前 SKU 价格与全部配色/版本列表；
+// 3. 切换接口 cms-business/goods/switch 按"配色+版本"逐个取对应 SKU 的价格
+//    （attributes 参数需双重 URL 编码，与商城前端行为一致）。
+
+const OPPO_OAPI_HEADERS = {
+  'User-Agent': COMMON_HEADERS['User-Agent'],
+  'Accept': 'application/json',
+  'Accept-Language': 'zh-CN,zh;q=0.9',
+  'Referer': 'https://www.opposhop.cn/cn/web/',
+}
+
+// 一级品类 code：003880 手机 / 003883 平板 / 003885 智能手表
+const OPPO_CATEGORY_CODES = ['003880', '003883', '003885']
+
+let oppoShopItemsPromise = null
+
+async function fetchOppoJson(url) {
+  const response = await fetch(url, { headers: OPPO_OAPI_HEADERS })
+  if (!response.ok) throw new Error(`OPPO oapi HTTP ${response.status}`)
+  return response.json()
+}
+
+// 拉取欢太商城在售商品清单（每个 SPU 一条代表 SKU），进程内缓存
+async function loadOppoShopItems() {
+  if (!oppoShopItemsPromise) {
+    oppoShopItemsPromise = (async () => {
+      const items = []
+      const seen = new Set()
+      for (const code of OPPO_CATEGORY_CODES) {
+        const payload = await fetchOppoJson(`https://www.opposhop.cn/cn/oapi/goods-business/category/first/detail?scene=mall&code=${code}`).catch(() => null)
+        for (const group of (payload?.data || [])) {
+          const children = Array.isArray(group?.child) ? group.child : (group?.child ? [group.child] : [])
+          const buckets = [group?.category, ...children.map(ch => ch?.category ?? ch)]
+          for (const bucket of buckets) {
+            for (const goods of (bucket?.goods || [])) {
+              if (!goods?.spuId || !goods?.spuName || seen.has(goods.spuId)) continue
+              seen.add(goods.spuId)
+              items.push({
+                spuId: goods.spuId,
+                spuName: String(goods.spuName).trim(),
+                skuId: goods.skuId,
+                skuName: goods.skuName || '',
+                price: goods.price?.price || goods.priceInfo?.price || '',
+              })
+            }
+          }
+        }
+        await sleep(randomInt(300, 700))
+      }
+      console.log(`Loaded ${items.length} OPPO products from opposhop categories`)
+      return items
+    })()
+  }
+  return oppoShopItemsPromise
+}
+
+// 归一化 OPPO 型号用于匹配："OPPO Reno15 Pro" -> "reno15pro"、"一加 15" -> "oneplus15"
+function oppoModelToken(s) {
+  return String(s || '')
+    .toLowerCase()
+    .replace(/一加/g, 'oneplus')
+    .replace(/oppo/g, '')
+    .replace(/[\s\-]+/g, '')
+}
+
+function oppoDetailUrl(skuId) {
+  return `https://store.oppo.com/cn/oapi/cms-business/goods/detail?interfaceVersion=v2&pageCode=skuDetail&skuId=${skuId}&addressId=&secKillRoundId=&eventId=`
+}
+
+function oppoSwitchUrl(skuId, spuId, color, version) {
+  // 商城前端对 attributes JSON 做了双重 URL 编码，服务端按此解析
+  const attributes = encodeURIComponent(encodeURIComponent(JSON.stringify({ key1: color, key2: version })))
+  return `https://store.oppo.com/cn/oapi/cms-business/goods/switch?interfaceVersion=v2&pageCode=skuDetail&skuId=${skuId}&spuId=${spuId}&secKillRoundId=&eventId=&attributes=${attributes}&buyMethod=normal`
+}
+
+async function handleOppoSearch(req, res, model) {
+  if (vmallCache.has(`oppo_${model}`)) {
+    sendJson(res, 200, vmallCache.get(`oppo_${model}`))
+    return
+  }
+
+  try {
+    const items = await loadOppoShopItems()
+    const token = oppoModelToken(model)
+    const match = items.find(item => oppoModelToken(item.spuName) === token)
+    if (!match) {
+      const result = { ok: false, source: 'official', message: '欢太商城未找到该产品。', product: null }
+      vmallCache.set(`oppo_${model}`, result)
+      sendJson(res, 200, result)
+      return
+    }
+
+    let detail = await fetchOppoJson(oppoDetailUrl(match.skuId))
+    let components = detail?.data?.components || []
+    let pricing = components.find(c => c.componentId === 'ProductPricing_v2_001')?.['_$data'] || {}
+    // 详情接口偶发缺失 pricing 组件（配色/版本列表在其中），重试一次
+    if (!pricing.attributes) {
+      await sleep(randomInt(800, 1500))
+      detail = await fetchOppoJson(oppoDetailUrl(match.skuId)).catch(() => detail)
+      components = detail?.data?.components || components
+      pricing = components.find(c => c.componentId === 'ProductPricing_v2_001')?.['_$data'] || pricing
+    }
+    const detailData = detail?.data?.['_$data'] || {}
+    const colors = (pricing.attributes?.preColor?.list || [])
+      .map(item => item?.['_$text'])
+      .filter(text => text && !/套装/.test(text))
+    const versions = (pricing.attributes?.preAttribute?.list || [])
+      .map(item => item?.['_$text'])
+      .filter(Boolean)
+    const currentColor = detailData.skuAttributes?.key1 || detailData.color || colors[0] || ''
+    const currentVersion = detailData.skuAttributes?.key2 || ''
+
+    // 逐版本取价：当前 SKU 直接用详情价，其余版本走 switch 接口（限流 + 小延时）
+    const skuPrices = []
+    for (const version of versions.slice(0, 8)) {
+      if (version === currentVersion && detailData.price) {
+        skuPrices.push({ version, price: `¥ ${detailData.price}` })
+        continue
+      }
+      await sleep(randomInt(400, 900))
+      const switched = await fetchOppoJson(oppoSwitchUrl(match.skuId, detailData.spuId ?? match.spuId, currentColor, version)).catch(() => null)
+      const switchedData = switched?.data?.['_$data']
+      if (switchedData?.price) skuPrices.push({ version, price: `¥ ${switchedData.price}` })
+    }
+
+    // 规格参数：ProductParams 组件按分组给出（处理平台/电池/屏幕等）
+    const paramGroups = components.find(c => c.componentId === 'ProductParams_001')?.['_$data']?.list || []
+    const paramMap = {}
+    for (const group of paramGroups) {
+      for (const item of (group?.list || [])) {
+        if (item?.['_$text']) paramMap[item['_$text']] = (item.value || []).join('；')
+      }
+    }
+    const paramText = Object.entries(paramMap).map(([key, value]) => `${key}:${value}`).join('\n')
+    // 电池容量：手表在 600mAh 量级，放宽到 3 位数（必须紧跟 mAh 不会误配）
+    const batteryMatch = paramText.match(/(\d{3,5})\s*mAh/i)?.[1]
+    // 充电功率：取合理区间内最大值，避免把反向充电（12W）当成主充功率
+    const chargeCandidates = [...paramText.matchAll(/(\d{2,3})\s*W(?![a-z])/gi)]
+      .map(m => Number(m[1]))
+      .filter(n => n >= 18 && n <= 240)
+    const chargeMatch = chargeCandidates.length ? Math.max(...chargeCandidates) : null
+    // 屏幕尺寸：兼容平板（11-13 英寸）与手机（4-8 英寸）
+    const screenMatch = (paramMap['屏幕尺寸'] || paramText).match(/(\d{1,2}(?:\.\d{1,2})?)\s*英寸/)?.[1]
+    const refreshMatch = paramText.match(/(\d{2,3})\s*Hz/)?.[1]
+    const specs = {
+      chip: paramMap['处理平台'] || paramText.match(/(第?[一二三四五]?代?骁龙\s?[^\s，。;；]{1,20}|天玑\s?\d{4}\s?\w*)/)?.[1] || '',
+      battery: batteryMatch ? `${batteryMatch}mAh` : '',
+      screen: screenMatch ? `${screenMatch}英寸` : '',
+      charge: chargeMatch ? `${chargeMatch}W` : '',
+      refreshRate: refreshMatch ? `${refreshMatch}Hz` : '',
+      screenTech: paramText.match(/(AMOLED|OLED|LTPO|LCD)/i)?.[1] || '',
+    }
+    // 无版本区分的品类（手表等）：至少落一条当前 SKU 价格，便于下游按型号取价
+    if (!skuPrices.length && currentVersion && detailData.price) {
+      skuPrices.push({ version: currentVersion, price: `¥ ${detailData.price}` })
+    }
+
+    const price = skuPrices[0]?.price
+      || (detailData.price ? `¥ ${detailData.price}` : '')
+      || (match.price ? `¥ ${match.price}` : '')
+
+    const result = {
+      ok: true,
+      source: 'official',
+      product: {
+        title: match.spuName,
+        price,
+        skuPrices,
+        careServices: [],
+        colors,
+        specs,
+      },
+    }
+
+    vmallCache.set(`oppo_${model}`, result)
+    sendJson(res, 200, result)
+  } catch (error) {
+    sendJson(res, 200, {
+      ok: false,
+      source: 'official',
+      message: error instanceof Error ? error.message : '欢太商城数据获取失败。',
+      product: null,
+    })
+  }
+}
+
 async function handleOfficialSearch(req, res) {
   const requestUrl = new URL(req.url ?? '/', `http://${req.headers.host}`)
   const model = requestUrl.searchParams.get('model')?.trim()
@@ -1578,6 +1871,7 @@ async function handleOfficialSearch(req, res) {
     : /xiaomi|小米|redmi/i.test(model) ? 'xiaomi'
     : /apple|苹果|iphone/i.test(model) ? 'apple'
     : /荣耀|honor/i.test(model) ? 'honor'
+    : /oppo|一加|oneplus|reno|find\s*[xn]/i.test(model) ? 'oppo'
     : /dji|大疆|mini\s*\d|air\s*\d|mavic|osmo|pocket/i.test(model) ? 'dji'
     : 'unknown'
 
@@ -1587,6 +1881,10 @@ async function handleOfficialSearch(req, res) {
   }
   if (brand === 'honor') {
     await handleHonorSearch(req, res, model)
+    return
+  }
+  if (brand === 'oppo') {
+    await handleOppoSearch(req, res, model)
     return
   }
   if (brand === 'apple') {
@@ -1635,20 +1933,40 @@ async function handleOfficialSearch(req, res) {
     }
 
     // Find best matching product (exclude accessories and variants)
-    const target = searchData.resultList.find(p => {
+    const modelLower = model.toLowerCase()
+    const tokens = modelLower.replace(/华为|huawei/gi, '').trim().split(/\s+/).filter(Boolean)
+    // 变体关键词只在型号本身未包含时才排除（搜索"Mate X5 典藏版"时不应排除典藏版商品）；
+    // "非凡大师"是 RS 的中文副标，型号带 RS 时一并放行。
+    const variantWords = ['风驰', '典藏', 'rs', '非凡大师']
+      .filter(w => !modelLower.includes(w) && !(w === '非凡大师' && /\brs\b/.test(modelLower)))
+    const isAccessory = (name) => /壳|保护|贴膜|支架|充电器|数据线|键盘|鼠标|扩展坞|手写笔/.test(name)
+    const hasExcludedVariant = (name) => variantWords.some(w => name.includes(w))
+    // 兜底匹配的必需 token：忽略"优享版/尊享版"等后缀词，但数字/英文型号 token 必须全中，
+    // 防止搜索已下架型号（如 WATCH GT 5）时错拿相近在售型号（GT 7）的价格。
+    const requiredTokens = tokens.filter(t => !/版$/.test(t))
+    // 候选比型号多出的系列后缀越少越优先，避免"WATCH 5"拿到"WATCH FIT 5"、
+    // "MatePad 11.5"拿到"11.5 鸿蒙焕新版"这类同系列串号。
+    const suffixWords = ['pro', 'max', 'ultra', 'plus', 'se', 'air', 'mini', 's', 'fit', 'gt', 'buds', 'runner', 'ultimate', 'design',
+      '鸿蒙焕新版', '焕新版', '灵动款', '鸿蒙版', '柔光版', '优享版', '尊享版', '至臻版', '青春版']
+    const extraSuffixCount = (name) => suffixWords.reduce((count, w) => {
+      if (tokens.includes(w)) return count
+      const hit = /^[a-z]+$/.test(w) ? new RegExp(`\\b${w}\\b`).test(name) : name.includes(w)
+      return count + (hit ? 1 : 0)
+    }, 0)
+    const pickBest = (list) => list
+      .map((p, i) => ({ p, i, extra: extraSuffixCount((p.name || '').toLowerCase()) }))
+      .sort((a, b) => a.extra - b.extra || a.i - b.i)[0]?.p ?? null
+    const usableResults = searchData.resultList.filter(p => {
       const name = (p.name || '').toLowerCase()
-      // Exclude accessories
-      if (/壳|保护|贴膜|支架|充电器|数据线/.test(name)) return false
-      // Exclude variants (风驰版, 典藏版, RS, 非凡大师)
-      if (/风驰|典藏|rs|非凡大师/.test(name)) return false
-      // Match by key tokens
-      const modelLower = model.toLowerCase()
-      const tokens = modelLower.replace(/华为|huawei/gi, '').trim().split(/\s+/)
-      return tokens.every(t => name.includes(t.toLowerCase()))
-    }) || searchData.resultList.find(p => {
-      const name = (p.name || '')
-      return !/壳|保护|贴膜|支架|风驰|典藏|RS|非凡大师/.test(name)
+      return !isAccessory(name) && !hasExcludedVariant(name)
     })
+    const target = pickBest(usableResults.filter(p => {
+      const name = (p.name || '').toLowerCase()
+      return tokens.every(t => name.includes(t))
+    })) || pickBest(usableResults.filter(p => {
+      const name = (p.name || '').toLowerCase()
+      return requiredTokens.every(t => name.includes(t))
+    }))
 
     if (!target) {
       const result = { ok: false, source: 'official', message: '未找到匹配的产品。', product: null }
@@ -1698,13 +2016,18 @@ async function handleOfficialSearch(req, res) {
     // Extract SKU prices (deduplicated by version)
     const skuMap = new Map()
     for (const m of html.matchAll(/"name":"([^"]+)","normalPiaPeriod"[\s\S]{0,900}?"price":(\d+)[\s\S]{0,900}?"sbomAbbr":"([^"]+)"[\s\S]{0,160}?"sbomCode":"([^"]+)"/g)) {
-      const version = m[3].match(/(\d{1,2}GB\+\d{3}GB|\d{1,2}GB\+1TB|\d{1,2}GB\+2TB)/)?.[1]
+      const versionHit = matchSkuVersion(m[3])
+      const version = versionHit?.version
       const price = Number(m[2])
       if (!version || price < 1000) continue
+      // 排除同页挂载的其它商品 SKU（如笔记本页上的鼠标/扩展坞），SKU 名必须命中型号数字 token
+      const abbrLower = m[3].toLowerCase()
+      const digitTokens = requiredTokens.filter(t => /\d/.test(t))
+      if (digitTokens.length && !digitTokens.every(t => abbrLower.includes(t))) continue
       if (!skuMap.has(version)) {
         skuMap.set(version, { version, price: `¥ ${price}`, sbomCode: m[4], colors: [] })
       }
-      const color = m[3].replace(m[1], '').replace(version, '').trim()
+      const color = m[3].replace(m[1], '').replace(versionHit?.raw ?? '', '').trim()
       if (color && !skuMap.get(version).colors.includes(color)) {
         skuMap.get(version).colors.push(color)
       }
@@ -1742,7 +2065,8 @@ async function handleOfficialSearch(req, res) {
       source: 'official',
       product: {
         title: target.name,
-        price: `¥ ${target.price}`,
+        // 手表/显示器等无容量版本的品类依赖这个主价格；搜索结果无价格时留空（价格待公布）
+        price: target.price != null && target.price !== '' ? `¥ ${target.price}` : (skuPrices[0]?.price ?? ''),
         skuPrices,
         careServices,
         colors: Array.from(colorSet),
@@ -1962,6 +2286,11 @@ async function discoverOfficialModels() {
   })
   const sources = [
     { brand: 'huawei', url: 'https://consumer.huawei.com/cn/phones/' },
+    // 华为非手机品类页：平板/笔记本/显示器/穿戴（ERP 库存覆盖这些品类）
+    { brand: 'huawei', url: 'https://consumer.huawei.com/cn/tablets/' },
+    { brand: 'huawei', url: 'https://consumer.huawei.com/cn/laptops/' },
+    { brand: 'huawei', url: 'https://consumer.huawei.com/cn/monitors/' },
+    { brand: 'huawei', url: 'https://consumer.huawei.com/cn/wearables/' },
     { brand: 'honor', url: 'https://www.honor.com/cn/phones/' },
     { brand: 'vivo', url: 'https://www.vivo.com.cn/products-x.html' },
     { brand: 'vivo', url: 'https://www.vivo.com.cn/products-s.html' },
@@ -2013,6 +2342,11 @@ function extractModelsFromText(brand, text) {
     /(?:\u534e\u4e3a\s*)?Pura\s*(?:X|\d{1,3})\s*(?:Pro\s*\+?|Pro|Ultra)?(?:\s*(?:\u5178\u85cf\u7248))?/gi,
     /(?:\u534e\u4e3a\s*)?nova\s*\d{1,3}\s*(?:Pro|Ultra|SE)?/gi,
     /(?:\u534e\u4e3a\s*)?\u7545\u4eab\s*\d{1,3}[A-Za-z]?\s*(?:Plus|Pro|Max)?/gi,
+    // 非手机品类：平板 / 笔记本 / 显示器 / 手表手环
+    /(?:\u534e\u4e3a\s*)?MatePad\s*(?:Pro|Air|SE|mini|Edge)?\s*\d{1,2}(?:\.\d)?\s*S?/gi,
+    /(?:\u534e\u4e3a\s*)?MateBook\s*(?:X\s*Pro|GT\s*\d{2}|D\s*\d{2}|Fold|Pro|E|\d{2})(?:\s*(?:SE|\u9e3f\u8499\u7248))?/gi,
+    /(?:\u534e\u4e3a\s*)?MateView\s*(?:GT|SE)?\s*\d{2}(?:\.\d)?\s*(?:\u82f1\u5bf8)?/gi,
+    /(?:\u534e\u4e3a\s*)?WATCH\s*(?:GT\s*\d|FIT\s*\d?|D\s*\d?|Ultimate|\d)(?:\s*Pro)?/gi,
   ] : brand === 'honor' ? [
     /(?:\u8363\u8000\s*)?Magic\s*(?:V\s*)?\d{1,2}\s*(?:Pro|Lite|RSR|Ultimate)?/gi,
     /(?:\u8363\u8000\s*)?(?:\d{2,3}|X\d{2,3}|GT|Power\d?|WIN)\s*(?:Pro|Plus|Max|Ultra|GT)?/gi,

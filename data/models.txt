@@ -148,3 +148,95 @@ iQOO Z11i
 
 # Auto-discovered by node server.mjs --discover-models.
 荣耀 300 Ultra
+
+# ── 华为 平板 ── (来源: 华为商城在售清单 20260812)
+华为 MatePad Pro Max
+华为 MatePad Pro 13.2 英寸
+华为 MatePad Pro 12.2 英寸
+华为 MatePad Pro 12英寸
+华为 MatePad Edge
+华为 MatePad Mini
+华为 MatePad Mini 鸿蒙焕新版
+华为 MatePad Air 12英寸 鸿蒙焕新版
+华为 MatePad 11.5 S
+华为 MatePad 11.5 S 灵动款 鸿蒙焕新版
+华为 MatePad 11.5
+华为 MatePad 11.5 鸿蒙焕新版
+华为 MatePad SE 11英寸 焕新版
+
+# ── 华为 笔记本 ── (来源: 华为商城在售清单 20260812)
+华为 MateBook 14 鸿蒙版
+华为 MateBook 14 酷睿 Ultra
+华为 MateBook D 14
+华为 MateBook D 14 SE
+华为 MateBook D 16
+华为 MateBook GT 14 酷睿 Ultra
+华为 MateBook Pro S
+华为 MateBook Pro 麒麟X90 Plus
+华为 MateBook Fold 非凡大师
+
+# ── 华为 显示器 ── (来源: 华为商城在售清单 20260812)
+华为 MateView GT 27英寸
+华为 MateView SE 27英寸
+华为 MateView SE 23.8英寸
+
+# ── 华为 手表 ── (来源: 华为商城在售清单 20260812)
+华为 WATCH GT 7
+华为 WATCH GT 7 Pro
+华为 WATCH GT 6
+华为 WATCH GT 6 Pro
+华为 WATCH 5
+华为 WATCH D2
+华为 WATCH FIT 5
+华为 WATCH FIT 5 Pro
+华为 WATCH FIT 4
+华为 WATCH FIT 4 Pro
+华为 WATCH Ultimate 2 非凡探索
+华为儿童手表 5
+华为超新星手表 X1
+华为超新星手表 X1 Pro
+
+# ── 华为 移动电源 ── (来源: 华为商城在售清单 20260812)
+华为 自带线全能充智能移动电源（100 W 12000）
+华为 自带线全能充移动电源（100 W 12000）
+华为 自带线全能充移动电源（66 W 12000）
+华为 全能充磁吸移动电源
+华为 多协议超级快充移动电源 10000 mAh（Max 22.5W SE）
+
+# ── OPPO ── (来源: 欢太商城在售清单 20260812)
+OPPO Find N6
+OPPO Find N5
+OPPO Find X9
+OPPO Find X9 Pro
+OPPO Find X9 Ultra
+OPPO Find X8s
+OPPO Reno16
+OPPO Reno16 Pro
+OPPO Reno15
+OPPO Reno15 Pro
+OPPO Reno14
+OPPO A7 Pro Max
+OPPO A6 Pro
+OPPO A5 活力版
+OPPO K15
+OPPO K15 Pro
+OPPO Pad 6
+OPPO Pad 5
+OPPO Pad SE
+OPPO Watch X3
+OPPO Watch S
+
+# ── 荣耀 平板/手表 ── (来源: 荣耀商城在售清单 20260812)
+荣耀 MagicPad3 12.5
+荣耀 MagicPad3 Pro 12.3
+荣耀 MagicPad3 Pro 13.3
+荣耀平板 X9 Pro
+荣耀平板 X10
+荣耀平板 GT2 Pro
+荣耀手表5 Ultra
+荣耀手表5 Pro
+荣耀手表 X5
+
+# ── vivo/iQOO 平板 ── (来源: vivo 官网在售清单 20260812)
+vivo Pad6 Pro
+iQOO Pad6 Pro
