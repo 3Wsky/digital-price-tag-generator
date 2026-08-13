@@ -240,3 +240,10 @@ OPPO Watch S
 # ── vivo/iQOO 平板 ── (来源: vivo 官网在售清单 20260812)
 vivo Pad6 Pro
 iQOO Pad6 Pro
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 MatePad Pro 12
+华为 MateBook Pro
+华为 MateBook GT 14
+华为 MateBook X Pro
+华为 MateBook 14
