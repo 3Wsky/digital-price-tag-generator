@@ -1896,7 +1896,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:13:53.085Z"
+    "fetchedAt": "2026-08-14T20:48:04.197Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1924,7 +1924,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:14:38.047Z"
+    "fetchedAt": "2026-08-14T20:48:50.069Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2383,7 +2383,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:15:33.879Z"
+    "fetchedAt": "2026-08-14T20:49:22.327Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -3239,7 +3239,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:16:19.187Z"
+    "fetchedAt": "2026-08-14T20:50:06.137Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -3328,7 +3328,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:17:03.712Z"
+    "fetchedAt": "2026-08-14T20:50:48.258Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3679,7 +3679,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:17:49.084Z"
+    "fetchedAt": "2026-08-14T20:51:31.607Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3787,7 +3787,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:18:36.030Z"
+    "fetchedAt": "2026-08-14T20:52:13.201Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3856,7 +3856,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:19:59.851Z"
+    "fetchedAt": "2026-08-14T20:53:01.378Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3927,7 +3927,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:06:50.037Z"
+    "fetchedAt": "2026-08-14T20:53:35.056Z"
   },
   "荣耀 Magic4": {
     "ok": true,
@@ -3955,7 +3955,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:21:24.691Z"
+    "fetchedAt": "2026-08-14T20:54:21.038Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3991,7 +3991,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:08:07.392Z"
+    "fetchedAt": "2026-08-14T20:54:54.701Z"
   },
   "荣耀 Magic4 Pro": {
     "ok": true,
@@ -4019,7 +4019,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:22:09.941Z"
+    "fetchedAt": "2026-08-14T20:55:39.206Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -4062,14 +4062,14 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:22:57.221Z"
+    "fetchedAt": "2026-08-14T20:56:22.182Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "华为畅享 90 Pro Max",
-      "price": "¥ 1999",
+      "price": "¥ 1699",
       "skuPrices": [],
       "careServices": [
         {
@@ -4095,7 +4095,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:10:24.484Z"
+    "fetchedAt": "2026-08-14T20:56:55.460Z"
   },
   "荣耀 618": {
     "ok": false,
@@ -4103,7 +4103,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:10:58.347Z"
+    "fetchedAt": "2026-08-14T20:57:29.033Z"
   },
   "华为 畅享 90": {
     "ok": true,
@@ -4135,7 +4135,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:11:31.550Z"
+    "fetchedAt": "2026-08-14T20:57:59.552Z"
   },
   "荣耀 Magic3": {
     "ok": true,
@@ -4162,7 +4162,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-13T21:23:43.973Z"
+    "fetchedAt": "2026-08-14T20:58:44.604Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -4208,7 +4208,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:12:50.284Z"
+    "fetchedAt": "2026-08-14T20:59:20.221Z"
   },
   "荣耀 Power": {
     "ok": true,
@@ -4253,7 +4253,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:13:36.802Z"
+    "fetchedAt": "2026-08-14T21:00:08.109Z"
   },
   "荣耀 600": {
     "ok": true,
@@ -4295,7 +4295,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:14:24.365Z"
+    "fetchedAt": "2026-08-14T21:00:52.894Z"
   },
   "荣耀 300": {
     "ok": false,
@@ -4303,7 +4303,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:14:58.401Z"
+    "fetchedAt": "2026-08-14T21:01:28.566Z"
   },
   "荣耀 300 Pro": {
     "ok": false,
@@ -4311,7 +4311,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:15:34.847Z"
+    "fetchedAt": "2026-08-14T21:02:02.841Z"
   },
   "荣耀 200": {
     "ok": false,
@@ -4319,7 +4319,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:16:10.597Z"
+    "fetchedAt": "2026-08-14T21:02:40.223Z"
   },
   "iQOO Z11i": {
     "ok": true,
@@ -4357,7 +4357,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-08-07T21:16:21.122Z"
+    "fetchedAt": "2026-08-14T21:02:48.421Z"
   },
   "华为 nova 16 SE": {
     "ok": true,
@@ -7606,5 +7606,88 @@
     },
     "zhihuItems": [],
     "fetchedAt": "2026-08-13T21:27:23.896Z"
+  },
+  "华为 WATCH Ultimate": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI WATCH Ultimate 2 非凡探索",
+      "price": "¥ 6499",
+      "skuPrices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 699",
+          "sbomCode": "3201020127401"
+        }
+      ],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "undefinedmAh",
+        "screen": "1.5英寸",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": "LTPO"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-08-14T21:03:18.220Z"
+  },
+  "华为 WATCH FIT": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI WATCH FIT 5",
+      "price": "¥ 1199",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "undefinedmAh",
+        "screen": "undefined英寸",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-08-14T21:03:48.946Z"
+  },
+  "华为 WATCH D": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI WATCH D2",
+      "price": "¥ 2988",
+      "skuPrices": [],
+      "careServices": [
+        {
+          "name": "HUAWEI Care+（一年期）",
+          "price": "¥ 179",
+          "sbomCode": "3201020087901"
+        },
+        {
+          "name": "HUAWEI Care+（两年期）",
+          "price": "¥ 299",
+          "sbomCode": "3201020088001"
+        }
+      ],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "undefinedmAh",
+        "screen": "undefined英寸",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": "OLED"
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-08-14T21:04:23.221Z"
   }
 }

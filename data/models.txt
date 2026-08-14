@@ -247,3 +247,8 @@ iQOO Pad6 Pro
 华为 MateBook GT 14
 华为 MateBook X Pro
 华为 MateBook 14
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 WATCH Ultimate
+华为 WATCH FIT
+华为 WATCH D
