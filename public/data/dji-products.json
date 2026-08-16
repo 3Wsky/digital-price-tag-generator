@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-15T20:57:58.382Z"
+    "fetchedAt": "2026-08-16T20:51:23.747Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-15T20:58:04.463Z"
+    "fetchedAt": "2026-08-16T20:51:28.605Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-15T20:58:10.689Z"
+    "fetchedAt": "2026-08-16T20:51:34.031Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1183,8 +1183,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 碳素黑）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini",
           "type": "SpuBundle",
-          "price": "¥2498",
-          "priceValue": 2498,
+          "price": "¥2485",
+          "priceValue": 2485,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1254,8 +1254,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 云感白）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini-transmitter-arctic-white",
           "type": "SpuBundle",
-          "price": "¥2498",
-          "priceValue": 2498,
+          "price": "¥2485",
+          "priceValue": 2485,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-15T20:58:14.953Z"
+    "fetchedAt": "2026-08-16T20:51:37.217Z"
   }
 }
