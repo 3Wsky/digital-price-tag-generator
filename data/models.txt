@@ -252,3 +252,6 @@ iQOO Pad6 Pro
 华为 WATCH Ultimate
 华为 WATCH FIT
 华为 WATCH D
+
+# Auto-discovered by node server.mjs --discover-models.
+iQOO Z11S
