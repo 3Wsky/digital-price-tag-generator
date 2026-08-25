@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-24T21:06:43.418Z"
+    "fetchedAt": "2026-08-25T21:02:10.459Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -385,18 +385,28 @@
       "title": "DJI Air 3S",
       "slug": "dji-air-3s",
       "url": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN",
-      "price": "¥7227",
+      "price": "¥6516",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Air 3S 140W 氮化镓充电套装",
           "slug": "dji-air-3s-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥7227",
-          "priceValue": 7227,
+          "price": "¥6516",
+          "priceValue": 6516,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
+            {
+              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Power 140W 氮化镓充电器",
+              "quantity": 1,
+              "slug": ""
+            },
             {
               "name": "DJI Air 3S",
               "quantity": 1,
@@ -436,16 +446,6 @@
               "name": "云台保护罩",
               "quantity": 1,
               "slug": ""
-            },
-            {
-              "name": "DJI Power 140W 氮化镓充电器",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
-              "quantity": 1,
-              "slug": ""
             }
           ]
         },
@@ -453,8 +453,8 @@
           "title": "DJI Air 3S 畅飞套装（普通遥控器）",
           "slug": "dji-air-3s-fly-more-combo",
           "type": "Spu",
-          "price": "¥8788",
-          "priceValue": 8788,
+          "price": "¥7909",
+          "priceValue": 7909,
           "controller": "普通遥控器",
           "bundleKind": "畅飞套装",
           "includedItems": [
@@ -519,8 +519,8 @@
           "title": "DJI Air 3S 畅飞套装（带屏遥控器）",
           "slug": "dji-air-3s-fly-more-combo-rc-2",
           "type": "Spu",
-          "price": "¥9988",
-          "priceValue": 9988,
+          "price": "¥8989",
+          "priceValue": 8989,
           "controller": "带屏遥控器",
           "bundleKind": "畅飞套装",
           "includedItems": [
@@ -631,8 +631,8 @@
           "title": "DJI Air 3S（普通遥控器）",
           "slug": "dji-air-3s",
           "type": "Spu",
-          "price": "¥6988",
-          "priceValue": 6988,
+          "price": "¥6289",
+          "priceValue": 6289,
           "controller": "普通遥控器",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-24T21:06:48.667Z"
+    "fetchedAt": "2026-08-25T21:02:16.375Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -734,6 +734,16 @@
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
+            {
+              "name": "DJI Power 140W 氮化镓充电器",
+              "quantity": 1,
+              "slug": ""
+            },
+            {
+              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
+              "quantity": 1,
+              "slug": ""
+            },
             {
               "name": "DJI Mavic 4 Pro",
               "quantity": 1,
@@ -766,16 +776,6 @@
             },
             {
               "name": "DJI 100W 桌面充电器",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Power 140W 氮化镓充电器",
-              "quantity": 1,
-              "slug": ""
-            },
-            {
-              "name": "DJI Power 7A USB-C 数显充电线（1 米）",
               "quantity": 1,
               "slug": ""
             }
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-24T21:06:52.627Z"
+    "fetchedAt": "2026-08-25T21:02:21.138Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-08-24T21:06:59.290Z"
+    "fetchedAt": "2026-08-25T21:02:26.997Z"
   }
 }
