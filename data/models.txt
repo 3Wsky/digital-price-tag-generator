@@ -255,3 +255,6 @@ iQOO Pad6 Pro
 
 # Auto-discovered by node server.mjs --discover-models.
 iQOO Z11S
+
+# Auto-discovered by node server.mjs --discover-models.
+荣耀 400
