@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-08T23:01:55.546Z"
+    "fetchedAt": "2026-09-09T22:54:48.717Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -385,15 +385,15 @@
       "title": "DJI Air 3S",
       "slug": "dji-air-3s",
       "url": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN",
-      "price": "¥6516",
+      "price": "¥7212",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Air 3S 140W 氮化镓充电套装",
           "slug": "dji-air-3s-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥6516",
-          "priceValue": 6516,
+          "price": "¥7212",
+          "priceValue": 7212,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -453,8 +453,8 @@
           "title": "DJI Air 3S 畅飞套装（普通遥控器）",
           "slug": "dji-air-3s-fly-more-combo",
           "type": "Spu",
-          "price": "¥7909",
-          "priceValue": 7909,
+          "price": "¥8788",
+          "priceValue": 8788,
           "controller": "普通遥控器",
           "bundleKind": "畅飞套装",
           "includedItems": [
@@ -519,8 +519,8 @@
           "title": "DJI Air 3S 畅飞套装（带屏遥控器）",
           "slug": "dji-air-3s-fly-more-combo-rc-2",
           "type": "Spu",
-          "price": "¥8989",
-          "priceValue": 8989,
+          "price": "¥9988",
+          "priceValue": 9988,
           "controller": "带屏遥控器",
           "bundleKind": "畅飞套装",
           "includedItems": [
@@ -631,8 +631,8 @@
           "title": "DJI Air 3S（普通遥控器）",
           "slug": "dji-air-3s",
           "type": "Spu",
-          "price": "¥6289",
-          "priceValue": 6289,
+          "price": "¥6988",
+          "priceValue": 6988,
           "controller": "普通遥控器",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-08T23:01:59.706Z"
+    "fetchedAt": "2026-09-09T22:54:53.565Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -722,15 +722,15 @@
       "title": "DJI Mavic 4 Pro",
       "slug": "dji-mavic-4-pro",
       "url": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN",
-      "price": "¥14115",
+      "price": "¥14112",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Mavic 4 Pro 140W 氮化镓充电套装",
           "slug": "dji-mavic-4-pro-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥14115",
-          "priceValue": 14115,
+          "price": "¥14112",
+          "priceValue": 14112,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-08T23:02:05.320Z"
+    "fetchedAt": "2026-09-09T22:54:58.519Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1044,15 +1044,15 @@
       "title": "Osmo Pocket 3",
       "slug": "osmo-pocket-3",
       "url": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN",
-      "price": "¥2626",
+      "price": "¥2623",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "Osmo Pocket 3 140W 氮化镓充电套装",
           "slug": "osmo-pocket-3-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥2626",
-          "priceValue": 2626,
+          "price": "¥2623",
+          "priceValue": 2623,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -1325,8 +1325,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 3 发射器）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-3-transmitter",
           "type": "SpuBundle",
-          "price": "¥3098",
-          "priceValue": 3098,
+          "price": "¥2928",
+          "priceValue": 2928,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-08T23:02:09.842Z"
+    "fetchedAt": "2026-09-09T22:55:01.533Z"
   }
 }
