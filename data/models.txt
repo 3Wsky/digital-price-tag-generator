@@ -265,3 +265,6 @@ iQOO Z11S
 
 # Auto-discovered by node server.mjs --discover-models.
 华为 mate 2
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 WATCH D3
