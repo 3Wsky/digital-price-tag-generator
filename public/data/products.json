@@ -826,7 +826,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:38:49.546Z"
+    "fetchedAt": "2026-09-16T23:02:08.651Z"
   },
   "华为 Pura 80": {
     "ok": true,
@@ -883,7 +883,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:39:22.707Z"
+    "fetchedAt": "2026-09-16T23:02:42.386Z"
   },
   "华为 Pura 80 Pro": {
     "ok": true,
@@ -939,7 +939,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:39:54.347Z"
+    "fetchedAt": "2026-09-16T23:03:15.848Z"
   },
   "华为 Pura 80 Pro+": {
     "ok": true,
@@ -990,7 +990,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:40:25.542Z"
+    "fetchedAt": "2026-09-16T23:03:49.926Z"
   },
   "华为 Pura 80 Ultra": {
     "ok": true,
@@ -1292,10 +1292,6 @@
         {
           "version": "16GB+512GB",
           "price": "¥ 3509"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 2909"
         }
       ],
       "careServices": [],
@@ -1323,34 +1319,25 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:41:13.756Z"
+    "fetchedAt": "2026-09-16T23:04:41.936Z"
   },
   "荣耀 Magic7 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "荣耀Magic7 Pro",
-      "price": "¥ 4579",
+      "price": "¥ 3399",
       "skuPrices": [
-        {
-          "version": "16GB+1TB",
-          "price": "¥ 4579"
-        },
         {
           "version": "12GB+256GB",
           "price": "¥ 3399"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥ 3719"
         }
       ],
       "careServices": [],
       "colors": [
         "月影灰",
         "雪域白",
-        "天际蓝",
-        "绒黑色"
+        "天际蓝"
       ],
       "specs": {
         "chip": "骁龙®️8至尊版移动平台",
@@ -1369,7 +1356,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:41:59.566Z"
+    "fetchedAt": "2026-09-16T23:05:31.333Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1393,9 +1380,7 @@
       ],
       "careServices": [],
       "colors": [
-        "绒黑色",
-        "海湖青",
-        "祁连雪"
+        "绒黑色"
       ],
       "specs": {
         "chip": "第三代骁龙8",
@@ -1414,7 +1399,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:42:46.061Z"
+    "fetchedAt": "2026-09-16T23:06:19.268Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1669,7 +1654,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:09:42.266Z"
+    "fetchedAt": "2026-09-16T23:07:04.267Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1697,7 +1682,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:10:27.959Z"
+    "fetchedAt": "2026-09-16T23:07:50.969Z"
   },
   "vivo X200": {
     "ok": true,
@@ -1968,7 +1953,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:44:53.555Z"
+    "fetchedAt": "2026-09-16T23:08:11.558Z"
   },
   "vivo X300s": {
     "ok": true,
@@ -2014,7 +1999,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:45:02.006Z"
+    "fetchedAt": "2026-09-16T23:08:21.003Z"
   },
   "vivo S30": {
     "ok": true,
@@ -2052,7 +2037,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:45:10.393Z"
+    "fetchedAt": "2026-09-16T23:08:28.491Z"
   },
   "vivo S30 Pro mini": {
     "ok": true,
@@ -2090,7 +2075,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:45:34.093Z"
+    "fetchedAt": "2026-09-16T23:08:52.223Z"
   },
   "vivo S50": {
     "ok": true,
@@ -2161,7 +2146,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:45:40.492Z"
+    "fetchedAt": "2026-09-16T23:08:59.275Z"
   },
   "vivo Y60": {
     "ok": true,
@@ -2196,7 +2181,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:46:02.172Z"
+    "fetchedAt": "2026-09-16T23:09:22.453Z"
   },
   "vivo Y500": {
     "ok": true,
@@ -2237,7 +2222,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:46:23.104Z"
+    "fetchedAt": "2026-09-16T23:09:46.912Z"
   },
   "vivo Y500i": {
     "ok": false,
@@ -2245,7 +2230,7 @@
     "message": "vivo 官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:46:52.709Z"
+    "fetchedAt": "2026-09-16T23:10:18.787Z"
   },
   "vivo Y500 Pro": {
     "ok": true,
@@ -2288,7 +2273,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:47:15.856Z"
+    "fetchedAt": "2026-09-16T23:10:42.763Z"
   },
   "vivo Y600 Pro": {
     "ok": true,
@@ -2335,7 +2320,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:47:23.902Z"
+    "fetchedAt": "2026-09-16T23:10:49.337Z"
   },
   "iQOO 15": {
     "ok": true,
@@ -2383,7 +2368,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:47:31.832Z"
+    "fetchedAt": "2026-09-16T23:10:54.972Z"
   },
   "iQOO 13": {
     "ok": true,
@@ -2430,7 +2415,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:47:40.006Z"
+    "fetchedAt": "2026-09-16T23:11:02.768Z"
   },
   "iQOO Neo11": {
     "ok": true,
@@ -2477,7 +2462,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-11T22:47:48.455Z"
+    "fetchedAt": "2026-09-16T23:11:11.034Z"
   },
   "iQOO Neo10": {
     "ok": true,
@@ -2868,35 +2853,12 @@
     "fetchedAt": "2026-09-12T22:29:01.850Z"
   },
   "荣耀 Magic7 RSR": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀Magic7 RSR 保时捷设计",
-      "price": "",
-      "skuPrices": [],
-      "careServices": [],
-      "colors": [
-        "普罗旺斯紫",
-        "玛瑙灰"
-      ],
-      "specs": {
-        "chip": "骁龙®8至尊版移动平台",
-        "battery": "5850mAh",
-        "screen": "6.8英寸",
-        "charge": "100W",
-        "refreshRate": "120Hz",
-        "screenTech": "绿洲护眼屏"
-      },
-      "features": [
-        "5850mAh 荣耀青海湖电池 100W荣耀超快充",
-        "骁龙®8至尊版移动平台 芯片",
-        "6.8英寸 绿洲护眼屏 120Hz",
-        "2亿像素 超高清影像"
-      ],
-      "priceStatus": "pending"
-    },
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic7%20RSR\", waiting until \"domcontentloaded\"\n",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:12:06.145Z"
+    "fetchedAt": "2026-09-16T23:11:48.713Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -2985,7 +2947,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:12:50.585Z"
+    "fetchedAt": "2026-09-16T23:12:36.030Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3347,7 +3309,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:13:33.371Z"
+    "fetchedAt": "2026-09-16T23:13:24.708Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3455,7 +3417,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:14:17.374Z"
+    "fetchedAt": "2026-09-16T23:14:08.593Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3524,7 +3486,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:15:01.595Z"
+    "fetchedAt": "2026-09-16T23:14:51.402Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3667,7 +3629,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:15:48.657Z"
+    "fetchedAt": "2026-09-16T23:15:36.975Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -3710,7 +3672,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:16:34.360Z"
+    "fetchedAt": "2026-09-16T23:16:19.898Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3810,7 +3772,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-15T23:17:18.051Z"
+    "fetchedAt": "2026-09-16T23:17:09.977Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
