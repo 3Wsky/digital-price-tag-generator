@@ -1654,7 +1654,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:40:46.691Z"
+    "fetchedAt": "2026-09-19T22:27:56.629Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1682,7 +1682,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:41:32.667Z"
+    "fetchedAt": "2026-09-19T22:28:42.698Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2978,7 +2978,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:43:25.624Z"
+    "fetchedAt": "2026-09-19T22:29:27.362Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3328,7 +3328,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:44:09.994Z"
+    "fetchedAt": "2026-09-19T22:30:13.912Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3410,33 +3410,12 @@
     "fetchedAt": "2026-09-17T23:10:21.983Z"
   },
   "荣耀 Magic5": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀Magic5 至臻版",
-      "price": "",
-      "skuPrices": [],
-      "careServices": [],
-      "colors": [
-        "雅黑色",
-        "燃橙色"
-      ],
-      "specs": {
-        "chip": "",
-        "battery": "5450mAh",
-        "screen": "",
-        "charge": "",
-        "refreshRate": "",
-        "screenTech": ""
-      },
-      "features": [
-        "5450mAh",
-        "5000万像素 超高清影像"
-      ],
-      "priceStatus": "pending"
-    },
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic5\", waiting until \"domcontentloaded\"\n",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:44:59.371Z"
+    "fetchedAt": "2026-09-19T22:30:53.197Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3505,7 +3484,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:45:44.265Z"
+    "fetchedAt": "2026-09-19T22:31:41.204Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3604,7 +3583,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:47:41.542Z"
+    "fetchedAt": "2026-09-19T22:32:27.390Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3668,7 +3647,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:49:07.577Z"
+    "fetchedAt": "2026-09-19T22:33:15.102Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -3684,7 +3663,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:40:15.851Z"
+    "fetchedAt": "2026-09-19T22:33:39.315Z"
   },
   "荣耀 Magic3 Pro": {
     "ok": true,
@@ -3711,7 +3690,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:50:19.755Z"
+    "fetchedAt": "2026-09-19T22:34:25.336Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3744,7 +3723,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:41:33.178Z"
+    "fetchedAt": "2026-09-19T22:35:01.788Z"
   },
   "荣耀 618": {
     "ok": false,
@@ -3752,7 +3731,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:42:09.722Z"
+    "fetchedAt": "2026-09-19T22:35:42.020Z"
   },
   "华为 畅享 90": {
     "ok": true,
@@ -3784,7 +3763,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:42:42.274Z"
+    "fetchedAt": "2026-09-19T22:36:18.526Z"
   },
   "荣耀 Magic3": {
     "ok": true,
@@ -3811,7 +3790,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:51:05.378Z"
+    "fetchedAt": "2026-09-19T22:37:05.132Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -3857,7 +3836,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:44:01.855Z"
+    "fetchedAt": "2026-09-19T22:37:44.296Z"
   },
   "荣耀 Power": {
     "ok": true,
@@ -3902,7 +3881,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:44:51.664Z"
+    "fetchedAt": "2026-09-19T22:38:32.440Z"
   },
   "荣耀 600": {
     "ok": true,
@@ -3947,7 +3926,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:45:38.885Z"
+    "fetchedAt": "2026-09-19T22:39:23.920Z"
   },
   "荣耀 300": {
     "ok": false,
@@ -4040,15 +4019,15 @@
     "source": "official",
     "product": {
       "title": "荣耀300 Ultra",
-      "price": "¥ 2319",
+      "price": "¥ 3189",
       "skuPrices": [
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 2319"
-        },
         {
           "version": "16GB+1TB",
           "price": "¥ 3189"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 2319"
         }
       ],
       "careServices": [],
@@ -4073,7 +4052,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:46:30.036Z"
+    "fetchedAt": "2026-09-19T22:40:14.101Z"
   },
   "华为 MatePad Pro Max": {
     "ok": true,
@@ -4486,70 +4465,24 @@
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad 11.5 S",
-      "price": "¥ 2799",
+      "price": "¥ 2199",
       "skuPrices": [
         {
           "version": "12GB+256GB",
           "price": "¥ 2799",
-          "sbomCode": "2701010122621",
+          "sbomCode": "2701010122609",
           "colors": []
         },
         {
           "version": "12GB+512GB",
           "price": "¥ 3199",
-          "sbomCode": "2701010122623",
+          "sbomCode": "2701010122610",
           "colors": []
-        }
-      ],
-      "careServices": [
-        {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 199",
-          "sbomCode": "3201020123401"
-        }
-      ],
-      "colors": [
-        "原野绿",
-        "深空灰",
-        "冰霜银",
-        "羽砂紫"
-      ],
-      "specs": {
-        "chip": "",
-        "battery": "8800mAh",
-        "screen": "3.2英寸",
-        "charge": "40W",
-        "refreshRate": "",
-        "screenTech": ""
-      },
-      "priceStatus": "available"
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-09-08T22:59:38.359Z"
-  },
-  "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "HUAWEI MatePad 11.5 S 灵动款 鸿蒙焕新版",
-      "price": "¥ 2999",
-      "skuPrices": [
+        },
         {
           "version": "8GB+256GB",
-          "price": "¥ 2999",
-          "sbomCode": "2701010131801",
-          "colors": []
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 3299",
-          "sbomCode": "2701010131802",
-          "colors": []
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 3999",
-          "sbomCode": "2701010131808",
+          "price": "¥ 2199",
+          "sbomCode": "2701010122616",
           "colors": []
         }
       ],
@@ -4561,8 +4494,10 @@
         }
       ],
       "colors": [
+        "羽砂紫",
+        "深空灰",
         "冰霜银",
-        "羽砂紫"
+        "原野绿"
       ],
       "specs": {
         "chip": "",
@@ -4575,13 +4510,21 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-08T23:00:13.525Z"
+    "fetchedAt": "2026-09-19T22:40:48.135Z"
+  },
+  "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
+    "ok": false,
+    "source": "official",
+    "message": "未找到匹配的产品。",
+    "product": null,
+    "zhihuItems": [],
+    "fetchedAt": "2026-09-19T22:41:12.136Z"
   },
   "华为 MatePad 11.5": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "HUAWEI MatePad 11.5 2024款 智能皮套",
+      "title": "HUAWEI MatePad 11.5 智能皮套",
       "price": "¥ 149",
       "skuPrices": [],
       "careServices": [],
@@ -4589,7 +4532,7 @@
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "2.2英寸",
+        "screen": "3.2英寸",
         "charge": "",
         "refreshRate": "",
         "screenTech": ""
@@ -4597,14 +4540,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-08T23:00:48.178Z"
+    "fetchedAt": "2026-09-19T22:41:42.581Z"
   },
   "华为 MatePad 11.5 鸿蒙焕新版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad 11.5 鸿蒙焕新版",
-      "price": "¥ 2599",
+      "price": "¥ 3599",
       "skuPrices": [
         {
           "version": "8GB+128GB",
@@ -4636,8 +4579,7 @@
         "深空灰",
         "海岛蓝",
         "冰霜银",
-        "羽砂紫",
-        "原野绿"
+        "羽砂紫"
       ],
       "specs": {
         "chip": "",
@@ -4650,7 +4592,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-08T23:01:22.443Z"
+    "fetchedAt": "2026-09-19T22:42:19.968Z"
   },
   "华为 MatePad SE 11英寸 焕新版": {
     "ok": true,
@@ -4693,7 +4635,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-08T23:01:52.978Z"
+    "fetchedAt": "2026-09-19T22:42:55.032Z"
   },
   "华为 MateBook 14 鸿蒙版": {
     "ok": true,
@@ -4744,14 +4686,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-12T22:43:23.951Z"
+    "fetchedAt": "2026-09-19T22:43:30.266Z"
   },
   "华为 MateBook 14 酷睿 Ultra": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MateBook 14 酷睿 Ultra",
-      "price": "¥ 6999",
+      "price": "¥ 6299",
       "skuPrices": [
         {
           "version": "24GB+1TB",
@@ -4765,20 +4707,14 @@
           "sbomCode": "2801010174903",
           "colors": [
             "电脑MateBook14酷睿Ultra 5 深空灰一级能效 规格型号：FLMH-16",
-            "电脑MateBook14酷睿Ultra 5 皓月银一级能效 规格型号：FLMH-16",
-            "电脑MateBook14酷睿Ultra 5 原野绿一级能效 规格型号：FLMH-16"
+            "电脑MateBook14酷睿Ultra 5 皓月银一级能效 规格型号：FLMH-16"
           ]
         },
         {
           "version": "32GB+1TB",
-          "price": "¥ 6999",
-          "sbomCode": "2801010174905",
-          "colors": [
-            "电脑MateBook14酷睿Ultra 5 原野绿一级能效 规格型号：FLMH-32",
-            "电脑MateBook14酷睿Ultra 5 深空灰一级能效 规格型号：FLMH-32",
-            "电脑MateBook14酷睿Ultra 7 原野绿一级能效 规格型号：FLMH-32",
-            "电脑MateBook14酷睿Ultra 7 深空灰一级能效 规格型号：FLMH-32"
-          ]
+          "price": "¥ 7599",
+          "sbomCode": "2801010174937",
+          "colors": []
         }
       ],
       "careServices": [
@@ -4793,17 +4729,12 @@
         "深空灰",
         "皓月银",
         "电脑MateBook14酷睿Ultra 5 深空灰一级能效 规格型号：FLMH-16",
-        "电脑MateBook14酷睿Ultra 5 皓月银一级能效 规格型号：FLMH-16",
-        "电脑MateBook14酷睿Ultra 5 原野绿一级能效 规格型号：FLMH-16",
-        "电脑MateBook14酷睿Ultra 5 原野绿一级能效 规格型号：FLMH-32",
-        "电脑MateBook14酷睿Ultra 5 深空灰一级能效 规格型号：FLMH-32",
-        "电脑MateBook14酷睿Ultra 7 原野绿一级能效 规格型号：FLMH-32",
-        "电脑MateBook14酷睿Ultra 7 深空灰一级能效 规格型号：FLMH-32"
+        "电脑MateBook14酷睿Ultra 5 皓月银一级能效 规格型号：FLMH-16"
       ],
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "4.2英寸",
+        "screen": "3.2英寸",
         "charge": "70W",
         "refreshRate": "",
         "screenTech": "OLED"
@@ -4811,29 +4742,23 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-12T22:43:58.328Z"
+    "fetchedAt": "2026-09-19T22:44:02.595Z"
   },
   "华为 MateBook D 14": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MateBook D 14",
-      "price": "¥ 5799",
+      "price": "¥ 5999",
       "skuPrices": [
         {
           "version": "16GB+1TB",
           "price": "¥ 5999",
           "sbomCode": "2801010169429",
           "colors": [
+            "电脑 MateBook D 14 2024 13代酷睿i5   深空灰 一级能效 规格型号：MDG-32",
+            "电脑 MateBook D 14 2024 13代酷睿i5   皓月银 一级能效 规格型号：MDG-32",
             "MateBook D 14 2023 13代酷睿i7  深空灰"
-          ]
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥ 3599",
-          "sbomCode": "2801010169405",
-          "colors": [
-            "电脑 MateBook D 14 2024 i5   皓月银 一级能效 规格型号：MDF-16"
           ]
         }
       ],
@@ -4841,13 +4766,14 @@
       "colors": [
         "皓月银",
         "深空灰",
-        "MateBook D 14 2023 13代酷睿i7  深空灰",
-        "电脑 MateBook D 14 2024 i5   皓月银 一级能效 规格型号：MDF-16"
+        "电脑 MateBook D 14 2024 13代酷睿i5   深空灰 一级能效 规格型号：MDG-32",
+        "电脑 MateBook D 14 2024 13代酷睿i5   皓月银 一级能效 规格型号：MDG-32",
+        "MateBook D 14 2023 13代酷睿i7  深空灰"
       ],
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "undefined英寸",
+        "screen": "3.2英寸",
         "charge": "56W",
         "refreshRate": "60Hz",
         "screenTech": ""
@@ -4855,7 +4781,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-12T22:44:30.811Z"
+    "fetchedAt": "2026-09-19T22:44:35.122Z"
   },
   "华为 MateBook D 14 SE": {
     "ok": true,
@@ -4869,7 +4795,6 @@
           "price": "¥ 5699",
           "sbomCode": "2801010170615",
           "colors": [
-            "电脑 MateBook D 14 SE 2024 13代酷睿i5   皓月银 一级能效 规格型号：MDG-16",
             "电脑 MateBook D 14 SE 2024 13代酷睿i5   深空灰 一级能效 规格型号：MDG-16"
           ]
         },
@@ -4884,7 +4809,6 @@
       "colors": [
         "皓月银",
         "深空灰",
-        "电脑 MateBook D 14 SE 2024 13代酷睿i5   皓月银 一级能效 规格型号：MDG-16",
         "电脑 MateBook D 14 SE 2024 13代酷睿i5   深空灰 一级能效 规格型号：MDG-16"
       ],
       "specs": {
@@ -4898,23 +4822,20 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-12T22:45:03.343Z"
+    "fetchedAt": "2026-09-19T22:45:05.744Z"
   },
   "华为 MateBook D 16": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MateBook D 16",
-      "price": "¥ 4999",
+      "price": "¥ 6499",
       "skuPrices": [
         {
           "version": "16GB+1TB",
           "price": "¥ 5999",
           "sbomCode": "2801010168125",
-          "colors": [
-            "电脑 MateBook D 16 2024 13代酷睿i5   深空灰 一级能效 规格型号：MCLG-16",
-            "电脑 MateBook D 16 高能版 2024 13代酷睿标压 i5  皓月银 一级能效 规格型号：MCLG-16"
-          ]
+          "colors": []
         }
       ],
       "careServices": [
@@ -4926,14 +4847,12 @@
       ],
       "colors": [
         "皓月银",
-        "深空灰",
-        "电脑 MateBook D 16 2024 13代酷睿i5   深空灰 一级能效 规格型号：MCLG-16",
-        "电脑 MateBook D 16 高能版 2024 13代酷睿标压 i5  皓月银 一级能效 规格型号：MCLG-16"
+        "深空灰"
       ],
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "undefined英寸",
+        "screen": "3.2英寸",
         "charge": "56W",
         "refreshRate": "",
         "screenTech": ""
@@ -4941,14 +4860,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:47:03.705Z"
+    "fetchedAt": "2026-09-19T22:45:39.279Z"
   },
   "华为 MateBook GT 14 酷睿 Ultra": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MateBook GT 14 酷睿 Ultra",
-      "price": "¥ 7299",
+      "price": "¥ 10799",
       "skuPrices": [
         {
           "version": "32GB+1TB",
@@ -4959,18 +4878,9 @@
         {
           "version": "32GB+2TB",
           "price": "¥ 10799",
-          "sbomCode": "2801010177201",
+          "sbomCode": "2801010177215",
           "colors": [
-            "电脑MateBookGT14Ultra9 皓月银一级能效 规格型号：ENZH-32",
             "电脑MateBookGT14Ultra9 深空灰一级能效 规格型号：ENZH-32"
-          ]
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥ 7299",
-          "sbomCode": "2801010177204",
-          "colors": [
-            "电脑MateBookGT14Ultra5 皓月银一级能效 规格型号：ENZH-16"
           ]
         }
       ],
@@ -4984,9 +4894,7 @@
       "colors": [
         "皓月银",
         "深空灰",
-        "电脑MateBookGT14Ultra9 皓月银一级能效 规格型号：ENZH-32",
-        "电脑MateBookGT14Ultra9 深空灰一级能效 规格型号：ENZH-32",
-        "电脑MateBookGT14Ultra5 皓月银一级能效 规格型号：ENZH-16"
+        "电脑MateBookGT14Ultra9 深空灰一级能效 规格型号：ENZH-32"
       ],
       "specs": {
         "chip": "",
@@ -4999,7 +4907,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:47:35.721Z"
+    "fetchedAt": "2026-09-19T22:46:12.604Z"
   },
   "华为 MateBook Pro S": {
     "ok": true,
@@ -5058,7 +4966,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-13T22:48:06.720Z"
+    "fetchedAt": "2026-09-19T22:46:44.274Z"
   },
   "华为 MateBook Pro 麒麟X90 Plus": {
     "ok": true,
@@ -7498,6 +7406,6 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:57:56.590Z"
+    "fetchedAt": "2026-09-19T22:47:37.194Z"
   }
 }
