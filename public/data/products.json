@@ -3462,7 +3462,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-25T23:37:30.618Z"
+    "fetchedAt": "2026-09-26T22:50:11.515Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3671,7 +3671,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-25T23:39:19.462Z"
+    "fetchedAt": "2026-09-26T22:50:57.590Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3771,7 +3771,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-25T23:40:18.659Z"
+    "fetchedAt": "2026-09-26T22:51:44.620Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -4033,14 +4033,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:40:14.101Z"
+    "fetchedAt": "2026-09-26T22:52:36.146Z"
   },
   "华为 MatePad Pro Max": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Pro Max",
-      "price": "¥ 6799",
+      "price": "¥ 7799",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -4099,58 +4099,15 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:53:02.336Z"
+    "fetchedAt": "2026-09-26T22:53:11.538Z"
   },
   "华为 MatePad Pro 13.2 英寸": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "HUAWEI MatePad Pro 13.2 英寸",
-      "price": "¥ 10599",
-      "skuPrices": [
-        {
-          "version": "16GB+1TB",
-          "price": "¥ 10599",
-          "sbomCode": "2701010110425",
-          "colors": []
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 5699",
-          "sbomCode": "2701010110403",
-          "colors": [
-            "平板 MatePad Pro 13.2 英寸 2025 WiFi  砚黑"
-          ]
-        }
-      ],
-      "careServices": [
-        {
-          "name": "HUAWEI Care+（两年期）",
-          "price": "¥ 999",
-          "sbomCode": "3201020089601"
-        },
-        {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 549",
-          "sbomCode": "3201020089701"
-        }
-      ],
-      "colors": [
-        "砚黑",
-        "平板 MatePad Pro 13.2 英寸 2025 WiFi  砚黑"
-      ],
-      "specs": {
-        "chip": "",
-        "battery": "10100mAh",
-        "screen": "3.2英寸",
-        "charge": "100W",
-        "refreshRate": "144Hz",
-        "screenTech": "OLED"
-      },
-      "priceStatus": "available"
-    },
+    "message": "未找到匹配的产品。",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:53:37.736Z"
+    "fetchedAt": "2026-09-26T22:53:33.398Z"
   },
   "华为 MatePad Pro 12.2 英寸": {
     "ok": true,
@@ -4172,7 +4129,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:54:14.025Z"
+    "fetchedAt": "2026-09-26T22:54:05.414Z"
   },
   "华为 MatePad Pro 12英寸": {
     "ok": true,
@@ -4216,7 +4173,7 @@
       "specs": {
         "chip": "",
         "battery": "10400mAh",
-        "screen": "3.2英寸",
+        "screen": "2.2英寸",
         "charge": "66W",
         "refreshRate": "144Hz",
         "screenTech": "OLED"
@@ -4224,7 +4181,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:54:50.566Z"
+    "fetchedAt": "2026-09-26T22:54:40.021Z"
   },
   "华为 MatePad Edge": {
     "ok": true,
@@ -4285,14 +4242,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:55:24.354Z"
+    "fetchedAt": "2026-09-26T22:55:11.742Z"
   },
   "华为 MatePad Mini": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Mini",
-      "price": "¥ 4999",
+      "price": "¥ 5999",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -4348,7 +4305,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:56:00.412Z"
+    "fetchedAt": "2026-09-26T22:55:45.907Z"
   },
   "华为 MatePad Mini 鸿蒙焕新版": {
     "ok": true,
@@ -4384,7 +4341,7 @@
       "specs": {
         "chip": "麒麟9010",
         "battery": "6400mAh",
-        "screen": "3.2英寸",
+        "screen": "8.8英寸",
         "charge": "",
         "refreshRate": "",
         "screenTech": "OLED"
@@ -4392,7 +4349,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:56:32.450Z"
+    "fetchedAt": "2026-09-26T22:56:19.130Z"
   },
   "华为 MatePad Air 12英寸 鸿蒙焕新版": {
     "ok": true,
@@ -4431,7 +4388,7 @@
       "specs": {
         "chip": "",
         "battery": "10100mAh",
-        "screen": "3.2英寸",
+        "screen": "undefined英寸",
         "charge": "66W",
         "refreshRate": "144Hz",
         "screenTech": "OLED"
@@ -4439,73 +4396,13 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-18T22:57:07.687Z"
+    "fetchedAt": "2026-09-26T22:56:52.499Z"
   },
   "华为 MatePad 11.5 S": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "HUAWEI MatePad 11.5 S",
-      "price": "¥ 2199",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 2799",
-          "sbomCode": "2701010122609",
-          "colors": []
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 3199",
-          "sbomCode": "2701010122610",
-          "colors": []
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥ 2199",
-          "sbomCode": "2701010122616",
-          "colors": []
-        }
-      ],
-      "careServices": [
-        {
-          "name": "HUAWEI Care+（一年期）",
-          "price": "¥ 199",
-          "sbomCode": "3201020123401"
-        }
-      ],
-      "colors": [
-        "羽砂紫",
-        "深空灰",
-        "冰霜银",
-        "原野绿"
-      ],
-      "specs": {
-        "chip": "",
-        "battery": "8800mAh",
-        "screen": "3.2英寸",
-        "charge": "40W",
-        "refreshRate": "",
-        "screenTech": ""
-      },
-      "priceStatus": "available"
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:40:48.135Z"
-  },
-  "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
-    "ok": false,
-    "source": "official",
-    "message": "未找到匹配的产品。",
-    "product": null,
-    "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:41:12.136Z"
-  },
-  "华为 MatePad 11.5": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "HUAWEI MatePad 11.5 智能皮套",
+      "title": "HUAWEI MatePad 11.5 S 智能皮套",
       "price": "¥ 149",
       "skuPrices": [],
       "careServices": [],
@@ -4521,14 +4418,44 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:41:42.581Z"
+    "fetchedAt": "2026-09-26T22:57:27.857Z"
+  },
+  "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
+    "ok": false,
+    "source": "official",
+    "message": "未找到匹配的产品。",
+    "product": null,
+    "zhihuItems": [],
+    "fetchedAt": "2026-09-26T22:57:50.621Z"
+  },
+  "华为 MatePad 11.5": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI MatePad 11.5 智能皮套",
+      "price": "¥ 149",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "undefinedmAh",
+        "screen": "2.2英寸",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-09-26T22:58:26.661Z"
   },
   "华为 MatePad 11.5 鸿蒙焕新版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad 11.5 鸿蒙焕新版",
-      "price": "¥ 3599",
+      "price": "¥ 2599",
       "skuPrices": [
         {
           "version": "8GB+128GB",
@@ -4565,7 +4492,7 @@
       "specs": {
         "chip": "",
         "battery": "10100mAh",
-        "screen": "3.2英寸",
+        "screen": "1.5英寸",
         "charge": "40W",
         "refreshRate": "",
         "screenTech": ""
@@ -4573,7 +4500,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:42:19.968Z"
+    "fetchedAt": "2026-09-26T22:58:59.247Z"
   },
   "华为 MatePad SE 11英寸 焕新版": {
     "ok": true,
@@ -4608,7 +4535,7 @@
       "specs": {
         "chip": "",
         "battery": "7700mAh",
-        "screen": "3.2英寸",
+        "screen": "undefined英寸",
         "charge": "",
         "refreshRate": "",
         "screenTech": ""
@@ -4616,7 +4543,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:42:55.032Z"
+    "fetchedAt": "2026-09-26T22:59:31.094Z"
   },
   "华为 MateBook 14 鸿蒙版": {
     "ok": true,
@@ -4659,7 +4586,7 @@
       "specs": {
         "chip": "",
         "battery": "6000mAh",
-        "screen": "3.2英寸",
+        "screen": "4.2英寸",
         "charge": "70W",
         "refreshRate": "60Hz",
         "screenTech": "OLED"
@@ -4667,7 +4594,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:43:30.266Z"
+    "fetchedAt": "2026-09-26T23:00:03.868Z"
   },
   "华为 MateBook 14 酷睿 Ultra": {
     "ok": true,
@@ -4715,7 +4642,7 @@
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "3.2英寸",
+        "screen": "4.2英寸",
         "charge": "70W",
         "refreshRate": "",
         "screenTech": "OLED"
@@ -4723,7 +4650,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:44:02.595Z"
+    "fetchedAt": "2026-09-26T23:00:35.877Z"
   },
   "华为 MateBook D 14": {
     "ok": true,
@@ -4737,8 +4664,6 @@
           "price": "¥ 5999",
           "sbomCode": "2801010169429",
           "colors": [
-            "电脑 MateBook D 14 2024 13代酷睿i5   深空灰 一级能效 规格型号：MDG-32",
-            "电脑 MateBook D 14 2024 13代酷睿i5   皓月银 一级能效 规格型号：MDG-32",
             "MateBook D 14 2023 13代酷睿i7  深空灰"
           ]
         }
@@ -4747,14 +4672,12 @@
       "colors": [
         "皓月银",
         "深空灰",
-        "电脑 MateBook D 14 2024 13代酷睿i5   深空灰 一级能效 规格型号：MDG-32",
-        "电脑 MateBook D 14 2024 13代酷睿i5   皓月银 一级能效 规格型号：MDG-32",
         "MateBook D 14 2023 13代酷睿i7  深空灰"
       ],
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "3.2英寸",
+        "screen": "undefined英寸",
         "charge": "56W",
         "refreshRate": "60Hz",
         "screenTech": ""
@@ -4762,7 +4685,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:44:35.122Z"
+    "fetchedAt": "2026-09-26T23:01:08.361Z"
   },
   "华为 MateBook D 14 SE": {
     "ok": true,
@@ -4795,7 +4718,7 @@
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "3.2英寸",
+        "screen": "4.0英寸",
         "charge": "56W",
         "refreshRate": "60Hz",
         "screenTech": ""
@@ -4803,7 +4726,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:45:05.744Z"
+    "fetchedAt": "2026-09-26T23:01:42.101Z"
   },
   "华为 MateBook D 16": {
     "ok": true,
@@ -4833,7 +4756,7 @@
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "3.2英寸",
+        "screen": "undefined英寸",
         "charge": "56W",
         "refreshRate": "",
         "screenTech": ""
@@ -4841,7 +4764,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:45:39.279Z"
+    "fetchedAt": "2026-09-26T23:02:17.680Z"
   },
   "华为 MateBook GT 14 酷睿 Ultra": {
     "ok": true,
@@ -4880,7 +4803,7 @@
       "specs": {
         "chip": "",
         "battery": "undefinedmAh",
-        "screen": "3.2英寸",
+        "screen": "4.2英寸",
         "charge": "70W",
         "refreshRate": "",
         "screenTech": "OLED"
@@ -4888,7 +4811,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-19T22:46:12.604Z"
+    "fetchedAt": "2026-09-26T23:02:52.709Z"
   },
   "华为 MateBook Pro S": {
     "ok": true,
