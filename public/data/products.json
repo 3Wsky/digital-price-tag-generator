@@ -1318,84 +1318,44 @@
     "fetchedAt": "2026-09-27T23:17:39.749Z"
   },
   "荣耀 Magic7 Pro": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀Magic7 Pro",
-      "price": "¥ 3399",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 3399"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "月影灰",
-        "雪域白",
-        "天际蓝"
-      ],
-      "specs": {
-        "chip": "骁龙®️8至尊版移动平台",
-        "battery": "5850mAh",
-        "screen": "6.8英寸",
-        "charge": "80W",
-        "refreshRate": "120Hz",
-        "screenTech": "OLED"
-      },
-      "features": [
-        "5850mAh 荣耀青海湖电池 80W荣耀超快充",
-        "骁龙®️8至尊版移动平台 芯片",
-        "6.8英寸 OLED 120Hz",
-        "2亿像素 潜望式长焦摄像头：1/1.4"
-      ],
-      "priceStatus": "available"
-    },
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:03:41.566Z"
+    "fetchedAt": "2026-09-29T00:29:13.615Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "荣耀Magic6 Pro",
-      "price": "¥ 2489",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 2489"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥ 3149"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥ 2849"
-        }
-      ],
+      "price": "",
+      "skuPrices": [],
       "careServices": [],
       "colors": [
-        "绒黑色"
+        "绒黑色",
+        "祁连雪",
+        "查看视频"
       ],
       "specs": {
         "chip": "第三代骁龙8",
         "battery": "5600mAh",
-        "screen": "6.8英寸",
-        "charge": "66W",
+        "screen": "6.80英寸",
+        "charge": "80W",
         "refreshRate": "120Hz",
-        "screenTech": "OLED"
+        "screenTech": "LTPO"
       },
       "features": [
-        "5600mAh 66W荣耀超快充",
+        "5600mAh 荣耀青海湖电池 80W荣耀超快充",
         "第三代骁龙8 芯片",
-        "6.8英寸 OLED 120Hz",
-        "1.8亿像素 潜望式长焦摄像头"
+        "6.80英寸 LTPO 120Hz",
+        "1.8亿像素 潜望式"
       ],
-      "priceStatus": "available"
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:04:33.143Z"
+    "fetchedAt": "2026-09-29T00:30:07.194Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1766,46 +1726,12 @@
     "fetchedAt": "2026-09-25T23:36:43.988Z"
   },
   "vivo X200 Pro": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "vivo X200 Pro",
-      "price": "¥6499",
-      "skuPrices": [
-        {
-          "version": "16GB+1TB 卫星通信版",
-          "price": "¥6499"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥5299"
-        },
-        {
-          "version": "16GB+512GB",
-          "price": "¥5999"
-        },
-        {
-          "version": "16GB+1TB",
-          "price": "¥6499"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "辰夜黑",
-        "白月光",
-        "宝石蓝",
-        "钛色"
-      ],
-      "specs": {},
-      "features": [
-        "蓝晶×天玑 9400",
-        "6000mAh蓝海电池",
-        "蔡司2 亿APO超级长焦"
-      ],
-      "priceStatus": "available"
-    },
+    "message": "vivo 官网未找到该产品。",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:06:19.725Z"
+    "fetchedAt": "2026-09-29T00:30:45.230Z"
   },
   "vivo X200s": {
     "ok": true,
@@ -1851,7 +1777,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:06:26.832Z"
+    "fetchedAt": "2026-09-29T00:30:51.553Z"
   },
   "vivo X300": {
     "ok": true,
@@ -1898,7 +1824,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:06:35.043Z"
+    "fetchedAt": "2026-09-29T00:30:57.839Z"
   },
   "vivo X300 Pro": {
     "ok": true,
@@ -1939,7 +1865,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:06:43.830Z"
+    "fetchedAt": "2026-09-29T00:31:04.050Z"
   },
   "vivo X300 Ultra": {
     "ok": true,
@@ -1984,7 +1910,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:06:49.457Z"
+    "fetchedAt": "2026-09-29T00:31:10.719Z"
   },
   "vivo X300s": {
     "ok": true,
@@ -2030,7 +1956,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:06:55.358Z"
+    "fetchedAt": "2026-09-29T00:31:19.975Z"
   },
   "vivo S30": {
     "ok": true,
@@ -2068,7 +1994,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:07:03.887Z"
+    "fetchedAt": "2026-09-29T00:31:26.770Z"
   },
   "vivo S30 Pro mini": {
     "ok": true,
@@ -2106,41 +2032,35 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:07:24.992Z"
+    "fetchedAt": "2026-09-29T00:31:47.253Z"
   },
   "vivo S50": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "vivo S50t",
-      "price": "¥3699",
-      "skuPrices": [
-        {
-          "version": "16GB+256GB",
-          "price": "¥3699"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥3699"
-        }
-      ],
+      "title": "vivo S50",
+      "price": "",
+      "skuPrices": [],
       "careServices": [],
       "colors": [
-        "深空黑",
-        "灵感紫",
         "告白",
-        "悠悠蓝"
+        "灵感紫",
+        "悠悠蓝",
+        "深空黑"
       ],
-      "specs": {},
-      "features": [
-        "长焦Live神器",
-        "高通第三代骁龙 8s",
-        "湿手秒开超声波指纹 2.0"
-      ],
-      "priceStatus": "available"
+      "specs": {
+        "chip": "",
+        "battery": "6500mAh",
+        "screen": "6.59英寸",
+        "charge": "90W",
+        "refreshRate": "120Hz",
+        "screenTech": ""
+      },
+      "features": [],
+      "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:07:33.392Z"
+    "fetchedAt": "2026-09-29T00:32:07.110Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2177,7 +2097,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:07:37.228Z"
+    "fetchedAt": "2026-09-29T00:32:12.754Z"
   },
   "vivo Y60": {
     "ok": true,
@@ -2212,7 +2132,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:08:02.674Z"
+    "fetchedAt": "2026-09-29T00:32:35.222Z"
   },
   "vivo Y500": {
     "ok": true,
@@ -2253,7 +2173,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:08:25.571Z"
+    "fetchedAt": "2026-09-29T00:33:00.187Z"
   },
   "vivo Y500i": {
     "ok": true,
@@ -2299,7 +2219,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:08:31.313Z"
+    "fetchedAt": "2026-09-29T00:33:08.741Z"
   },
   "vivo Y500 Pro": {
     "ok": true,
@@ -2342,7 +2262,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:08:53.896Z"
+    "fetchedAt": "2026-09-29T00:33:32.542Z"
   },
   "vivo Y600 Pro": {
     "ok": true,
@@ -2389,34 +2309,34 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:09:02.947Z"
+    "fetchedAt": "2026-09-29T00:33:37.066Z"
   },
   "iQOO 15": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "vivo iQOO 15",
-      "price": "¥4999",
+      "price": "¥5299",
       "skuPrices": [
         {
           "version": "12GB+256GB",
-          "price": "¥4999"
-        },
-        {
-          "version": "16GB+256GB",
           "price": "¥5299"
         },
         {
-          "version": "12GB+512GB",
-          "price": "¥5599"
+          "version": "16GB+256GB",
+          "price": "¥5699"
         },
         {
-          "version": "16GB+512GB",
+          "version": "12GB+512GB",
           "price": "¥5999"
         },
         {
+          "version": "16GB+512GB",
+          "price": "¥6499"
+        },
+        {
           "version": "16GB+1TB",
-          "price": "¥6999"
+          "price": "¥7499"
         }
       ],
       "careServices": [],
@@ -2437,7 +2357,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:09:07.337Z"
+    "fetchedAt": "2026-09-29T00:33:45.964Z"
   },
   "iQOO 13": {
     "ok": true,
@@ -2484,7 +2404,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:09:14.073Z"
+    "fetchedAt": "2026-09-29T00:33:54.700Z"
   },
   "iQOO Neo11": {
     "ok": true,
@@ -2531,7 +2451,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-22T23:09:18.478Z"
+    "fetchedAt": "2026-09-29T00:34:02.687Z"
   },
   "iQOO Neo10": {
     "ok": true,
@@ -3458,7 +3378,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-27T23:18:23.622Z"
+    "fetchedAt": "2026-09-29T00:34:51.414Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3667,7 +3587,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-27T23:19:12.374Z"
+    "fetchedAt": "2026-09-29T00:35:38.364Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3767,7 +3687,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-27T23:20:00.614Z"
+    "fetchedAt": "2026-09-29T00:36:23.572Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
