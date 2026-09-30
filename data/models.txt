@@ -271,3 +271,6 @@ iQOO Z11S
 
 # Auto-discovered by node server.mjs --discover-models.
 荣耀 Magic9
+
+# Auto-discovered by node server.mjs --discover-models.
+iQOO 16

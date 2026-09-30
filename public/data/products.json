@@ -1330,32 +1330,43 @@
     "source": "official",
     "product": {
       "title": "荣耀Magic6 Pro",
-      "price": "",
-      "skuPrices": [],
+      "price": "¥ 2489",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 2489"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥ 3149"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥ 2849"
+        }
+      ],
       "careServices": [],
       "colors": [
-        "绒黑色",
-        "祁连雪",
-        "查看视频"
+        "绒黑色"
       ],
       "specs": {
         "chip": "第三代骁龙8",
         "battery": "5600mAh",
-        "screen": "6.80英寸",
-        "charge": "80W",
+        "screen": "6.8英寸",
+        "charge": "66W",
         "refreshRate": "120Hz",
-        "screenTech": "LTPO"
+        "screenTech": "OLED"
       },
       "features": [
-        "5600mAh 荣耀青海湖电池 80W荣耀超快充",
+        "5600mAh 66W荣耀超快充",
         "第三代骁龙8 芯片",
-        "6.80英寸 LTPO 120Hz",
-        "1.8亿像素 潜望式"
+        "6.8英寸 OLED 120Hz",
+        "1.8亿像素 潜望式长焦摄像头"
       ],
-      "priceStatus": "pending"
+      "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-29T00:30:07.194Z"
+    "fetchedAt": "2026-09-29T23:48:02.241Z"
   },
   "荣耀 500": {
     "ok": true,
@@ -1660,20 +1671,59 @@
     "fetchedAt": "2026-09-25T23:35:46.788Z"
   },
   "荣耀 X60 Pro": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀X60 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "6600mAh",
+        "screen": "",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "绿洲护眼屏"
+      },
+      "features": [
+        "6600mAh 荣耀青海湖电池 66W荣耀超快充",
+        "绿洲护眼屏 120Hz",
+        "1亿像素 超清影像需进入高像素拍照模式"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:19:23.647Z"
+    "fetchedAt": "2026-09-29T23:48:44.307Z"
   },
   "荣耀 X50": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀X50",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "第一代骁龙6",
+        "battery": "5800mAh",
+        "screen": "6.78英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "AMOLED"
+      },
+      "features": [
+        "5800mAh",
+        "第一代骁龙6 芯片",
+        "6.78英寸 AMOLED 120Hz",
+        "13.1亿像素 为摄像头像素点参数"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:19:51.623Z"
+    "fetchedAt": "2026-09-29T23:49:30.104Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2060,7 +2110,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-29T00:32:07.110Z"
+    "fetchedAt": "2026-09-29T23:50:03.816Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2497,7 +2547,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:04:46.570Z"
+    "fetchedAt": "2026-09-29T23:50:10.088Z"
   },
   "iQOO Z11x": {
     "ok": true,
@@ -2543,7 +2593,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:04:56.670Z"
+    "fetchedAt": "2026-09-29T23:50:17.557Z"
   },
   "iQOO Z11 Turbo": {
     "ok": true,
@@ -2590,7 +2640,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:05:02.012Z"
+    "fetchedAt": "2026-09-29T23:50:24.066Z"
   },
   "华为 Mate 80 RS": {
     "ok": true,
@@ -2636,7 +2686,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:05:34.797Z"
+    "fetchedAt": "2026-09-29T23:50:55.869Z"
   },
   "荣耀 Magic V6": {
     "ok": true,
@@ -2667,7 +2717,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:06:26.506Z"
+    "fetchedAt": "2026-09-29T23:51:41.859Z"
   },
   "华为 Mate 70 RS": {
     "ok": true,
@@ -2727,7 +2777,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:07:00.935Z"
+    "fetchedAt": "2026-09-29T23:52:15.888Z"
   },
   "荣耀 Magic8 RSR": {
     "ok": true,
@@ -2766,7 +2816,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:07:50.443Z"
+    "fetchedAt": "2026-09-29T23:53:03.790Z"
   },
   "华为 Mate 60": {
     "ok": false,
@@ -2774,7 +2824,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:08:12.100Z"
+    "fetchedAt": "2026-09-29T23:53:27.971Z"
   },
   "荣耀 Magic V5": {
     "ok": true,
@@ -2807,19 +2857,19 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:08:57.572Z"
+    "fetchedAt": "2026-09-29T23:54:11.316Z"
   },
   "华为 Pura 90 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI Pura 90 Pro",
-      "price": "¥ 7499",
+      "price": "¥ 5499",
       "skuPrices": [
         {
           "version": "12GB+256GB",
           "price": "¥ 5499",
-          "sbomCode": "2601010614420",
+          "sbomCode": "2601010614418",
           "colors": []
         },
         {
@@ -2854,10 +2904,10 @@
         }
       ],
       "colors": [
-        "粉红芭乐",
-        "桑果黑",
         "椰青白",
-        "橘子汽水"
+        "桑果黑",
+        "橘子汽水",
+        "粉红芭乐"
       ],
       "specs": {
         "chip": "麒麟9030",
@@ -2870,15 +2920,38 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:09:31.340Z"
+    "fetchedAt": "2026-09-29T23:54:43.716Z"
   },
   "荣耀 Magic7 RSR": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic7 RSR 保时捷设计",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "普罗旺斯紫",
+        "玛瑙灰"
+      ],
+      "specs": {
+        "chip": "骁龙®8至尊版移动平台",
+        "battery": "5850mAh",
+        "screen": "6.8英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "绿洲护眼屏"
+      },
+      "features": [
+        "5850mAh 荣耀青海湖电池 100W荣耀超快充",
+        "骁龙®8至尊版移动平台 芯片",
+        "6.8英寸 绿洲护眼屏 120Hz",
+        "2亿像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:09:58.329Z"
+    "fetchedAt": "2026-09-29T23:55:31.793Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -2934,33 +3007,58 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:10:35.796Z"
+    "fetchedAt": "2026-09-29T23:56:07.054Z"
   },
   "荣耀 Magic V3": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic V3",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "绒黑色",
+        "丝路敦煌",
+        "祁连雪",
+        "苔原绿"
+      ],
+      "specs": {
+        "chip": "第三代骁龙8",
+        "battery": "5150mAh",
+        "screen": "7.92英寸",
+        "charge": "66W",
+        "refreshRate": "120Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5150mAh 荣耀青海湖电池 66W荣耀超快充",
+        "第三代骁龙8 芯片",
+        "7.92英寸 LTPO 120Hz",
+        "5000万像素"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:20:14.753Z"
+    "fetchedAt": "2026-09-29T23:56:52.044Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "nova 16 Pro",
-      "price": "¥ 4999",
+      "price": "¥ 3899",
       "skuPrices": [
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 4399",
-          "sbomCode": "2601010625819",
-          "colors": []
-        },
         {
           "version": "12GB+256GB",
           "price": "¥ 3899",
-          "sbomCode": "2601010625813",
+          "sbomCode": "2601010625826",
+          "colors": []
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 4399",
+          "sbomCode": "2601010625817",
           "colors": []
         },
         {
@@ -2972,6 +3070,7 @@
       ],
       "careServices": [],
       "colors": [
+        "野联名款",
         "全网通版"
       ],
       "specs": {
@@ -2985,7 +3084,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:11:58.743Z"
+    "fetchedAt": "2026-09-29T23:57:24.716Z"
   },
   "荣耀 Magic6": {
     "ok": true,
@@ -3020,7 +3119,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:12:49.326Z"
+    "fetchedAt": "2026-09-29T23:58:14.864Z"
   },
   "华为 nova 16 Ultra": {
     "ok": true,
@@ -3063,7 +3162,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:13:49.950Z"
+    "fetchedAt": "2026-09-29T23:58:48.524Z"
   },
   "荣耀 Magic6 RSR": {
     "ok": true,
@@ -3098,7 +3197,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:14:41.652Z"
+    "fetchedAt": "2026-09-29T23:59:37.296Z"
   },
   "iQOO Z11": {
     "ok": true,
@@ -3144,7 +3243,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-23T23:14:51.698Z"
+    "fetchedAt": "2026-09-29T23:59:45.869Z"
   },
   "华为 nova 16": {
     "ok": true,
@@ -3378,7 +3477,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-29T00:34:51.414Z"
+    "fetchedAt": "2026-09-30T00:00:33.852Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3587,7 +3686,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-29T00:35:38.364Z"
+    "fetchedAt": "2026-09-30T00:01:19.825Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3687,7 +3786,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-29T00:36:23.572Z"
+    "fetchedAt": "2026-09-30T00:02:02.419Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -7235,5 +7334,47 @@
     },
     "zhihuItems": [],
     "fetchedAt": "2026-09-24T23:35:49.931Z"
+  },
+  "iQOO 16": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "vivo iQOO 16",
+      "price": "¥5999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥5999"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥6799"
+        },
+        {
+          "version": "16GB+512GB",
+          "price": "¥7499"
+        },
+        {
+          "version": "16GB+1TB",
+          "price": "¥8499"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "赛道",
+        "传奇",
+        "逐光"
+      ],
+      "specs": {},
+      "features": [
+        "2K 165Hz 三星珠峰屏",
+        "自研电竞芯片 Q4",
+        "第六代骁龙 8 超级至尊版",
+        "8.5K VC 冰穹散热系统"
+      ],
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-09-30T00:02:08.920Z"
   }
 }

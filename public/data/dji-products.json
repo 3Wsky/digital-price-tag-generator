@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-29T00:36:25.731Z"
+    "fetchedAt": "2026-09-30T00:02:11.026Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-29T00:36:32.357Z"
+    "fetchedAt": "2026-09-30T00:02:15.513Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-29T00:36:38.540Z"
+    "fetchedAt": "2026-09-30T00:02:19.577Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1183,8 +1183,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 碳素黑）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini",
           "type": "SpuBundle",
-          "price": "¥2485",
-          "priceValue": 2485,
+          "price": "¥2498",
+          "priceValue": 2498,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1254,8 +1254,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic Mini 发射器 云感白）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-mini-transmitter-arctic-white",
           "type": "SpuBundle",
-          "price": "¥2485",
-          "priceValue": 2485,
+          "price": "¥2498",
+          "priceValue": 2498,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1325,8 +1325,8 @@
           "title": "Osmo Pocket 3 Vlog 套装（DJI Mic 3 发射器）",
           "slug": "osmo-pocket-3-vlog-combo-dji-mic-3-transmitter",
           "type": "SpuBundle",
-          "price": "¥2928",
-          "priceValue": 2928,
+          "price": "¥3098",
+          "priceValue": 3098,
           "controller": "",
           "bundleKind": "Vlog 套装",
           "includedItems": [
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-09-29T00:36:44.362Z"
+    "fetchedAt": "2026-09-30T00:02:23.357Z"
   }
 }
