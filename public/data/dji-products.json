@@ -375,7 +375,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mini-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-10-01T00:08:02.602Z"
+    "fetchedAt": "2026-10-02T00:16:40.707Z"
   },
   "dji-air-3s": {
     "ok": true,
@@ -712,7 +712,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-air-3s?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-10-01T00:08:07.919Z"
+    "fetchedAt": "2026-10-02T00:16:45.310Z"
   },
   "dji-mavic-4-pro": {
     "ok": true,
@@ -722,15 +722,15 @@
       "title": "DJI Mavic 4 Pro",
       "slug": "dji-mavic-4-pro",
       "url": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN",
-      "price": "¥14112",
+      "price": "¥14107",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "DJI Mavic 4 Pro 140W 氮化镓充电套装",
           "slug": "dji-mavic-4-pro-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥14112",
-          "priceValue": 14112,
+          "price": "¥14107",
+          "priceValue": 14107,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -1034,7 +1034,7 @@
       "fetchedFrom": "https://store.dji.com/cn/product/dji-mavic-4-pro?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-10-01T00:08:11.486Z"
+    "fetchedAt": "2026-10-02T00:16:49.105Z"
   },
   "osmo-pocket-3": {
     "ok": true,
@@ -1044,15 +1044,15 @@
       "title": "Osmo Pocket 3",
       "slug": "osmo-pocket-3",
       "url": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN",
-      "price": "¥2623",
+      "price": "¥2618",
       "priceStatus": "available",
       "bundles": [
         {
           "title": "Osmo Pocket 3 140W 氮化镓充电套装",
           "slug": "osmo-pocket-3-140w-gan-charging-combo",
           "type": "SpuBundle",
-          "price": "¥2623",
-          "priceValue": 2623,
+          "price": "¥2618",
+          "priceValue": 2618,
           "controller": "",
           "bundleKind": "标准套装",
           "includedItems": [
@@ -1574,6 +1574,6 @@
       "fetchedFrom": "https://store.dji.com/cn/product/osmo-pocket-3?set_region=CN"
     },
     "message": "",
-    "fetchedAt": "2026-10-01T00:08:16.331Z"
+    "fetchedAt": "2026-10-02T00:16:53.184Z"
   }
 }

@@ -274,3 +274,8 @@ iQOO Z11S
 
 # Auto-discovered by node server.mjs --discover-models.
 iQOO 16
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 Mate 90 Pro
+华为 Mate 90 RS
+华为 Mate 90
