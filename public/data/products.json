@@ -2022,7 +2022,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:03:30.257Z"
+    "fetchedAt": "2026-10-03T22:58:58.514Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2863,7 +2863,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:04:17.308Z"
+    "fetchedAt": "2026-10-03T22:59:56.473Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -2952,7 +2952,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:05:00.139Z"
+    "fetchedAt": "2026-10-03T23:00:39.310Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3303,7 +3303,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:05:46.189Z"
+    "fetchedAt": "2026-10-03T23:01:26.494Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3411,7 +3411,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:06:34.030Z"
+    "fetchedAt": "2026-10-03T23:02:12.063Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3480,7 +3480,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:07:19.007Z"
+    "fetchedAt": "2026-10-03T23:02:56.717Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3623,7 +3623,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:08:09.789Z"
+    "fetchedAt": "2026-10-03T23:03:42.110Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -3666,7 +3666,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:08:54.957Z"
+    "fetchedAt": "2026-10-03T23:04:28.313Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3766,7 +3766,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T00:09:43.176Z"
+    "fetchedAt": "2026-10-03T23:05:11.837Z"
   },
   "荣耀 600 Pro": {
     "ok": false,
@@ -3785,49 +3785,12 @@
     "fetchedAt": "2026-10-02T00:14:58.254Z"
   },
   "荣耀 600": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀600 元气版",
-      "price": "¥ 2999",
-      "skuPrices": [
-        {
-          "version": "12GB+256GB",
-          "price": "¥ 2999"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥ 2699"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 3399"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "曜石黑",
-        "元气白",
-        "好事橙"
-      ],
-      "specs": {
-        "chip": "第四代骁龙7",
-        "battery": "7000mAh",
-        "screen": "6.57英寸",
-        "charge": "80W",
-        "refreshRate": "120Hz",
-        "screenTech": "AMOLED"
-      },
-      "features": [
-        "7000mAh 80W荣耀超快充",
-        "第四代骁龙7 芯片",
-        "6.57英寸 AMOLED 120Hz",
-        "5000万像素 广角摄像头"
-      ],
-      "priceStatus": "available"
-    },
+    "message": "荣耀官网未找到该产品。",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:32:44.559Z"
+    "fetchedAt": "2026-10-03T23:05:50.264Z"
   },
   "荣耀 300": {
     "ok": false,
@@ -3835,7 +3798,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:33:20.532Z"
+    "fetchedAt": "2026-10-03T23:06:33.538Z"
   },
   "荣耀 300 Pro": {
     "ok": false,
@@ -3843,7 +3806,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:33:57.943Z"
+    "fetchedAt": "2026-10-03T23:07:15.409Z"
   },
   "荣耀 200": {
     "ok": false,
@@ -3851,7 +3814,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:34:35.397Z"
+    "fetchedAt": "2026-10-03T23:07:51.988Z"
   },
   "iQOO Z11i": {
     "ok": true,
@@ -3889,7 +3852,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:34:42.539Z"
+    "fetchedAt": "2026-10-03T23:08:01.295Z"
   },
   "华为 nova 16 SE": {
     "ok": true,
@@ -3913,54 +3876,22 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-24T23:35:15.527Z"
+    "fetchedAt": "2026-10-03T23:08:33.525Z"
   },
   "荣耀 300 Ultra": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "荣耀300 Ultra",
-      "price": "¥ 3189",
-      "skuPrices": [
-        {
-          "version": "16GB+1TB",
-          "price": "¥ 3189"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥ 2319"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "山茶白",
-        "墨岩黑"
-      ],
-      "specs": {
-        "chip": "第三代骁龙8",
-        "battery": "5300mAh",
-        "screen": "6.78英寸",
-        "charge": "100W",
-        "refreshRate": "120Hz",
-        "screenTech": "AMOLED"
-      },
-      "features": [
-        "5300mAh 荣耀青海湖电池 100W荣耀超快充",
-        "第三代骁龙8 芯片",
-        "6.78英寸 AMOLED 120Hz",
-        "5000万像素 广角摄像头"
-      ],
-      "priceStatus": "available"
-    },
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:52:36.146Z"
+    "fetchedAt": "2026-10-03T23:09:00.812Z"
   },
   "华为 MatePad Pro Max": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Pro Max",
-      "price": "¥ 7799",
+      "price": "¥ 6499",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -4019,7 +3950,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:53:11.538Z"
+    "fetchedAt": "2026-10-03T23:09:35.381Z"
   },
   "华为 MatePad Pro 13.2 英寸": {
     "ok": false,
@@ -4027,7 +3958,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:53:33.398Z"
+    "fetchedAt": "2026-10-03T23:09:58.490Z"
   },
   "华为 MatePad Pro 12.2 英寸": {
     "ok": true,
@@ -4049,14 +3980,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:54:05.414Z"
+    "fetchedAt": "2026-10-03T23:10:30.999Z"
   },
   "华为 MatePad Pro 12英寸": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Pro 12英寸",
-      "price": "¥ 5999",
+      "price": "¥ 5699",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -4101,14 +4032,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:54:40.021Z"
+    "fetchedAt": "2026-10-03T23:11:06.880Z"
   },
   "华为 MatePad Edge": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Edge",
-      "price": "¥ 7999",
+      "price": "¥ 5999",
       "skuPrices": [
         {
           "version": "16GB+256GB",
@@ -4162,14 +4093,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:55:11.742Z"
+    "fetchedAt": "2026-10-03T23:11:38.437Z"
   },
   "华为 MatePad Mini": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Mini",
-      "price": "¥ 5999",
+      "price": "¥ 3799",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -4225,7 +4156,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:55:45.907Z"
+    "fetchedAt": "2026-10-03T23:12:09.676Z"
   },
   "华为 MatePad Mini 鸿蒙焕新版": {
     "ok": true,
@@ -4261,7 +4192,7 @@
       "specs": {
         "chip": "麒麟9010",
         "battery": "6400mAh",
-        "screen": "8.8英寸",
+        "screen": "2.2英寸",
         "charge": "",
         "refreshRate": "",
         "screenTech": "OLED"
@@ -4269,14 +4200,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:56:19.130Z"
+    "fetchedAt": "2026-10-03T23:12:40.818Z"
   },
   "华为 MatePad Air 12英寸 鸿蒙焕新版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Air 12英寸（第三代）",
-      "price": "¥ 5299",
+      "price": "¥ 4499",
       "skuPrices": [
         {
           "version": "8GB+256GB",
@@ -4308,7 +4239,7 @@
       "specs": {
         "chip": "",
         "battery": "10100mAh",
-        "screen": "undefined英寸",
+        "screen": "2.2英寸",
         "charge": "66W",
         "refreshRate": "144Hz",
         "screenTech": "OLED"
@@ -4316,43 +4247,13 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:56:52.499Z"
+    "fetchedAt": "2026-10-03T23:13:15.115Z"
   },
   "华为 MatePad 11.5 S": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad 11.5 S 智能皮套",
-      "price": "¥ 149",
-      "skuPrices": [],
-      "careServices": [],
-      "colors": [],
-      "specs": {
-        "chip": "",
-        "battery": "undefinedmAh",
-        "screen": "3.2英寸",
-        "charge": "",
-        "refreshRate": "",
-        "screenTech": ""
-      },
-      "priceStatus": "available"
-    },
-    "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:57:27.857Z"
-  },
-  "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
-    "ok": false,
-    "source": "official",
-    "message": "未找到匹配的产品。",
-    "product": null,
-    "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:57:50.621Z"
-  },
-  "华为 MatePad 11.5": {
-    "ok": true,
-    "source": "official",
-    "product": {
-      "title": "HUAWEI MatePad 11.5 智能皮套",
       "price": "¥ 149",
       "skuPrices": [],
       "careServices": [],
@@ -4368,7 +4269,37 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:58:26.661Z"
+    "fetchedAt": "2026-10-03T23:13:47.141Z"
+  },
+  "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
+    "ok": false,
+    "source": "official",
+    "message": "未找到匹配的产品。",
+    "product": null,
+    "zhihuItems": [],
+    "fetchedAt": "2026-10-03T23:14:08.551Z"
+  },
+  "华为 MatePad 11.5": {
+    "ok": true,
+    "source": "official",
+    "product": {
+      "title": "HUAWEI MatePad 11.5 2024款 智能皮套",
+      "price": "¥ 149",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "undefinedmAh",
+        "screen": "2.2英寸",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "priceStatus": "available"
+    },
+    "zhihuItems": [],
+    "fetchedAt": "2026-10-03T23:14:43.050Z"
   },
   "华为 MatePad 11.5 鸿蒙焕新版": {
     "ok": true,
@@ -4420,7 +4351,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:58:59.247Z"
+    "fetchedAt": "2026-10-03T23:15:15.595Z"
   },
   "华为 MatePad SE 11英寸 焕新版": {
     "ok": true,
@@ -4463,7 +4394,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-09-26T22:59:31.094Z"
+    "fetchedAt": "2026-10-03T23:15:47.451Z"
   },
   "华为 MateBook 14 鸿蒙版": {
     "ok": true,
