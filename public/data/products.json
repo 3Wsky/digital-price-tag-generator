@@ -1214,7 +1214,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:11:08.772Z"
+    "fetchedAt": "2026-10-10T00:08:55.843Z"
   },
   "荣耀 Magic6 Pro": {
     "ok": true,
@@ -1586,7 +1586,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:25:47.668Z"
+    "fetchedAt": "2026-10-10T00:09:44.352Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1614,7 +1614,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:26:34.247Z"
+    "fetchedAt": "2026-10-10T00:10:32.748Z"
   },
   "vivo X200": {
     "ok": true,
@@ -1672,7 +1672,7 @@
     "message": "vivo 官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:11:50.441Z"
+    "fetchedAt": "2026-10-10T00:11:15.549Z"
   },
   "vivo X200s": {
     "ok": true,
@@ -1718,7 +1718,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:11:56.831Z"
+    "fetchedAt": "2026-10-10T00:11:23.416Z"
   },
   "vivo X300": {
     "ok": true,
@@ -1765,30 +1765,30 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:12:07.595Z"
+    "fetchedAt": "2026-10-10T00:11:34.409Z"
   },
   "vivo X300 Pro": {
     "ok": true,
     "source": "official",
     "product": {
-      "title": "vivo X300 Pro 卫星通信版",
-      "price": "¥5999",
+      "title": "vivo X300 Pro",
+      "price": "¥5599",
       "skuPrices": [
         {
-          "version": "12GB+256GB 卫星通信版",
-          "price": "¥5999"
+          "version": "12GB+256GB",
+          "price": "¥5599"
         },
         {
-          "version": "12GB+512GB 卫星通信版",
-          "price": "¥6299"
+          "version": "16GB+512GB",
+          "price": "¥6399"
         },
         {
-          "version": "16GB+512GB 卫星通信版",
-          "price": "¥6799"
+          "version": "16GB+1TB",
+          "price": "¥7199"
         },
         {
-          "version": "16GB+1TB 卫星通信版",
-          "price": "¥7799"
+          "version": "16GB+1TB 摄影师套装",
+          "price": "¥7199"
         }
       ],
       "careServices": [],
@@ -1806,7 +1806,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:12:16.750Z"
+    "fetchedAt": "2026-10-10T00:11:43.044Z"
   },
   "vivo X300 Ultra": {
     "ok": true,
@@ -1851,7 +1851,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:12:21.803Z"
+    "fetchedAt": "2026-10-10T00:11:50.027Z"
   },
   "vivo X300s": {
     "ok": true,
@@ -1897,7 +1897,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:12:27.043Z"
+    "fetchedAt": "2026-10-10T00:11:57.830Z"
   },
   "vivo S30": {
     "ok": true,
@@ -1935,7 +1935,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:12:33.070Z"
+    "fetchedAt": "2026-10-10T00:12:06.935Z"
   },
   "vivo S30 Pro mini": {
     "ok": true,
@@ -1973,7 +1973,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:12:58.164Z"
+    "fetchedAt": "2026-10-10T00:12:33.086Z"
   },
   "vivo S50": {
     "ok": true,
@@ -2001,7 +2001,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:27:10.617Z"
+    "fetchedAt": "2026-10-10T00:12:53.490Z"
   },
   "vivo S50 Pro mini": {
     "ok": true,
@@ -2038,7 +2038,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:13:30.201Z"
+    "fetchedAt": "2026-10-10T00:12:57.757Z"
   },
   "vivo Y60": {
     "ok": true,
@@ -2073,7 +2073,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:13:49.669Z"
+    "fetchedAt": "2026-10-10T00:13:21.803Z"
   },
   "vivo Y500": {
     "ok": true,
@@ -2114,53 +2114,15 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:14:14.530Z"
+    "fetchedAt": "2026-10-10T00:13:46.282Z"
   },
   "vivo Y500i": {
-    "ok": true,
+    "ok": false,
     "source": "official",
-    "product": {
-      "title": "vivo Y500i",
-      "price": "¥1299",
-      "skuPrices": [
-        {
-          "version": "8GB+128GB",
-          "price": "¥1299"
-        },
-        {
-          "version": "8GB+256GB",
-          "price": "¥1499"
-        },
-        {
-          "version": "12GB+256GB",
-          "price": "¥1799"
-        },
-        {
-          "version": "8GB+512GB",
-          "price": "¥1799"
-        },
-        {
-          "version": "12GB+512GB",
-          "price": "¥2199"
-        }
-      ],
-      "careServices": [],
-      "colors": [
-        "曜石黑",
-        "星河银",
-        "凤迎金",
-        "幸运红"
-      ],
-      "specs": {},
-      "features": [
-        "6年长寿大电池",
-        "满级防水防尘全面抗摔",
-        "1200nits硬件级真护眼屏"
-      ],
-      "priceStatus": "available"
-    },
+    "message": "vivo 官网未找到该产品。",
+    "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:14:24.253Z"
+    "fetchedAt": "2026-10-10T00:14:13.452Z"
   },
   "vivo Y500 Pro": {
     "ok": true,
@@ -2203,7 +2165,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:14:48.406Z"
+    "fetchedAt": "2026-10-10T00:14:34.516Z"
   },
   "vivo Y600 Pro": {
     "ok": true,
@@ -2250,7 +2212,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:14:53.550Z"
+    "fetchedAt": "2026-10-10T00:14:39.314Z"
   },
   "iQOO 15": {
     "ok": true,
@@ -2298,7 +2260,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:14:59.589Z"
+    "fetchedAt": "2026-10-10T00:14:47.169Z"
   },
   "iQOO 13": {
     "ok": true,
@@ -2345,7 +2307,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:15:07.777Z"
+    "fetchedAt": "2026-10-10T00:14:55.115Z"
   },
   "iQOO Neo11": {
     "ok": true,
@@ -2392,7 +2354,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-04T23:15:12.919Z"
+    "fetchedAt": "2026-10-10T00:15:02.393Z"
   },
   "iQOO Neo10": {
     "ok": true,
@@ -2912,7 +2874,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:27:55.601Z"
+    "fetchedAt": "2026-10-10T00:15:50.004Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3236,7 +3198,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:29:57.437Z"
+    "fetchedAt": "2026-10-10T00:16:34.776Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3344,7 +3306,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:31:27.208Z"
+    "fetchedAt": "2026-10-10T00:17:21.704Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3413,7 +3375,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:32:47.332Z"
+    "fetchedAt": "2026-10-10T00:18:07.167Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3512,7 +3474,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:34:38.740Z"
+    "fetchedAt": "2026-10-10T00:18:53.046Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3576,7 +3538,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:36:03.601Z"
+    "fetchedAt": "2026-10-10T00:19:40.586Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -3619,7 +3581,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:37:38.835Z"
+    "fetchedAt": "2026-10-10T00:20:28.700Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3719,7 +3681,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-09T00:40:15.936Z"
+    "fetchedAt": "2026-10-10T00:21:15.956Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -3860,7 +3822,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T23:06:33.538Z"
+    "fetchedAt": "2026-10-10T00:21:54.898Z"
   },
   "荣耀 300 Pro": {
     "ok": false,
@@ -3868,7 +3830,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-03T23:07:15.409Z"
+    "fetchedAt": "2026-10-10T00:22:31.189Z"
   },
   "荣耀 200": {
     "ok": false,
