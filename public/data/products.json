@@ -1689,12 +1689,32 @@
     "fetchedAt": "2026-10-17T22:33:56.915Z"
   },
   "荣耀 X50": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀X50",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "第一代骁龙6",
+        "battery": "5800mAh",
+        "screen": "6.78英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "AMOLED"
+      },
+      "features": [
+        "5800mAh",
+        "第一代骁龙6 芯片",
+        "6.78英寸 AMOLED 120Hz",
+        "13.1亿像素 为摄像头像素点参数"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:55:36.662Z"
+    "fetchedAt": "2026-10-21T23:21:39.210Z"
   },
   "vivo X200": {
     "ok": true,
@@ -2901,12 +2921,35 @@
     "fetchedAt": "2026-10-19T23:47:50.662Z"
   },
   "荣耀 Magic7 RSR": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic7 RSR 保时捷设计",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "普罗旺斯紫",
+        "玛瑙灰"
+      ],
+      "specs": {
+        "chip": "骁龙®8至尊版移动平台",
+        "battery": "5850mAh",
+        "screen": "6.8英寸",
+        "charge": "100W",
+        "refreshRate": "120Hz",
+        "screenTech": "绿洲护眼屏"
+      },
+      "features": [
+        "5850mAh 荣耀青海湖电池 100W荣耀超快充",
+        "骁龙®8至尊版移动平台 芯片",
+        "6.8英寸 绿洲护眼屏 120Hz",
+        "2亿像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:56:01.280Z"
+    "fetchedAt": "2026-10-21T23:22:25.703Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -2995,7 +3038,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-20T23:22:04.178Z"
+    "fetchedAt": "2026-10-21T23:23:10.749Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3346,7 +3389,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-20T23:23:22.775Z"
+    "fetchedAt": "2026-10-21T23:23:54.908Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3389,7 +3432,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:22:47.030Z"
+    "fetchedAt": "2026-10-21T23:24:15.525Z"
   },
   "华为 nova 15 Pro": {
     "ok": true,
@@ -3425,15 +3468,36 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:23:16.991Z"
+    "fetchedAt": "2026-10-21T23:24:50.057Z"
   },
   "荣耀 Magic5": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic5 至臻版",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "雅黑色",
+        "燃橙色"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5450mAh",
+        "screen": "",
+        "charge": "",
+        "refreshRate": "",
+        "screenTech": ""
+      },
+      "features": [
+        "5450mAh",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:16:58.453Z"
+    "fetchedAt": "2026-10-21T23:25:40.009Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3468,15 +3532,41 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:24:36.341Z"
+    "fetchedAt": "2026-10-21T23:26:13.085Z"
   },
   "荣耀 Magic5 Pro": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic5 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [
+        "苔原绿",
+        "查看更多细节",
+        "勃朗蓝",
+        "珊瑚紫",
+        "燃橙色",
+        "亮黑色"
+      ],
+      "specs": {
+        "chip": "",
+        "battery": "5450mAh",
+        "screen": "6.81英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "5450mAh",
+        "6.81英寸 LTPO 120Hz",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:17:25.615Z"
+    "fetchedAt": "2026-10-21T23:26:57.894Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3511,7 +3601,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:25:57.743Z"
+    "fetchedAt": "2026-10-21T23:27:29.978Z"
   },
   "华为 nova 14": {
     "ok": true,
@@ -3547,15 +3637,35 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:26:31.233Z"
+    "fetchedAt": "2026-10-21T23:28:00.516Z"
   },
   "荣耀 Magic4": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic4 至臻版",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "骁龙8移动平台",
+        "battery": "4600mAh",
+        "screen": "6.81英寸",
+        "charge": "100W",
+        "refreshRate": "1920Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "4600mAh 100W荣耀超快充",
+        "骁龙8移动平台 芯片",
+        "6.81英寸 LTPO 1920Hz",
+        "6400万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:17:48.878Z"
+    "fetchedAt": "2026-10-21T23:28:48.345Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3591,15 +3701,35 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:27:56.835Z"
+    "fetchedAt": "2026-10-21T23:29:20.266Z"
   },
   "荣耀 Magic4 Pro": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic4 Pro",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "骁龙8移动平台",
+        "battery": "4600mAh",
+        "screen": "6.81英寸",
+        "charge": "100W",
+        "refreshRate": "1920Hz",
+        "screenTech": "LTPO"
+      },
+      "features": [
+        "4600mAh 100W荣耀超快充",
+        "骁龙8移动平台 芯片",
+        "6.81英寸 LTPO 1920Hz",
+        "5000万像素 超高清影像"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:18:13.438Z"
+    "fetchedAt": "2026-10-21T23:30:06.701Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -3607,7 +3737,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:29:12.942Z"
+    "fetchedAt": "2026-10-21T23:30:29.552Z"
   },
   "华为 nova 13": {
     "ok": false,
@@ -3615,15 +3745,15 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:29:33.245Z"
+    "fetchedAt": "2026-10-21T23:30:50.457Z"
   },
   "荣耀 Magic3 Pro": {
     "ok": false,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
+    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Magic3%20Pro\", waiting until \"domcontentloaded\"\n",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:18:40.261Z"
+    "fetchedAt": "2026-10-21T23:31:31.220Z"
   },
   "华为 畅享 90 Pro": {
     "ok": true,
@@ -3656,7 +3786,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:30:50.085Z"
+    "fetchedAt": "2026-10-21T23:32:03.223Z"
   },
   "荣耀 618": {
     "ok": false,
@@ -3664,7 +3794,7 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:31:26.720Z"
+    "fetchedAt": "2026-10-21T23:32:41.098Z"
   },
   "华为 畅享 90": {
     "ok": true,
@@ -3696,15 +3826,34 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:32:02.029Z"
+    "fetchedAt": "2026-10-21T23:33:13.926Z"
   },
   "荣耀 Magic3": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Magic3 至臻版",
+      "price": "",
+      "skuPrices": [],
+      "careServices": [],
+      "colors": [],
+      "specs": {
+        "chip": "",
+        "battery": "4600mAh",
+        "screen": "6.76英寸",
+        "charge": "",
+        "refreshRate": "120Hz",
+        "screenTech": "OLED"
+      },
+      "features": [
+        "4600mAh",
+        "6.76英寸 OLED 120Hz",
+        "6400万像素"
+      ],
+      "priceStatus": "pending"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:19:05.393Z"
+    "fetchedAt": "2026-10-21T23:34:03.208Z"
   },
   "荣耀 600 Pro": {
     "ok": true,
@@ -3750,7 +3899,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:33:23.266Z"
+    "fetchedAt": "2026-10-21T23:34:39.131Z"
   },
   "荣耀 Power": {
     "ok": false,
