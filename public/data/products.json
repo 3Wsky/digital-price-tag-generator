@@ -1673,7 +1673,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:24:59.008Z"
+    "fetchedAt": "2026-10-24T22:34:21.487Z"
   },
   "荣耀 X50": {
     "ok": true,
@@ -1701,7 +1701,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:25:45.413Z"
+    "fetchedAt": "2026-10-24T22:35:05.239Z"
   },
   "vivo X200": {
     "ok": true,
@@ -1743,7 +1743,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-17T22:34:18.418Z"
+    "fetchedAt": "2026-10-24T22:35:22.290Z"
   },
   "vivo X200 Ultra": {
     "ok": false,
@@ -2936,7 +2936,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:26:27.446Z"
+    "fetchedAt": "2026-10-24T22:36:12.273Z"
   },
   "华为 Pura 90": {
     "ok": true,
@@ -3025,7 +3025,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:27:14.257Z"
+    "fetchedAt": "2026-10-24T22:36:58.527Z"
   },
   "华为 nova 16 Pro": {
     "ok": true,
@@ -3376,7 +3376,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:28:01.091Z"
+    "fetchedAt": "2026-10-24T22:37:47.201Z"
   },
   "iQOO Z10 Turbo": {
     "ok": true,
@@ -3484,7 +3484,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:28:47.213Z"
+    "fetchedAt": "2026-10-24T22:38:34.613Z"
   },
   "华为 nova 15": {
     "ok": true,
@@ -3553,7 +3553,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:29:30.284Z"
+    "fetchedAt": "2026-10-24T22:39:20.252Z"
   },
   "华为 nova 14 Ultra": {
     "ok": true,
@@ -3652,7 +3652,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:30:18.647Z"
+    "fetchedAt": "2026-10-24T22:40:04.709Z"
   },
   "华为 nova 14 Pro": {
     "ok": true,
@@ -3716,7 +3716,7 @@
       "priceStatus": "pending"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-23T23:31:06.690Z"
+    "fetchedAt": "2026-10-24T22:40:48.902Z"
   },
   "华为 nova 13 Pro": {
     "ok": false,
@@ -3870,28 +3870,102 @@
     "fetchedAt": "2026-10-21T23:34:39.131Z"
   },
   "荣耀 Power": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20Power\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀Power",
+      "price": "¥ 2299",
+      "skuPrices": [
+        {
+          "version": "8GB+256GB",
+          "price": "¥ 2299"
+        },
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 2499"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 2799"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "幻夜黑",
+        "沙漠金",
+        "雪原白"
+      ],
+      "specs": {
+        "chip": "第三代骁龙7",
+        "battery": "8000mAh",
+        "screen": "6.78英寸",
+        "charge": "80W",
+        "refreshRate": "120Hz",
+        "screenTech": "AMOLED"
+      },
+      "features": [
+        "8000mAh 荣耀青海湖电池 80W荣耀超快充",
+        "第三代骁龙7 芯片",
+        "6.78英寸 AMOLED 120Hz",
+        "5000万像素 OIS摄像头"
+      ],
+      "priceStatus": "available"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:34:02.970Z"
+    "fetchedAt": "2026-10-24T22:41:33.814Z"
   },
   "荣耀 600": {
-    "ok": false,
+    "ok": true,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/v/search?keyword=%E8%8D%A3%E8%80%80%20600\", waiting until \"domcontentloaded\"\n",
-    "product": null,
+    "product": {
+      "title": "荣耀600 元气版",
+      "price": "¥ 2999",
+      "skuPrices": [
+        {
+          "version": "12GB+256GB",
+          "price": "¥ 2999"
+        },
+        {
+          "version": "8GB+256GB",
+          "price": "¥ 2699"
+        },
+        {
+          "version": "12GB+512GB",
+          "price": "¥ 3399"
+        }
+      ],
+      "careServices": [],
+      "colors": [
+        "曜石黑",
+        "元气白",
+        "好事橙"
+      ],
+      "specs": {
+        "chip": "第四代骁龙7",
+        "battery": "7000mAh",
+        "screen": "6.57英寸",
+        "charge": "80W",
+        "refreshRate": "120Hz",
+        "screenTech": "AMOLED"
+      },
+      "features": [
+        "7000mAh 80W荣耀超快充",
+        "第四代骁龙7 芯片",
+        "6.57英寸 AMOLED 120Hz",
+        "5000万像素 广角摄像头"
+      ],
+      "priceStatus": "available"
+    },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-14T23:34:44.097Z"
+    "fetchedAt": "2026-10-24T22:42:22.241Z"
   },
   "荣耀 300": {
     "ok": false,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
+    "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:19:30.256Z"
+    "fetchedAt": "2026-10-24T22:42:56.683Z"
   },
   "荣耀 300 Pro": {
     "ok": false,
@@ -3899,15 +3973,15 @@
     "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-15T23:20:09.881Z"
+    "fetchedAt": "2026-10-24T22:43:32.174Z"
   },
   "荣耀 200": {
     "ok": false,
     "source": "official",
-    "message": "page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.honor.com/cn/shop/\", waiting until \"domcontentloaded\"\n",
+    "message": "荣耀官网未找到该产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:57:13.578Z"
+    "fetchedAt": "2026-10-24T22:44:10.028Z"
   },
   "iQOO Z11i": {
     "ok": true,
@@ -3945,7 +4019,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:57:31.606Z"
+    "fetchedAt": "2026-10-24T22:44:19.619Z"
   },
   "华为 nova 16 SE": {
     "ok": true,
@@ -3969,7 +4043,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:58:04.193Z"
+    "fetchedAt": "2026-10-24T22:44:50.089Z"
   },
   "荣耀 300 Ultra": {
     "ok": true,
@@ -4009,14 +4083,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:58:58.850Z"
+    "fetchedAt": "2026-10-24T22:45:38.466Z"
   },
   "华为 MatePad Pro Max": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Pro Max",
-      "price": "¥ 7999",
+      "price": "¥ 6799",
       "skuPrices": [
         {
           "version": "12GB+256GB",
@@ -4069,13 +4143,13 @@
         "battery": "10400mAh",
         "screen": "3.2英寸",
         "charge": "",
-        "refreshRate": "144Hz",
+        "refreshRate": "",
         "screenTech": "OLED"
       },
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:59:32.275Z"
+    "fetchedAt": "2026-10-24T22:46:11.220Z"
   },
   "华为 MatePad Pro 13.2 英寸": {
     "ok": false,
@@ -4083,7 +4157,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T22:59:55.245Z"
+    "fetchedAt": "2026-10-24T22:46:32.581Z"
   },
   "华为 MatePad Pro 12.2 英寸": {
     "ok": false,
@@ -4091,7 +4165,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:00:16.654Z"
+    "fetchedAt": "2026-10-24T22:46:54.784Z"
   },
   "华为 MatePad Pro 12英寸": {
     "ok": true,
@@ -4137,20 +4211,20 @@
         "battery": "10400mAh",
         "screen": "3.2英寸",
         "charge": "66W",
-        "refreshRate": "144Hz",
+        "refreshRate": "",
         "screenTech": "OLED"
       },
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:00:49.990Z"
+    "fetchedAt": "2026-10-24T22:47:27.214Z"
   },
   "华为 MatePad Edge": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Edge",
-      "price": "¥ 7999",
+      "price": "¥ 9999",
       "skuPrices": [
         {
           "version": "16GB+256GB",
@@ -4173,7 +4247,7 @@
         {
           "version": "32GB+2TB",
           "price": "¥ 12999",
-          "sbomCode": "2701010126310",
+          "sbomCode": "2701010126336",
           "colors": []
         }
       ],
@@ -4198,13 +4272,13 @@
         "battery": "12900mAh",
         "screen": "4.2英寸",
         "charge": "",
-        "refreshRate": "",
+        "refreshRate": "120Hz",
         "screenTech": "OLED"
       },
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:01:20.752Z"
+    "fetchedAt": "2026-10-24T22:48:00.161Z"
   },
   "华为 MatePad Mini": {
     "ok": true,
@@ -4221,8 +4295,8 @@
         },
         {
           "version": "12GB+512GB",
-          "price": "¥ 4499",
-          "sbomCode": "2701010123205",
+          "price": "¥ 4999",
+          "sbomCode": "2701010123206",
           "colors": []
         },
         {
@@ -4252,8 +4326,8 @@
       ],
       "colors": [
         "雪域白",
-        "云杉绿",
         "曜石黑",
+        "云杉绿",
         "寰宇红"
       ],
       "specs": {
@@ -4267,7 +4341,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:01:50.809Z"
+    "fetchedAt": "2026-10-24T22:48:35.161Z"
   },
   "华为 MatePad Mini 鸿蒙焕新版": {
     "ok": true,
@@ -4310,14 +4384,14 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:02:23.477Z"
+    "fetchedAt": "2026-10-24T22:49:06.935Z"
   },
   "华为 MatePad Air 12英寸 鸿蒙焕新版": {
     "ok": true,
     "source": "official",
     "product": {
       "title": "HUAWEI MatePad Air 12英寸（第三代）",
-      "price": "¥ 5299",
+      "price": "¥ 6299",
       "skuPrices": [
         {
           "version": "8GB+256GB",
@@ -4357,7 +4431,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:02:56.436Z"
+    "fetchedAt": "2026-10-24T22:49:38.166Z"
   },
   "华为 MatePad 11.5 S": {
     "ok": true,
@@ -4379,7 +4453,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:03:27.032Z"
+    "fetchedAt": "2026-10-24T22:50:07.733Z"
   },
   "华为 MatePad 11.5 S 灵动款 鸿蒙焕新版": {
     "ok": false,
@@ -4387,7 +4461,7 @@
     "message": "未找到匹配的产品。",
     "product": null,
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:03:48.111Z"
+    "fetchedAt": "2026-10-24T22:50:32.255Z"
   },
   "华为 MatePad 11.5": {
     "ok": true,
@@ -4409,7 +4483,7 @@
       "priceStatus": "available"
     },
     "zhihuItems": [],
-    "fetchedAt": "2026-10-16T23:04:18.937Z"
+    "fetchedAt": "2026-10-24T22:51:03.222Z"
   },
   "华为 MatePad 11.5 鸿蒙焕新版": {
     "ok": true,
