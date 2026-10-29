@@ -279,3 +279,9 @@ iQOO 16
 华为 Mate 90 Pro
 华为 Mate 90 RS
 华为 Mate 90
+
+# Auto-discovered by node server.mjs --discover-models.
+华为 畅享 100 Pro
+iQOO Neo12
+华为 畅享 100
+华为 畅享 100m
